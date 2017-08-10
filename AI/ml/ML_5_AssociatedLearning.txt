@@ -1,0 +1,66 @@
+##################################
+   Misc Notes Online Course
+##################################
+
+############ PYTHON ###############
+### check code      : cmd + i   ###
+### run code        : cmd enter ###
+### set working dir : Fn F5     ###
+###################################
+
+############### R ####################
+### check code      : Fn F1        ###
+### run code        : cmd enter    ###
+### set working dir : files 'more' ###
+######################################
+
+
+#######################################
+###   PART 5 - ASSOCIATED LEARNING  ###
+#######################################
+
+
+############################
+###    INTRO & SUMMARY   ###
+############################
+
+		    learning
+            /      \
+           /        \
+    supervised       \
+   Learning from the k\nown label data to create a model, then predicting target class for the given input data.
+   (basket of known fruit)
+                        \
+                         \
+                    unsupervised
+            Learning from the unlabeled data to just differentiating the given input data
+            (basket of fruit with no idea what they are)
+
+
+People who bought also bought ... That is what Association Rule Learning will help us figure out !
+In this part, you will understand and learn how to implement the following Association Rule Learning models:
+
+############################
+###       APRIORI        ###
+############################
+
+- create sparse matrix
+
+Spagetti Egg Tomato
+Flour Sugar Egg
+
+Spagetti Egg Tomato Flour Sugar
+1         1     1     0     0
+0         1     0     1     1
+
+Expects a list of lists
+
+
+############################
+###       ECLAT          ###
+############################
+
+
+
+
+

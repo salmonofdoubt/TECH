@@ -1,0 +1,69 @@
+JS has no types, so not strongly typed
+
+ECMAScript is based on several originating technologies, the most well-known
+JavaScript (Netscape), official
+JScript (Microsoft)
+
+ECMAScript language specification
+
+##################################
+###         Fat Arrow          ###
+##################################
+
+// var functionname       takes args     and does this
+var multiply2       =     (x,y)          => { return x * y}
+
+
+
+##################################
+###      Return Functions      ###
+##################################
+
+// again braces make all the difference 
+doSomething()   // runs the statement, nothing to see 
+doSomething()() // executes the statement, i.e. makes it the return value "Ho", not just the entire statement
+
+function doSomething(){
+  return function(){    // doSomething()
+    console.log("Ho")   // doSomething()()
+  }
+}
+
+##################################
+### Pass Function as arguments ### 
+##################################
+
+function doIf(condition, func) {
+  if(condition) {
+    func()
+  }
+}
+
+const x = 1
+
+doIf(x === 1, function() {
+  console.log("x is equal to 1")
+})
+doIf(x === "Bananas", function() {
+  console.log("x is equal to 'Bananas'")
+})
+doIf(x < 10 && x > 0, function() {
+  console.log("x is between 0 and 10")
+})
+
+
+################################
+### Assign functions to vars ###
+################################
+
+compiler moves functions to the top, vars not 
+so funcs in vars can only be used AFTER var declaration
+ 
+var line = console.log   // line is the function
+var line = console.log() // line is now the return value, probabbly undefined 
+
+
+
+
+
+

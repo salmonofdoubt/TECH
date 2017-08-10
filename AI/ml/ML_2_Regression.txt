@@ -1,0 +1,257 @@
+##################################
+   Misc Notes Online Course
+##################################
+
+############ PYTHON ###############
+### check code      : cmd + i   ###
+### run code        : cmd enter ###
+### set working dir : Fn F5     ###
+###################################
+
+############### R ####################
+### check code      : Fn F1        ###
+### run code        : cmd enter    ###
+### set working dir : files 'more' ###
+######################################
+
+
+########################################
+###    PART 2 - Regression Models    ###
+########################################
+
+###############################
+###       REFLECTION        ###
+###############################
+
+- Interprete results critically especially if category units are not the same
+- R^2 can be negative 
+
+
+###############################
+###       R^2 Rsquare       ###
+###############################
+
+- NOTE on elimination: When eliminating features, check R^2(adjusted), rather than R^2 to verify
+- Even though SL may be slightly greater than 0.05.
+
+- R Squared Intuition: Sum of Squares 
+  - SS(res residual) = SUM(y_i - y'_i)^2   -> MIN    # slope
+  - SS(tot average)    = SUM(y_i - y'_avg)^2 -> MIN    # flat, horizontal line
+
+- R^2 = 1 - SS(res)/SS(tot)      # essentially: how good is *your* line compared with average line
+                                 # it can be negative :), average would be better
+                                 # the greater (closer to 1), the better
+
+- PROBLEM: Adding a new var to model will always make R^2 better no matter what, because SS(tot) remains same
+- So you dont know which vars make a fit better, hence
+
+- R^2(adj adjusted) = 1 - (1-R^2) (n-1)/(n-p-1)   # p number of regressors
+                                                  # n sample size
+
+
+###############################
+### RANDOM FORREST INTUITION ##
+###############################
+
+- very powerful
+- Ensemble Learning, take many algo together
+- Well, take DTR to the extreme and run the model with many decision trees
+  - Pick random k data points
+  - Build a decision tree on those
+  - choose number of Ntree
+  - for a new data point make many, Ntree, predictions for it
+   - hey what's your guess for this, what's your guess, and yours?
+   - then you take the median of their guesses, and you will be fairly close
+
+
+
+###############################
+### DECISION TREE INTUITION ###
+###############################
+
+- This is non-lin, non-continious regression model
+- Here it's 2D (x1, x2), but the code examples are in 1D only
+
+x2
+|
+|  x  x|
+| x  x |x x  x    x
+|______| x x  x   x x
+|    x |______________
+|x  x  | x  x  | x
+| x    |  n  x |  x x
+|  x x | x x   | x  x
+|______|_______|________ x1
+
+            CART Classification and Regression Trees
+           /    \
+          /      \
+         /        \
+Classification   Regression
+     Trees         Trees
+                 * More complex
+                 * Predict a 3rd var from a 2D scatter plot
+                 * Scatter Plot is split into rectangular leaves based on Information Entropy
+                 * The algo to split resembles a Desicion Tree :)
+                 * Now, adding a new value "n" into a leaf, what, say average, does it have,
+                   in that leaf? In other words what is it's Y value?
+
+
+
+
+###############################
+###          SVR            ###
+###############################
+
+- SUPPORT VECTOR REGRESSION
+- Great model as seen by example with position 6.5
+
+
+###############################
+###          PLR            ###
+###############################
+
+- POLYNOMIAL LINEAR REGRSSION (((Seems to be best so far)))
+- Although X is exponential, note the coefficients are still linear
+- So polynomial regression equation is a linear regression equation
+  where the features are the powers of one feature:
+
+- It's a non-lin version that builds on MLR
+  y      = b0 + b1*x1 + b2*x1^2 ... b4*D1
+
+###############################
+###          MLR            ###
+###############################
+
+* Next Multiple Linear Regression, with multiple dependent data
+ - Many records, but Profit column being the depended var
+  y      = b0 + b1*x1 + b2*x2 + b2*x3 ... b4*D1  //a straight line, but steeper
+  Profit        R&D     Expense
+
+                       D1   D2
+  State is categorical NY   CA (Dummay vars, but you ever incl only N-1)
+                        1   0
+                        0   1
+
+- Then Build your Model, step by step:
+   - Basically, remove X data garbage: But explain why you can't use all 1000 vars...
+   - Below are the methods, we used 2.Backward Elimination in example
+
+<<< ALL-IN >>>
+
+   - Prior knowledge, all these are the true predictors
+   - Framework dictates to use all of them
+
+
+<<< BACKWARD SELECTION >>>
+
+  - 1. significance level SL 0.05
+  - 2. Fit the full model, everything
+  - 3. Consider predictor with highest P-Val:
+      if P > SL {
+        step 4
+        } else {
+            goto 6
+            }
+  - 4. Remove the predictor
+  - 5. Fit model without this var
+  - 6. FIN
+
+
+<<< FORWARD SELECTION >>>
+
+  - 1. significance level SL 0.05
+  - 2. Fit the full model, everything, select the one with lowest P-val
+  - 3. Keep this var and fit all possible models with one more predictor in addition to it
+  - 4. Out of all these 2var models, consider the predictor with lowest P-Value
+      if P < SL {
+         goto step 4
+         } else {
+             goto FIN with the previous model
+             }
+  - 5. FIN
+
+
+<<< BIDEIRECTIONAL ELIMINATION >>>
+
+  - 1. significance level to enter SLENTER 0.05
+     significance level to stay  SLSTAY 0.05
+  - 2. Next step of Forward Selection
+     New vars must have P < SLENTER
+  - 3. Perform all steps of Backward Elimination
+     Old vars must have P < SLSTAY
+  - 4. No new vars can enter, no old vars can exit
+  - 5. FIN
+
+
+<<< SCORE COMP >>> (meh, exponentially)
+
+  - Compare all possible models
+     2^N - 1, so 10 cols(x) 1023 possibilities
+
+###############################
+###          SLR            ###
+###############################
+
+     y      = b0 + b1*x1          //a straight best line, trend
+e.g. salary = b0 + b1*Experience
+
+y dependend var DV
+x independent var IV
+b0 constant (where line crosses y)
+b1 the coefficient, a unit change (slope)
+
+The line is the modelled data
+ - take + or - distance, square them SUM(y-y^)^2
+
+* So once data is prepared, lets use Python, then R, to apply SLR model to it :)
+
+
+
+
+ - Note of caution: ANY LR makes these assumptions:
+     1 Linearity
+     2 Homoscedasticity
+     3 Multivariate Normality
+     4 Independence of errors
+     5 Lack of multicollinearity
+
+#################################################################
+####### PART 1 - Data Preprocessing #############################
+#################################################################
+
+* In the dataset, find out the independent and dependent cols
+* When running file in python anaconda console:
+  <highlight then control + enter>
+* In R we dont need
+
+* Based on the dataset, lets set to X the MATRIX OF FEATURES,
+* to y the DEPENDEND DATA
+X = dataset.iloc[:, :-1].values
+y = dataset.iloc[:, 3].values
+
+* Rows are OBSERVATIONS
+* Columns are the FEATURES, and DEPENDEND DATA
+
+* Missing data: use mean
+
+* PenUltimateluy transform relevant cols into Categorical Data
+  - So to have only mathematical data in equations, not strings
+  - Dummy vars (mask) so to avoid that anything is greater than the other s
+  - Now same in R..it's simpler
+
+* Eventually, split your data set into the actual training set, and test set
+  - This is absolutely required for any ML to see it's working correctly
+  - Effectively declare a subset to be the test set, but how to select:
+  - Most importantly avoid overfitting (0.2 for Test is usually cool)
+
+* Feature Scaling
+  - Here: Age and Salary is not on a scale
+  - Euclidian Distance (square of x(age),y(salary)) not at all same scale
+  - so standardisation and normalisation necessary > no domination
+  - Also, makes ML much faster
+
+--- PART 0 - Requirements ---
+
+R Studio
+Python 3.5 + Anaconda IDE (numPy, Pandas..)

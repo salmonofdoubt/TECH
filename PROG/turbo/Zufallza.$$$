@@ -1,0 +1,42 @@
+Program Zufall;
+uses crt;
+var z:word;
+    i:integer;
+    k:char;
+label 1;
+procedure Eingabe;
+
+begin
+writeln;writeln('Geben Sie eine Zahl zwischen 0 und 65536 ein : ');
+readln (z);
+end;
+procedure Ausgabe;
+
+begin
+writeln (' ');
+write (z);
+end;
+begin
+1:clrscr;
+writeln (' voelliger Zufall ');
+Eingabe;
+writeln ('Resultat: ');
+for i:= 1 to 10 do begin
+randomize;
+z:= (25173 *z +13849) mod 65536;
+Ausgabe;
+end;
+writeln (' ');writeln(' ');
+write ('Nochmal (j/n)? ');
+readln (k);
+if (k= 'j ') or (k = ' J ') then goto 1;
+end.
+
+
+
+
+
+
+
+
+

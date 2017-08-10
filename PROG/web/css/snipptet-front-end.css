@@ -1,0 +1,64 @@
+/*
+ SASS: Syntactically Awesome Style Sheets
+ CSS cascading style sheets, e.g. foo.html uses style.css
+
+### SELECTORS ###
+selector {
+  object: declaration;
+}
+
+1. element selector
+HTML: <h1> my text </h1> 
+CSS:   h1 { fontX: colorY; }
+
+2. class selector 
+HTML:    <h1 class="error"> OOPS </h1>
+in CSS: .error{color: red}
+
+### IDs ###
+must be unique
+
+
+*/
+
+@keyframes lr {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: calc(100% - 10rem);
+  }
+}
+cf, .container {
+  *zoom: 1;
+}
+cf:after, .container:after {
+  clear: both;
+}
+cf:before, .container:before, cf:after, .container:after {
+  content: " ";
+  display: table;
+}
+
+.container {
+  position: relative;
+  width: 50%;
+}
+@media only screen and (max-width: 500px) {
+  .container {
+    width: 100%;
+  }
+}
+.container ul {
+  width: 100%;
+  float: left;
+}
+.container ul li {
+  position: relative;
+  display: block;
+  margin-top: 1em;
+  animation: lr 5s infinite alternate ease-in-out;
+}
+.container ul li input {
+  width: 10rem;
+}

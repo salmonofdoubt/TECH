@@ -1,0 +1,32 @@
+
+  * https://www.tensorflow.org/tutorials/
+  * TensorFlow being an API, its toolkit's hierarchy is
+
+| Toolkit(s)        | Description                                        
+| ----------------- | ---------------------------------------------------
+| Estimators        | High-level, OOP API
+| tf.layers/tf.losses/tf.metrics | Libraries for common model components
+| tf.learn          | Provides model management and checkpointing
+| TensorFlow        | Lower-level APIs
+
+* TensorFlow consists of the following two components:
+  - a graph proto
+  - a runtime that executes the (distributed) graph (both analogous to the Java compiler and the JVM)
+  - Just as the JVM is implemented on multiple hardware platforms, so is TensorFlow CPUs and GPUs.
+  - Use API with highest level of abstraction solves the problem.
+    - They are easier to use, but by design less flexible. 
+  - Estimator API is compatible with the scikit-learn API http://scikit-learn.org
+  - Linear regression program (fit) implemented in Estimators:
+
+```
+import tensorflow as tf
+
+# Set up a linear classifier.
+classifier = tf.contrib.learn.TensorFlowLinearClassifier()
+
+# Train the model on some example data.
+classifier.fit(X_train, y_train)
+
+# Use it to predict.
+predictions = classifier.predict(X_test)
+```

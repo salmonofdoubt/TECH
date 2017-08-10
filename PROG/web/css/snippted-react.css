@@ -1,0 +1,73 @@
+/*What does <Component size={5}/> do?*/
+/*Array size 5 ?? */
+
+import * as React from 'react';
+
+type Item = {
+  key: number;
+  value: string;
+};
+
+interface IProps {
+  size: number;
+}
+
+interface IState {
+  items: Item[];
+}
+
+export default class Component extends React.Component<IProps, IState> {
+  constructor(props: any) {
+    super(props);
+
+    this.state = {
+      items: new Array(this.props.size).fill(null).map((_, index: number) => ({
+        key: index,
+        value: ''
+      }))
+    };
+  }
+
+  /*
+  export default class Component extends React.Component<IProps, IState> {
+                                <MenuItem
+                                    key={name}
+                                    insetChildren={true}
+                                    checked={selectedJobs && selectedJobs.include(name)}
+                                    checked={selectedJobs && selectedJobs.includes(name)}
+                                    value={name}
+                                    primaryText={name}
+                                    size={5}
+                                />
+*/
+
+  private onChange(key: number, value: string) {
+    const items: Item[] = this.state.items.slice(0);
+    const index: number = items.findIndex((item) => item.key === key);
+    items[index].value = value;
+    this.setState({ items });
+  }
+
+  public render(): JSX.Element {
+    return <div className="container">
+      <ul>{
+      this.state.items
+        .sort((a, b) => a.value > b.value ? 1 : -1)
+        .map((item, key) => Element({
+          key: item.key,
+          value: item.value,
+          onChange: this.onChange.bind(this)
+        }))
+    }</ul></div>;
+  }
+}
+
+const Element = ({ key, value, onChange }:
+  { key: number, value: string, onChange: (key: number, value: string) => void }) => {
+  return <li key={ key }>
+    <input
+      value={ value }
+      onChange={ (e) => onChange(key, e.currentTarget.value) }
+    />
+  </li>;
+};

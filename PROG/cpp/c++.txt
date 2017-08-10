@@ -1,0 +1,11 @@
+c++
+
+- runs directly on computer's hardware, nothing between like JM, Python etc.
+
+- needs GNU G++ / GCC  - unix, mac
+- MinGW                - windows
+- Visual C++ Compiler  - 
+
+- Edit in Visual Studio 
+- Run in XCode, right?
+

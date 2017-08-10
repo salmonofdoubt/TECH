@@ -1,0 +1,3 @@
+#! /bin/sh
+
+/System/Library/Frameworks/Python.framework/Versions/2.5/Resources/Python.app/Contents/MacOS/Python /Library/Python/2.5/site-packages/pychecker/checker.py "$@"

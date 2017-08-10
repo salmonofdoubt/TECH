@@ -1,0 +1,400 @@
+What Are Signals? 
+Signals, to be short, are various notifications sent to a process in order to notify it of various "important" events. By their nature, they interrupt whatever the process is doing at this minute, and force it to handle them immediately. Each signal has an integer number that represents it (1, 2 and so on), as well as a symbolic name that is usually defined in the file /usr/include/signal.h or one of the files included by it directly or indirectly (HUP, INT and so on. Use the command 'kill -l' to see a list of signals supported by your system). 
+
+Each signal may have a signal handler, which is a function that gets called when the process receives that signal. The function is called in "asynchronous mode", meaning that no where in your program you have code that calls this function directly. Instead, when the signal is sent to the process, the operating system stops the execution of the process, and "forces" it to call the signal handler function. When that signal handler function returns, the process continues execution from wherever it happened to be before the signal was received, as if this interruption never occurred. 
+
+Note for "hardwarists": If you are familiar with interrupts (you are, right?), signals are very similar in their behavior. The difference is that while interrupts are sent to the operating system by the hardware, signals are sent to the process by the operating system, or by other processes. Note that signals have nothing to do with software interrupts, which are still sent by the hardware (the CPU itself, in this case). 
+
+
+
+Sending Signals To Processes 
+
+Ctrl-C 
+(SIGINT) 
+causes the process to immediately terminate. 
+
+Ctrl-Z 
+(SIGTSTP) 
+causes the process to suspend execution. 
+
+Ctrl-\ 
+(SIGABRT)
+same as Ctrl-C with more flexibility
+
+Sending Signals From The Command Line 
+Another way of sending signals to processes is done using various commands, usually internal to the shell: 
+
+
+kill 
+The kill command accepts two parameters: a signal name (or number), and a process ID. Usually the syntax for using it goes something like: 
+
+
+kill -<signal> <PID> 
+
+
+For example, in order to send the INT signal to process with PID 5342, type: 
+
+kill -INT 5342 
+
+This has the same affect as pressing Ctrl-C in the shell that runs that process. 
+If no signal name or number is specified, the default is to send a TERM signal to the process, which normally causes its termination, and hence the name of the kill command. 
+
+
+fg 
+On most shells, using the 'fg' command will resume execution of the process (that was suspended with Ctrl-Z), by sending it a CONT signal. 
+
+
+
+
+Sending Signals Using System Calls 
+A third way of sending signals to processes is by using the kill system call. This is the normal way of sending a signal from one process to another. This system call is also used by the 'kill' command or by the 'fg' command. Here is an example code that causes a process to suspend its own execution by sending itself the STOP signal: 
+
+
+#include <unistd.h>     /* standard unix functions, like getpid()       */ 
+#include <sys/types.h>  /* various type definitions, like pid_t         */ 
+#include <signal.h>     /* signal name macros, and the kill() prototype */ 
+
+/* first, find my own process ID */ 
+pid_t my_pid = getpid(); 
+
+/* now that i got my PID, send myself the STOP signal. */ 
+kill(my_pid, SIGSTOP); 
+
+An example of a situation when this code might prove useful, is inside a signal handler that catches the TSTP signal (Ctrl-Z, remember?) in order to do various tasks before actually suspending the process. We will see an example of this later on. 
+
+
+
+Catching Signals - Signal Handlers 
+
+
+
+Catchable And Non-Catchable Signals 
+Most signals may be caught by the process, but there are a few signals that the process cannot catch, and cause the process to terminate. For example, the KILL signal (-9 on all unices I've met so far) is such a signal. This is why you usually see a process being shut down using this signal if it gets "wild". One process that uses this signal is a system shutdown process. It first sends a TERM signal to all processes, waits a while, and after allowing them a "grace period" to shut down cleanly, it kills whichever are left using the KILL signal. 
+
+STOP is also a signal that a process cannot catch, and forces the process's suspension immediately. This is useful when debugging programs whose behavior depends on timing. Suppose that process A needs to send some data to process B, and you want to check some system parameters after the message is sent, but before it is received and processed by process B. One way to do that would be to send a STOP signal to process B, thus causing its suspension, and then running process A and waiting until it sends its oh-so important message to process B. Now you can check whatever you want to, and later on you can use the CONT signal to continue process B's execution, which will then receive and process the message sent from process A. 
+
+Now, many other signals are catchable, and this includes the famous SEGV and BUS signals. You probably have seen numerous occasions when a program has exited with a message such as 'Segmentation Violation - Core Dumped', or 'Bus Error - core dumped'. In the first occasion, a SEGV signal was sent to your program due to accessing an illegal memory address. In the second case, a BUS signal was sent to your program, due to accessing a memory address with invalid alignment. In both cases, it is possible to catch these signals in order to do some cleanup - kill child processes, perhaps remove temporary files, etc. Although in both cases, the memory used by your process is most likely corrupt, it's probable that only a small part of it was corrupt, so cleanup is still usually possible. 
+
+
+
+Default Signal Handlers 
+If you install no signal handlers of your own (remember what a signal handler is? yes, that function handling a signal?), the runtime environment sets up a set of default signal handlers for your program. For example, the default signal handler for the TERM signal calls the exit() system call. The default handler for the ABRT signal calls the abort() system call, which causes the process's memory image to be dumped into a file named 'core' in the process's current directory, and then exit. 
+
+
+
+
+Installing Signal Handlers 
+There are several ways to install signal handlers. We'll use the most basic form here, and refer you to your manual pages for further reading. 
+
+
+
+The signal() System Call 
+The signal() system call is used to set a signal handler for a single signal type. signal() accepts a signal number and a pointer to a signal handler function, and sets that handler to accept the given signal. As an example, here is a code snippest that causes the program to print the string "Don't do that" when a user presses Ctrl-C: 
+
+
+
+#include <stdio.h>     /* standard I/O functions                         */ 
+#include <unistd.h>    /* standard unix functions, like getpid()         */ 
+#include <sys/types.h> /* various type definitions, like pid_t           */ 
+#include <signal.h>    /* signal name macros, and the signal() prototype */ 
+
+/* first, here is the signal handler */ 
+void catch_int(int sig_num) 
+{ 
+    /* re-set the signal handler again to catch_int, for next time */ 
+    signal(SIGINT, catch_int); 
+    /* and print the message */ 
+    printf("Don't do that"); 
+    fflush(stdout); 
+} 
+
+. 
+. 
+. 
+/* and somewhere later in the code.... */ 
+. 
+. 
+
+/* set the INT (Ctrl-C) 
+
+signal handler to 'catch_int' */ 
+signal(SIGINT, catch_int); 
+
+/* now, lets get into an infinite loop of doing nothing. */ 
+for ( ;; ) 
+    pause(); 
+
+
+
+
+The complete source code for this program is found in the catch-ctrl-c.c file. 
+
+Notes: 
+
+the pause() system call causes the process to halt execution, until a signal is received. it is surely better then a 'busy wait' infinite loop. 
+the name of a function in C/C++ is actually a pointer to the function, so when you're asked to supply a pointer to a function, you may simply specify its name instead. 
+On some systems (such as Linux), when a signal handler is called, the system automatically resets the signal handler for that signal to the default handler. Thus, we re-assign the signal handler immediately when entering the handler function. Otherwise, the next time this signal is received, the process will exit (default behavior for INT signals). Even on systems that do not behave in this way, it still won't hurt, so adding this line always is a good idea. 
+
+
+
+Pre-defined Signal Handlers 
+For our convenience, there are two pre-defined signal handler functions that we can use, instead of writing our own: SIG_IGN and SIG_DFL. 
+
+SIG_IGN: 
+Causes the process to ignore the specified signal. For example, in order to ignore Ctrl-C completely (useful for programs that must NOT be interrupted in the middle, or in critical sections), write this: 
+
+signal(SIGINT, SIG_IGN); 
+
+SIG_DFL: 
+Causes the system to set the default signal handler for the given signal (i.e. the same handler the system would have assigned for the signal when the process started running): 
+
+signal(SIGTSTP, SIG_DFL); 
+
+
+
+Avoiding Signal Races - Masking Signals 
+One of the nasty problems that might occur when handling a signal, is the occurrence of a second signal while the signal handler function executes. Such a signal might be of a different type then the one being handled, or even of the same type. Thus, we should take some precautions inside the signal handler function, to avoid races. 
+
+Luckily, the system also contains some features that will allow us to block signals from being processed. These can be used in two 'contexts' - a global context which affects all signal handlers, or a per-signal type context - that only affects the signal handler for a specific signal type. 
+
+
+
+Masking signals with sigprocmask() 
+the (modern) "POSIX" function used to mask signals in the global context, is the sigprocmask() system call. It allows us to specify a set of signals to block, and returns the list of signals that were previously blocked. This is useful when we'll want to restore the previous masking state once we're done with our critical section. sigprocmask() accepts 3 parameters: 
+
+int how 
+defines if we want to add signals to the current mask (SIG_BLOCK), remove them from the current mask (SIG_UNBLOCK), or completely replace the current mask with the new mask (SIG_SETMASK). 
+const sigset_t *set 
+The set of signals to be blocked, or to be added to the current mask, or removed from the current mask (depending on the 'how' parameter). 
+sigset_t *oldset 
+If this parameter is not NULL, then it'll contain the previous mask. We can later use this set to restore the situation back to how it was before we called sigprocmask(). 
+
+Note: Older systems do not support the sigprocmask() system call. Instead, one should use the sigmask() and sigsetmask() system calls. If you have such an operating system handy, please read the manual pages for these system calls. They are simpler to use then sigprocmask, so it shouldn't be too hard understanding them once you've read this section. 
+
+You probably wonder what are these sigset_t variables, and how they are manipulated. Well, i wondered too, so i went to the manual page of sigsetops, and found the answer. There are several functions to handle these sets. Lets learn them using some example code: 
+
+
+
+/* define a new mask set */ 
+sigset_t mask_set; 
+/* first clear the set (i.e. make it contain no signal numbers) */ 
+sigemptyset(&mask_set); 
+/* lets add the TSTP and INT signals to our mask set */ 
+sigaddset(&mask_set, SIGTSTP); 
+sigaddset(&mask_set, SIGINT); 
+/* and just for fun, lets remove the TSTP signal from the set. */ 
+sigdelset(&mask_set, SIGTSTP); 
+/* finally, lets check if the INT signal is defined in our set */ 
+if (sigismember(&mask_set, SIGINT) 
+    printf("signal INT is in our set\n"); 
+else 
+    printf("signal INT is not in our set - how strange...\n"); 
+/* finally, lets make the set contain ALL signals available on our system */ 
+sigfillset(&mask_set) 
+
+
+
+
+Now that we know all these little secrets, lets see a short code example that counts the number of Ctrl-C signals a user has hit, and on the 5th time (note - this number was "Stolen" from some quite famous Unix program) asks the user if they really want to exit. Further more, if the user hits Ctrl-Z, the number of Ctrl-C presses is printed on the screen. 
+
+
+
+
+/* first, define the Ctrl-C counter, initialize it with zero. */ 
+int ctrl_c_count = 0; 
+#define CTRL_C_THRESHOLD 5 
+
+/* the Ctrl-C signal handler */ 
+void catch_int(int sig_num) 
+{ 
+    sigset_t mask_set; /* used to set a signal masking set. */ 
+    sigset_t old_set; /* used to store the old mask set.   */ 
+
+    /* re-set the signal handler again to catch_int, for next time */ 
+    signal(SIGINT, catch_int); 
+    /* mask any further signals while we're inside the handler. */ 
+    sigfillset(&mask_set); 
+    sigprocmask(SIG_SETMASK, &mask_set, &old_set); 
+     
+    /* increase count, and check if threshold was reached */ 
+    ctrl_c_count++; 
+    if (ctrl_c_count >= CTRL_C_THRESHOLD) { 
+ char answer[30]; 
+
+ /* prompt the user to tell us if to really exit or not */ 
+ printf("\nRealy Exit? [y/N]: "); 
+ fflush(stdout); 
+ gets(answer); 
+ if (answer[0] == 'y' || answer[0] == 'Y') { 
+     printf("\nExiting...\n"); 
+     fflush(stdout); 
+     exit(0); 
+ } 
+ else { 
+     printf("\nContinuing\n"); 
+     fflush(stdout); 
+     /* reset Ctrl-C counter */ 
+     ctrl_c_count = 0; 
+ } 
+    } 
+    /* restore the old signal mask */{{/COMMENT_FONT}*/ 
+    sigprocmask(SIG_SETMASK, &old_set, NULL); 
+} 
+
+/* the Ctrl-Z signal handler */ 
+void catch_suspend(int sig_num) 
+{ 
+    sigset_t mask_set; /* used to set a signal masking set. */ 
+    sigset_t old_set; /* used to store the old mask set.   */ 
+
+    /* re-set the signal handler again to catch_suspend, for next time */ 
+    signal(SIGTSTP, catch_suspend); 
+    /* mask any further signals while we're inside the handler. */ 
+    sigfillset(&mask_set); 
+    sigprocmask(SIG_SETMASK, &mask_set, &old_set); 
+
+    /* print the current Ctrl-C counter */ 
+    printf("\n\nSo far, '%d' Ctrl-C presses were counted\n\n", ctrl_c_count); 
+    fflush(stdout); 
+
+    /* restore the old signal mask */ 
+    sigprocmask(SIG_SETMASK, &old_set, NULL); 
+} 
+
+. 
+. 
+/* and somewhere inside the main function... */ 
+. 
+. 
+
+/* set the Ctrl-C and Ctrl-Z signal handlers */ 
+signal(SIGINT, catch_int); 
+signal(SIGTSTP, catch_suspend); 
+. 
+. 
+/* and then the rest of the program */ 
+. 
+. 
+
+The complete source code for this program is found in the count-ctrl-c.c file. 
+
+You should note that using sigprocmask() the way we did now does not resolve all possible race conditions. For example, It is possible that after we entered the signal handler, but before we managed to call the sigprocmask() system call, we receive another signal, which WILL be called. Thus, if the user is VERY quick (or the system is very slow), it is possible to get into races. In our current functions, this will probably not disturb the flow, but there might be cases where this kind of race could cause problems. 
+
+The way to guarantee no races at all, is to let the system set the signal masking for us before it calls the signal handler. This can be done if we use the sigaction() system call to define both the signal handler function AND the signal mask to be used when the handler is executed. You would probably be able to read the manual page for sigaction() on your own, now that you're familiar with the various concepts of signal handling. On old systems, however, you won't find this system call, but you still might find the sigvec() call, that enables a similar functionality. 
+
+
+
+Implementing Timers Using Signals 
+One of the weak aspects of Unix-like operating systems is their lack of proper support for timers. Timers are important to allow one to check timeouts (e.g. wait for user input up to 30 seconds, or exit), check some conditions on a regular basis (e.g. check every 30 seconds that a server we're talking to is still active, or close the connection and notify the user about the problem), and so on. There are various ways to get around the problem for programs that use an "event loop" based on the select() system call (or its new replacement, the poll() system call), but not all programs work that way, and this method is too complex for short and simple programs. 
+
+Yet, the operating system gives us a simple way of setting up timers that don't require too much hassles, by using special alarm signals. They are generally limited to one timer active at a time, but that will suffice in simple cases. 
+
+
+
+The alarm() System Call 
+The alarm() system call is used to ask the system to send our process a special signal, named ALRM, after a given number of seconds. Since Unix-like systems don't operate as real-time systems, your process might receive this signal after a longer time then requested. Combining this system call with a proper signal handler enables us to do some simple tricks. Lets see an example of a program that waits for user input, but exits if none was given after a certain timeout. 
+
+
+
+
+#include <unistd.h>    /* standard unix functions, like alarm()          */ 
+#include <signal.h>    /* signal name macros, and the signal() prototype */ 
+
+char user[40];  /* buffer to read user name from the user */ 
+
+/* define an alarm signal handler. */ 
+void catch_alarm(int sig_num) 
+{ 
+    printf("Operation timed out. Exiting...\n\n"); 
+    exit(0); 
+} 
+
+. 
+. 
+/* and inside the main program... */ 
+. 
+. 
+
+/* set a signal handler for ALRM signals */ 
+signal(SIGALRM, catch_alarm); 
+
+/* prompt the user for input */ 
+printf("Username: "); 
+fflush(stdout); 
+/* start a 30 seconds alarm */ 
+alarm(30); 
+/* wait for user input */ 
+gets(user); 
+/* remove the timer, now that we've got the user's input */ 
+alarm(0); 
+
+. 
+. 
+/* do something with the received user name */ 
+. 
+. 
+
+
+
+The complete source code for this program is found in the use-alarms.c file. 
+
+As you can see, we start the timer right before waiting for user input. If we started it earlier, we'll be giving the user less time then promised to perform the operation. We also stop the timer right after getting the user's input, before doing any tests or processing of the input, to avoid a random timer from setting off due to slow processing of the input. Many bugs that occur using the alarm() system call occur due to forgetting to set off the timer at various places when the code gets complicated. If you need to make some tests during the input phase, put the whole piece of code in a function, so it'll be easier to make sure that the timer is always set off after calling the function. Here is an example of how NOT to do this: 
+
+
+
+int read_user_name(char user[]) 
+{ 
+    int ok_len; 
+    int result = 0; /* assume failure */ 
+
+    /* set an alarm to timeout the input operation */ 
+    alarm(3); /* Mistake 1 */ 
+    printf("Enter user name: "); /* Mistake 2 */ 
+    fflush(stdout); 
+    if (gets(user) == NULL) { 
+ printf("End of input received.\n"); 
+ return 0;  /* Mistake 3 */ 
+    } 
+    /* count the size of prefix of 'user' made only of characters */ 
+    /* in the given set. if all characters in 'user' are in the   */ 
+    /* set, then ok_len with be equal to the length of 'user'.    */ 
+    ok_len = strspn(user, "abcdefghijklmnopqrstuvwxyz0123456789"); 
+    if (ok_len == strlen(user)) { 
+ /* check if the user exists in our database */ 
+ result = find_user_in_database(user); /* Mistake 4 */ 
+    } 
+    alarm(0); 
+
+    return result; 
+} 
+
+
+
+Lets count the mistakes and bad programming practices in the above function: 
+
+* Too short timeout: 
+3 seconds might be enough for superman to type his user name, but a normal user obviously needs more time. Such a timeout should actually be tunable, because not all people type at the same pace, or should be long enough for even the slowest of users. 
+
+* Printing while timer is ticking: 
+Norty Norty. This printing should have been done before starting up the timer. Printing may be a time consuming operation, and thus will leave less time then expected for the user to type in the expected input. 
+
+* Exiting function without turning off timer: 
+This kind of mistake is hard to catch. It will cause the program to randomally exit somewhere LATER during the execution. If we'll trace it with a debugger, we'll see that the signal was received while we were already executing a completely different part of the program, leaving us scratching our head and looking up to the sky, hoping somehow inspiration will fall from there to guide us to the location of the problem. 
+
+* Making long checks before turning off timer: 
+As if it's not enough that we gave the poor user a short time to check for the input, we're also inserting some database checking operation while the timer is still ticking. Even if we also want to timeout the database operation, we should probably set up a different timer (and a different ALRM signal handler), so as not to confuse a slow user with a slow database server. It will also allow the user to know why we are timing out. Without this information, a person trying to figure out why the program suddenly exits, will have hard time finding where the fault lies. 
+
+
+
+Summary - "Do" and "Don't" inside A Signal Handler 
+We have seen a few "thumb rules" all over this tutorial, and there are quite many of those, as the area of signals handling is rather tricky. Lets try to summarize these rules of thumb here: 
+
+Make it short - the signal handler should be a short function that returns quickly. Instead of doing complex operations inside the signal handler, it is better that the function will raise a flag (e.g. a global variable, although these are evil by themselves) and have the main program check that flag occasionally. 
+Proper Signal Masking - don't be too lazy to define proper signal masking for a signal handler, preferably using the sigaction() system call. It takes a little more effort then just using the signal() system call, but it'll help you sleep better at night, knowing that you haven't left an extra place for race conditions to occur. Remember - if some bug has a probability of 1/10,000 to occur, it WILL occur when many people use that program many times, as tends to be the case with good programs (you write only good programs, no?). 
+Careful with "fault" signals - If you catch signals that indicate a program bug (SIGBUS, SIGSEGV, SIGFPE), don't try to be too smart and let the program continue, unless you know exactly what you are doing (which is a very rare case) - just do the minimal required cleanup, and exit, preferably with a core dump (using the abort() function). Such signals usually indicate a bug in the program, that if ignored will most likely cause it to crush sooner or later, making you think the problem is somewhere else in the code. 
+Careful with timers - when you use timers, remember that you can only use one timer at a time, unless you also (ab)use the VTALRM signal. If you need to have more then one timer active at a time, don't use signals, or devise a set of functions that will allow you to have several virtual timers using a delta list of some sort. If you've no idea what I'm talking about, you probably don't need several simultaneous timers in the first place. 
+Signals are NOT an event driven framework - it is easy to get carried away and try turning the signals system into an event-driven driver for a program, but signal handling functions were not meant for that. If you need such a thing, use some framework that is more suitable for the application (e.g. use an event loop of a windowing program, use a select-based loop inside a network server, etc.). 
+
+
+
+

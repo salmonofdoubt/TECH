@@ -1,0 +1,618 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr">
+<head>
+<title>Non-Programmer's Tutorial for Python 3/Defining Functions - Wikibooks, collection of open-content textbooks</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta name="generator" content="MediaWiki 1.16wmf4" />
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="/w/index.php?title=Non-Programmer%27s_Tutorial_for_Python_3/Defining_Functions&amp;action=edit" />
+<link rel="edit" title="Edit this page" href="/w/index.php?title=Non-Programmer%27s_Tutorial_for_Python_3/Defining_Functions&amp;action=edit" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikibooks (en)" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/" />
+<link rel="alternate" type="application/atom+xml" title="Wikibooks Atom feed" href="/w/index.php?title=Special:RecentChanges&amp;feed=atom" />
+<link rel="stylesheet" href="http://bits.wikimedia.org/skins-1.5/common/shared.css?283p" type="text/css" media="screen" />
+<link rel="stylesheet" href="http://bits.wikimedia.org/skins-1.5/common/commonPrint.css?283p" type="text/css" media="print" />
+<link rel="stylesheet" href="http://bits.wikimedia.org/skins-1.5/monobook/main.css?283p" type="text/css" media="screen" />
+<link rel="stylesheet" href="http://bits.wikimedia.org/skins-1.5/chick/main.css?283p" type="text/css" media="handheld" />
+<!--[if lt IE 5.5000]><link rel="stylesheet" href="http://bits.wikimedia.org/skins-1.5/monobook/IE50Fixes.css?283p" type="text/css" media="screen" /><![endif]-->
+<!--[if IE 5.5000]><link rel="stylesheet" href="http://bits.wikimedia.org/skins-1.5/monobook/IE55Fixes.css?283p" type="text/css" media="screen" /><![endif]-->
+<!--[if IE 6]><link rel="stylesheet" href="http://bits.wikimedia.org/skins-1.5/monobook/IE60Fixes.css?283p" type="text/css" media="screen" /><![endif]-->
+<!--[if IE 7]><link rel="stylesheet" href="http://bits.wikimedia.org/skins-1.5/monobook/IE70Fixes.css?283p" type="text/css" media="screen" /><![endif]-->
+<link rel="stylesheet" href="/w/extensions/FlaggedRevs/client/flaggedrevs.css?76" type="text/css" media="all" />
+<link rel="stylesheet" href="/w/extensions/ReaderFeedback/readerfeedback.css?1" type="text/css" media="all" />
+<link rel="stylesheet" href="/w/index.php?title=MediaWiki:Common.css&amp;usemsgcache=yes&amp;ctype=text%2Fcss&amp;smaxage=2678400&amp;action=raw&amp;maxage=2678400" type="text/css" media="all" />
+<link rel="stylesheet" href="/w/index.php?title=MediaWiki:Print.css&amp;usemsgcache=yes&amp;ctype=text%2Fcss&amp;smaxage=2678400&amp;action=raw&amp;maxage=2678400" type="text/css" media="print" />
+<link rel="stylesheet" href="/w/index.php?title=MediaWiki:Handheld.css&amp;usemsgcache=yes&amp;ctype=text%2Fcss&amp;smaxage=2678400&amp;action=raw&amp;maxage=2678400" type="text/css" media="handheld" />
+<link rel="stylesheet" href="/w/index.php?title=MediaWiki:Monobook.css&amp;usemsgcache=yes&amp;ctype=text%2Fcss&amp;smaxage=2678400&amp;action=raw&amp;maxage=2678400" type="text/css" media="all" />
+<link rel="stylesheet" href="/w/index.php?title=-&amp;action=raw&amp;maxage=2678400&amp;gen=css" type="text/css" media="all" />
+<script type="text/javascript">
+var skin="monobook",
+stylepath="http://bits.wikimedia.org/skins-1.5",
+wgUrlProtocols="http\\:\\/\\/|https\\:\\/\\/|ftp\\:\\/\\/|irc\\:\\/\\/|gopher\\:\\/\\/|telnet\\:\\/\\/|nntp\\:\\/\\/|worldwind\\:\\/\\/|mailto\\:|news\\:|svn\\:\\/\\/",
+wgArticlePath="/wiki/$1",
+wgScriptPath="/w",
+wgScriptExtension=".php",
+wgScript="/w/index.php",
+wgVariantArticlePath=false,
+wgActionPaths={},
+wgServer="http://en.wikibooks.org",
+wgCanonicalNamespace="",
+wgCanonicalSpecialPageName=false,
+wgNamespaceNumber=0,
+wgPageName="Non-Programmer\'s_Tutorial_for_Python_3/Defining_Functions",
+wgTitle="Non-Programmer\'s Tutorial for Python 3/Defining Functions",
+wgAction="view",
+wgArticleId=180493,
+wgIsArticle=true,
+wgUserName=null,
+wgUserGroups=null,
+wgUserLanguage="en",
+wgContentLanguage="en",
+wgBreakFrames=false,
+wgCurRevisionId=1903298,
+wgVersion="1.16wmf4",
+wgEnableAPI=true,
+wgEnableWriteAPI=true,
+wgSeparatorTransformTable=["", ""],
+wgDigitTransformTable=["", ""],
+wgMainPageTitle="Main Page",
+wgFormattedNamespaces={"-2": "Media", "-1": "Special", "0": "", "1": "Talk", "2": "User", "3": "User talk", "4": "Wikibooks", "5": "Wikibooks talk", "6": "File", "7": "File talk", "8": "MediaWiki", "9": "MediaWiki talk", "10": "Template", "11": "Template talk", "12": "Help", "13": "Help talk", "14": "Category", "15": "Category talk", "102": "Cookbook", "103": "Cookbook talk", "108": "Transwiki", "109": "Transwiki talk", "110": "Wikijunior", "111": "Wikijunior talk", "112": "Subject", "113": "Subject talk"},
+wgNamespaceIds={"media": -2, "special": -1, "": 0, "talk": 1, "user": 2, "user_talk": 3, "wikibooks": 4, "wikibooks_talk": 5, "file": 6, "file_talk": 7, "mediawiki": 8, "mediawiki_talk": 9, "template": 10, "template_talk": 11, "help": 12, "help_talk": 13, "category": 14, "category_talk": 15, "cookbook": 102, "cookbook_talk": 103, "transwiki": 108, "transwiki_talk": 109, "wikijunior": 110, "wikijunior_talk": 111, "subject": 112, "subject_talk": 113, "wb": 4, "wj": 110, "cat": 14, "cook": 102, "sub": 112, "image": 6, "image_talk": 7},
+wgSiteName="Wikibooks",
+wgCategories=["Non-Programmer\'s Tutorial for Python 3", "Non-Programmer\'s Tutorial for Python 3.0"],
+wgMWSuggestTemplate="http://en.wikibooks.org/w/api.php?action=opensearch\x26search={searchTerms}\x26namespace={namespaces}\x26suggest",
+wgDBname="enwikibooks",
+wgSearchNamespaces=[0, 4, 112],
+wgMWSuggestMessages=["with suggestions", "no suggestions"],
+wgRestrictionEdit=[],
+wgRestrictionMove=[],
+wgFlaggedRevsParams={"tags": {"value": {"levels": 3, "quality": 2, "pristine": 3}}},
+wgStableRevisionId=1903298,
+wgFeedbackParams={"tags": {"reliability": 3, "completeness": 2, "npov": 2, "presentation": 1}},
+wgAjaxFeedback={"sendingMsg": "Submitting …", "sentMsg": "Thank you!"},
+wgNotice="",
+wgNoticeLocal="";
+</script><script src="http://bits.wikimedia.org/skins-1.5/common/wikibits.js?283p" type="text/javascript"></script>
+<script src="http://bits.wikimedia.org/skins-1.5/common/ajax.js?283p" type="text/javascript"></script>
+<script src="http://bits.wikimedia.org/skins-1.5/common/mwsuggest.js?283p" type="text/javascript"></script>
+<script type="text/javascript" src="http://upload.wikimedia.org/centralnotice/wikibooks/en/centralnotice.js?283p"></script>
+
+<script src="/w/index.php?title=-&amp;action=raw&amp;gen=js&amp;useskin=monobook&amp;283p" type="text/javascript"></script>
+
+<style type="text/css">/*<![CDATA[*/
+.source-python {line-height: normal;}
+.source-python li, .source-python pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for python
+ * CSS class: source-python, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.python.source-python .de1, .python.source-python .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;}
+.python.source-python  {font-family:monospace;}
+.python.source-python .imp {font-weight: bold; color: red;}
+.python.source-python li, .python.source-python .li1 {font-weight: normal; vertical-align:top;}
+.python.source-python .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.python.source-python .li2 {font-weight: bold; vertical-align:top;}
+.python.source-python .kw1 {color: #ff7700;font-weight:bold;}
+.python.source-python .kw2 {color: #008000;}
+.python.source-python .kw3 {color: #dc143c;}
+.python.source-python .kw4 {color: #0000cd;}
+.python.source-python .co1 {color: #808080; font-style: italic;}
+.python.source-python .coMULTI {color: #808080; font-style: italic;}
+.python.source-python .es0 {color: #000099; font-weight: bold;}
+.python.source-python .br0 {color: black;}
+.python.source-python .sy0 {color: #66cc66;}
+.python.source-python .st0 {color: #483d8b;}
+.python.source-python .nu0 {color: #ff4500;}
+.python.source-python .me1 {color: black;}
+.python.source-python .ln-xtra, .python.source-python li.ln-xtra, .python.source-python div.ln-xtra {background-color: #ffc;}
+.python.source-python span.xtra { display:block; }
+
+/*]]>*/
+</style>
+<style type="text/css">/*<![CDATA[*/
+@import "/w/index.php?title=MediaWiki:Geshi.css&usemsgcache=yes&action=raw&ctype=text/css&smaxage=2678400";
+/*]]>*/
+</style><script type="text/javascript" src="/w/extensions/FlaggedRevs/client/flaggedrevs.js?76"></script>
+<script type="text/javascript">FlaggedRevs.messages = {"diffToggleShow": "show those changes", "diffToggleHide": "hide those changes", "logToggleShow": "show stability log", "logToggleHide": "hide stability log", "logDetailsShow": "show details", "logDetailsHide": "hide details", "toggleShow": "(+)", "toggleHide": "(-)"};</script>
+<script type="text/javascript" src="/w/extensions/ReaderFeedback/readerfeedback.js?1"></script>
+</head>
+<body class="mediawiki ltr ns-0 ns-subject page-Non-Programmer_s_Tutorial_for_Python_3_Defining_Functions skin-monobook">
+<div id="globalWrapper">
+<div id="column-content"><div id="content">
+	<a id="top"></a>
+	<div id="siteNotice"><script type='text/javascript'>if (wgNotice != '') document.writeln(wgNotice);</script></div>
+	<h1 id="firstHeading" class="firstHeading">Non-Programmer's Tutorial for Python 3/Defining Functions</h1>
+	<div id="bodyContent">
+		<div id="siteSub">From Wikibooks, the open-content textbooks collection</div>
+		<div id="contentSub"><span class="subpages">&lt; <a href="/wiki/Non-Programmer%27s_Tutorial_for_Python_3" title="Non-Programmer's Tutorial for Python 3">Non-Programmer's Tutorial for Python 3</a></span></div>
+		<div id="jump-to-nav">Jump to: <a href="#column-one">navigation</a>, <a href="#searchInput">search</a></div>
+		<!-- start content -->
+<table id="toc" class="toc">
+<tr>
+<td>
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Creating_Functions"><span class="tocnumber">1</span> <span class="toctext">Creating Functions</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Variables_in_functions"><span class="tocnumber">2</span> <span class="toctext">Variables in functions</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Examples"><span class="tocnumber">3</span> <span class="toctext">Examples</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Exercises"><span class="tocnumber">4</span> <span class="toctext">Exercises</span></a></li>
+</ul>
+</td>
+</tr>
+</table>
+<script type="text/javascript">
+//<![CDATA[
+if (window.showTocToggle) { var tocShowText = "show"; var tocHideText = "hide"; showTocToggle(); } 
+//]]>
+</script>
+<h3><span class="editsection">[<a href="/w/index.php?title=Non-Programmer%27s_Tutorial_for_Python_3/Defining_Functions&amp;action=edit&amp;section=1" title="Edit section: Creating Functions">edit</a>]</span> <span class="mw-headline" id="Creating_Functions">Creating Functions</span></h3>
+<p>To start off this chapter I am going to give you an example of what you could do but shouldn't (so don't type it in):</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;">
+<div class="python source-python" style="font-family:monospace;">
+<pre class="de1">
+a = 23
+b = -23
+ 
+<span class="kw1">if</span> a <span class="sy0">&lt;</span> 0:
+    a = -a
+<span class="kw1">if</span> b <span class="sy0">&lt;</span> 0:
+    b = -b
+<span class="kw1">if</span> a == b:
+    <span class="kw1">print</span><span class="br0">(</span><span class="st0">"The absolute values of"</span>, a, <span class="st0">"and"</span>, b, <span class="st0">"are equal"</span><span class="br0">)</span>
+<span class="kw1">else</span>:
+    <span class="kw1">print</span><span class="br0">(</span><span class="st0">"The absolute values of"</span>, a, <span class="st0">"and"</span>, b, <span class="st0">"are different"</span><span class="br0">)</span>
+</pre></div>
+</div>
+<p>with the output being:</p>
+<pre>
+The absolute values of 23 and 23 are equal
+</pre>
+<p>The program seems a little repetitive. Programmers hate to repeat things -- that's what computers are for, after all! (Note also that finding the absolute value changed the value of the variable, which is why it is printing out 23, and not -23 in the output.) Fortunately Python allows you to create functions to remove duplication. Here is the rewritten example:</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;">
+<div class="python source-python" style="font-family:monospace;">
+<pre class="de1">
+a = 23
+b = -23
+ 
+<span class="kw1">def</span> absolute_value<span class="br0">(</span>n<span class="br0">)</span>:
+    <span class="kw1">if</span> n <span class="sy0">&lt;</span> 0:
+        n = -n
+    <span class="kw1">return</span> n
+ 
+<span class="kw1">if</span> absolute_value<span class="br0">(</span>a<span class="br0">)</span> == absolute_value<span class="br0">(</span>b<span class="br0">)</span>:
+    <span class="kw1">print</span><span class="br0">(</span><span class="st0">"The absolute values of"</span>, a, <span class="st0">"and"</span>, b, <span class="st0">"are equal"</span><span class="br0">)</span>
+<span class="kw1">else</span>:
+    <span class="kw1">print</span><span class="br0">(</span><span class="st0">"The absolute values of"</span>, a, <span class="st0">"and"</span>, b, <span class="st0">"are different"</span><span class="br0">)</span>
+</pre></div>
+</div>
+<p>with the output being:</p>
+<pre>
+The absolute values of 23 and -23 are equal
+</pre>
+<p>The key feature of this program is the <code>def</code> statement. <code>def</code> (short for define) starts a function definition. <code>def</code> is followed by the name of the function <code>absolute_value</code>. Next comes a '(' followed by the parameter <code>n</code> (<code>n</code> is passed from the program into the function when the function is called). The statements after the ':' are executed when the function is used. The statements continue until either the indented statements end or a <code>return</code> is encountered. The <code>return</code> statement returns a value back to the place where the function was called. We already have encountered a function in our very first program, the <code>print</code> function. Now we can make new functions.</p>
+<p>Notice how the values of <code>a</code> and <code>b</code> are not changed. Functions can be used to repeat tasks that don't return values. Here are some examples:</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;">
+<div class="python source-python" style="font-family:monospace;">
+<pre class="de1">
+<span class="kw1">def</span> hello<span class="br0">(</span><span class="br0">)</span>:
+    <span class="kw1">print</span><span class="br0">(</span><span class="st0">"Hello"</span><span class="br0">)</span>
+ 
+<span class="kw1">def</span> area<span class="br0">(</span>width, height<span class="br0">)</span>:
+    <span class="kw1">return</span> width <span class="sy0">*</span> height
+ 
+<span class="kw1">def</span> print_welcome<span class="br0">(</span>name<span class="br0">)</span>:
+    <span class="kw1">print</span><span class="br0">(</span><span class="st0">"Welcome"</span>, name<span class="br0">)</span>
+ 
+hello<span class="br0">(</span><span class="br0">)</span>
+hello<span class="br0">(</span><span class="br0">)</span>
+ 
+print_welcome<span class="br0">(</span><span class="st0">"Fred"</span><span class="br0">)</span>
+w = 4
+h = 5
+<span class="kw1">print</span><span class="br0">(</span><span class="st0">"width ="</span>, w, <span class="st0">"height ="</span>, h, <span class="st0">"area ="</span>, area<span class="br0">(</span>w, h<span class="br0">)</span><span class="br0">)</span>
+</pre></div>
+</div>
+<p>with output being:</p>
+<pre>
+Hello
+Hello
+Welcome Fred
+width = 4 height = 5 area = 20
+</pre>
+<p>That example shows some more stuff that you can do with functions. Notice that you can use no arguments or two or more. Notice also when a function doesn't need to send back a value, a return is optional.</p>
+<h3><span class="editsection">[<a href="/w/index.php?title=Non-Programmer%27s_Tutorial_for_Python_3/Defining_Functions&amp;action=edit&amp;section=2" title="Edit section: Variables in functions">edit</a>]</span> <span class="mw-headline" id="Variables_in_functions">Variables in functions</span></h3>
+<p>When eliminating repeated code, you often have variables in the repeated code. In Python, these are dealt with in a special way. So far all variables we have seen are global variables. Functions have a special type of variable called local variables. These variables only exist while the function is running. When a local variable has the same name as another variable (such as a global variable), the local variable hides the other. Sound confusing? Well, these next examples (which are a bit contrived) should help clear things up.</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;">
+<div class="python source-python" style="font-family:monospace;">
+<pre class="de1">
+a = 4
+ 
+<span class="kw1">def</span> print_func<span class="br0">(</span><span class="br0">)</span>:
+    a = 17
+    <span class="kw1">print</span><span class="br0">(</span><span class="st0">"in print_func a = "</span>, a<span class="br0">)</span>
+ 
+print_func<span class="br0">(</span><span class="br0">)</span>
+<span class="kw1">print</span><span class="br0">(</span><span class="st0">"a = "</span>, a<span class="br0">)</span>
+</pre></div>
+</div>
+<p>When run, we will receive an output of:</p>
+<pre>
+in print_func a = 17
+a = 4
+</pre>
+<p>Variable assignments inside a function do not override global variables, they exist only inside the function. Even though <code>a</code> was assigned a new value inside the function, this newly assigned value was only relevant to <code>print_func</code>, when the function finishes running, and the <code>a</code>'s values is printed again, we see the originally assigned values.</p>
+<p>Here is another more complex example.</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;">
+<div class="python source-python" style="font-family:monospace;">
+<pre class="de1">
+a_var = 10
+b_var = 15
+e_var = 25
+ 
+<span class="kw1">def</span> a_func<span class="br0">(</span>a_var<span class="br0">)</span>:
+    <span class="kw1">print</span><span class="br0">(</span><span class="st0">"in a_func a_var = "</span>, a_var<span class="br0">)</span>
+    b_var = 100 + a_var
+    d_var = 2 <span class="sy0">*</span> a_var
+    <span class="kw1">print</span><span class="br0">(</span><span class="st0">"in a_func b_var = "</span>, b_var<span class="br0">)</span>
+    <span class="kw1">print</span><span class="br0">(</span><span class="st0">"in a_func d_var = "</span>, d_var<span class="br0">)</span>
+    <span class="kw1">print</span><span class="br0">(</span><span class="st0">"in a_func e_var = "</span>, e_var<span class="br0">)</span>
+    <span class="kw1">return</span> b_var + 10
+ 
+c_var = a_func<span class="br0">(</span>b_var<span class="br0">)</span>
+ 
+<span class="kw1">print</span><span class="br0">(</span><span class="st0">"a_var = "</span>, a_var<span class="br0">)</span>
+<span class="kw1">print</span><span class="br0">(</span><span class="st0">"b_var = "</span>, b_var<span class="br0">)</span>
+<span class="kw1">print</span><span class="br0">(</span><span class="st0">"c_var = "</span>, c_var<span class="br0">)</span>
+<span class="kw1">print</span><span class="br0">(</span><span class="st0">"d_var = "</span>, d_var<span class="br0">)</span>
+</pre></div>
+</div>
+<div style="clear:both;width:100%;color:#000000;" class="NavFrame">
+<div class="NavHead" align="center">Output</div>
+<div class="NavContent" align="left">
+<pre>
+ in a_func a_var =  15
+ in a_func b_var =  115
+ in a_func d_var =  30
+ in a_func e_var =  25
+ a_var =  10
+ b_var =  15
+ c_var =  125
+ d_var = 
+ 
+ Traceback (most recent call last):
+  File "C:\def2.py", line 19, in &lt;module&gt;
+    print("d_var = ", d_var)
+NameError: name 'd_var' is not defined
+</pre></div>
+</div>
+<p>In this example the variables <code>a_var</code>, <code>b_var</code>, and <code>d_var</code> are all local variables when they are inside the function <code>a_func</code>. After the statement <code>return b_var + 10</code> is run, they all cease to exist. The variable <code>a_var</code> is automatically a local variable since it is a parameter name. The variables <code>b_var</code> and <code>d_var</code> are local variables since they appear on the left of an equals sign in the function in the statements <code>b_var = 100 + a_var</code> and <code>d_var = 2 * a_var</code> .</p>
+<p>Inside of the function <code>a_var</code> has no value assigned to it. When the function is called with <code>c_var = a_func(b_var)</code>, 15 is assigned to <code>a_var</code> since at that point in time <code>b_var</code> is 15, making the call to the function <code>a_func(15)</code>. This ends up setting <code>a_var</code> to 15 when it is inside of <code>a_func</code>.</p>
+<p>As you can see, once the function finishes running, the local variables <code>a_var</code> and <code>b_var</code> that had hidden the global variables of the same name are gone. Then the statement <code>print("a_var = ", a_var)</code> prints the value <code>10</code> rather than the value <code>15</code> since the local variable that hid the global variable is gone.</p>
+<p>Another thing to notice is the <code>NameError</code> that happens at the end. This appears since the variable <code>d_var</code> no longer exists since <code>a_func</code> finished. All the local variables are deleted when the function exits. If you want to get something from a function, then you will have to use <code>return something</code>.</p>
+<p>One last thing to notice is that the value of <code>e_var</code> remains unchanged inside <code>a_func</code> since it is not a parameter and it never appears on the left of an equals sign inside of the function <code>a_func</code>. When a global variable is accessed inside a function it is the global variable from the outside.</p>
+<p>Functions allow local variables that exist only inside the function and can hide other variables that are outside the function.</p>
+<h3><span class="editsection">[<a href="/w/index.php?title=Non-Programmer%27s_Tutorial_for_Python_3/Defining_Functions&amp;action=edit&amp;section=3" title="Edit section: Examples">edit</a>]</span> <span class="mw-headline" id="Examples">Examples</span></h3>
+<p><b>temperature2.py</b></p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;">
+<div class="python source-python" style="font-family:monospace;">
+<pre class="de1">
+<span class="co1"># converts temperature to Fahrenheit or Celsius</span>
+ 
+<span class="kw1">def</span> print_options<span class="br0">(</span><span class="br0">)</span>:
+    <span class="kw1">print</span><span class="br0">(</span><span class="st0">"Options:"</span><span class="br0">)</span>
+    <span class="kw1">print</span><span class="br0">(</span><span class="st0">" 'p' print options"</span><span class="br0">)</span>
+    <span class="kw1">print</span><span class="br0">(</span><span class="st0">" 'c' convert from Celsius"</span><span class="br0">)</span>
+    <span class="kw1">print</span><span class="br0">(</span><span class="st0">" 'f' convert from Fahrenheit"</span><span class="br0">)</span>
+    <span class="kw1">print</span><span class="br0">(</span><span class="st0">" 'q' quit the program"</span><span class="br0">)</span>
+ 
+<span class="kw1">def</span> celsius_to_fahrenheit<span class="br0">(</span>c_temp<span class="br0">)</span>:
+    <span class="kw1">return</span> 9.0 / 5.0 <span class="sy0">*</span> c_temp + 32
+ 
+<span class="kw1">def</span> fahrenheit_to_celsius<span class="br0">(</span>f_temp<span class="br0">)</span>:
+    <span class="kw1">return</span> <span class="br0">(</span>f_temp - <span class="nu0">32.0</span><span class="br0">)</span> <span class="sy0">*</span> <span class="nu0">5.0</span> / <span class="nu0">9.0</span>
+ 
+choice = <span class="st0">"p"</span>
+<span class="kw1">while</span> choice <span class="sy0">!</span>= <span class="st0">"q"</span>:
+    <span class="kw1">if</span> choice == <span class="st0">"c"</span>:
+        temp = <span class="kw2">float</span><span class="br0">(</span><span class="kw2">input</span><span class="br0">(</span><span class="st0">"Celsius temperature: "</span><span class="br0">)</span><span class="br0">)</span>
+        <span class="kw1">print</span><span class="br0">(</span><span class="st0">"Fahrenheit:"</span>, celsius_to_fahrenheit<span class="br0">(</span>temp<span class="br0">)</span><span class="br0">)</span>
+    <span class="kw1">elif</span> choice == <span class="st0">"f"</span>:
+        temp = <span class="kw2">float</span><span class="br0">(</span><span class="kw2">input</span><span class="br0">(</span><span class="st0">"Fahrenheit temperature: "</span><span class="br0">)</span><span class="br0">)</span>
+        <span class="kw1">print</span><span class="br0">(</span><span class="st0">"Celsius:"</span>, fahrenheit_to_celsius<span class="br0">(</span>temp<span class="br0">)</span><span class="br0">)</span>
+    <span class="kw1">elif</span> choice == <span class="st0">"p"</span>: <span class="co1">#Alternatively choice != "q": so that print when anything unexpected inputed</span>
+        print_options<span class="br0">(</span><span class="br0">)</span>
+    choice = <span class="kw2">input</span><span class="br0">(</span><span class="st0">"option: "</span><span class="br0">)</span>
+</pre></div>
+</div>
+<p>Sample Run:</p>
+<pre>
+Options:
+ 'p' print options
+ 'c' convert from celsius
+ 'f' convert from fahrenheit
+ 'q' quit the program
+option: <b>c</b>
+Celsius temperature: <b>30</b> 
+Fahrenheit: 86.0
+option: <b>f</b>
+Fahrenheit temperature: <b>60</b>
+Celsius: 15.5555555556
+option: <b>q</b>
+</pre>
+<p><b>area2.py</b></p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;">
+<div class="python source-python" style="font-family:monospace;">
+<pre class="de1">
+<span class="co1"># By Amos Satterlee</span>
+<span class="kw1">print</span>
+<span class="kw1">def</span> hello<span class="br0">(</span><span class="br0">)</span>:
+    <span class="kw1">print</span><span class="br0">(</span><span class="st0">'Hello!'</span><span class="br0">)</span>
+ 
+<span class="kw1">def</span> area<span class="br0">(</span>width, height<span class="br0">)</span>:
+    <span class="kw1">return</span> width <span class="sy0">*</span> height
+ 
+<span class="kw1">def</span> print_welcome<span class="br0">(</span>name<span class="br0">)</span>:
+    <span class="kw1">print</span><span class="br0">(</span><span class="st0">'Welcome,'</span>, name<span class="br0">)</span>
+ 
+<span class="kw1">def</span> positive_input<span class="br0">(</span>prompt<span class="br0">)</span>:
+    number = <span class="kw2">float</span><span class="br0">(</span><span class="kw2">input</span><span class="br0">(</span>prompt<span class="br0">)</span><span class="br0">)</span>
+    <span class="kw1">while</span> number <span class="sy0">&lt;</span>= 0:
+        <span class="kw1">print</span><span class="br0">(</span><span class="st0">'Must be a positive number'</span><span class="br0">)</span>
+        number = <span class="kw2">float</span><span class="br0">(</span><span class="kw2">input</span><span class="br0">(</span>prompt<span class="br0">)</span><span class="br0">)</span>
+    <span class="kw1">return</span> number
+ 
+name = <span class="kw2">input</span><span class="br0">(</span><span class="st0">'Your Name: '</span><span class="br0">)</span>
+hello<span class="br0">(</span><span class="br0">)</span>
+print_welcome<span class="br0">(</span>name<span class="br0">)</span>
+<span class="kw1">print</span><span class="br0">(</span><span class="br0">)</span>
+<span class="kw1">print</span><span class="br0">(</span><span class="st0">'To find the area of a rectangle,'</span><span class="br0">)</span>
+<span class="kw1">print</span><span class="br0">(</span><span class="st0">'enter the width and height below.'</span><span class="br0">)</span>
+<span class="kw1">print</span><span class="br0">(</span><span class="br0">)</span>
+w = positive_input<span class="br0">(</span><span class="st0">'Width: '</span><span class="br0">)</span>
+h = positive_input<span class="br0">(</span><span class="st0">'Height: '</span><span class="br0">)</span>
+ 
+<span class="kw1">print</span><span class="br0">(</span><span class="st0">'Width ='</span>, w, <span class="st0">'Height ='</span>, h, <span class="st0">'so Area ='</span>, area<span class="br0">(</span>w, h<span class="br0">)</span><span class="br0">)</span>
+</pre></div>
+</div>
+<p>Sample Run:</p>
+<pre>
+Your Name: <b>Josh</b>
+Hello!
+Welcome, Josh
+
+To find the area of a rectangle,
+enter the width and height below.
+
+Width: <b>-4</b>
+Must be a positive number
+Width: <b>4</b>
+Height: <b>3</b>
+Width = 4 Height = 3 so Area = 12
+</pre>
+<h3><span class="editsection">[<a href="/w/index.php?title=Non-Programmer%27s_Tutorial_for_Python_3/Defining_Functions&amp;action=edit&amp;section=4" title="Edit section: Exercises">edit</a>]</span> <span class="mw-headline" id="Exercises">Exercises</span></h3>
+<p>Rewrite the area2.py program from the Examples above to have a separate function for the area of a square, the area of a rectangle, and the area of a circle (<code>3.14 * radius**2</code>). This program should include a menu interface.</p>
+<div style="clear:both;width:100%;color:#000000;" class="NavFrame">
+<div class="NavHead" align="center">Solution</div>
+<div class="NavContent" align="left">
+<div dir="ltr" class="mw-geshi" style="text-align: left;">
+<div class="python source-python" style="font-family:monospace;">
+<pre class="de1">
+<span class="kw1">def</span> square<span class="br0">(</span>l<span class="br0">)</span>:
+    <span class="kw1">return</span> l <span class="sy0">*</span> l
+ 
+<span class="kw1">def</span> rectangle<span class="br0">(</span>width , height<span class="br0">)</span>:
+    <span class="kw1">return</span> width <span class="sy0">*</span> height
+ 
+<span class="kw1">def</span> circle<span class="br0">(</span>radius<span class="br0">)</span>:
+    <span class="kw1">return</span> 3.14159 <span class="sy0">*</span> radius <span class="sy0">**</span> 2
+ 
+<span class="kw1">def</span> options<span class="br0">(</span><span class="br0">)</span>:
+    <span class="kw1">print</span><span class="br0">(</span><span class="br0">)</span>
+    <span class="kw1">print</span><span class="br0">(</span><span class="st0">"Options:"</span><span class="br0">)</span>
+    <span class="kw1">print</span><span class="br0">(</span><span class="st0">"s = calculate the area of a square."</span><span class="br0">)</span>
+    <span class="kw1">print</span><span class="br0">(</span><span class="st0">"c = calculate the area of a circle."</span><span class="br0">)</span>
+    <span class="kw1">print</span><span class="br0">(</span><span class="st0">"r = calculate the area of a rectangle."</span><span class="br0">)</span>
+    <span class="kw1">print</span><span class="br0">(</span><span class="st0">"q = quit"</span><span class="br0">)</span>
+    <span class="kw1">print</span><span class="br0">(</span><span class="br0">)</span>
+ 
+<span class="kw1">print</span><span class="br0">(</span><span class="st0">"This program will calculate the area of a square, circle or rectangle."</span><span class="br0">)</span>
+choice = <span class="st0">"x"</span>
+options<span class="br0">(</span><span class="br0">)</span>
+<span class="kw1">while</span> choice <span class="sy0">!</span>= <span class="st0">"q"</span>:
+    choice = <span class="kw2">input</span><span class="br0">(</span><span class="st0">"Please enter your choice: "</span><span class="br0">)</span>
+    <span class="kw1">if</span> choice == <span class="st0">"s"</span>:
+        l = <span class="kw2">float</span><span class="br0">(</span><span class="kw2">input</span><span class="br0">(</span><span class="st0">"Length of square side: "</span><span class="br0">)</span><span class="br0">)</span>
+        <span class="kw1">print</span><span class="br0">(</span><span class="st0">"The area of this square is"</span>, square<span class="br0">(</span>l<span class="br0">)</span><span class="br0">)</span>
+        options<span class="br0">(</span><span class="br0">)</span>
+    <span class="kw1">elif</span> choice == <span class="st0">"c"</span>:
+        radius = <span class="kw2">float</span><span class="br0">(</span><span class="kw2">input</span><span class="br0">(</span><span class="st0">"Radius of the circle: "</span><span class="br0">)</span><span class="br0">)</span>
+        <span class="kw1">print</span><span class="br0">(</span><span class="st0">"The area of the circle is"</span>, circle<span class="br0">(</span>radius<span class="br0">)</span><span class="br0">)</span>
+        options<span class="br0">(</span><span class="br0">)</span>
+    <span class="kw1">elif</span> choice == <span class="st0">"r"</span>:
+        width = <span class="kw2">float</span><span class="br0">(</span><span class="kw2">input</span><span class="br0">(</span><span class="st0">"Width of the rectangle: "</span><span class="br0">)</span><span class="br0">)</span>
+        height = <span class="kw2">float</span><span class="br0">(</span><span class="kw2">input</span><span class="br0">(</span><span class="st0">"Height of the rectangle: "</span><span class="br0">)</span><span class="br0">)</span>
+        <span class="kw1">print</span><span class="br0">(</span><span class="st0">"The area of the rectangle is"</span>, rectangle<span class="br0">(</span>width, height<span class="br0">)</span><span class="br0">)</span>
+        options<span class="br0">(</span><span class="br0">)</span>
+    <span class="kw1">elif</span> choice == <span class="st0">"q"</span>:
+        <span class="kw1">print</span><span class="br0">(</span><span class="st0">" "</span>,end=<span class="st0">""</span><span class="br0">)</span>
+    <span class="kw1">else</span>:
+        <span class="kw1">print</span><span class="br0">(</span><span class="st0">"Unrecognized option."</span><span class="br0">)</span>
+        options<span class="br0">(</span><span class="br0">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><br /></p>
+<div class="noprint PrettyTextBox" style="background-color:#ffffe0;padding:0.5ex">
+<table width="100%" cellspacing="0" cellpadding="2">
+<tr>
+<td width="33%" bgcolor="#FFFFE0"><a href="/wiki/Non-Programmer%27s_Tutorial_for_Python_3/Debugging" title="Non-Programmer's Tutorial for Python 3/Debugging"><b>Previous:</b> Debugging</a></td>
+<td width="33%" bgcolor="#FFFFE0" align="center"><a href="/wiki/Non-Programmer%27s_Tutorial_for_Python_3" title="Non-Programmer's Tutorial for Python 3"><b>Front Page</b></a></td>
+<td width="33%" bgcolor="#FFFFE0" align="right"><a href="/wiki/Non-Programmer%27s_Tutorial_for_Python_3/Advanced_Functions_Example" title="Non-Programmer's Tutorial for Python 3/Advanced Functions Example"><b>Next:</b> Advanced Functions Example</a></td>
+</tr>
+</table>
+</div>
+
+
+<!-- 
+NewPP limit report
+Preprocessor node count: 159/1000000
+Post-expand include size: 1621/2048000 bytes
+Template argument size: 167/2048000 bytes
+Expensive parser function count: 0/500
+-->
+
+<!-- Saved in parser cache with key enwikibooks:pcache:idhash:180493-0!1!0!default!!en!2 and timestamp 20100825064642 -->
+<div class="printfooter">
+Retrieved from "<a href="http://en.wikibooks.org/wiki/Non-Programmer%27s_Tutorial_for_Python_3/Defining_Functions">http://en.wikibooks.org/wiki/Non-Programmer%27s_Tutorial_for_Python_3/Defining_Functions</a>"</div>
+		<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks"><a href="/wiki/Special:Categories" title="Special:Categories">Categories</a>: <span dir='ltr'><a href="/wiki/Category:Non-Programmer%27s_Tutorial_for_Python_3" title="Category:Non-Programmer's Tutorial for Python 3">Non-Programmer's Tutorial for Python 3</a></span> | <span dir='ltr'><a href="/wiki/Category:Non-Programmer%27s_Tutorial_for_Python_3.0" title="Category:Non-Programmer's Tutorial for Python 3.0">Non-Programmer's Tutorial for Python 3.0</a></span></div></div>		<!-- end content -->
+		<div id='mw-data-after-content'>
+	<form method="post" action="/w/index.php?title=Special:ReaderFeedback&amp;action=submit" id="mw-feedbackform"><fieldset class="feedback_reviewform noprint"><legend><strong>What do you think of this page?</strong></legend>
+<p><i>Please take a moment to rate this page below. Your feedback is valuable and helps us improve our website.</i>
+</p><span id="mw-feedbackselects"><b><label for="wpreliability">Reliability</label>:</b>&nbsp;<select name="wpreliability" id="wpreliability" onchange="updateFeedbackForm()"><option class="rfb-rating-option-4" value="4">Excellent</option>
+<option class="rfb-rating-option-3" value="3">High</option>
+<option class="rfb-rating-option-2" value="2">Fair</option>
+<option class="rfb-rating-option-1" value="1">Low</option>
+<option class="rfb-rating-option-0" value="0">Poor</option>
+<option value="-1" selected="selected">(unsure)</option>
+</select>
+<b><label for="wpcompleteness">Completeness</label>:</b>&nbsp;<select name="wpcompleteness" id="wpcompleteness" onchange="updateFeedbackForm()"><option class="rfb-rating-option-4" value="4">Excellent</option>
+<option class="rfb-rating-option-3" value="3">High</option>
+<option class="rfb-rating-option-2" value="2">Fair</option>
+<option class="rfb-rating-option-1" value="1">Low</option>
+<option class="rfb-rating-option-0" value="0">Poor</option>
+<option value="-1" selected="selected">(unsure)</option>
+</select>
+<b><label for="wpnpov">Neutrality</label>:</b>&nbsp;<select name="wpnpov" id="wpnpov" onchange="updateFeedbackForm()"><option class="rfb-rating-option-4" value="4">Excellent</option>
+<option class="rfb-rating-option-3" value="3">High</option>
+<option class="rfb-rating-option-2" value="2">Fair</option>
+<option class="rfb-rating-option-1" value="1">Low</option>
+<option class="rfb-rating-option-0" value="0">Poor</option>
+<option value="-1" selected="selected">(unsure)</option>
+</select>
+<b><label for="wppresentation">Presentation</label>:</b>&nbsp;<select name="wppresentation" id="wppresentation" onchange="updateFeedbackForm()"><option class="rfb-rating-option-4" value="4">Excellent</option>
+<option class="rfb-rating-option-3" value="3">High</option>
+<option class="rfb-rating-option-2" value="2">Fair</option>
+<option class="rfb-rating-option-1" value="1">Low</option>
+<option class="rfb-rating-option-0" value="0">Poor</option>
+<option value="-1" selected="selected">(unsure)</option>
+</select>
+</span><input type="submit" value="Submit" id="submitfeedback" accesskey="b" title="Submit review [b]" /><input type="hidden" value="Special:ReaderFeedback" name="title" />
+<input type="hidden" value="Non-Programmer's_Tutorial_for_Python_3/Defining_Functions" name="target" />
+<input type="hidden" value="1903298" name="oldid" />
+<input type="hidden" value="b897fa0e54d2c7a41aaf474d0be6d3a7" name="validatedParams" /><input type="hidden" value="submit" name="action" />
+<input type="hidden" value="+\" name="wpEditToken" />
+<input name="commentary" size="12" value="" style="display:none;" />
+</fieldset></form>
+</div>
+		<div class="visualClear"></div>
+	</div>
+</div></div>
+<div id="column-one">
+	<div id="p-cactions" class="portlet">
+		<h5>Views</h5>
+		<div class="pBody">
+			<ul>
+				 <li id="ca-nstab-main" class="selected"><a href="/wiki/Non-Programmer%27s_Tutorial_for_Python_3/Defining_Functions" title="View the content page [c]" accesskey="c">Module</a></li>
+				 <li id="ca-talk" class="new"><a href="/w/index.php?title=Talk:Non-Programmer%27s_Tutorial_for_Python_3/Defining_Functions&amp;action=edit&amp;redlink=1" title="Discussion about the content page [t]" accesskey="t">Discussion</a></li>
+				 <li id="ca-edit"><a href="/w/index.php?title=Non-Programmer%27s_Tutorial_for_Python_3/Defining_Functions&amp;action=edit" title="You can edit this page. Please use the preview button before saving [e]" accesskey="e">Edit this page</a></li>
+				 <li id="ca-history"><a href="/w/index.php?title=Non-Programmer%27s_Tutorial_for_Python_3/Defining_Functions&amp;action=history" title="Past revisions of this page [h]" accesskey="h">History</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-personal">
+		<h5>Personal tools</h5>
+		<div class="pBody">
+			<ul>
+				<li id="pt-optin-try"><a href="http://en.wikibooks.org/w/index.php?title=Special:UsabilityInitiativeOptIn&amp;from=Non-Programmer%27s_Tutorial_for_Python_3%2FDefining_Functions" title="Try out new features" class="no-text-transform">Try Beta</a></li>
+				<li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Non-Programmer%27s_Tutorial_for_Python_3/Defining_Functions" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in / create account</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-logo">
+		<a style="background-image: url(http://upload.wikimedia.org/wikibooks/en/b/bc/Wiki.png);" href="/wiki/Main_Page" title="Visit the main page"></a>
+	</div>
+	<script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
+	<div class='generated-sidebar portlet' id='p-Navigation'>
+		<h5>Navigation</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-mainpage"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main Page</a></li>
+				<li id="n-help"><a href="/wiki/Help:Contents" title="Find help on how to use and edit Wikibooks">Help</a></li>
+				<li id="n-Browse"><a href="/wiki/Wikibooks:Card_Catalog_Office" title="Check out what Wikibooks has to offer">Browse</a></li>
+				<li id="n-Cookbook"><a href="/wiki/Cookbook:Table_of_Contents" title="Learn recipes from around the world">Cookbook</a></li>
+				<li id="n-Wikijunior"><a href="/wiki/Wikijunior" title="Books for children">Wikijunior</a></li>
+				<li id="n-Featured-books"><a href="/wiki/Wikibooks:Featured_books" title="The best of Wikibooks">Featured books</a></li>
+				<li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="The list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+				<li id="n-sitesupport"><a href="http://wikimediafoundation.org/wiki/Donate" title="Support Wikibooks">Donations</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="p-search" class="portlet">
+		<h5><label for="searchInput">Search</label></h5>
+		<div id="searchBody" class="pBody">
+			<form action="/w/index.php" id="searchform">
+				<input type='hidden' name="title" value="Special:Search"/>
+				<input id="searchInput" title="Search Wikibooks" accesskey="f" value="" name="search" />
+				<input type='submit' name="go" class="searchButton" id="searchGoButton"	value="Go" title="Go to a page with this exact name if exists" />&nbsp;
+				<input type='submit' name="fulltext" class="searchButton" id="mw-searchButton" value="Search" title="Search the pages for this text" />
+			</form>
+		</div>
+	</div>
+	<div class='generated-sidebar portlet' id='p-Community'>
+		<h5>Community</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-Reading-room"><a href="/wiki/Wikibooks:Reading_room" title="Discuss Wikibooks-related questions and concerns with others">Reading room</a></li>
+				<li id="n-portal"><a href="/wiki/Wikibooks:Community_Portal" title="Find your way around the Wikibooks community">Community portal</a></li>
+				<li id="n-currentevents"><a href="/wiki/Wikibooks:Reading_room/Bulletin_Board" title="Important community news">Bulletin Board</a></li>
+				<li id="n-maintenance"><a href="/wiki/Wikibooks:Maintenance" title="Frequent tasks that you can help with">Help out!</a></li>
+				<li id="n-Policies-and-guidelines"><a href="/wiki/Wikibooks:Policies_and_guidelines" title="Pages detailing important rules and procedures">Policies and guidelines</a></li>
+				<li id="n-contact"><a href="/wiki/Wikibooks:Contact_us" title="Alternative methods of communication">Contact us</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class='generated-sidebar portlet' id='p-coll-print_export'>
+		<h5>Print/export</h5>
+		<div class='pBody'>
+<ul id="collectionPortletList"><li id="coll-create_a_book"><a href="/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Non-Programmer%27s+Tutorial+for+Python+3%2FDefining+Functions" title="Create a book or page collection" rel="nofollow">Create a book</a></li><li id="coll-download-as-rl"><a href="/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Non-Programmer%27s+Tutorial+for+Python+3%2FDefining+Functions&amp;oldid=1903298&amp;writer=rl" title="Download a PDF version of this wiki page" rel="nofollow">Download as PDF</a></li><li id="t-print"><a href="/w/index.php?title=Non-Programmer%27s_Tutorial_for_Python_3/Defining_Functions&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li></ul>		</div>
+	</div>
+	<div class="portlet" id="p-tb">
+		<h5>Toolbox</h5>
+		<div class="pBody">
+			<ul>
+				<li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Non-Programmer%27s_Tutorial_for_Python_3/Defining_Functions" title="List of all wiki pages that link here [j]" accesskey="j">What links here</a></li>
+				<li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Non-Programmer%27s_Tutorial_for_Python_3/Defining_Functions" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+<li id="t-upload"><a href="http://commons.wikimedia.org/wiki/Commons:Upload" title="Upload files [u]" accesskey="u">Upload file</a></li>
+<li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="List of all special pages [q]" accesskey="q">Special pages</a></li>
+				<li id="t-permalink"><a href="/w/index.php?title=Non-Programmer%27s_Tutorial_for_Python_3/Defining_Functions&amp;oldid=1903298" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-rating"><a href="/w/index.php?title=Special:RatingHistory&amp;target=Non-Programmer%27s_Tutorial_for_Python_3/Defining_Functions">Page rating</a></li>			</ul>
+		</div>
+	</div>
+</div><!-- end of the left (by default at least) column -->
+<div class="visualClear"></div>
+<div id="footer">
+	<div id="f-poweredbyico"><a href="http://www.mediawiki.org/"><img src="http://bits.wikimedia.org/skins-1.5/common/images/poweredby_mediawiki_88x31.png" height="31" width="88" alt="Powered by MediaWiki" /></a></div>
+	<div id="f-copyrightico"><a href="http://wikimediafoundation.org/"><img src="/images/wikimedia-button.png" width="88" height="31" alt="Wikimedia Foundation"/></a></div>
+	<ul id="f-list">
+		<li id="lastmod"> This page was last modified on 28 July 2010, at 12:22.</li>
+		<li id="copyright">Text is available under the <a rel="license" href="http://en.wikibooks.org/wiki/Wikibooks:Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply. See <a href="http://wikimediafoundation.org/wiki/Terms_of_Use">Terms of Use</a> for details.</li>
+		<li id="privacy"><a href="http://wikimediafoundation.org/wiki/Privacy_policy" title="wikimedia:Privacy policy">Privacy policy</a></li>
+		<li id="about"><a href="/wiki/Wikibooks:About" title="Wikibooks:About">About Wikibooks</a></li>
+		<li id="disclaimer"><a href="/wiki/Wikibooks:General_disclaimer" title="Wikibooks:General disclaimer">Disclaimers</a></li>
+	</ul>
+</div>
+</div>
+
+<script type="text/javascript">if (window.runOnloadHook) runOnloadHook();</script>
+<!-- Served by srv151 in 0.091 secs. --></body></html>

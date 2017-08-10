@@ -1,0 +1,50 @@
+#include <stdio.h>
+
+//#define SOMETHING = 100
+
+//fct prototypes go here
+
+int main ( int argc, char *argv[] ){
+  
+  struct data1 *ptr {
+    int a;
+    float b;
+    float c;
+  } info;
+  
+  info.a = 100;
+  ptr = &info;
+  
+  ptr->b = 5.5;
+  (*ptr).b = 5.5;
+  
+  //linked list skeleton, would need to be malloc'ed:
+  struct data2 {
+    char string[21];
+    struct data2 *ptr;
+  };
+  
+  //five strings
+  typedef struct {
+    char addr1[31];
+    char addr2[31];
+    char city[11];
+    char state[3];
+    char zip[11];
+  } fiveaddr;
+  
+  fiveaddr myaddress = {"53 Morrow Hs";
+                        "The Coast";
+                        "Dublin";
+                        "Ireland";
+                        "013";
+                        }
+                        
+                        
+                        
+  
+  
+  
+  return 0;
+  //exit(EXIT_SUCCESS);
+}

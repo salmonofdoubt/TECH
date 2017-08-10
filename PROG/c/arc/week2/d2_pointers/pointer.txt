@@ -1,0 +1,83 @@
+
+declaration
+--------------
+...
+int x;
+int *p_x;
+
+initialization
+--------------
+x = 10;
+*p_x = &x;
+
+use value
+--------------
+y = x - z;
+or
+y = *p_x -z;
+
+use address
+--------------
+&x
+or 
+p_x
+
+=eg.====================================
+char *message = "Great Caesar's Ghost!";
+char message[] = "Great Caesar's Ghost!";
+
+The two notations *message and message[] are equivalent. They both mean "a pointer to." 
+========================================
+
+
+Six Allowable Operations
+========================
+
+ ---------------
+| 1. Assignment |
+ ---------------
+You can assign a value to a pointer. The value should be an address, obtained with the address of operator (&):
+
+int x = 10;
+
+int *p_x;
+p_x = &x; 
+
+Or, from a pointer constant (array name):
+
+int *p_int_arr;
+	...
+p_int_arr = int_arr; //points to the location of the 0th e.
+
+// But then, an array name without brackets is always pointer to the array's first element. 
+
+ ----------------
+| 2. Indirection |
+ ----------------
+The indirection operator (*) (also known as the dereferencing operator) gives the value stored in the pointed-to location. This operator is also used when declaring the pointer.
+
+y = *p_x -z;
+
+ ---------------
+| 3. address of |
+ ---------------
+You can use the address of operator to find the address of a pointer, so you can have pointers to pointers. This is an advanced topic and is covered on Day 15, "More on Pointers."
+
+&x or p_x
+
+ -----------------	
+| 4. Incrementing |
+ -----------------
+ C "knows" the data type that the pointer points to (from the pointer declaration), and increases the address stored in the pointer by the size of the data type.
+
+... *p_int_arr++ ...
+
+ -----------------
+| 5. Differencing |
+ ----------------- 
+If you have two pointers to different elements of the same array, you can subtract them and find out how far apart they are.
+
+ ----------------	
+| 6. Comparisons |
+ ----------------
+Comparisons use the relational operators ==, !=, >, <, >=, and <=. They are valid only with two pointers that point to the same array.

@@ -1,0 +1,95 @@
+
+##################################
+   Misc Notes Online Course
+##################################
+
+############ PYTHON ###############
+### check code      : cmd + i   ###
+### run code        : cmd enter ###
+### set working dir : Fn F5     ###
+###################################
+
+############### R ####################
+### check code      : Fn F1        ###
+### run code        : cmd enter    ###
+### set working dir : files 'more' ###
+######################################
+
+
+###########################################
+###  PART 9  Dimensionality Reduction   ###
+###########################################
+
+
+############################
+###    INTRO & SUMMARY   ###
+############################
+
+Remember in Part 3 - Classification, we worked with datasets composed of only two independent variables (e.g. age, salary)
+We did for two reasons:
+Because we needed two dimensions to visualize better how Machine Learning models worked (by plotting the prediction regions and the prediction boundary for each model).
+Because whatever is the original number of our independent variables, we can often end up with two independent variables by applying an appropriate Dimensionality Reduction technique.
+
+There are two types of Dimensionality Reduction techniques:
+
+Feature Selection
+Feature Extraction
+
+Feature Selection techniques are Backward Elimination, Forward Selection, Bidirectional Elimination, Score Comparison and more. We covered these techniques in Part 2 - Regression.
+
+In this part we will cover the following Feature Extraction techniques:
+
+Principal Component Analysis (PCA)
+Linear Discriminant Analysis (LDA)
+Kernel PCA
+Quadratic Discriminant Analysis (QDA)
+
+
+#############
+###  PCA  ###
+#############
+
+* From independent vars (features) in dataset, PCA extracts independent vars
+  that explain most the variance of the dataset, regardless of independent var.
+
+* Principal components
+
+* Fact that DV is not considered, makes this an unsupervised strategy. 
+
+* So things can be visualised
+
+* But how???
+
+3 Customer wine segments 
+PCA_Result.png
+
+cm of 3x3 3 classes and 3 predicted classes
+[[14  0  0]
+ [ 0 16  0]
+ [ 0  0  6]]
+
+
+#############
+###  LDA  ###
+#############
+
+* From the n independent vars of dataset, extract p<n new independent vars (principal components)
+that seperate the most the classes of the DVs.
+
+* Fact that DV is considered, makes this an supervised strategy. 
+
+
+####################
+###  KERNEL_PCA  ###
+####################
+
+* Use this when PCA does not work well and you need non-linear seperation of classes
+* remember non-linear problem is where classes do not seperate linearly
+* KERNEL-PCA: make a non-linear problem linear
+
+
+
+
+
+
+

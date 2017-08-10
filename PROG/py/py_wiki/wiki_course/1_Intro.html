@@ -1,0 +1,482 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr">
+<head>
+<title>Non-Programmer's Tutorial for Python 3/Intro - Wikibooks, collection of open-content textbooks</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta name="generator" content="MediaWiki 1.16wmf4" />
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="/w/index.php?title=Non-Programmer%27s_Tutorial_for_Python_3/Intro&amp;action=edit" />
+<link rel="edit" title="Edit this page" href="/w/index.php?title=Non-Programmer%27s_Tutorial_for_Python_3/Intro&amp;action=edit" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikibooks (en)" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/" />
+<link rel="alternate" type="application/atom+xml" title="Wikibooks Atom feed" href="/w/index.php?title=Special:RecentChanges&amp;feed=atom" />
+<link rel="stylesheet" href="http://bits.wikimedia.org/skins-1.5/common/shared.css?283p" type="text/css" media="screen" />
+<link rel="stylesheet" href="http://bits.wikimedia.org/skins-1.5/common/commonPrint.css?283p" type="text/css" media="print" />
+<link rel="stylesheet" href="http://bits.wikimedia.org/skins-1.5/monobook/main.css?283p" type="text/css" media="screen" />
+<link rel="stylesheet" href="http://bits.wikimedia.org/skins-1.5/chick/main.css?283p" type="text/css" media="handheld" />
+<!--[if lt IE 5.5000]><link rel="stylesheet" href="http://bits.wikimedia.org/skins-1.5/monobook/IE50Fixes.css?283p" type="text/css" media="screen" /><![endif]-->
+<!--[if IE 5.5000]><link rel="stylesheet" href="http://bits.wikimedia.org/skins-1.5/monobook/IE55Fixes.css?283p" type="text/css" media="screen" /><![endif]-->
+<!--[if IE 6]><link rel="stylesheet" href="http://bits.wikimedia.org/skins-1.5/monobook/IE60Fixes.css?283p" type="text/css" media="screen" /><![endif]-->
+<!--[if IE 7]><link rel="stylesheet" href="http://bits.wikimedia.org/skins-1.5/monobook/IE70Fixes.css?283p" type="text/css" media="screen" /><![endif]-->
+<link rel="stylesheet" href="/w/extensions/FlaggedRevs/client/flaggedrevs.css?76" type="text/css" media="all" />
+<link rel="stylesheet" href="/w/extensions/ReaderFeedback/readerfeedback.css?1" type="text/css" media="all" />
+<link rel="stylesheet" href="/w/index.php?title=MediaWiki:Common.css&amp;usemsgcache=yes&amp;ctype=text%2Fcss&amp;smaxage=2678400&amp;action=raw&amp;maxage=2678400" type="text/css" media="all" />
+<link rel="stylesheet" href="/w/index.php?title=MediaWiki:Print.css&amp;usemsgcache=yes&amp;ctype=text%2Fcss&amp;smaxage=2678400&amp;action=raw&amp;maxage=2678400" type="text/css" media="print" />
+<link rel="stylesheet" href="/w/index.php?title=MediaWiki:Handheld.css&amp;usemsgcache=yes&amp;ctype=text%2Fcss&amp;smaxage=2678400&amp;action=raw&amp;maxage=2678400" type="text/css" media="handheld" />
+<link rel="stylesheet" href="/w/index.php?title=MediaWiki:Monobook.css&amp;usemsgcache=yes&amp;ctype=text%2Fcss&amp;smaxage=2678400&amp;action=raw&amp;maxage=2678400" type="text/css" media="all" />
+<link rel="stylesheet" href="/w/index.php?title=-&amp;action=raw&amp;maxage=2678400&amp;gen=css" type="text/css" media="all" />
+<script type="text/javascript">
+var skin="monobook",
+stylepath="http://bits.wikimedia.org/skins-1.5",
+wgUrlProtocols="http\\:\\/\\/|https\\:\\/\\/|ftp\\:\\/\\/|irc\\:\\/\\/|gopher\\:\\/\\/|telnet\\:\\/\\/|nntp\\:\\/\\/|worldwind\\:\\/\\/|mailto\\:|news\\:|svn\\:\\/\\/",
+wgArticlePath="/wiki/$1",
+wgScriptPath="/w",
+wgScriptExtension=".php",
+wgScript="/w/index.php",
+wgVariantArticlePath=false,
+wgActionPaths={},
+wgServer="http://en.wikibooks.org",
+wgCanonicalNamespace="",
+wgCanonicalSpecialPageName=false,
+wgNamespaceNumber=0,
+wgPageName="Non-Programmer\'s_Tutorial_for_Python_3/Intro",
+wgTitle="Non-Programmer\'s Tutorial for Python 3/Intro",
+wgAction="view",
+wgArticleId=179701,
+wgIsArticle=true,
+wgUserName=null,
+wgUserGroups=null,
+wgUserLanguage="en",
+wgContentLanguage="en",
+wgBreakFrames=false,
+wgCurRevisionId=1870561,
+wgVersion="1.16wmf4",
+wgEnableAPI=true,
+wgEnableWriteAPI=true,
+wgSeparatorTransformTable=["", ""],
+wgDigitTransformTable=["", ""],
+wgMainPageTitle="Main Page",
+wgFormattedNamespaces={"-2": "Media", "-1": "Special", "0": "", "1": "Talk", "2": "User", "3": "User talk", "4": "Wikibooks", "5": "Wikibooks talk", "6": "File", "7": "File talk", "8": "MediaWiki", "9": "MediaWiki talk", "10": "Template", "11": "Template talk", "12": "Help", "13": "Help talk", "14": "Category", "15": "Category talk", "102": "Cookbook", "103": "Cookbook talk", "108": "Transwiki", "109": "Transwiki talk", "110": "Wikijunior", "111": "Wikijunior talk", "112": "Subject", "113": "Subject talk"},
+wgNamespaceIds={"media": -2, "special": -1, "": 0, "talk": 1, "user": 2, "user_talk": 3, "wikibooks": 4, "wikibooks_talk": 5, "file": 6, "file_talk": 7, "mediawiki": 8, "mediawiki_talk": 9, "template": 10, "template_talk": 11, "help": 12, "help_talk": 13, "category": 14, "category_talk": 15, "cookbook": 102, "cookbook_talk": 103, "transwiki": 108, "transwiki_talk": 109, "wikijunior": 110, "wikijunior_talk": 111, "subject": 112, "subject_talk": 113, "wb": 4, "wj": 110, "cat": 14, "cook": 102, "sub": 112, "image": 6, "image_talk": 7},
+wgSiteName="Wikibooks",
+wgCategories=["Non-Programmer\'s Tutorial for Python 3"],
+wgMWSuggestTemplate="http://en.wikibooks.org/w/api.php?action=opensearch\x26search={searchTerms}\x26namespace={namespaces}\x26suggest",
+wgDBname="enwikibooks",
+wgSearchNamespaces=[0, 4, 112],
+wgMWSuggestMessages=["with suggestions", "no suggestions"],
+wgRestrictionEdit=[],
+wgRestrictionMove=[],
+wgFlaggedRevsParams={"tags": {"value": {"levels": 3, "quality": 2, "pristine": 3}}},
+wgStableRevisionId=1870561,
+wgFeedbackParams={"tags": {"reliability": 3, "completeness": 2, "npov": 2, "presentation": 1}},
+wgAjaxFeedback={"sendingMsg": "Submitting …", "sentMsg": "Thank you!"},
+wgNotice="",
+wgNoticeLocal="";
+</script><script src="http://bits.wikimedia.org/skins-1.5/common/wikibits.js?283p" type="text/javascript"></script>
+<script src="http://bits.wikimedia.org/skins-1.5/common/ajax.js?283p" type="text/javascript"></script>
+<script src="http://bits.wikimedia.org/skins-1.5/common/mwsuggest.js?283p" type="text/javascript"></script>
+<script type="text/javascript" src="http://upload.wikimedia.org/centralnotice/wikibooks/en/centralnotice.js?283p"></script>
+
+<script src="/w/index.php?title=-&amp;action=raw&amp;gen=js&amp;useskin=monobook&amp;283p" type="text/javascript"></script>
+
+<style type="text/css">/*<![CDATA[*/
+.source-python {line-height: normal;}
+.source-python li, .source-python pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for python
+ * CSS class: source-python, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.python.source-python .de1, .python.source-python .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;}
+.python.source-python  {font-family:monospace;}
+.python.source-python .imp {font-weight: bold; color: red;}
+.python.source-python li, .python.source-python .li1 {font-weight: normal; vertical-align:top;}
+.python.source-python .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.python.source-python .li2 {font-weight: bold; vertical-align:top;}
+.python.source-python .kw1 {color: #ff7700;font-weight:bold;}
+.python.source-python .kw2 {color: #008000;}
+.python.source-python .kw3 {color: #dc143c;}
+.python.source-python .kw4 {color: #0000cd;}
+.python.source-python .co1 {color: #808080; font-style: italic;}
+.python.source-python .coMULTI {color: #808080; font-style: italic;}
+.python.source-python .es0 {color: #000099; font-weight: bold;}
+.python.source-python .br0 {color: black;}
+.python.source-python .sy0 {color: #66cc66;}
+.python.source-python .st0 {color: #483d8b;}
+.python.source-python .nu0 {color: #ff4500;}
+.python.source-python .me1 {color: black;}
+.python.source-python .ln-xtra, .python.source-python li.ln-xtra, .python.source-python div.ln-xtra {background-color: #ffc;}
+.python.source-python span.xtra { display:block; }
+
+/*]]>*/
+</style>
+<style type="text/css">/*<![CDATA[*/
+@import "/w/index.php?title=MediaWiki:Geshi.css&usemsgcache=yes&action=raw&ctype=text/css&smaxage=2678400";
+/*]]>*/
+</style><script type="text/javascript" src="/w/extensions/FlaggedRevs/client/flaggedrevs.js?76"></script>
+<script type="text/javascript">FlaggedRevs.messages = {"diffToggleShow": "show those changes", "diffToggleHide": "hide those changes", "logToggleShow": "show stability log", "logToggleHide": "hide stability log", "logDetailsShow": "show details", "logDetailsHide": "hide details", "toggleShow": "(+)", "toggleHide": "(-)"};</script>
+<script type="text/javascript" src="/w/extensions/ReaderFeedback/readerfeedback.js?1"></script>
+</head>
+<body class="mediawiki ltr ns-0 ns-subject page-Non-Programmer_s_Tutorial_for_Python_3_Intro skin-monobook">
+<div id="globalWrapper">
+<div id="column-content"><div id="content">
+	<a id="top"></a>
+	<div id="siteNotice"><script type='text/javascript'>if (wgNotice != '') document.writeln(wgNotice);</script></div>
+	<h1 id="firstHeading" class="firstHeading">Non-Programmer's Tutorial for Python 3/Intro</h1>
+	<div id="bodyContent">
+		<div id="siteSub">From Wikibooks, the open-content textbooks collection</div>
+		<div id="contentSub"><span class="subpages">&lt; <a href="/wiki/Non-Programmer%27s_Tutorial_for_Python_3" title="Non-Programmer's Tutorial for Python 3">Non-Programmer's Tutorial for Python 3</a></span></div>
+		<div id="jump-to-nav">Jump to: <a href="#column-one">navigation</a>, <a href="#searchInput">search</a></div>
+		<!-- start content -->
+<table id="toc" class="toc">
+<tr>
+<td>
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#First_things_first"><span class="tocnumber">1</span> <span class="toctext">First things first</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Installing_Python"><span class="tocnumber">2</span> <span class="toctext">Installing Python</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#Linux.2C_BSD_and_Unix_users"><span class="tocnumber">2.1</span> <span class="toctext">Linux, BSD and Unix users</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Mac_users"><span class="tocnumber">2.2</span> <span class="toctext">Mac users</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Windows_users"><span class="tocnumber">2.3</span> <span class="toctext">Windows users</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-6"><a href="#Interactive_Mode"><span class="tocnumber">3</span> <span class="toctext">Interactive Mode</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#Creating_and_Running_Programs"><span class="tocnumber">4</span> <span class="toctext">Creating and Running Programs</span></a>
+<ul>
+<li class="toclevel-2 tocsection-8"><a href="#Program_file_names"><span class="tocnumber">4.1</span> <span class="toctext">Program file names</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-9"><a href="#Using_Python_from_the_command_line"><span class="tocnumber">5</span> <span class="toctext">Using Python from the command line</span></a>
+<ul>
+<li class="toclevel-2 tocsection-10"><a href="#Running_Python_Programs_in_Unix"><span class="tocnumber">5.1</span> <span class="toctext">Running Python Programs in Unix</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-11"><a href="#Where_to_get_help"><span class="tocnumber">6</span> <span class="toctext">Where to get help</span></a>
+<ul>
+<li class="toclevel-2 tocsection-12"><a href="#Python_documentation"><span class="tocnumber">6.1</span> <span class="toctext">Python documentation</span></a></li>
+<li class="toclevel-2 tocsection-13"><a href="#Python_user_community"><span class="tocnumber">6.2</span> <span class="toctext">Python user community</span></a></li>
+</ul>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+<script type="text/javascript">
+//<![CDATA[
+if (window.showTocToggle) { var tocShowText = "show"; var tocHideText = "hide"; showTocToggle(); } 
+//]]>
+</script>
+<h3><span class="editsection">[<a href="/w/index.php?title=Non-Programmer%27s_Tutorial_for_Python_3/Intro&amp;action=edit&amp;section=1" title="Edit section: First things first">edit</a>]</span> <span class="mw-headline" id="First_things_first">First things first</span></h3>
+<p>So, you've never programmed before. As we go through this tutorial, I will attempt to teach you how to program. There really is only one way to learn to program. <b>You</b> must read <i>code</i> and write <i>code</i> (as computer programs are often called). I'm going to show you lots of code. You should type in code that I show you to see what happens. Play around with it and make changes. The worst that can happen is that it won't work. When I type in code it will be formatted like this:</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;">
+<div class="python source-python" style="font-family:monospace;">
+<pre class="de1">
+<span class="co1">##Python is easy to learn</span>
+<span class="kw1">print</span><span class="br0">(</span><span class="st0">"Hello, World!"</span><span class="br0">)</span>
+</pre></div>
+</div>
+<p>That's so it is easy to distinguish from the other text. If you're reading this on the web, you'll notice the code is in color -- that's just to make it stand out, and to make the different parts of the code stand out from each other. The code you enter will probably not be colored, or the colors may be different, but it won't affect the code as long as you enter it the same way as it's printed here.</p>
+<p>If the computer prints something out it will be formatted like this:</p>
+<pre>
+Hello, World!
+</pre>
+<p>(Note that printed text goes to your screen, and does not involve paper. Before computers had screens, the output of computer programs would be printed on paper.)</p>
+<p>Note that this is a python 3.0 tutorial, which means that most of the example will not work in python 2.6 and before. As well, since Python 3.0 was only released on 03 Dec 2008, many of the extra libraries have not yet been converted. You may want to consider learning from the <a href="/wiki/Non-Programmer%27s_Tutorial_for_Python_2.6" title="Non-Programmer's Tutorial for Python 2.6">Non-Programmer's Tutorial for Python 2.6</a>. However, the differences between versions are not particularly large, so if you learn one, you should be able to read programs written for the other without much difficultly.</p>
+<p>There will often be a mixture of the text you type (which is shown in <b>bold</b>) and the text the program prints to the screen, which would look like this:</p>
+<pre>
+Halt!
+Who Goes there? <b>Josh</b>
+You may pass, Josh
+</pre>
+<p>(Some of the tutorial has not been converted to this format. Since this is a wiki, you can convert it when you find it.)</p>
+<p>I will also introduce you to the terminology of programming - for example, that programming is often referred to as <i>coding</i> or <i>hacking</i>. This will not only help you understand what programmers are talking about, but also help the learning process.</p>
+<p>Now, on to more important things. In order to program in Python you need the Python 3.0 software. If you don't already have the Python software go to <a href="http://www.python.org/download/" class="external free" rel="nofollow">http://www.python.org/download/</a> and get the proper version for your platform. Download it, read the instructions and get it installed.</p>
+<h3><span class="editsection">[<a href="/w/index.php?title=Non-Programmer%27s_Tutorial_for_Python_3/Intro&amp;action=edit&amp;section=2" title="Edit section: Installing Python">edit</a>]</span> <span class="mw-headline" id="Installing_Python">Installing Python</span></h3>
+<p>For Python programming you need a working Python installation and a text editor. Python comes with its own editor <i>IDLE</i>, which is quite nice and totally sufficient for the beginning. As you get more into programming, you will probably switch to some other editor like <i>emacs</i>, <i>vi</i> or another.</p>
+<p>The Python download page is <a href="http://www.python.org/download" class="external free" rel="nofollow">http://www.python.org/download</a>. The most recent version is 3.1, python 2.6 and older will not work with this tutorial. There are various different installation files for different computer platforms available on the download site. Here are some specific instructions for the most common operating systems:</p>
+<h4><span class="editsection">[<a href="/w/index.php?title=Non-Programmer%27s_Tutorial_for_Python_3/Intro&amp;action=edit&amp;section=3" title="Edit section: Linux, BSD and Unix users">edit</a>]</span> <span class="mw-headline" id="Linux.2C_BSD_and_Unix_users">Linux, BSD and Unix users</span></h4>
+<p>You are probably lucky and Python is already installed on your machine. To test it type <tt>python3.0</tt> on a command line. If you see something like that in the following section, you are set.</p>
+<p>If you have to install Python, first try to use the operating system's package manager or go to the repository where your packages are available and get Python 3. Python 3.0 was released in Dec 2008, so not all the distributions have Python 3 available yet so you may have to compile Python from scratch after downloading the source code. Ubuntu and Fedora do have Python 3 packages but they are not yet the default, so they need to be installed specially.</p>
+<p>Roughly, here are the steps to compile Python in unix (If these totally don't make sense, you may want to read another introduction to Unix such as <a href="http://tldp.org/LDP/intro-linux/html/index.html" class="external text" rel="nofollow">Introduction to Linux</a>):</p>
+<ul>
+<li>Download the .tgz file (Use your web browser to get the gzipped tar file from <a href="http://www.python.org/download/releases/3.0/" class="external free" rel="nofollow">http://www.python.org/download/releases/3.0/</a> )</li>
+<li>Uncompress the tar file (put in the correct path to where you downloaded it):</li>
+</ul>
+<pre>
+$ tar -xvzf ~/Download/Python-3.0.tgz
+<i>... list of files as they are uncompressed </i>
+</pre>
+<ul>
+<li>Switch to the directory and tell the computer to compile and install the program</li>
+</ul>
+<pre>
+$ cd Python-3.0/
+$ ./configure --prefix=$HOME/python3_install 
+<i> ... lots of output.  Watch for error messages here ... </i>
+$ make
+<i> ... even more output.  Hopefully no error messages ... </i>
+$ make install
+</pre>
+<ul>
+<li>Add python 3.0 to your path. You can test it first by specifying the full path. You should add $HOME/python3_install/bin to your PATH bash variable.</li>
+</ul>
+<pre>
+$ ~/python3_install/bin/python3.0
+<i>Python 3.0 (r30:67503, Dec 29 2008, 21:31:07) </i>
+[GCC 4.3.2 20081105 (Red Hat 4.3.2-7)] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+&gt;&gt;&gt; 
+</pre>
+<p>The above commands will install python to your home directory, which is probably what you want, but if you skip the <tt>--prefix</tt>, it will install it to <tt>/usr/local</tt> If you want to use IDLE, you need to make sure that tk and tcl and their development files are installed on the system. You will get a warning during the make phase if these are not available.</p>
+<h4><span class="editsection">[<a href="/w/index.php?title=Non-Programmer%27s_Tutorial_for_Python_3/Intro&amp;action=edit&amp;section=4" title="Edit section: Mac users">edit</a>]</span> <span class="mw-headline" id="Mac_users">Mac users</span></h4>
+<p>Starting from Mac OS X (Tiger), Python ships by default with the operating system, but you will need to update to python 3.0 as in the Unix instructions until OS X starts including python 3.0. (check the version by starting <tt>python3.0</tt> in a command line terminal). Also IDLE (the Python editor) might be missing in the standard installation. If you want to (re-)install Python, have a look at the <a href="http://www.python.org/download/mac/" class="external text" rel="nofollow">Mac page on the Python download site</a>.</p>
+<h4><span class="editsection">[<a href="/w/index.php?title=Non-Programmer%27s_Tutorial_for_Python_3/Intro&amp;action=edit&amp;section=5" title="Edit section: Windows users">edit</a>]</span> <span class="mw-headline" id="Windows_users">Windows users</span></h4>
+<p>Download the appropriate Windows installer (the normal one, if you do not have a 64-bit AMD or Intel chip). Start the installer by double-clicking it and follow the procedure.</p>
+<h3><span class="editsection">[<a href="/w/index.php?title=Non-Programmer%27s_Tutorial_for_Python_3/Intro&amp;action=edit&amp;section=6" title="Edit section: Interactive Mode">edit</a>]</span> <span class="mw-headline" id="Interactive_Mode">Interactive Mode</span></h3>
+<p>Go into IDLE (also called the Python GUI). You should see a window that has some text like this:</p>
+<pre>
+Python 3.0 (r30:67503, Dec 29 2008, 21:31:07) 
+[GCC 4.3.2 20081105 (Red Hat 4.3.2-7)] on linux2
+Type "copyright", "credits" or "license()" for more information.
+
+    ****************************************************************
+    Personal firewall software may warn about the connection IDLE
+    makes to its subprocess using this computer's internal loopback
+    interface.  This connection is not visible on any external
+    interface and no data is sent to or received from the Internet.
+    ****************************************************************
+    
+IDLE 3.0      
+&gt;&gt;&gt; 
+</pre>
+<p>The <code>&gt;&gt;&gt;</code> is Python's way of telling you that you are in interactive mode. In interactive mode what you type is immediately run. Try typing <code>1+1</code> in. Python will respond with <code>2</code>. Interactive mode allows you to test out and see what Python will do. If you ever feel you need to play with new Python statements, go into interactive mode and try them out.</p>
+<h3><span class="editsection">[<a href="/w/index.php?title=Non-Programmer%27s_Tutorial_for_Python_3/Intro&amp;action=edit&amp;section=7" title="Edit section: Creating and Running Programs">edit</a>]</span> <span class="mw-headline" id="Creating_and_Running_Programs">Creating and Running Programs</span></h3>
+<p>Go into IDLE if you are not already. In the menu at the top, select <code>File</code> then <code>New Window</code>. In the new window that appears, type the following:</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;">
+<div class="python source-python" style="font-family:monospace;">
+<pre class="de1">
+<span class="kw1">print</span><span class="br0">(</span><span class="st0">"Hello, World!"</span><span class="br0">)</span>
+</pre></div>
+</div>
+<p>Now save the program: select <code>File</code> from the menu, then <code>Save</code>. Save it as "<code>hello.py</code>" (you can save it in any folder you want). Now that it is saved it can be run.</p>
+<p>Next run the program by going to <code>Run</code> then <code>Run Module</code> (or if you have a older version of IDLE use <code>Edit</code> then <code>Run script</code>). This will output <code>Hello, World!</code> on the <code>*Python Shell*</code> window.</p>
+<p>For a more in-depth introduction to IDLE, a longer tutorial with screenshots can be found at <a href="http://hkn.eecs.berkeley.edu/~dyoo/python/idle_intro/index.html" class="external free" rel="nofollow">http://hkn.eecs.berkeley.edu/~dyoo/python/idle_intro/index.html</a></p>
+<h4><span class="editsection">[<a href="/w/index.php?title=Non-Programmer%27s_Tutorial_for_Python_3/Intro&amp;action=edit&amp;section=8" title="Edit section: Program file names">edit</a>]</span> <span class="mw-headline" id="Program_file_names">Program file names</span></h4>
+<p>It is very useful to stick to some rules regarding the file names of Python programs. Otherwise some things <i>might</i> go wrong unexpectedly. These don't matter as much for programs, but you can have weird problems if you don't follow them for module names (modules will be discussed later).</p>
+<ol>
+<li>Always save the program with the extension <tt>.py</tt>. Do not put another dot anywhere else in the file name.</li>
+<li>Only use standard characters for file names: letters, numbers, dash (<tt>-</tt>) and underscore (<tt>_</tt>).</li>
+<li>White space (" ") should not be used at all (use e.g. underscores instead).</li>
+<li>Do not use anything other than a letter (particularly no numbers!) at the beginning of a file name.</li>
+<li>Do not use "non-english" characters (such as <tt>ä</tt>, <tt>ö</tt>, <tt>ü</tt>, <tt>å</tt> or <tt>ß</tt>) in your file names—or, even better, do not use them at all when programming.</li>
+</ol>
+<h3><span class="editsection">[<a href="/w/index.php?title=Non-Programmer%27s_Tutorial_for_Python_3/Intro&amp;action=edit&amp;section=9" title="Edit section: Using Python from the command line">edit</a>]</span> <span class="mw-headline" id="Using_Python_from_the_command_line">Using Python from the command line</span></h3>
+<p>If you don't want to use Python from the command line, you don't have to, just use IDLE. To get into interactive mode just type <code>python3.0</code> without any arguments. To run a program, create it with a text editor (Emacs has a good Python mode) and then run it with <code>python3.0 program_name</code>.</p>
+<p>Additionally, to use Python within Vim, you may want to visit <a href="http://www.ibiblio.org/obp/pybiblio/tips/elkner/vim4python.php" class="external text" rel="nofollow">Using vim as a Python IDE</a></p>
+<h4><span class="editsection">[<a href="/w/index.php?title=Non-Programmer%27s_Tutorial_for_Python_3/Intro&amp;action=edit&amp;section=10" title="Edit section: Running Python Programs in Unix">edit</a>]</span> <span class="mw-headline" id="Running_Python_Programs_in_Unix">Running Python Programs in Unix</span></h4>
+<p>If you are using Unix (such as Linux, Mac OSX, or BSD), if you make the program executable with <code>chmod</code>, and have as the first line:</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;">
+<div class="python source-python" style="font-family:monospace;">
+<pre class="de1">
+<span class="co1">#!/usr/bin/env python3.0</span>
+</pre></div>
+</div>
+<p>you can run the python program with <code>./hello.py</code> like any other command.</p>
+<h3><span class="editsection">[<a href="/w/index.php?title=Non-Programmer%27s_Tutorial_for_Python_3/Intro&amp;action=edit&amp;section=11" title="Edit section: Where to get help">edit</a>]</span> <span class="mw-headline" id="Where_to_get_help">Where to get help</span></h3>
+<p>At some point in your Python career you will probably get stuck and have no clue about how to solve the problem you are supposed to work on. This tutorial only covers the basics of Python programming, but there is a lot of further information available.</p>
+<h4><span class="editsection">[<a href="/w/index.php?title=Non-Programmer%27s_Tutorial_for_Python_3/Intro&amp;action=edit&amp;section=12" title="Edit section: Python documentation">edit</a>]</span> <span class="mw-headline" id="Python_documentation">Python documentation</span></h4>
+<p>First of all, Python is very well documented. There might even be copies of these documents on your computer, which came with your Python installation:</p>
+<ul>
+<li>The official <a href="http://www.python.org/doc/3.0/tutorial/index.html" class="external text" rel="nofollow">Python 3.0 Tutorial</a> by Guido van Rossum is often a good starting point for general questions.</li>
+<li>For questions about standard modules (you will learn what this is later), the <a href="http://www.python.org/doc/3.0/library/index.html" class="external text" rel="nofollow">Python 3.0 Library Reference</a> is the place to look at.</li>
+<li>If you really want to get to know something about the details of the language, the <a href="http://www.python.org/doc/3.0/reference/index.html" class="external text" rel="nofollow">Python 3.0 Reference Manual</a> is comprehensive but quite complex for beginners.</li>
+</ul>
+<h4><span class="editsection">[<a href="/w/index.php?title=Non-Programmer%27s_Tutorial_for_Python_3/Intro&amp;action=edit&amp;section=13" title="Edit section: Python user community">edit</a>]</span> <span class="mw-headline" id="Python_user_community">Python user community</span></h4>
+<p>There are a lot of other Python users out there, and usually they are nice and willing to help you. This very active user community is organised mostly through mailing lists and a newsgroup:</p>
+<ul>
+<li>The <a href="http://mail.python.org/mailman/listinfo/tutor" class="external text" rel="nofollow">tutor mailing list</a> is for folks who want to ask questions regarding how to learn computer programming with the Python language.</li>
+<li>The <a href="http://www.python.org/community/lists/#python-help" class="external text" rel="nofollow">python-help mailing list</a> is python.org's help desk. You can ask a group of knowledgeable volunteers questions about all your Python problems.</li>
+<li>The Python newsgroup <a href="news:comp.lang.python" class="external text" rel="nofollow">comp.lang.python</a> (<a href="http://groups.google.com/group/comp.lang.python/" class="external text" rel="nofollow">Google groups archive</a>) is the place for general Python discussions, questions and the central meeting point of the community.</li>
+</ul>
+<p>In order not to reinvent the wheel and discuss the same questions again and again, people will appreciate very much if you <i>do a web search for a solution to your problem before contacting these lists!</i></p>
+<div class="noprint PrettyTextBox" style="background-color:#ffffe0;padding:0.5ex">
+<table width="100%" cellspacing="0" cellpadding="2">
+<tr>
+<td width="33%" bgcolor="#FFFFE0"><a href="/wiki/Non-Programmer%27s_Tutorial_for_Python_3/Front_matter" title="Non-Programmer's Tutorial for Python 3/Front matter"><b>Previous:</b> Front matter</a></td>
+<td width="33%" bgcolor="#FFFFE0" align="center"><a href="/wiki/Non-Programmer%27s_Tutorial_for_Python_3" title="Non-Programmer's Tutorial for Python 3"><b>Front Page</b></a></td>
+<td width="33%" bgcolor="#FFFFE0" align="right"><a href="/wiki/Non-Programmer%27s_Tutorial_for_Python_3/Hello,_World" title="Non-Programmer's Tutorial for Python 3/Hello, World"><b>Next:</b> Hello, World</a></td>
+</tr>
+</table>
+</div>
+
+
+<!-- 
+NewPP limit report
+Preprocessor node count: 137/1000000
+Post-expand include size: 1044/2048000 bytes
+Template argument size: 48/2048000 bytes
+Expensive parser function count: 0/500
+-->
+
+<!-- Saved in parser cache with key enwikibooks:pcache:idhash:179701-0!1!0!default!!en!2 and timestamp 20100824142911 -->
+<div class="printfooter">
+Retrieved from "<a href="http://en.wikibooks.org/wiki/Non-Programmer%27s_Tutorial_for_Python_3/Intro">http://en.wikibooks.org/wiki/Non-Programmer%27s_Tutorial_for_Python_3/Intro</a>"</div>
+		<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks"><a href="/wiki/Special:Categories" title="Special:Categories">Category</a>: <span dir='ltr'><a href="/wiki/Category:Non-Programmer%27s_Tutorial_for_Python_3" title="Category:Non-Programmer's Tutorial for Python 3">Non-Programmer's Tutorial for Python 3</a></span></div></div>		<!-- end content -->
+		<div id='mw-data-after-content'>
+	<form method="post" action="/w/index.php?title=Special:ReaderFeedback&amp;action=submit" id="mw-feedbackform"><fieldset class="feedback_reviewform noprint"><legend><strong>What do you think of this page?</strong></legend>
+<p><i>Please take a moment to rate this page below. Your feedback is valuable and helps us improve our website.</i>
+</p><span id="mw-feedbackselects"><b><label for="wpreliability">Reliability</label>:</b>&nbsp;<select name="wpreliability" id="wpreliability" onchange="updateFeedbackForm()"><option class="rfb-rating-option-4" value="4">Excellent</option>
+<option class="rfb-rating-option-3" value="3">High</option>
+<option class="rfb-rating-option-2" value="2">Fair</option>
+<option class="rfb-rating-option-1" value="1">Low</option>
+<option class="rfb-rating-option-0" value="0">Poor</option>
+<option value="-1" selected="selected">(unsure)</option>
+</select>
+<b><label for="wpcompleteness">Completeness</label>:</b>&nbsp;<select name="wpcompleteness" id="wpcompleteness" onchange="updateFeedbackForm()"><option class="rfb-rating-option-4" value="4">Excellent</option>
+<option class="rfb-rating-option-3" value="3">High</option>
+<option class="rfb-rating-option-2" value="2">Fair</option>
+<option class="rfb-rating-option-1" value="1">Low</option>
+<option class="rfb-rating-option-0" value="0">Poor</option>
+<option value="-1" selected="selected">(unsure)</option>
+</select>
+<b><label for="wpnpov">Neutrality</label>:</b>&nbsp;<select name="wpnpov" id="wpnpov" onchange="updateFeedbackForm()"><option class="rfb-rating-option-4" value="4">Excellent</option>
+<option class="rfb-rating-option-3" value="3">High</option>
+<option class="rfb-rating-option-2" value="2">Fair</option>
+<option class="rfb-rating-option-1" value="1">Low</option>
+<option class="rfb-rating-option-0" value="0">Poor</option>
+<option value="-1" selected="selected">(unsure)</option>
+</select>
+<b><label for="wppresentation">Presentation</label>:</b>&nbsp;<select name="wppresentation" id="wppresentation" onchange="updateFeedbackForm()"><option class="rfb-rating-option-4" value="4">Excellent</option>
+<option class="rfb-rating-option-3" value="3">High</option>
+<option class="rfb-rating-option-2" value="2">Fair</option>
+<option class="rfb-rating-option-1" value="1">Low</option>
+<option class="rfb-rating-option-0" value="0">Poor</option>
+<option value="-1" selected="selected">(unsure)</option>
+</select>
+</span><input type="submit" value="Submit" id="submitfeedback" accesskey="b" title="Submit review [b]" /><input type="hidden" value="Special:ReaderFeedback" name="title" />
+<input type="hidden" value="Non-Programmer's_Tutorial_for_Python_3/Intro" name="target" />
+<input type="hidden" value="1870561" name="oldid" />
+<input type="hidden" value="adf3ee73934cc7aca1b42bc6f2b2d219" name="validatedParams" /><input type="hidden" value="submit" name="action" />
+<input type="hidden" value="+\" name="wpEditToken" />
+<input name="commentary" size="12" value="" style="display:none;" />
+</fieldset></form>
+</div>
+		<div class="visualClear"></div>
+	</div>
+</div></div>
+<div id="column-one">
+	<div id="p-cactions" class="portlet">
+		<h5>Views</h5>
+		<div class="pBody">
+			<ul>
+				 <li id="ca-nstab-main" class="selected"><a href="/wiki/Non-Programmer%27s_Tutorial_for_Python_3/Intro" title="View the content page [c]" accesskey="c">Module</a></li>
+				 <li id="ca-talk" class="new"><a href="/w/index.php?title=Talk:Non-Programmer%27s_Tutorial_for_Python_3/Intro&amp;action=edit&amp;redlink=1" title="Discussion about the content page [t]" accesskey="t">Discussion</a></li>
+				 <li id="ca-edit"><a href="/w/index.php?title=Non-Programmer%27s_Tutorial_for_Python_3/Intro&amp;action=edit" title="You can edit this page. Please use the preview button before saving [e]" accesskey="e">Edit this page</a></li>
+				 <li id="ca-history"><a href="/w/index.php?title=Non-Programmer%27s_Tutorial_for_Python_3/Intro&amp;action=history" title="Past revisions of this page [h]" accesskey="h">History</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-personal">
+		<h5>Personal tools</h5>
+		<div class="pBody">
+			<ul>
+				<li id="pt-optin-try"><a href="http://en.wikibooks.org/w/index.php?title=Special:UsabilityInitiativeOptIn&amp;from=Non-Programmer%27s_Tutorial_for_Python_3%2FIntro" title="Try out new features" class="no-text-transform">Try Beta</a></li>
+				<li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Non-Programmer%27s_Tutorial_for_Python_3/Intro" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in / create account</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-logo">
+		<a style="background-image: url(http://upload.wikimedia.org/wikibooks/en/b/bc/Wiki.png);" href="/wiki/Main_Page" title="Visit the main page"></a>
+	</div>
+	<script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
+	<div class='generated-sidebar portlet' id='p-Navigation'>
+		<h5>Navigation</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-mainpage"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main Page</a></li>
+				<li id="n-help"><a href="/wiki/Help:Contents" title="Find help on how to use and edit Wikibooks">Help</a></li>
+				<li id="n-Browse"><a href="/wiki/Wikibooks:Card_Catalog_Office" title="Check out what Wikibooks has to offer">Browse</a></li>
+				<li id="n-Cookbook"><a href="/wiki/Cookbook:Table_of_Contents" title="Learn recipes from around the world">Cookbook</a></li>
+				<li id="n-Wikijunior"><a href="/wiki/Wikijunior" title="Books for children">Wikijunior</a></li>
+				<li id="n-Featured-books"><a href="/wiki/Wikibooks:Featured_books" title="The best of Wikibooks">Featured books</a></li>
+				<li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="The list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+				<li id="n-sitesupport"><a href="http://wikimediafoundation.org/wiki/Donate" title="Support Wikibooks">Donations</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="p-search" class="portlet">
+		<h5><label for="searchInput">Search</label></h5>
+		<div id="searchBody" class="pBody">
+			<form action="/w/index.php" id="searchform">
+				<input type='hidden' name="title" value="Special:Search"/>
+				<input id="searchInput" title="Search Wikibooks" accesskey="f" value="" name="search" />
+				<input type='submit' name="go" class="searchButton" id="searchGoButton"	value="Go" title="Go to a page with this exact name if exists" />&nbsp;
+				<input type='submit' name="fulltext" class="searchButton" id="mw-searchButton" value="Search" title="Search the pages for this text" />
+			</form>
+		</div>
+	</div>
+	<div class='generated-sidebar portlet' id='p-Community'>
+		<h5>Community</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-Reading-room"><a href="/wiki/Wikibooks:Reading_room" title="Discuss Wikibooks-related questions and concerns with others">Reading room</a></li>
+				<li id="n-portal"><a href="/wiki/Wikibooks:Community_Portal" title="Find your way around the Wikibooks community">Community portal</a></li>
+				<li id="n-currentevents"><a href="/wiki/Wikibooks:Reading_room/Bulletin_Board" title="Important community news">Bulletin Board</a></li>
+				<li id="n-maintenance"><a href="/wiki/Wikibooks:Maintenance" title="Frequent tasks that you can help with">Help out!</a></li>
+				<li id="n-Policies-and-guidelines"><a href="/wiki/Wikibooks:Policies_and_guidelines" title="Pages detailing important rules and procedures">Policies and guidelines</a></li>
+				<li id="n-contact"><a href="/wiki/Wikibooks:Contact_us" title="Alternative methods of communication">Contact us</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class='generated-sidebar portlet' id='p-coll-print_export'>
+		<h5>Print/export</h5>
+		<div class='pBody'>
+<ul id="collectionPortletList"><li id="coll-create_a_book"><a href="/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Non-Programmer%27s+Tutorial+for+Python+3%2FIntro" title="Create a book or page collection" rel="nofollow">Create a book</a></li><li id="coll-download-as-rl"><a href="/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Non-Programmer%27s+Tutorial+for+Python+3%2FIntro&amp;oldid=1870561&amp;writer=rl" title="Download a PDF version of this wiki page" rel="nofollow">Download as PDF</a></li><li id="t-print"><a href="/w/index.php?title=Non-Programmer%27s_Tutorial_for_Python_3/Intro&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li></ul>		</div>
+	</div>
+	<div class="portlet" id="p-tb">
+		<h5>Toolbox</h5>
+		<div class="pBody">
+			<ul>
+				<li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Non-Programmer%27s_Tutorial_for_Python_3/Intro" title="List of all wiki pages that link here [j]" accesskey="j">What links here</a></li>
+				<li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Non-Programmer%27s_Tutorial_for_Python_3/Intro" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+<li id="t-upload"><a href="http://commons.wikimedia.org/wiki/Commons:Upload" title="Upload files [u]" accesskey="u">Upload file</a></li>
+<li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="List of all special pages [q]" accesskey="q">Special pages</a></li>
+				<li id="t-permalink"><a href="/w/index.php?title=Non-Programmer%27s_Tutorial_for_Python_3/Intro&amp;oldid=1870561" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-rating"><a href="/w/index.php?title=Special:RatingHistory&amp;target=Non-Programmer%27s_Tutorial_for_Python_3/Intro">Page rating</a></li>			</ul>
+		</div>
+	</div>
+	<div id="p-lang" class="portlet">
+		<h5>In other languages</h5>
+		<div class="pBody">
+			<ul>
+				<li class="interwiki-ca"><a href="http://ca.wikibooks.org/wiki/Python_3_per_a_no_programadors/Introducci%C3%B3" title="Python 3 per a no programadors/Introducció">Català</a></li>
+			</ul>
+		</div>
+	</div>
+</div><!-- end of the left (by default at least) column -->
+<div class="visualClear"></div>
+<div id="footer">
+	<div id="f-poweredbyico"><a href="http://www.mediawiki.org/"><img src="http://bits.wikimedia.org/skins-1.5/common/images/poweredby_mediawiki_88x31.png" height="31" width="88" alt="Powered by MediaWiki" /></a></div>
+	<div id="f-copyrightico"><a href="http://wikimediafoundation.org/"><img src="/images/wikimedia-button.png" width="88" height="31" alt="Wikimedia Foundation"/></a></div>
+	<ul id="f-list">
+		<li id="lastmod"> This page was last modified on 1 July 2010, at 02:42.</li>
+		<li id="copyright">Text is available under the <a rel="license" href="http://en.wikibooks.org/wiki/Wikibooks:Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply. See <a href="http://wikimediafoundation.org/wiki/Terms_of_Use">Terms of Use</a> for details.</li>
+		<li id="privacy"><a href="http://wikimediafoundation.org/wiki/Privacy_policy" title="wikimedia:Privacy policy">Privacy policy</a></li>
+		<li id="about"><a href="/wiki/Wikibooks:About" title="Wikibooks:About">About Wikibooks</a></li>
+		<li id="disclaimer"><a href="/wiki/Wikibooks:General_disclaimer" title="Wikibooks:General disclaimer">Disclaimers</a></li>
+	</ul>
+</div>
+</div>
+
+<script type="text/javascript">if (window.runOnloadHook) runOnloadHook();</script>
+<!-- Served by srv212 in 0.059 secs. --></body></html>

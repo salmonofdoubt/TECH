@@ -1,0 +1,176 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1038\cocoasubrtf360
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww9000\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural\pardirnatural
+
+\f0\fs24 \cf0   (abaumann@grailx; jobs: 0)\
+(~/asm-lab/asm-class)\
+(!504)$ cat extra.asm \
+\
+; aid for calling assembly functions from C programs\
+;\
+%macro  save_all        0\
+        push    ebx\
+        push    esi\
+        push    edi\
+        push    ebp\
+%endmacro\
+\
+%macro  restore_all     0\
+        pop     ebp\
+        pop     edi\
+        pop     esi\
+        pop     ebx\
+%endmacro\
+\
+; make the global variables from the C module visible to the Asm module\
+;\
+EXTERN  g_numbers1_count\
+EXTERN  g_numbers2_count\
+EXTERN  g_numbers1\
+EXTERN  g_numbers2\
+EXTERN  g_output\
+EXTERN  g_input1\
+EXTERN  g_input2\
+EXTERN  g_total\
+\
+; make the functions of the Asm module visible to the C module\
+;\
+GLOBAL asm_example1\
+GLOBAL asm_example2\
+GLOBAL asm_sum_counter\
+GLOBAL asm_sum_numbers\
+GLOBAL asm_add_sub_numbers\
+GLOBAL asm_array_numbers\
+\
+\
+;---------------------------------------------------------------\
+;EatMsg: db "Eat at Joe's!"\
+;mov ecx, EatMsg	;copies ***address*** of EatMsg into ecx\
+;mov ecx, [EatMsg]	;copies ***data*** of EatMsg into ecx\
+;lea ecx, [EatMsg]	;copies ***address*** of EatMsg into ecx\
+\
+;---------------------------------------------------------------\
+; Discuss what this program is doing and why the result is 512\
+;\
+asm_example1:\
+        save_all\
+        mov     eax, 1\
+        mov     ecx, 9\
+.again:\
+        add     eax,eax\
+        dec     ecx\
+        jnz     .again\
+        mov     [g_total], eax\
+        restore_all\
+        ret\
+\
+;-------------------------------------------------------------\
+; Discuss what this program is doing and why the result is\
+; a list of numbers from 1 to 10\
+;\
+asm_example2:\
+        save_all\
+        lea     esi, [g_numbers1]\
+        lea     edi, [g_output]\
+        mov     ecx, [g_numbers1_count]\
+.again:\
+        mov     eax, [esi]\
+        mov     [edi], eax\
+        add     esi, 4\
+        add     edi, 4\
+        dec     ecx\
+        jnz     .again\
+        restore_all\
+        ret\
+\
+-------------------------------------------------------------\
+; Write a program to count down to zero,\
+; and keep a sum of the values the counter is doing.\
+; The initial value of the counter is in g_input1.\
+; Put the result in g_total.\
+; ***Sum of counter\
+asm_sum_counter:\
+        	save_all\
+        	mov eax, [g_input1]  ; move value at addr g_input1 into eax (10)\
+        	mov ebx, 0           ; initialize ebx\
+.countdown:\
+        	add ebx, eax        ; add eax to ebx into ebx\
+        	dec eax      	        ; decrease eax by 1\
+        	jnz .countdown     ; if not zero, jump							mov [g_total],ebx  ; move ebx into addr of g_total\
+	restore_all\
+	ret\
+\
+;-----------------------------------------------------------\
+; Write a program here to sum all the numbers in the g_numbers1 array.\
+; Put the result in g_total.\
+;\
+asm_sum_numbers:\
+        save_all\
+; ***Sum numbers***\
+        lea esi, [g_numbers1]        ;load effective addr of g_numbers1 into esi\
+        lea edi, [g_total]           ;load effective addr of g_total into edi\
+        mov ecx, [g_numbers1_count]  ;copy first 4B (32bit) of data of g_numbers1_count into ecx\
+        mov ebx, 0\
+.again:\
+        mov eax, [esi]		;copy data at address of esi into eax\
+        add ebx, eax		;add eax to ebx\
+        add esi, 4		;add 4B to esi (to move to next item)\
+        add edi, 4		;add 4B to edi\
+        mov [edi], ebx		;copy address ebx to data edi\
+        dec ecx			;decrease ecx by 1\
+        jnz .again		;jump if not zero\
+        restore_all\
+        ret\
+\
+;-----------------------------------------------------------\
+; Write a progam here to sum all the numbers in the g_numbers1 array\
+; and substract all numbers from the g_numbers2 array.\
+; Put the result in g_total.\
+;\
+asm_add_sub_numbers:\
+        save_all\
+        lea esi, [g_numbers1]\
+        lea edi, [g_numbers2]\
+	mov eax, [g_numbers1_count]\
+        mov ecx, 0\
+	mov edx, 0\
+.again:\
+	add ecx, [esi]\
+	add edx, [edi]\
+	add esi, 4\
+	add edi, 4\
+	dec eax\
+	jnz .again\
+	sub ecx, edx\
+	mov [g_total], ecx\
+        restore_all\
+        ret\
+\
+;------------------------------------------------------------\
+; Write a progam here to substract each number in g_numbers2\
+; from the corresponding one in g_numbers1, and store the results\
+; in g_output.\
+\
+asm_array_numbers:\
+        save_all\
+	lea esi, [g_numbers1]\
+        lea edi, [g_numbers2]\
+	lea eax, [g_output]\
+	mov ecx, [g_numbers1_count]\
+.again:\
+	mov ebx,[esi]\
+	sub ebx,[edi]\
+	mov [eax],ebx\
+	add esi, 4\
+	add edi, 4\
+	add eax, 4\
+	dec ecx\
+	jnz .again\
+	restore_all\
+        ret\
+\
+;------------------------------------------------------------\
+\
+}

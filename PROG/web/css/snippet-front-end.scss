@@ -1,0 +1,49 @@
+$v: 500px;
+
+@mixin bp($s) {
+  @media only screen and (max-width: $s) {
+    @content;
+  }
+}
+
+@keyframes lr {
+  0% { left: 0; }
+  100% { left: calc(100% - 10rem); }
+}
+
+cf {
+  *zoom: 1;
+  &:after {
+    clear: both;
+  }
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+}
+
+.container {
+  @extend cf;
+  position: relative;
+  width: 50%;
+  @include bp($v) {
+    width: 100%;
+  }
+
+  ul {
+    width: 100%;
+    float: left;
+
+    li {
+      position: relative;
+      display: block;
+      margin-top: 1em;
+      animation: lr 5s infinite alternate ease-in-out;
+
+      input {
+        width: 10rem;
+      }
+    }
+  }
+}

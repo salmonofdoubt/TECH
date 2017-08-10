@@ -1,0 +1,47 @@
+Lets look at the basics first, 
+
+so read LIP:
+
+***exec() 
+as such does not exist. There are letters.  
+514
+- The execve(pathname, argv, envp) system call loads a new program (pathname,
+with argument list argv, and environment list envp) into a process’s memory.
+- The existing program text is discarded, and the stack, data, and heap segments
+are freshly created for the new program. This operation is often referred to as
+execing a new program 
+
+563–576
+#include <unistd.h>
+- int execve(const char *pathname, char *const argv[], char *const envp[]);
+  Never returns on success; returns –1 on error
+- After an execve(), the process ID of the process remains the same, because the same
+process continues to exist
+
+
+32, 286, 345, 514, 563–579, 690, 801
+effect on process attributes, 612–615
+file descriptors and, 575–578
+in multithreaded process, 605
+process capabilities and, 805
+set-user-ID program and, 169
+signals and, 578–579
+threads and, 686
+
+***inetd (Internet superserver daemon), 
+768, 1247–1251
+
+***bash 
+
+***fork #include <unistd.h>
+-after it has completed its work, two processes exist, and, in each process, execution continues from the point where fork() returns.
+
+pid_t fork(void);
+- In parent: returns PID of child on success, or –1 on error; 
+  to deal with say wait() on children: use getppid()
+- in child: always returns 0
+  to get it's own PID: getpid()
+
+man 3 exec
+man dup2
+

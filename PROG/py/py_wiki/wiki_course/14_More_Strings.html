@@ -1,0 +1,629 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr">
+<head>
+<title>Non-Programmer's Tutorial for Python 3/Revenge of the Strings - Wikibooks, collection of open-content textbooks</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta name="generator" content="MediaWiki 1.16wmf4" />
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="/w/index.php?title=Non-Programmer%27s_Tutorial_for_Python_3/Revenge_of_the_Strings&amp;action=edit" />
+<link rel="edit" title="Edit this page" href="/w/index.php?title=Non-Programmer%27s_Tutorial_for_Python_3/Revenge_of_the_Strings&amp;action=edit" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikibooks (en)" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/" />
+<link rel="alternate" type="application/atom+xml" title="Wikibooks Atom feed" href="/w/index.php?title=Special:RecentChanges&amp;feed=atom" />
+<link rel="stylesheet" href="http://bits.wikimedia.org/skins-1.5/common/shared.css?283p" type="text/css" media="screen" />
+<link rel="stylesheet" href="http://bits.wikimedia.org/skins-1.5/common/commonPrint.css?283p" type="text/css" media="print" />
+<link rel="stylesheet" href="http://bits.wikimedia.org/skins-1.5/monobook/main.css?283p" type="text/css" media="screen" />
+<link rel="stylesheet" href="http://bits.wikimedia.org/skins-1.5/chick/main.css?283p" type="text/css" media="handheld" />
+<!--[if lt IE 5.5000]><link rel="stylesheet" href="http://bits.wikimedia.org/skins-1.5/monobook/IE50Fixes.css?283p" type="text/css" media="screen" /><![endif]-->
+<!--[if IE 5.5000]><link rel="stylesheet" href="http://bits.wikimedia.org/skins-1.5/monobook/IE55Fixes.css?283p" type="text/css" media="screen" /><![endif]-->
+<!--[if IE 6]><link rel="stylesheet" href="http://bits.wikimedia.org/skins-1.5/monobook/IE60Fixes.css?283p" type="text/css" media="screen" /><![endif]-->
+<!--[if IE 7]><link rel="stylesheet" href="http://bits.wikimedia.org/skins-1.5/monobook/IE70Fixes.css?283p" type="text/css" media="screen" /><![endif]-->
+<link rel="stylesheet" href="/w/extensions/FlaggedRevs/client/flaggedrevs.css?76" type="text/css" media="all" />
+<link rel="stylesheet" href="/w/extensions/ReaderFeedback/readerfeedback.css?1" type="text/css" media="all" />
+<link rel="stylesheet" href="/w/index.php?title=MediaWiki:Common.css&amp;usemsgcache=yes&amp;ctype=text%2Fcss&amp;smaxage=2678400&amp;action=raw&amp;maxage=2678400" type="text/css" media="all" />
+<link rel="stylesheet" href="/w/index.php?title=MediaWiki:Print.css&amp;usemsgcache=yes&amp;ctype=text%2Fcss&amp;smaxage=2678400&amp;action=raw&amp;maxage=2678400" type="text/css" media="print" />
+<link rel="stylesheet" href="/w/index.php?title=MediaWiki:Handheld.css&amp;usemsgcache=yes&amp;ctype=text%2Fcss&amp;smaxage=2678400&amp;action=raw&amp;maxage=2678400" type="text/css" media="handheld" />
+<link rel="stylesheet" href="/w/index.php?title=MediaWiki:Monobook.css&amp;usemsgcache=yes&amp;ctype=text%2Fcss&amp;smaxage=2678400&amp;action=raw&amp;maxage=2678400" type="text/css" media="all" />
+<link rel="stylesheet" href="/w/index.php?title=-&amp;action=raw&amp;maxage=2678400&amp;gen=css" type="text/css" media="all" />
+<script type="text/javascript">
+var skin="monobook",
+stylepath="http://bits.wikimedia.org/skins-1.5",
+wgUrlProtocols="http\\:\\/\\/|https\\:\\/\\/|ftp\\:\\/\\/|irc\\:\\/\\/|gopher\\:\\/\\/|telnet\\:\\/\\/|nntp\\:\\/\\/|worldwind\\:\\/\\/|mailto\\:|news\\:|svn\\:\\/\\/",
+wgArticlePath="/wiki/$1",
+wgScriptPath="/w",
+wgScriptExtension=".php",
+wgScript="/w/index.php",
+wgVariantArticlePath=false,
+wgActionPaths={},
+wgServer="http://en.wikibooks.org",
+wgCanonicalNamespace="",
+wgCanonicalSpecialPageName=false,
+wgNamespaceNumber=0,
+wgPageName="Non-Programmer\'s_Tutorial_for_Python_3/Revenge_of_the_Strings",
+wgTitle="Non-Programmer\'s Tutorial for Python 3/Revenge of the Strings",
+wgAction="view",
+wgArticleId=189882,
+wgIsArticle=true,
+wgUserName=null,
+wgUserGroups=null,
+wgUserLanguage="en",
+wgContentLanguage="en",
+wgBreakFrames=false,
+wgCurRevisionId=1904507,
+wgVersion="1.16wmf4",
+wgEnableAPI=true,
+wgEnableWriteAPI=true,
+wgSeparatorTransformTable=["", ""],
+wgDigitTransformTable=["", ""],
+wgMainPageTitle="Main Page",
+wgFormattedNamespaces={"-2": "Media", "-1": "Special", "0": "", "1": "Talk", "2": "User", "3": "User talk", "4": "Wikibooks", "5": "Wikibooks talk", "6": "File", "7": "File talk", "8": "MediaWiki", "9": "MediaWiki talk", "10": "Template", "11": "Template talk", "12": "Help", "13": "Help talk", "14": "Category", "15": "Category talk", "102": "Cookbook", "103": "Cookbook talk", "108": "Transwiki", "109": "Transwiki talk", "110": "Wikijunior", "111": "Wikijunior talk", "112": "Subject", "113": "Subject talk"},
+wgNamespaceIds={"media": -2, "special": -1, "": 0, "talk": 1, "user": 2, "user_talk": 3, "wikibooks": 4, "wikibooks_talk": 5, "file": 6, "file_talk": 7, "mediawiki": 8, "mediawiki_talk": 9, "template": 10, "template_talk": 11, "help": 12, "help_talk": 13, "category": 14, "category_talk": 15, "cookbook": 102, "cookbook_talk": 103, "transwiki": 108, "transwiki_talk": 109, "wikijunior": 110, "wikijunior_talk": 111, "subject": 112, "subject_talk": 113, "wb": 4, "wj": 110, "cat": 14, "cook": 102, "sub": 112, "image": 6, "image_talk": 7},
+wgSiteName="Wikibooks",
+wgCategories=["Non-Programmer\'s Tutorial for Python 3", "Non-Programmer\'s Tutorial for Python 3.0"],
+wgMWSuggestTemplate="http://en.wikibooks.org/w/api.php?action=opensearch\x26search={searchTerms}\x26namespace={namespaces}\x26suggest",
+wgDBname="enwikibooks",
+wgSearchNamespaces=[0, 4, 112],
+wgMWSuggestMessages=["with suggestions", "no suggestions"],
+wgRestrictionEdit=[],
+wgRestrictionMove=[],
+wgFlaggedRevsParams={"tags": {"value": {"levels": 3, "quality": 2, "pristine": 3}}},
+wgStableRevisionId=1904507,
+wgFeedbackParams={"tags": {"reliability": 3, "completeness": 2, "npov": 2, "presentation": 1}},
+wgAjaxFeedback={"sendingMsg": "Submitting …", "sentMsg": "Thank you!"},
+wgNotice="",
+wgNoticeLocal="";
+</script><script src="http://bits.wikimedia.org/skins-1.5/common/wikibits.js?283p" type="text/javascript"></script>
+<script src="http://bits.wikimedia.org/skins-1.5/common/ajax.js?283p" type="text/javascript"></script>
+<script src="http://bits.wikimedia.org/skins-1.5/common/mwsuggest.js?283p" type="text/javascript"></script>
+<script type="text/javascript" src="http://upload.wikimedia.org/centralnotice/wikibooks/en/centralnotice.js?283p"></script>
+
+<script src="/w/index.php?title=-&amp;action=raw&amp;gen=js&amp;useskin=monobook&amp;283p" type="text/javascript"></script>
+
+<style type="text/css">/*<![CDATA[*/
+.source-python {line-height: normal;}
+.source-python li, .source-python pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for python
+ * CSS class: source-python, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.python.source-python .de1, .python.source-python .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;}
+.python.source-python  {font-family:monospace;}
+.python.source-python .imp {font-weight: bold; color: red;}
+.python.source-python li, .python.source-python .li1 {font-weight: normal; vertical-align:top;}
+.python.source-python .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.python.source-python .li2 {font-weight: bold; vertical-align:top;}
+.python.source-python .kw1 {color: #ff7700;font-weight:bold;}
+.python.source-python .kw2 {color: #008000;}
+.python.source-python .kw3 {color: #dc143c;}
+.python.source-python .kw4 {color: #0000cd;}
+.python.source-python .co1 {color: #808080; font-style: italic;}
+.python.source-python .coMULTI {color: #808080; font-style: italic;}
+.python.source-python .es0 {color: #000099; font-weight: bold;}
+.python.source-python .br0 {color: black;}
+.python.source-python .sy0 {color: #66cc66;}
+.python.source-python .st0 {color: #483d8b;}
+.python.source-python .nu0 {color: #ff4500;}
+.python.source-python .me1 {color: black;}
+.python.source-python .ln-xtra, .python.source-python li.ln-xtra, .python.source-python div.ln-xtra {background-color: #ffc;}
+.python.source-python span.xtra { display:block; }
+
+/*]]>*/
+</style>
+<style type="text/css">/*<![CDATA[*/
+@import "/w/index.php?title=MediaWiki:Geshi.css&usemsgcache=yes&action=raw&ctype=text/css&smaxage=2678400";
+/*]]>*/
+</style><script type="text/javascript" src="/w/extensions/FlaggedRevs/client/flaggedrevs.js?76"></script>
+<script type="text/javascript">FlaggedRevs.messages = {"diffToggleShow": "show those changes", "diffToggleHide": "hide those changes", "logToggleShow": "show stability log", "logToggleHide": "hide stability log", "logDetailsShow": "show details", "logDetailsHide": "hide details", "toggleShow": "(+)", "toggleHide": "(-)"};</script>
+<script type="text/javascript" src="/w/extensions/ReaderFeedback/readerfeedback.js?1"></script>
+</head>
+<body class="mediawiki ltr ns-0 ns-subject page-Non-Programmer_s_Tutorial_for_Python_3_Revenge_of_the_Strings skin-monobook">
+<div id="globalWrapper">
+<div id="column-content"><div id="content">
+	<a id="top"></a>
+	<div id="siteNotice"><script type='text/javascript'>if (wgNotice != '') document.writeln(wgNotice);</script></div>
+	<h1 id="firstHeading" class="firstHeading">Non-Programmer's Tutorial for Python 3/Revenge of the Strings</h1>
+	<div id="bodyContent">
+		<div id="siteSub">From Wikibooks, the open-content textbooks collection</div>
+		<div id="contentSub"><span class="subpages">&lt; <a href="/wiki/Non-Programmer%27s_Tutorial_for_Python_3" title="Non-Programmer's Tutorial for Python 3">Non-Programmer's Tutorial for Python 3</a></span></div>
+		<div id="jump-to-nav">Jump to: <a href="#column-one">navigation</a>, <a href="#searchInput">search</a></div>
+		<!-- start content -->
+<p>And now presenting a cool trick that can be done with strings:</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;">
+<div class="python source-python" style="font-family:monospace;">
+<pre class="de1">
+<span class="kw1">def</span> shout<span class="br0">(</span><span class="kw3">string</span><span class="br0">)</span>:
+    <span class="kw1">for</span> character <span class="kw1">in</span> <span class="kw3">string</span>:
+        <span class="kw1">print</span><span class="br0">(</span><span class="st0">"Gimme a "</span> + character<span class="br0">)</span>
+        <span class="kw1">print</span><span class="br0">(</span><span class="st0">"'"</span> + character + <span class="st0">"'"</span><span class="br0">)</span>
+ 
+shout<span class="br0">(</span><span class="st0">"Lose"</span><span class="br0">)</span>
+ 
+<span class="kw1">def</span> middle<span class="br0">(</span><span class="kw3">string</span><span class="br0">)</span>:
+    <span class="kw1">print</span><span class="br0">(</span><span class="st0">"The middle character is:"</span>, <span class="kw3">string</span><span class="br0">[</span><span class="kw2">len</span><span class="br0">(</span><span class="kw3">string</span><span class="br0">)</span> // <span class="nu0">2</span><span class="br0">]</span><span class="br0">)</span>
+ 
+middle<span class="br0">(</span><span class="st0">"abcdefg"</span><span class="br0">)</span>
+middle<span class="br0">(</span><span class="st0">"The Python Programming Language"</span><span class="br0">)</span>
+middle<span class="br0">(</span><span class="st0">"Atlanta"</span><span class="br0">)</span>
+</pre></div>
+</div>
+<p>And the output is:</p>
+<pre>
+Gimme a L
+'L'
+Gimme a o
+'o'
+Gimme a s
+'s'
+Gimme a e
+'e'
+The middle character is: d
+The middle character is: r
+The middle character is: a
+</pre>
+<p>What these programs demonstrate is that strings are similar to lists in several ways. The <code>shout()</code> function shows that <code>for</code> loops can be used with strings just as they can be used with lists. The <code>middle</code> procedure shows that that strings can also use the <code>len()</code> function and array indexes and slices. Most list features work on strings as well.</p>
+<p>The next feature demonstrates some string specific features:</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;">
+<div class="python source-python" style="font-family:monospace;">
+<pre class="de1">
+<span class="kw1">def</span> to_upper<span class="br0">(</span><span class="kw3">string</span><span class="br0">)</span>:
+    <span class="co1">## Converts a string to upper case</span>
+    upper_case = <span class="st0">""</span>
+    <span class="kw1">for</span> character <span class="kw1">in</span> <span class="kw3">string</span>:
+        <span class="kw1">if</span> <span class="st0">'a'</span> <span class="sy0">&lt;</span>= character <span class="sy0">&lt;</span>= <span class="st0">'z'</span>:
+            location = <span class="kw2">ord</span><span class="br0">(</span>character<span class="br0">)</span> - <span class="kw2">ord</span><span class="br0">(</span><span class="st0">'a'</span><span class="br0">)</span>
+            new_ascii = location + <span class="kw2">ord</span><span class="br0">(</span><span class="st0">'A'</span><span class="br0">)</span>
+            character = <span class="kw2">chr</span><span class="br0">(</span>new_ascii<span class="br0">)</span>
+        upper_case = upper_case + character
+    <span class="kw1">return</span> upper_case
+ 
+<span class="kw1">print</span><span class="br0">(</span>to_upper<span class="br0">(</span><span class="st0">"This is Text"</span><span class="br0">)</span><span class="br0">)</span>
+</pre></div>
+</div>
+<p>with the output being:</p>
+<pre>
+THIS IS TEXT
+</pre>
+<p>This works because the computer represents the characters of a string as numbers from 0 to 1,114,111. For example 'A' is 65, 'B' is 66 and א is 1488. The values are the <a href="http://en.wikipedia.org/wiki/en:unicode" class="extiw" title="w:en:unicode">unicode</a> value. Python has a function called <code>ord()</code> (short for ordinal) that returns a character as a number. There is also a corresponding function called <code>chr()</code> that converts a number into a character. With this in mind the program should start to be clear. The first detail is the line: <code>if 'a' &lt;= character &lt;= 'z':</code> which checks to see if a letter is lower case. If it is than the next lines are used. First it is converted into a location so that a&#160;=&#160;0, b&#160;=&#160;1, c&#160;=&#160;2 and so on with the line: <code>location = ord(character) - ord('a')</code>. Next the new value is found with <code>new_ascii = location + ord('A')</code>. This value is converted back to a character that is now upper case. Note that if you really need the upper case of a letter, you should use <code>u=var.upper()</code> which will work with other languages as well.</p>
+<p>Now for some interactive typing exercise:</p>
+<pre>
+&gt;&gt;&gt; <b># Integer to String</b>
+&gt;&gt;&gt; <b>2</b>
+2
+&gt;&gt;&gt; <b>repr(2)</b>
+'2'
+&gt;&gt;&gt; <b>-123</b>
+-123
+&gt;&gt;&gt; <b>repr(-123)</b>
+'-123'
+&gt;&gt;&gt; <b>`123`</b>
+'123'
+&gt;&gt;&gt; <b># String to Integer</b>
+&gt;&gt;&gt; <b>"23"</b>
+'23'
+&gt;&gt;&gt; <b>int("23")</b>
+23
+&gt;&gt;&gt; <b>"23" * 2</b>
+'2323'
+&gt;&gt;&gt; <b>int("23") * 2</b>
+46
+&gt;&gt;&gt; <b># Float to String</b>
+&gt;&gt;&gt; <b>1.23</b>
+1.23
+&gt;&gt;&gt; <b>repr(1.23)</b>
+'1.23'
+&gt;&gt;&gt; <b># Float to Integer</b>
+&gt;&gt;&gt; <b>1.23</b>
+1.23
+&gt;&gt;&gt; <b>int(1.23)</b>
+1
+&gt;&gt;&gt; <b>int(-1.23)</b>
+-1
+&gt;&gt;&gt; <b># String to Float</b>
+&gt;&gt;&gt; <b>float("1.23")</b>
+1.23
+&gt;&gt;&gt; <b>"1.23"</b> 
+'1.23'
+&gt;&gt;&gt; <b>float("123")</b>
+123.0
+&gt;&gt;&gt; <b>`float("1.23")`</b>
+'1.23'
+</pre>
+<p>If you haven't guessed already the function <code>repr()</code> can convert a integer to a string and the function <code>int()</code> can convert a string to an integer. The function <code>float()</code> can convert a string to a float. The <code>repr()</code> function returns a printable representation of something. <code>`...`</code> converts almost everything into a string, too. Here are some examples of this:</p>
+<pre>
+&gt;&gt;&gt; <b>repr(1)</b>
+'1'
+&gt;&gt;&gt; <b>repr(234.14)</b>
+'234.14'
+&gt;&gt;&gt; <b>repr([4, 42, 10])</b>
+'[4, 42, 10]'
+&gt;&gt;&gt; <b>`[4, 42, 10]`</b>
+'[4, 42, 10]'
+</pre>
+<p>The <code>int()</code> function tries to convert a string (or a float) into a integer. There is also a similar function called <code>float()</code> that will convert a integer or a string into a float. Another function that Python has is the <code>eval()</code> function. The <code>eval()</code> function takes a string and returns data of the type that python thinks it found. For example:</p>
+<pre>
+&gt;&gt;&gt; <b>v = eval('123')</b>
+&gt;&gt;&gt; <b>print(v, type(v))</b>
+123 &lt;type 'int'&gt;
+&gt;&gt;&gt; <b>v = eval('645.123')</b>
+&gt;&gt;&gt; <b>print(v, type(v))</b>
+645.123 &lt;type 'float'&gt;
+&gt;&gt;&gt; <b>v = eval('[1, 2, 3]')</b>
+&gt;&gt;&gt; <b>print(v, type(v))</b>
+[1, 2, 3] &lt;type 'list'&gt;
+</pre>
+<p>If you use the <code>eval()</code> function you should check that it returns the type that you expect.</p>
+<p>One useful string function is the <code>split()</code> method. Here's an example:</p>
+<pre>
+&gt;&gt;&gt; <b>"This is a bunch of words".split()</b>
+['This', 'is', 'a', 'bunch', 'of', 'words']
+&gt;&gt;&gt; <b>text = "First batch, second batch, third, fourth"</b>
+&gt;&gt;&gt; <b>text.split(",")</b>
+['First batch', ' second batch', ' third', ' fourth']
+</pre>
+<p>Notice how <code>split()</code> converts a string into a list of strings. The string is split by whitespace by default or by the optional argument (in this case a comma). You can also add another argument that tells <code>split()</code> how many times the separator will be used to split the text. For example:</p>
+<pre>
+&gt;&gt;&gt; <b>list = text.split(",")</b>
+&gt;&gt;&gt; <b>len(list)</b>
+4
+&gt;&gt;&gt; <b>list[-1]</b>
+' fourth'
+&gt;&gt;&gt; <b>list = text.split(",", 2)</b>
+&gt;&gt;&gt; <b>len(list)</b>
+3
+&gt;&gt;&gt; <b>list[-1]</b>
+' third, fourth'
+</pre>
+<h3><span class="editsection">[<a href="/w/index.php?title=Non-Programmer%27s_Tutorial_for_Python_3/Revenge_of_the_Strings&amp;action=edit&amp;section=1" title="Edit section: Slicing strings (and lists)">edit</a>]</span> <span class="mw-headline" id="Slicing_strings_.28and_lists.29">Slicing strings (and lists)</span></h3>
+<p>Strings can be cut into pieces — in the same way as it was shown for lists in the previous chapter — by using the <i>slicing</i> "operator" <tt>[]</tt>. The slicing operator works in the same way as before: text[first_index:last_index] (in very rare cases there can be another colon and a third argument, as in the example shown below).</p>
+<p>In order not to get confused by the index numbers, it is easiest to see them as <i>clipping places</i>, possibilities to cut a sting into parts. Here is an example, which shows the clipping places (in yellow) and their index numbers (red and blue) for a simple text string:</p>
+<table style="text-align:center" cellspacing="0px">
+<tr>
+<td></td>
+<td style="width:2ex"></td>
+<td style="width:2ex;color:red">0</td>
+<td style="width:2ex"></td>
+<td style="width:2ex;color:red">1</td>
+<td style="width:2ex"></td>
+<td style="width:2ex;color:red">2</td>
+<td style="width:2ex"></td>
+<td style="width:2ex">...</td>
+<td style="width:2ex"></td>
+<td style="width:2ex;color:blue">-2</td>
+<td style="width:2ex"></td>
+<td style="width:2ex;color:blue">-1</td>
+<td style="width:2ex"></td>
+<td style="width:2ex"></td>
+<td style="width:2ex"></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td style="background:#FFFF88">↓</td>
+<td></td>
+<td style="background:#FFFF88">↓</td>
+<td></td>
+<td style="background:#FFFF88">↓</td>
+<td></td>
+<td style="background:#FFFF88">↓</td>
+<td></td>
+<td style="background:#FFFF88">↓</td>
+<td></td>
+<td style="background:#FFFF88">↓</td>
+<td></td>
+<td style="background:#FFFF88">↓</td>
+<td></td>
+</tr>
+<tr>
+<td>text =</td>
+<td>"</td>
+<td style="background:#FFFF88"></td>
+<th>S</th>
+<td style="background:#FFFF88"></td>
+<th>T</th>
+<td style="background:#FFFF88"></td>
+<th>R</th>
+<td style="background:#FFFF88"></td>
+<th>I</th>
+<td style="background:#FFFF88"></td>
+<th>N</th>
+<td style="background:#FFFF88"></td>
+<th>G</th>
+<td style="background:#FFFF88"></td>
+<td>"</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td style="background:#FFFF88">↑</td>
+<td></td>
+<td style="background:#FFFF88"></td>
+<td></td>
+<td style="background:#FFFF88"></td>
+<td></td>
+<td style="background:#FFFF88"></td>
+<td></td>
+<td style="background:#FFFF88"></td>
+<td></td>
+<td style="background:#FFFF88"></td>
+<td></td>
+<td style="background:#FFFF88">↑</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>[:</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>:]</td>
+<td></td>
+</tr>
+</table>
+<p>Note that the red indexes are counted from the beginning of the string and the blue ones from the end of the string backwards. (Note that there is no blue -0, which could seem to be logical at the end of the string. Because <tt>-0 == 0</tt>, -0 means "beginning of the string" as well.) Now we are ready to use the indexes for slicing operations:</p>
+<table>
+<tr>
+<td>text[1:4]</td>
+<td style="width:3em;text-align:center">→</td>
+<td>"TRI"</td>
+</tr>
+<tr>
+<td>text[:5]</td>
+<td style="width:3em;text-align:center">→</td>
+<td>"STRIN"</td>
+</tr>
+<tr>
+<td>text[:-1]</td>
+<td style="width:3em;text-align:center">→</td>
+<td>"STRIN"</td>
+</tr>
+<tr>
+<td>text[-4:]</td>
+<td style="width:3em;text-align:center">→</td>
+<td>"RING"</td>
+</tr>
+<tr>
+<td>text[2]</td>
+<td style="width:3em;text-align:center">→</td>
+<td>"R"</td>
+</tr>
+<tr>
+<td>text[:]</td>
+<td style="width:3em;text-align:center">→</td>
+<td>"STRING"</td>
+</tr>
+<tr>
+<td>text[::-1]</td>
+<td style="width:3em;text-align:center">→</td>
+<td>"GNIRTS"</td>
+</tr>
+</table>
+<p><tt>text[1:4]</tt> gives us all of the <tt>text</tt> string between clipping places 1 and 4, "<tt>TRI</tt>". If you omit one of the [first_index:last_index] arguments, you get the beginning or end of the string as default: <tt>text[:5]</tt> gives "<tt>STRIN</tt>". For both <tt>first_index</tt> and <tt>last_index</tt> we can use both the red and the blue numbering schema: <tt>text[:-1]</tt> gives the same as <tt>text[:5]</tt>, because the index -1 is at the same place as 5 in this case. If we do not use an argument containing a colon, the number is treated in a different way: <tt>text[2]</tt> gives us one character following the second clipping point, "<tt>R</tt>". The special slicing operation <tt>text[:]</tt> means "from the beginning to the end" and produces a copy of the entire string (or list, as shown in the previous chapter).</p>
+<p>Last but not least, the slicing operation can have a second colon and a third argument, which is interpreted as the "step size": <tt>text[::-1]</tt> is <tt>text</tt> from beginning to the end, with a step size of -1. -1 means "every character, but in the other direction". "<tt>STRING</tt>" backwards is "<tt>GNIRTS</tt>" (test a step length of 2, if you have not got the point here).</p>
+<p>All these slicing operations work with lists as well. In that sense strings are just a special case of lists, where the list elements are single characters. Just remember the concept of <i>clipping places</i>, and the indexes for slicing things will get a lot less confusing.</p>
+<h3><span class="editsection">[<a href="/w/index.php?title=Non-Programmer%27s_Tutorial_for_Python_3/Revenge_of_the_Strings&amp;action=edit&amp;section=2" title="Edit section: Examples">edit</a>]</span> <span class="mw-headline" id="Examples">Examples</span></h3>
+<div dir="ltr" class="mw-geshi" style="text-align: left;">
+<div class="python source-python" style="font-family:monospace;">
+<pre class="de1">
+<span class="co1"># This program requires a excellent understanding of decimal numbers</span>
+<span class="kw1">def</span> to_string<span class="br0">(</span>in_int<span class="br0">)</span>:
+    <span class="st0">"""Converts an integer to a string"""</span>
+    out_str = <span class="st0">""</span>
+    prefix = <span class="st0">""</span>
+    <span class="kw1">if</span> in_int <span class="sy0">&lt;</span> <span class="nu0">0</span>:
+        prefix = <span class="st0">"-"</span>
+        in_int = -in_int
+    <span class="kw1">while</span> in_int // 10 <span class="sy0">!</span>= 0:
+        out_str = <span class="kw2">str</span><span class="br0">(</span>in_int <span class="sy0">%</span> 10<span class="br0">)</span> + out_str
+        in_int = in_int // 10
+    out_str = <span class="kw2">str</span><span class="br0">(</span>in_int <span class="sy0">%</span> 10<span class="br0">)</span> + out_str
+    <span class="kw1">return</span> prefix + out_str
+ 
+<span class="kw1">def</span> to_int<span class="br0">(</span>in_str<span class="br0">)</span>:
+    <span class="st0">"""Converts a string to an integer"""</span>
+    out_num = 0
+    <span class="kw1">if</span> in_str<span class="br0">[</span><span class="nu0">0</span><span class="br0">]</span> == <span class="st0">"-"</span>:
+        multiplier = -1
+        in_str = in_str<span class="br0">[</span>1:<span class="br0">]</span>
+    <span class="kw1">else</span>:
+        multiplier = 1
+    <span class="kw1">for</span> c <span class="kw1">in</span> in_str:
+        out_num = out_num <span class="sy0">*</span> 10 + <span class="kw2">int</span><span class="br0">(</span>c<span class="br0">)</span>
+    <span class="kw1">return</span> out_num <span class="sy0">*</span> multiplier
+ 
+<span class="kw1">print</span><span class="br0">(</span>to_string<span class="br0">(</span>2<span class="br0">)</span><span class="br0">)</span>
+<span class="kw1">print</span><span class="br0">(</span>to_string<span class="br0">(</span>23445<span class="br0">)</span><span class="br0">)</span>
+<span class="kw1">print</span><span class="br0">(</span>to_string<span class="br0">(</span>-23445<span class="br0">)</span><span class="br0">)</span>
+<span class="kw1">print</span><span class="br0">(</span>to_int<span class="br0">(</span><span class="st0">"14234"</span><span class="br0">)</span><span class="br0">)</span>
+<span class="kw1">print</span><span class="br0">(</span>to_int<span class="br0">(</span><span class="st0">"12345"</span><span class="br0">)</span><span class="br0">)</span>
+<span class="kw1">print</span><span class="br0">(</span>to_int<span class="br0">(</span><span class="st0">"-3512"</span><span class="br0">)</span><span class="br0">)</span>
+</pre></div>
+</div>
+<p>The output is:</p>
+<pre>
+2
+23445
+-23445
+14234
+12345
+-3512
+</pre>
+<div class="noprint PrettyTextBox" style="background-color:#ffffe0;padding:0.5ex">
+<table width="100%" cellspacing="0" cellpadding="2">
+<tr>
+<td width="33%" bgcolor="#FFFFE0"><a href="/wiki/Non-Programmer%27s_Tutorial_for_Python_3/More_on_Lists" title="Non-Programmer's Tutorial for Python 3/More on Lists"><b>Previous:</b> More on Lists</a></td>
+<td width="33%" bgcolor="#FFFFE0" align="center"><a href="/wiki/Non-Programmer%27s_Tutorial_for_Python_3" title="Non-Programmer's Tutorial for Python 3"><b>Front Page</b></a></td>
+<td width="33%" bgcolor="#FFFFE0" align="right"><a href="/wiki/Non-Programmer%27s_Tutorial_for_Python_3/File_IO" title="Non-Programmer's Tutorial for Python 3/File IO"><b>Next:</b> File IO</a></td>
+</tr>
+</table>
+</div>
+
+
+<!-- 
+NewPP limit report
+Preprocessor node count: 123/1000000
+Post-expand include size: 1206/2048000 bytes
+Template argument size: 40/2048000 bytes
+Expensive parser function count: 0/500
+-->
+
+<!-- Saved in parser cache with key enwikibooks:pcache:idhash:189882-0!1!0!default!!en!2 and timestamp 20100823051858 -->
+<div class="printfooter">
+Retrieved from "<a href="http://en.wikibooks.org/wiki/Non-Programmer%27s_Tutorial_for_Python_3/Revenge_of_the_Strings">http://en.wikibooks.org/wiki/Non-Programmer%27s_Tutorial_for_Python_3/Revenge_of_the_Strings</a>"</div>
+		<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks"><a href="/wiki/Special:Categories" title="Special:Categories">Categories</a>: <span dir='ltr'><a href="/wiki/Category:Non-Programmer%27s_Tutorial_for_Python_3" title="Category:Non-Programmer's Tutorial for Python 3">Non-Programmer's Tutorial for Python 3</a></span> | <span dir='ltr'><a href="/wiki/Category:Non-Programmer%27s_Tutorial_for_Python_3.0" title="Category:Non-Programmer's Tutorial for Python 3.0">Non-Programmer's Tutorial for Python 3.0</a></span></div></div>		<!-- end content -->
+		<div id='mw-data-after-content'>
+	<form method="post" action="/w/index.php?title=Special:ReaderFeedback&amp;action=submit" id="mw-feedbackform"><fieldset class="feedback_reviewform noprint"><legend><strong>What do you think of this page?</strong></legend>
+<p><i>Please take a moment to rate this page below. Your feedback is valuable and helps us improve our website.</i>
+</p><span id="mw-feedbackselects"><b><label for="wpreliability">Reliability</label>:</b>&nbsp;<select name="wpreliability" id="wpreliability" onchange="updateFeedbackForm()"><option class="rfb-rating-option-4" value="4">Excellent</option>
+<option class="rfb-rating-option-3" value="3">High</option>
+<option class="rfb-rating-option-2" value="2">Fair</option>
+<option class="rfb-rating-option-1" value="1">Low</option>
+<option class="rfb-rating-option-0" value="0">Poor</option>
+<option value="-1" selected="selected">(unsure)</option>
+</select>
+<b><label for="wpcompleteness">Completeness</label>:</b>&nbsp;<select name="wpcompleteness" id="wpcompleteness" onchange="updateFeedbackForm()"><option class="rfb-rating-option-4" value="4">Excellent</option>
+<option class="rfb-rating-option-3" value="3">High</option>
+<option class="rfb-rating-option-2" value="2">Fair</option>
+<option class="rfb-rating-option-1" value="1">Low</option>
+<option class="rfb-rating-option-0" value="0">Poor</option>
+<option value="-1" selected="selected">(unsure)</option>
+</select>
+<b><label for="wpnpov">Neutrality</label>:</b>&nbsp;<select name="wpnpov" id="wpnpov" onchange="updateFeedbackForm()"><option class="rfb-rating-option-4" value="4">Excellent</option>
+<option class="rfb-rating-option-3" value="3">High</option>
+<option class="rfb-rating-option-2" value="2">Fair</option>
+<option class="rfb-rating-option-1" value="1">Low</option>
+<option class="rfb-rating-option-0" value="0">Poor</option>
+<option value="-1" selected="selected">(unsure)</option>
+</select>
+<b><label for="wppresentation">Presentation</label>:</b>&nbsp;<select name="wppresentation" id="wppresentation" onchange="updateFeedbackForm()"><option class="rfb-rating-option-4" value="4">Excellent</option>
+<option class="rfb-rating-option-3" value="3">High</option>
+<option class="rfb-rating-option-2" value="2">Fair</option>
+<option class="rfb-rating-option-1" value="1">Low</option>
+<option class="rfb-rating-option-0" value="0">Poor</option>
+<option value="-1" selected="selected">(unsure)</option>
+</select>
+</span><input type="submit" value="Submit" id="submitfeedback" accesskey="b" title="Submit review [b]" /><input type="hidden" value="Special:ReaderFeedback" name="title" />
+<input type="hidden" value="Non-Programmer's_Tutorial_for_Python_3/Revenge_of_the_Strings" name="target" />
+<input type="hidden" value="1904507" name="oldid" />
+<input type="hidden" value="affad4b1a4cd07788bcdef874ce353d2" name="validatedParams" /><input type="hidden" value="submit" name="action" />
+<input type="hidden" value="+\" name="wpEditToken" />
+<input name="commentary" size="12" value="" style="display:none;" />
+</fieldset></form>
+</div>
+		<div class="visualClear"></div>
+	</div>
+</div></div>
+<div id="column-one">
+	<div id="p-cactions" class="portlet">
+		<h5>Views</h5>
+		<div class="pBody">
+			<ul>
+				 <li id="ca-nstab-main" class="selected"><a href="/wiki/Non-Programmer%27s_Tutorial_for_Python_3/Revenge_of_the_Strings" title="View the content page [c]" accesskey="c">Module</a></li>
+				 <li id="ca-talk" class="new"><a href="/w/index.php?title=Talk:Non-Programmer%27s_Tutorial_for_Python_3/Revenge_of_the_Strings&amp;action=edit&amp;redlink=1" title="Discussion about the content page [t]" accesskey="t">Discussion</a></li>
+				 <li id="ca-edit"><a href="/w/index.php?title=Non-Programmer%27s_Tutorial_for_Python_3/Revenge_of_the_Strings&amp;action=edit" title="You can edit this page. Please use the preview button before saving [e]" accesskey="e">Edit this page</a></li>
+				 <li id="ca-history"><a href="/w/index.php?title=Non-Programmer%27s_Tutorial_for_Python_3/Revenge_of_the_Strings&amp;action=history" title="Past revisions of this page [h]" accesskey="h">History</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-personal">
+		<h5>Personal tools</h5>
+		<div class="pBody">
+			<ul>
+				<li id="pt-optin-try"><a href="http://en.wikibooks.org/w/index.php?title=Special:UsabilityInitiativeOptIn&amp;from=Non-Programmer%27s_Tutorial_for_Python_3%2FRevenge_of_the_Strings" title="Try out new features" class="no-text-transform">Try Beta</a></li>
+				<li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Non-Programmer%27s_Tutorial_for_Python_3/Revenge_of_the_Strings" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in / create account</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-logo">
+		<a style="background-image: url(http://upload.wikimedia.org/wikibooks/en/b/bc/Wiki.png);" href="/wiki/Main_Page" title="Visit the main page"></a>
+	</div>
+	<script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
+	<div class='generated-sidebar portlet' id='p-Navigation'>
+		<h5>Navigation</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-mainpage"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main Page</a></li>
+				<li id="n-help"><a href="/wiki/Help:Contents" title="Find help on how to use and edit Wikibooks">Help</a></li>
+				<li id="n-Browse"><a href="/wiki/Wikibooks:Card_Catalog_Office" title="Check out what Wikibooks has to offer">Browse</a></li>
+				<li id="n-Cookbook"><a href="/wiki/Cookbook:Table_of_Contents" title="Learn recipes from around the world">Cookbook</a></li>
+				<li id="n-Wikijunior"><a href="/wiki/Wikijunior" title="Books for children">Wikijunior</a></li>
+				<li id="n-Featured-books"><a href="/wiki/Wikibooks:Featured_books" title="The best of Wikibooks">Featured books</a></li>
+				<li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="The list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+				<li id="n-sitesupport"><a href="http://wikimediafoundation.org/wiki/Donate" title="Support Wikibooks">Donations</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="p-search" class="portlet">
+		<h5><label for="searchInput">Search</label></h5>
+		<div id="searchBody" class="pBody">
+			<form action="/w/index.php" id="searchform">
+				<input type='hidden' name="title" value="Special:Search"/>
+				<input id="searchInput" title="Search Wikibooks" accesskey="f" value="" name="search" />
+				<input type='submit' name="go" class="searchButton" id="searchGoButton"	value="Go" title="Go to a page with this exact name if exists" />&nbsp;
+				<input type='submit' name="fulltext" class="searchButton" id="mw-searchButton" value="Search" title="Search the pages for this text" />
+			</form>
+		</div>
+	</div>
+	<div class='generated-sidebar portlet' id='p-Community'>
+		<h5>Community</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-Reading-room"><a href="/wiki/Wikibooks:Reading_room" title="Discuss Wikibooks-related questions and concerns with others">Reading room</a></li>
+				<li id="n-portal"><a href="/wiki/Wikibooks:Community_Portal" title="Find your way around the Wikibooks community">Community portal</a></li>
+				<li id="n-currentevents"><a href="/wiki/Wikibooks:Reading_room/Bulletin_Board" title="Important community news">Bulletin Board</a></li>
+				<li id="n-maintenance"><a href="/wiki/Wikibooks:Maintenance" title="Frequent tasks that you can help with">Help out!</a></li>
+				<li id="n-Policies-and-guidelines"><a href="/wiki/Wikibooks:Policies_and_guidelines" title="Pages detailing important rules and procedures">Policies and guidelines</a></li>
+				<li id="n-contact"><a href="/wiki/Wikibooks:Contact_us" title="Alternative methods of communication">Contact us</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class='generated-sidebar portlet' id='p-coll-print_export'>
+		<h5>Print/export</h5>
+		<div class='pBody'>
+<ul id="collectionPortletList"><li id="coll-create_a_book"><a href="/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Non-Programmer%27s+Tutorial+for+Python+3%2FRevenge+of+the+Strings" title="Create a book or page collection" rel="nofollow">Create a book</a></li><li id="coll-download-as-rl"><a href="/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Non-Programmer%27s+Tutorial+for+Python+3%2FRevenge+of+the+Strings&amp;oldid=1904507&amp;writer=rl" title="Download a PDF version of this wiki page" rel="nofollow">Download as PDF</a></li><li id="t-print"><a href="/w/index.php?title=Non-Programmer%27s_Tutorial_for_Python_3/Revenge_of_the_Strings&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li></ul>		</div>
+	</div>
+	<div class="portlet" id="p-tb">
+		<h5>Toolbox</h5>
+		<div class="pBody">
+			<ul>
+				<li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Non-Programmer%27s_Tutorial_for_Python_3/Revenge_of_the_Strings" title="List of all wiki pages that link here [j]" accesskey="j">What links here</a></li>
+				<li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Non-Programmer%27s_Tutorial_for_Python_3/Revenge_of_the_Strings" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+<li id="t-upload"><a href="http://commons.wikimedia.org/wiki/Commons:Upload" title="Upload files [u]" accesskey="u">Upload file</a></li>
+<li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="List of all special pages [q]" accesskey="q">Special pages</a></li>
+				<li id="t-permalink"><a href="/w/index.php?title=Non-Programmer%27s_Tutorial_for_Python_3/Revenge_of_the_Strings&amp;oldid=1904507" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-rating"><a href="/w/index.php?title=Special:RatingHistory&amp;target=Non-Programmer%27s_Tutorial_for_Python_3/Revenge_of_the_Strings">Page rating</a></li>			</ul>
+		</div>
+	</div>
+</div><!-- end of the left (by default at least) column -->
+<div class="visualClear"></div>
+<div id="footer">
+	<div id="f-poweredbyico"><a href="http://www.mediawiki.org/"><img src="http://bits.wikimedia.org/skins-1.5/common/images/poweredby_mediawiki_88x31.png" height="31" width="88" alt="Powered by MediaWiki" /></a></div>
+	<div id="f-copyrightico"><a href="http://wikimediafoundation.org/"><img src="/images/wikimedia-button.png" width="88" height="31" alt="Wikimedia Foundation"/></a></div>
+	<ul id="f-list">
+		<li id="lastmod"> This page was last modified on 30 July 2010, at 15:38.</li>
+		<li id="copyright">Text is available under the <a rel="license" href="http://en.wikibooks.org/wiki/Wikibooks:Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply. See <a href="http://wikimediafoundation.org/wiki/Terms_of_Use">Terms of Use</a> for details.</li>
+		<li id="privacy"><a href="http://wikimediafoundation.org/wiki/Privacy_policy" title="wikimedia:Privacy policy">Privacy policy</a></li>
+		<li id="about"><a href="/wiki/Wikibooks:About" title="Wikibooks:About">About Wikibooks</a></li>
+		<li id="disclaimer"><a href="/wiki/Wikibooks:General_disclaimer" title="Wikibooks:General disclaimer">Disclaimers</a></li>
+	</ul>
+</div>
+</div>
+
+<script type="text/javascript">if (window.runOnloadHook) runOnloadHook();</script>
+<!-- Served by srv242 in 0.062 secs. --></body></html>

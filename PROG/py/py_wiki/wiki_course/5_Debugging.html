@@ -1,0 +1,508 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr">
+<head>
+<title>Non-Programmer's Tutorial for Python 3/Debugging - Wikibooks, collection of open-content textbooks</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta name="generator" content="MediaWiki 1.16wmf4" />
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="/w/index.php?title=Non-Programmer%27s_Tutorial_for_Python_3/Debugging&amp;action=edit" />
+<link rel="edit" title="Edit this page" href="/w/index.php?title=Non-Programmer%27s_Tutorial_for_Python_3/Debugging&amp;action=edit" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikibooks (en)" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/" />
+<link rel="alternate" type="application/atom+xml" title="Wikibooks Atom feed" href="/w/index.php?title=Special:RecentChanges&amp;feed=atom" />
+<link rel="stylesheet" href="http://bits.wikimedia.org/skins-1.5/common/shared.css?283p" type="text/css" media="screen" />
+<link rel="stylesheet" href="http://bits.wikimedia.org/skins-1.5/common/commonPrint.css?283p" type="text/css" media="print" />
+<link rel="stylesheet" href="http://bits.wikimedia.org/skins-1.5/monobook/main.css?283p" type="text/css" media="screen" />
+<link rel="stylesheet" href="http://bits.wikimedia.org/skins-1.5/chick/main.css?283p" type="text/css" media="handheld" />
+<!--[if lt IE 5.5000]><link rel="stylesheet" href="http://bits.wikimedia.org/skins-1.5/monobook/IE50Fixes.css?283p" type="text/css" media="screen" /><![endif]-->
+<!--[if IE 5.5000]><link rel="stylesheet" href="http://bits.wikimedia.org/skins-1.5/monobook/IE55Fixes.css?283p" type="text/css" media="screen" /><![endif]-->
+<!--[if IE 6]><link rel="stylesheet" href="http://bits.wikimedia.org/skins-1.5/monobook/IE60Fixes.css?283p" type="text/css" media="screen" /><![endif]-->
+<!--[if IE 7]><link rel="stylesheet" href="http://bits.wikimedia.org/skins-1.5/monobook/IE70Fixes.css?283p" type="text/css" media="screen" /><![endif]-->
+<link rel="stylesheet" href="/w/extensions/FlaggedRevs/client/flaggedrevs.css?76" type="text/css" media="all" />
+<link rel="stylesheet" href="/w/extensions/ReaderFeedback/readerfeedback.css?1" type="text/css" media="all" />
+<link rel="stylesheet" href="/w/index.php?title=MediaWiki:Common.css&amp;usemsgcache=yes&amp;ctype=text%2Fcss&amp;smaxage=2678400&amp;action=raw&amp;maxage=2678400" type="text/css" media="all" />
+<link rel="stylesheet" href="/w/index.php?title=MediaWiki:Print.css&amp;usemsgcache=yes&amp;ctype=text%2Fcss&amp;smaxage=2678400&amp;action=raw&amp;maxage=2678400" type="text/css" media="print" />
+<link rel="stylesheet" href="/w/index.php?title=MediaWiki:Handheld.css&amp;usemsgcache=yes&amp;ctype=text%2Fcss&amp;smaxage=2678400&amp;action=raw&amp;maxage=2678400" type="text/css" media="handheld" />
+<link rel="stylesheet" href="/w/index.php?title=MediaWiki:Monobook.css&amp;usemsgcache=yes&amp;ctype=text%2Fcss&amp;smaxage=2678400&amp;action=raw&amp;maxage=2678400" type="text/css" media="all" />
+<link rel="stylesheet" href="/w/index.php?title=-&amp;action=raw&amp;maxage=2678400&amp;gen=css" type="text/css" media="all" />
+<script type="text/javascript">
+var skin="monobook",
+stylepath="http://bits.wikimedia.org/skins-1.5",
+wgUrlProtocols="http\\:\\/\\/|https\\:\\/\\/|ftp\\:\\/\\/|irc\\:\\/\\/|gopher\\:\\/\\/|telnet\\:\\/\\/|nntp\\:\\/\\/|worldwind\\:\\/\\/|mailto\\:|news\\:|svn\\:\\/\\/",
+wgArticlePath="/wiki/$1",
+wgScriptPath="/w",
+wgScriptExtension=".php",
+wgScript="/w/index.php",
+wgVariantArticlePath=false,
+wgActionPaths={},
+wgServer="http://en.wikibooks.org",
+wgCanonicalNamespace="",
+wgCanonicalSpecialPageName=false,
+wgNamespaceNumber=0,
+wgPageName="Non-Programmer\'s_Tutorial_for_Python_3/Debugging",
+wgTitle="Non-Programmer\'s Tutorial for Python 3/Debugging",
+wgAction="view",
+wgArticleId=179901,
+wgIsArticle=true,
+wgUserName=null,
+wgUserGroups=null,
+wgUserLanguage="en",
+wgContentLanguage="en",
+wgBreakFrames=false,
+wgCurRevisionId=1805370,
+wgVersion="1.16wmf4",
+wgEnableAPI=true,
+wgEnableWriteAPI=true,
+wgSeparatorTransformTable=["", ""],
+wgDigitTransformTable=["", ""],
+wgMainPageTitle="Main Page",
+wgFormattedNamespaces={"-2": "Media", "-1": "Special", "0": "", "1": "Talk", "2": "User", "3": "User talk", "4": "Wikibooks", "5": "Wikibooks talk", "6": "File", "7": "File talk", "8": "MediaWiki", "9": "MediaWiki talk", "10": "Template", "11": "Template talk", "12": "Help", "13": "Help talk", "14": "Category", "15": "Category talk", "102": "Cookbook", "103": "Cookbook talk", "108": "Transwiki", "109": "Transwiki talk", "110": "Wikijunior", "111": "Wikijunior talk", "112": "Subject", "113": "Subject talk"},
+wgNamespaceIds={"media": -2, "special": -1, "": 0, "talk": 1, "user": 2, "user_talk": 3, "wikibooks": 4, "wikibooks_talk": 5, "file": 6, "file_talk": 7, "mediawiki": 8, "mediawiki_talk": 9, "template": 10, "template_talk": 11, "help": 12, "help_talk": 13, "category": 14, "category_talk": 15, "cookbook": 102, "cookbook_talk": 103, "transwiki": 108, "transwiki_talk": 109, "wikijunior": 110, "wikijunior_talk": 111, "subject": 112, "subject_talk": 113, "wb": 4, "wj": 110, "cat": 14, "cook": 102, "sub": 112, "image": 6, "image_talk": 7},
+wgSiteName="Wikibooks",
+wgCategories=["Non-Programmer\'s Tutorial for Python 3", "Non-Programmer\'s Tutorial for Python 3.0"],
+wgMWSuggestTemplate="http://en.wikibooks.org/w/api.php?action=opensearch\x26search={searchTerms}\x26namespace={namespaces}\x26suggest",
+wgDBname="enwikibooks",
+wgSearchNamespaces=[0, 4, 112],
+wgMWSuggestMessages=["with suggestions", "no suggestions"],
+wgRestrictionEdit=[],
+wgRestrictionMove=[],
+wgFlaggedRevsParams={"tags": {"value": {"levels": 3, "quality": 2, "pristine": 3}}},
+wgStableRevisionId=1805370,
+wgFeedbackParams={"tags": {"reliability": 3, "completeness": 2, "npov": 2, "presentation": 1}},
+wgAjaxFeedback={"sendingMsg": "Submitting …", "sentMsg": "Thank you!"},
+wgNotice="",
+wgNoticeLocal="";
+</script><script src="http://bits.wikimedia.org/skins-1.5/common/wikibits.js?283p" type="text/javascript"></script>
+<script src="http://bits.wikimedia.org/skins-1.5/common/ajax.js?283p" type="text/javascript"></script>
+<script src="http://bits.wikimedia.org/skins-1.5/common/mwsuggest.js?283p" type="text/javascript"></script>
+<script type="text/javascript" src="http://upload.wikimedia.org/centralnotice/wikibooks/en/centralnotice.js?283p"></script>
+
+<script src="/w/index.php?title=-&amp;action=raw&amp;gen=js&amp;useskin=monobook&amp;283p" type="text/javascript"></script>
+
+<style type="text/css">/*<![CDATA[*/
+.source-python {line-height: normal;}
+.source-python li, .source-python pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for python
+ * CSS class: source-python, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.python.source-python .de1, .python.source-python .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;}
+.python.source-python  {font-family:monospace;}
+.python.source-python .imp {font-weight: bold; color: red;}
+.python.source-python li, .python.source-python .li1 {font-weight: normal; vertical-align:top;}
+.python.source-python .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.python.source-python .li2 {font-weight: bold; vertical-align:top;}
+.python.source-python .kw1 {color: #ff7700;font-weight:bold;}
+.python.source-python .kw2 {color: #008000;}
+.python.source-python .kw3 {color: #dc143c;}
+.python.source-python .kw4 {color: #0000cd;}
+.python.source-python .co1 {color: #808080; font-style: italic;}
+.python.source-python .coMULTI {color: #808080; font-style: italic;}
+.python.source-python .es0 {color: #000099; font-weight: bold;}
+.python.source-python .br0 {color: black;}
+.python.source-python .sy0 {color: #66cc66;}
+.python.source-python .st0 {color: #483d8b;}
+.python.source-python .nu0 {color: #ff4500;}
+.python.source-python .me1 {color: black;}
+.python.source-python .ln-xtra, .python.source-python li.ln-xtra, .python.source-python div.ln-xtra {background-color: #ffc;}
+.python.source-python span.xtra { display:block; }
+
+/*]]>*/
+</style>
+<style type="text/css">/*<![CDATA[*/
+@import "/w/index.php?title=MediaWiki:Geshi.css&usemsgcache=yes&action=raw&ctype=text/css&smaxage=2678400";
+/*]]>*/
+</style><script type="text/javascript" src="/w/extensions/FlaggedRevs/client/flaggedrevs.js?76"></script>
+<script type="text/javascript">FlaggedRevs.messages = {"diffToggleShow": "show those changes", "diffToggleHide": "hide those changes", "logToggleShow": "show stability log", "logToggleHide": "hide stability log", "logDetailsShow": "show details", "logDetailsHide": "hide details", "toggleShow": "(+)", "toggleHide": "(-)"};</script>
+<script type="text/javascript" src="/w/extensions/ReaderFeedback/readerfeedback.js?1"></script>
+</head>
+<body class="mediawiki ltr ns-0 ns-subject page-Non-Programmer_s_Tutorial_for_Python_3_Debugging skin-monobook">
+<div id="globalWrapper">
+<div id="column-content"><div id="content">
+	<a id="top"></a>
+	<div id="siteNotice"><script type='text/javascript'>if (wgNotice != '') document.writeln(wgNotice);</script></div>
+	<h1 id="firstHeading" class="firstHeading">Non-Programmer's Tutorial for Python 3/Debugging</h1>
+	<div id="bodyContent">
+		<div id="siteSub">From Wikibooks, the open-content textbooks collection</div>
+		<div id="contentSub"><span class="subpages">&lt; <a href="/wiki/Non-Programmer%27s_Tutorial_for_Python_3" title="Non-Programmer's Tutorial for Python 3">Non-Programmer's Tutorial for Python 3</a></span></div>
+		<div id="jump-to-nav">Jump to: <a href="#column-one">navigation</a>, <a href="#searchInput">search</a></div>
+		<!-- start content -->
+<table id="toc" class="toc">
+<tr>
+<td>
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#What_is_debugging.3F"><span class="tocnumber">1</span> <span class="toctext">What is debugging?</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#What_should_the_program_do.3F"><span class="tocnumber">2</span> <span class="toctext">What should the program do?</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#What_does_the_program_do.3F"><span class="tocnumber">3</span> <span class="toctext">What does the program do?</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#How_do_I_fix_my_program.3F"><span class="tocnumber">4</span> <span class="toctext">How do I fix my program?</span></a></li>
+</ul>
+</td>
+</tr>
+</table>
+<script type="text/javascript">
+//<![CDATA[
+if (window.showTocToggle) { var tocShowText = "show"; var tocHideText = "hide"; showTocToggle(); } 
+//]]>
+</script>
+<h3><span class="editsection">[<a href="/w/index.php?title=Non-Programmer%27s_Tutorial_for_Python_3/Debugging&amp;action=edit&amp;section=1" title="Edit section: What is debugging?">edit</a>]</span> <span class="mw-headline" id="What_is_debugging.3F">What is debugging?</span></h3>
+<dl>
+<dd>"As soon as we started programming, we found to our surprise that it wasn't as easy to get programs right as we had thought. Debugging had to be discovered. I can remember the exact instant when I realized that a large part of my life from then on was going to be spent in finding mistakes in my own programs." — <i>Maurice Wilkes discovers debugging</i>, 1949</dd>
+</dl>
+<p>By now if you have been messing around with the programs you have probably found that sometimes the program does something you didn't want it to do. This is fairly common. Debugging is the process of figuring out what the computer is doing and then getting it to do what you want it to do. This can be tricky. I once spent nearly a week tracking down and fixing a bug that was caused by someone putting an <code>x</code> where a <code>y</code> should have been.</p>
+<p>This chapter will be more abstract than previous chapters.</p>
+<h3><span class="editsection">[<a href="/w/index.php?title=Non-Programmer%27s_Tutorial_for_Python_3/Debugging&amp;action=edit&amp;section=2" title="Edit section: What should the program do?">edit</a>]</span> <span class="mw-headline" id="What_should_the_program_do.3F">What should the program do?</span></h3>
+<p>The first thing to do (this sounds obvious) is to figure out what the program should be doing if it is running correctly. Come up with some test cases and see what happens. For example, let's say I have a program to compute the perimeter of a rectangle (the sum of the length of all the edges). I have the following test cases:</p>
+<table class="wikitable">
+<tr>
+<th>height</th>
+<th>width</th>
+<th>perimeter</th>
+</tr>
+<tr>
+<td>3</td>
+<td>4</td>
+<td>14</td>
+</tr>
+<tr>
+<td>2</td>
+<td>3</td>
+<td>10</td>
+</tr>
+<tr>
+<td>4</td>
+<td>4</td>
+<td>16</td>
+</tr>
+<tr>
+<td>2</td>
+<td>2</td>
+<td>8</td>
+</tr>
+<tr>
+<td>5</td>
+<td>1</td>
+<td>12</td>
+</tr>
+</table>
+<p>I now run my program on all of the test cases and see if the program does what I expect it to do. If it doesn't then I need to find out what the computer is doing.</p>
+<p>More commonly some of the test cases will work and some will not. If that is the case you should try and figure out what the working ones have in common. For example here is the output for a perimeter program (you get to see the code in a minute):</p>
+<pre>
+Height: <b>3</b>
+Width: <b>4</b>
+perimeter = 15
+</pre>
+<pre>
+Height: <b>2</b>
+Width: <b>3</b>
+perimeter = 11
+</pre>
+<pre>
+Height: <b>4</b>
+Width: <b>4</b>
+perimeter = 16
+</pre>
+<pre>
+Height: <b>2</b>
+Width: <b>2</b>
+perimeter = 8
+</pre>
+<pre>
+Height: <b>5</b>
+Width: <b>1</b>
+perimeter = 8
+</pre>
+<p>Notice that it didn't work for the first two inputs, it worked for the next two and it didn't work on the last one. Try and figure out what is in common with the working ones. Once you have some idea what the problem is finding the cause is easier. With your own programs you should try more test cases if you need them.</p>
+<h3><span class="editsection">[<a href="/w/index.php?title=Non-Programmer%27s_Tutorial_for_Python_3/Debugging&amp;action=edit&amp;section=3" title="Edit section: What does the program do?">edit</a>]</span> <span class="mw-headline" id="What_does_the_program_do.3F">What does the program do?</span></h3>
+<p>The next thing to do is to look at the source code. One of the most important things to do while programming is reading source code. The primary way to do this is code walkthroughs.</p>
+<p>A code walkthrough starts at the first line, and works its way down until the program is done. <code>while</code> loops and <code>if</code> statements mean that some lines may never be run and some lines are run many times. At each line you figure out what Python has done.</p>
+<p>Lets start with the simple perimeter program. Don't type it in, you are going to read it, not run it. The source code is:</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;">
+<div class="python source-python" style="font-family:monospace;">
+<pre class="de1">
+height = <span class="kw2">int</span><span class="br0">(</span><span class="kw2">input</span><span class="br0">(</span><span class="st0">"Height: "</span><span class="br0">)</span><span class="br0">)</span>
+width = <span class="kw2">int</span><span class="br0">(</span><span class="kw2">input</span><span class="br0">(</span><span class="st0">"Width: "</span><span class="br0">)</span><span class="br0">)</span>
+<span class="kw1">print</span><span class="br0">(</span><span class="st0">"perimeter ="</span>, width + height + width + width<span class="br0">)</span>
+</pre></div>
+</div>
+<dl>
+<dt><i>Question:</i> What is the first line Python runs?</dt>
+<dd><i>Answer:</i> The first line is always run first. In this case it is: <code>height = int(input("Height: "))</code></dd>
+<dt>What does that line do?</dt>
+<dd>Prints <code>Height:</code> , waits for the user to type a string in, and then converts the string to an integer variable height.</dd>
+<dt>What is the next line that runs?</dt>
+<dd>In general, it is the next line down which is: <code>width = int(input("Width: "))</code></dd>
+<dt>What does that line do?</dt>
+<dd>Prints <code>Width:</code> , waits for the user to type a number in, and puts what the user types in the variable width.</dd>
+<dt>What is the next line that runs?</dt>
+<dd>When the next line is not indented more or less than the current line, it is the line right afterwards, so it is: <code>print("perimeter = ", width + height + width + width)</code> (It may also run a function in the current line, but that's a future chapter.)</dd>
+<dt>What does that line do?</dt>
+<dd>First it prints <code>perimeter =</code> , then it prints <code>width + height + width + width</code>.</dd>
+<dt>Does <code>width + height + width + width</code> calculate the perimeter properly?</dt>
+<dd>Let's see, perimeter of a rectangle is the bottom (width) plus the left side (height) plus the top (width) plus the right side (huh?). The last item should be the right side's length, or the height.</dd>
+<dt>Do you understand why some of the times the perimeter was calculated "correctly"?</dt>
+<dd>It was calculated correctly when the width and the height were equal.</dd>
+</dl>
+<p>The next program we will do a code walkthrough for is a program that is supposed to print out 5 dots on the screen. However, this is what the program is outputting:</p>
+<pre>
+. . . . 
+</pre>
+<p>And here is the program:</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;">
+<div class="python source-python" style="font-family:monospace;">
+<pre class="de1">
+number = 5
+<span class="kw1">while</span> number <span class="sy0">&gt;</span> 1:
+    <span class="kw1">print</span><span class="br0">(</span><span class="st0">"."</span>,end=<span class="st0">" "</span><span class="br0">)</span>
+    number = number - 1
+<span class="kw1">print</span><span class="br0">(</span><span class="br0">)</span>
+</pre></div>
+</div>
+<p>This program will be more complex to walkthrough since it now has indented portions (or control structures). Let us begin.</p>
+<dl>
+<dt>What is the first line to be run?</dt>
+<dd>The first line of the file: <code>number = 5</code></dd>
+<dt>What does it do?</dt>
+<dd>Puts the number 5 in the variable number.</dd>
+<dt>What is the next line?</dt>
+<dd>The next line is: <code>while number &gt; 1:</code></dd>
+<dt>What does it do?</dt>
+<dd>Well, <code>while</code> statements in general look at their expression, and if it is true they do the next indented block of code, otherwise they skip the next indented block of code.</dd>
+<dt>So what does it do right now?</dt>
+<dd>If <code>number &gt; 1</code> is true then the next two lines will be run.</dd>
+<dt>So is <code>number &gt; 1</code>?</dt>
+<dd>The last value put into <code>number</code> was <code>5</code> and <code>5 &gt; 1</code> so yes.</dd>
+<dt>So what is the next line?</dt>
+<dd>Since the <code>while</code> was true the next line is: <code>print(".",end=" ")</code></dd>
+<dt>What does that line do?</dt>
+<dd>Prints one dot and since the extra argument <code>end=" "</code> exists the next printed text will not be on a different screen line.</dd>
+<dt>What is the next line?</dt>
+<dd><code>number = number - 1</code> since that is following line and there are no indent changes.</dd>
+<dt>What does it do?</dt>
+<dd>It calculates <code>number - 1</code>, which is the current value of <code>number</code> (or 5) subtracts 1 from it, and makes that the new value of number. So basically it changes <code>number</code>'s value from 5 to 4.</dd>
+<dt>What is the next line?</dt>
+<dd>Well, the indent level decreases so we have to look at what type of control structure it is. It is a <code>while</code> loop, so we have to go back to the <code>while</code> clause which is <code>while number &gt; 1:</code></dd>
+<dt>What does it do?</dt>
+<dd>It looks at the value of number, which is 4, and compares it to 1 and since <code>4 &gt; 1</code> the while loop continues.</dd>
+<dt>What is the next line?</dt>
+<dd>Since the while loop was true, the next line is: <code>print(".",end=" ")</code></dd>
+<dt>What does it do?</dt>
+<dd>It prints a second dot on the line, ending by a space.</dd>
+<dt>What is the next line?</dt>
+<dd>No indent change so it is: <code>number = number - 1</code></dd>
+<dt>And what does it do?</dt>
+<dd>It takes the current value of number (4), subtracts 1 from it, which gives it 3 and then finally makes 3 the new value of number.</dd>
+<dt>What is the next line?</dt>
+<dd>Since there is an indent change caused by the end of the while loop, the next line is: <code>while number &gt; 1:</code></dd>
+<dt>What does it do?</dt>
+<dd>It compares the current value of number (3) to 1. <code>3 &gt; 1</code> so the while loop continues.</dd>
+<dt>What is the next line?</dt>
+<dd>Since the while loop condition was true the next line is: <code>print(".",end=" ")</code></dd>
+<dt>And it does what?</dt>
+<dd>A third dot is printed on the line.</dd>
+<dt>What is the next line?</dt>
+<dd>It is: <code>number = number - 1</code></dd>
+<dt>What does it do?</dt>
+<dd>It takes the current value of number (3) subtracts from it 1 and makes the 2 the new value of number.</dd>
+<dt>What is the next line?</dt>
+<dd>Back up to the start of the while loop: <code>while number &gt; 1:</code></dd>
+<dt>What does it do?</dt>
+<dd>It compares the current value of number (2) to 1. Since <code>2 &gt; 1</code> the while loop continues.</dd>
+<dt>What is the next line?</dt>
+<dd>Since the while loop is continuing: <code>print(".",end=" ")</code></dd>
+<dt>What does it do?</dt>
+<dd>It discovers the meaning of life, the universe and everything. I'm joking. (I had to make sure you were awake.) The line prints a fourth dot on the screen.</dd>
+<dt>What is the next line?</dt>
+<dd>It's: <code>number = number - 1</code></dd>
+<dt>What does it do?</dt>
+<dd>Takes the current value of number (2) subtracts 1 and makes 1 the new value of number.</dd>
+<dt>What is the next line?</dt>
+<dd>Back up to the while loop: <code>while number &gt; 1:</code></dd>
+<dt>What does the line do?</dt>
+<dd>It compares the current value of number (1) to 1. Since <code>1 &gt; 1</code> is false (one is not greater than one), the while loop exits.</dd>
+<dt>What is the next line?</dt>
+<dd>Since the while loop condition was false the next line is the line after the while loop exits, or: <code>print()</code></dd>
+<dt>What does that line do?</dt>
+<dd>Makes the screen go to the next line.</dd>
+<dt>Why doesn't the program print 5 dots?</dt>
+<dd>The loop exits 1 dot too soon.</dd>
+<dt>How can we fix that?</dt>
+<dd>Make the loop exit 1 dot later.</dd>
+<dt>And how do we do that?</dt>
+<dd>There are several ways. One way would be to change the while loop to: <code>while number &gt; 0:</code> Another way would be to change the conditional to: <code>number &gt;= 1</code> There are a couple others.</dd>
+</dl>
+<h3><span class="editsection">[<a href="/w/index.php?title=Non-Programmer%27s_Tutorial_for_Python_3/Debugging&amp;action=edit&amp;section=4" title="Edit section: How do I fix my program?">edit</a>]</span> <span class="mw-headline" id="How_do_I_fix_my_program.3F">How do I fix my program?</span></h3>
+<p>You need to figure out what the program is doing. You need to figure out what the program should do. Figure out what the difference between the two is. Debugging is a skill that has to be practiced to be learned. If you can't figure it out after an hour, take a break, talk to someone about the problem or contemplate the lint in your navel. Come back in a while and you will probably have new ideas about the problem. Good luck.</p>
+<div class="noprint PrettyTextBox" style="background-color:#ffffe0;padding:0.5ex">
+<table width="100%" cellspacing="0" cellpadding="2">
+<tr>
+<td width="33%" bgcolor="#FFFFE0"><a href="/wiki/Non-Programmer%27s_Tutorial_for_Python_3/Decisions" title="Non-Programmer's Tutorial for Python 3/Decisions"><b>Previous:</b> Decisions</a></td>
+<td width="33%" bgcolor="#FFFFE0" align="center"><a href="/wiki/Non-Programmer%27s_Tutorial_for_Python_3" title="Non-Programmer's Tutorial for Python 3"><b>Front Page</b></a></td>
+<td width="33%" bgcolor="#FFFFE0" align="right"><a href="/wiki/Non-Programmer%27s_Tutorial_for_Python_3/Defining_Functions" title="Non-Programmer's Tutorial for Python 3/Defining Functions"><b>Next:</b> Defining Functions</a></td>
+</tr>
+</table>
+</div>
+
+
+<!-- 
+NewPP limit report
+Preprocessor node count: 72/1000000
+Post-expand include size: 1090/2048000 bytes
+Template argument size: 54/2048000 bytes
+Expensive parser function count: 0/500
+-->
+
+<!-- Saved in parser cache with key enwikibooks:pcache:idhash:179901-0!1!0!default!!en!2 and timestamp 20100825064641 -->
+<div class="printfooter">
+Retrieved from "<a href="http://en.wikibooks.org/wiki/Non-Programmer%27s_Tutorial_for_Python_3/Debugging">http://en.wikibooks.org/wiki/Non-Programmer%27s_Tutorial_for_Python_3/Debugging</a>"</div>
+		<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks"><a href="/wiki/Special:Categories" title="Special:Categories">Categories</a>: <span dir='ltr'><a href="/wiki/Category:Non-Programmer%27s_Tutorial_for_Python_3" title="Category:Non-Programmer's Tutorial for Python 3">Non-Programmer's Tutorial for Python 3</a></span> | <span dir='ltr'><a href="/wiki/Category:Non-Programmer%27s_Tutorial_for_Python_3.0" title="Category:Non-Programmer's Tutorial for Python 3.0">Non-Programmer's Tutorial for Python 3.0</a></span></div></div>		<!-- end content -->
+		<div id='mw-data-after-content'>
+	<form method="post" action="/w/index.php?title=Special:ReaderFeedback&amp;action=submit" id="mw-feedbackform"><fieldset class="feedback_reviewform noprint"><legend><strong>What do you think of this page?</strong></legend>
+<p><i>Please take a moment to rate this page below. Your feedback is valuable and helps us improve our website.</i>
+</p><span id="mw-feedbackselects"><b><label for="wpreliability">Reliability</label>:</b>&nbsp;<select name="wpreliability" id="wpreliability" onchange="updateFeedbackForm()"><option class="rfb-rating-option-4" value="4">Excellent</option>
+<option class="rfb-rating-option-3" value="3">High</option>
+<option class="rfb-rating-option-2" value="2">Fair</option>
+<option class="rfb-rating-option-1" value="1">Low</option>
+<option class="rfb-rating-option-0" value="0">Poor</option>
+<option value="-1" selected="selected">(unsure)</option>
+</select>
+<b><label for="wpcompleteness">Completeness</label>:</b>&nbsp;<select name="wpcompleteness" id="wpcompleteness" onchange="updateFeedbackForm()"><option class="rfb-rating-option-4" value="4">Excellent</option>
+<option class="rfb-rating-option-3" value="3">High</option>
+<option class="rfb-rating-option-2" value="2">Fair</option>
+<option class="rfb-rating-option-1" value="1">Low</option>
+<option class="rfb-rating-option-0" value="0">Poor</option>
+<option value="-1" selected="selected">(unsure)</option>
+</select>
+<b><label for="wpnpov">Neutrality</label>:</b>&nbsp;<select name="wpnpov" id="wpnpov" onchange="updateFeedbackForm()"><option class="rfb-rating-option-4" value="4">Excellent</option>
+<option class="rfb-rating-option-3" value="3">High</option>
+<option class="rfb-rating-option-2" value="2">Fair</option>
+<option class="rfb-rating-option-1" value="1">Low</option>
+<option class="rfb-rating-option-0" value="0">Poor</option>
+<option value="-1" selected="selected">(unsure)</option>
+</select>
+<b><label for="wppresentation">Presentation</label>:</b>&nbsp;<select name="wppresentation" id="wppresentation" onchange="updateFeedbackForm()"><option class="rfb-rating-option-4" value="4">Excellent</option>
+<option class="rfb-rating-option-3" value="3">High</option>
+<option class="rfb-rating-option-2" value="2">Fair</option>
+<option class="rfb-rating-option-1" value="1">Low</option>
+<option class="rfb-rating-option-0" value="0">Poor</option>
+<option value="-1" selected="selected">(unsure)</option>
+</select>
+</span><input type="submit" value="Submit" id="submitfeedback" accesskey="b" title="Submit review [b]" /><input type="hidden" value="Special:ReaderFeedback" name="title" />
+<input type="hidden" value="Non-Programmer's_Tutorial_for_Python_3/Debugging" name="target" />
+<input type="hidden" value="1805370" name="oldid" />
+<input type="hidden" value="97f30b22c0ae28bbca4b0f8412276c87" name="validatedParams" /><input type="hidden" value="submit" name="action" />
+<input type="hidden" value="+\" name="wpEditToken" />
+<input name="commentary" size="12" value="" style="display:none;" />
+</fieldset></form>
+</div>
+		<div class="visualClear"></div>
+	</div>
+</div></div>
+<div id="column-one">
+	<div id="p-cactions" class="portlet">
+		<h5>Views</h5>
+		<div class="pBody">
+			<ul>
+				 <li id="ca-nstab-main" class="selected"><a href="/wiki/Non-Programmer%27s_Tutorial_for_Python_3/Debugging" title="View the content page [c]" accesskey="c">Module</a></li>
+				 <li id="ca-talk" class="new"><a href="/w/index.php?title=Talk:Non-Programmer%27s_Tutorial_for_Python_3/Debugging&amp;action=edit&amp;redlink=1" title="Discussion about the content page [t]" accesskey="t">Discussion</a></li>
+				 <li id="ca-edit"><a href="/w/index.php?title=Non-Programmer%27s_Tutorial_for_Python_3/Debugging&amp;action=edit" title="You can edit this page. Please use the preview button before saving [e]" accesskey="e">Edit this page</a></li>
+				 <li id="ca-history"><a href="/w/index.php?title=Non-Programmer%27s_Tutorial_for_Python_3/Debugging&amp;action=history" title="Past revisions of this page [h]" accesskey="h">History</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-personal">
+		<h5>Personal tools</h5>
+		<div class="pBody">
+			<ul>
+				<li id="pt-optin-try"><a href="http://en.wikibooks.org/w/index.php?title=Special:UsabilityInitiativeOptIn&amp;from=Non-Programmer%27s_Tutorial_for_Python_3%2FDebugging" title="Try out new features" class="no-text-transform">Try Beta</a></li>
+				<li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Non-Programmer%27s_Tutorial_for_Python_3/Debugging" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in / create account</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-logo">
+		<a style="background-image: url(http://upload.wikimedia.org/wikibooks/en/b/bc/Wiki.png);" href="/wiki/Main_Page" title="Visit the main page"></a>
+	</div>
+	<script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
+	<div class='generated-sidebar portlet' id='p-Navigation'>
+		<h5>Navigation</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-mainpage"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main Page</a></li>
+				<li id="n-help"><a href="/wiki/Help:Contents" title="Find help on how to use and edit Wikibooks">Help</a></li>
+				<li id="n-Browse"><a href="/wiki/Wikibooks:Card_Catalog_Office" title="Check out what Wikibooks has to offer">Browse</a></li>
+				<li id="n-Cookbook"><a href="/wiki/Cookbook:Table_of_Contents" title="Learn recipes from around the world">Cookbook</a></li>
+				<li id="n-Wikijunior"><a href="/wiki/Wikijunior" title="Books for children">Wikijunior</a></li>
+				<li id="n-Featured-books"><a href="/wiki/Wikibooks:Featured_books" title="The best of Wikibooks">Featured books</a></li>
+				<li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="The list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+				<li id="n-sitesupport"><a href="http://wikimediafoundation.org/wiki/Donate" title="Support Wikibooks">Donations</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="p-search" class="portlet">
+		<h5><label for="searchInput">Search</label></h5>
+		<div id="searchBody" class="pBody">
+			<form action="/w/index.php" id="searchform">
+				<input type='hidden' name="title" value="Special:Search"/>
+				<input id="searchInput" title="Search Wikibooks" accesskey="f" value="" name="search" />
+				<input type='submit' name="go" class="searchButton" id="searchGoButton"	value="Go" title="Go to a page with this exact name if exists" />&nbsp;
+				<input type='submit' name="fulltext" class="searchButton" id="mw-searchButton" value="Search" title="Search the pages for this text" />
+			</form>
+		</div>
+	</div>
+	<div class='generated-sidebar portlet' id='p-Community'>
+		<h5>Community</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-Reading-room"><a href="/wiki/Wikibooks:Reading_room" title="Discuss Wikibooks-related questions and concerns with others">Reading room</a></li>
+				<li id="n-portal"><a href="/wiki/Wikibooks:Community_Portal" title="Find your way around the Wikibooks community">Community portal</a></li>
+				<li id="n-currentevents"><a href="/wiki/Wikibooks:Reading_room/Bulletin_Board" title="Important community news">Bulletin Board</a></li>
+				<li id="n-maintenance"><a href="/wiki/Wikibooks:Maintenance" title="Frequent tasks that you can help with">Help out!</a></li>
+				<li id="n-Policies-and-guidelines"><a href="/wiki/Wikibooks:Policies_and_guidelines" title="Pages detailing important rules and procedures">Policies and guidelines</a></li>
+				<li id="n-contact"><a href="/wiki/Wikibooks:Contact_us" title="Alternative methods of communication">Contact us</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class='generated-sidebar portlet' id='p-coll-print_export'>
+		<h5>Print/export</h5>
+		<div class='pBody'>
+<ul id="collectionPortletList"><li id="coll-create_a_book"><a href="/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Non-Programmer%27s+Tutorial+for+Python+3%2FDebugging" title="Create a book or page collection" rel="nofollow">Create a book</a></li><li id="coll-download-as-rl"><a href="/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Non-Programmer%27s+Tutorial+for+Python+3%2FDebugging&amp;oldid=1805370&amp;writer=rl" title="Download a PDF version of this wiki page" rel="nofollow">Download as PDF</a></li><li id="t-print"><a href="/w/index.php?title=Non-Programmer%27s_Tutorial_for_Python_3/Debugging&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li></ul>		</div>
+	</div>
+	<div class="portlet" id="p-tb">
+		<h5>Toolbox</h5>
+		<div class="pBody">
+			<ul>
+				<li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Non-Programmer%27s_Tutorial_for_Python_3/Debugging" title="List of all wiki pages that link here [j]" accesskey="j">What links here</a></li>
+				<li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Non-Programmer%27s_Tutorial_for_Python_3/Debugging" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+<li id="t-upload"><a href="http://commons.wikimedia.org/wiki/Commons:Upload" title="Upload files [u]" accesskey="u">Upload file</a></li>
+<li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="List of all special pages [q]" accesskey="q">Special pages</a></li>
+				<li id="t-permalink"><a href="/w/index.php?title=Non-Programmer%27s_Tutorial_for_Python_3/Debugging&amp;oldid=1805370" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-rating"><a href="/w/index.php?title=Special:RatingHistory&amp;target=Non-Programmer%27s_Tutorial_for_Python_3/Debugging">Page rating</a></li>			</ul>
+		</div>
+	</div>
+</div><!-- end of the left (by default at least) column -->
+<div class="visualClear"></div>
+<div id="footer">
+	<div id="f-poweredbyico"><a href="http://www.mediawiki.org/"><img src="http://bits.wikimedia.org/skins-1.5/common/images/poweredby_mediawiki_88x31.png" height="31" width="88" alt="Powered by MediaWiki" /></a></div>
+	<div id="f-copyrightico"><a href="http://wikimediafoundation.org/"><img src="/images/wikimedia-button.png" width="88" height="31" alt="Wikimedia Foundation"/></a></div>
+	<ul id="f-list">
+		<li id="lastmod"> This page was last modified on 24 May 2010, at 17:17.</li>
+		<li id="copyright">Text is available under the <a rel="license" href="http://en.wikibooks.org/wiki/Wikibooks:Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply. See <a href="http://wikimediafoundation.org/wiki/Terms_of_Use">Terms of Use</a> for details.</li>
+		<li id="privacy"><a href="http://wikimediafoundation.org/wiki/Privacy_policy" title="wikimedia:Privacy policy">Privacy policy</a></li>
+		<li id="about"><a href="/wiki/Wikibooks:About" title="Wikibooks:About">About Wikibooks</a></li>
+		<li id="disclaimer"><a href="/wiki/Wikibooks:General_disclaimer" title="Wikibooks:General disclaimer">Disclaimers</a></li>
+	</ul>
+</div>
+</div>
+
+<script type="text/javascript">if (window.runOnloadHook) runOnloadHook();</script>
+<!-- Served by srv277 in 0.056 secs. --></body></html>

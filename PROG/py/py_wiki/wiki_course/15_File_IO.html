@@ -1,0 +1,603 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr">
+<head>
+<title>Non-Programmer's Tutorial for Python 3/File IO - Wikibooks, collection of open-content textbooks</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta name="generator" content="MediaWiki 1.16wmf4" />
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="/w/index.php?title=Non-Programmer%27s_Tutorial_for_Python_3/File_IO&amp;action=edit" />
+<link rel="edit" title="Edit this page" href="/w/index.php?title=Non-Programmer%27s_Tutorial_for_Python_3/File_IO&amp;action=edit" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikibooks (en)" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/" />
+<link rel="alternate" type="application/atom+xml" title="Wikibooks Atom feed" href="/w/index.php?title=Special:RecentChanges&amp;feed=atom" />
+<link rel="stylesheet" href="http://bits.wikimedia.org/skins-1.5/common/shared.css?283p" type="text/css" media="screen" />
+<link rel="stylesheet" href="http://bits.wikimedia.org/skins-1.5/common/commonPrint.css?283p" type="text/css" media="print" />
+<link rel="stylesheet" href="http://bits.wikimedia.org/skins-1.5/monobook/main.css?283p" type="text/css" media="screen" />
+<link rel="stylesheet" href="http://bits.wikimedia.org/skins-1.5/chick/main.css?283p" type="text/css" media="handheld" />
+<!--[if lt IE 5.5000]><link rel="stylesheet" href="http://bits.wikimedia.org/skins-1.5/monobook/IE50Fixes.css?283p" type="text/css" media="screen" /><![endif]-->
+<!--[if IE 5.5000]><link rel="stylesheet" href="http://bits.wikimedia.org/skins-1.5/monobook/IE55Fixes.css?283p" type="text/css" media="screen" /><![endif]-->
+<!--[if IE 6]><link rel="stylesheet" href="http://bits.wikimedia.org/skins-1.5/monobook/IE60Fixes.css?283p" type="text/css" media="screen" /><![endif]-->
+<!--[if IE 7]><link rel="stylesheet" href="http://bits.wikimedia.org/skins-1.5/monobook/IE70Fixes.css?283p" type="text/css" media="screen" /><![endif]-->
+<link rel="stylesheet" href="/w/extensions/FlaggedRevs/client/flaggedrevs.css?76" type="text/css" media="all" />
+<link rel="stylesheet" href="/w/extensions/ReaderFeedback/readerfeedback.css?1" type="text/css" media="all" />
+<link rel="stylesheet" href="/w/index.php?title=MediaWiki:Common.css&amp;usemsgcache=yes&amp;ctype=text%2Fcss&amp;smaxage=2678400&amp;action=raw&amp;maxage=2678400" type="text/css" media="all" />
+<link rel="stylesheet" href="/w/index.php?title=MediaWiki:Print.css&amp;usemsgcache=yes&amp;ctype=text%2Fcss&amp;smaxage=2678400&amp;action=raw&amp;maxage=2678400" type="text/css" media="print" />
+<link rel="stylesheet" href="/w/index.php?title=MediaWiki:Handheld.css&amp;usemsgcache=yes&amp;ctype=text%2Fcss&amp;smaxage=2678400&amp;action=raw&amp;maxage=2678400" type="text/css" media="handheld" />
+<link rel="stylesheet" href="/w/index.php?title=MediaWiki:Monobook.css&amp;usemsgcache=yes&amp;ctype=text%2Fcss&amp;smaxage=2678400&amp;action=raw&amp;maxage=2678400" type="text/css" media="all" />
+<link rel="stylesheet" href="/w/index.php?title=-&amp;action=raw&amp;maxage=2678400&amp;gen=css" type="text/css" media="all" />
+<script type="text/javascript">
+var skin="monobook",
+stylepath="http://bits.wikimedia.org/skins-1.5",
+wgUrlProtocols="http\\:\\/\\/|https\\:\\/\\/|ftp\\:\\/\\/|irc\\:\\/\\/|gopher\\:\\/\\/|telnet\\:\\/\\/|nntp\\:\\/\\/|worldwind\\:\\/\\/|mailto\\:|news\\:|svn\\:\\/\\/",
+wgArticlePath="/wiki/$1",
+wgScriptPath="/w",
+wgScriptExtension=".php",
+wgScript="/w/index.php",
+wgVariantArticlePath=false,
+wgActionPaths={},
+wgServer="http://en.wikibooks.org",
+wgCanonicalNamespace="",
+wgCanonicalSpecialPageName=false,
+wgNamespaceNumber=0,
+wgPageName="Non-Programmer\'s_Tutorial_for_Python_3/File_IO",
+wgTitle="Non-Programmer\'s Tutorial for Python 3/File IO",
+wgAction="view",
+wgArticleId=190100,
+wgIsArticle=true,
+wgUserName=null,
+wgUserGroups=null,
+wgUserLanguage="en",
+wgContentLanguage="en",
+wgBreakFrames=false,
+wgCurRevisionId=1904505,
+wgVersion="1.16wmf4",
+wgEnableAPI=true,
+wgEnableWriteAPI=true,
+wgSeparatorTransformTable=["", ""],
+wgDigitTransformTable=["", ""],
+wgMainPageTitle="Main Page",
+wgFormattedNamespaces={"-2": "Media", "-1": "Special", "0": "", "1": "Talk", "2": "User", "3": "User talk", "4": "Wikibooks", "5": "Wikibooks talk", "6": "File", "7": "File talk", "8": "MediaWiki", "9": "MediaWiki talk", "10": "Template", "11": "Template talk", "12": "Help", "13": "Help talk", "14": "Category", "15": "Category talk", "102": "Cookbook", "103": "Cookbook talk", "108": "Transwiki", "109": "Transwiki talk", "110": "Wikijunior", "111": "Wikijunior talk", "112": "Subject", "113": "Subject talk"},
+wgNamespaceIds={"media": -2, "special": -1, "": 0, "talk": 1, "user": 2, "user_talk": 3, "wikibooks": 4, "wikibooks_talk": 5, "file": 6, "file_talk": 7, "mediawiki": 8, "mediawiki_talk": 9, "template": 10, "template_talk": 11, "help": 12, "help_talk": 13, "category": 14, "category_talk": 15, "cookbook": 102, "cookbook_talk": 103, "transwiki": 108, "transwiki_talk": 109, "wikijunior": 110, "wikijunior_talk": 111, "subject": 112, "subject_talk": 113, "wb": 4, "wj": 110, "cat": 14, "cook": 102, "sub": 112, "image": 6, "image_talk": 7},
+wgSiteName="Wikibooks",
+wgCategories=["Non-Programmer\'s Tutorial for Python 3", "Non-Programmer\'s Tutorial for Python 3.0"],
+wgMWSuggestTemplate="http://en.wikibooks.org/w/api.php?action=opensearch\x26search={searchTerms}\x26namespace={namespaces}\x26suggest",
+wgDBname="enwikibooks",
+wgSearchNamespaces=[0, 4, 112],
+wgMWSuggestMessages=["with suggestions", "no suggestions"],
+wgRestrictionEdit=[],
+wgRestrictionMove=[],
+wgFlaggedRevsParams={"tags": {"value": {"levels": 3, "quality": 2, "pristine": 3}}},
+wgStableRevisionId=1904505,
+wgFeedbackParams={"tags": {"reliability": 3, "completeness": 2, "npov": 2, "presentation": 1}},
+wgAjaxFeedback={"sendingMsg": "Submitting …", "sentMsg": "Thank you!"},
+wgNotice="",
+wgNoticeLocal="";
+</script><script src="http://bits.wikimedia.org/skins-1.5/common/wikibits.js?283p" type="text/javascript"></script>
+<script src="http://bits.wikimedia.org/skins-1.5/common/ajax.js?283p" type="text/javascript"></script>
+<script src="http://bits.wikimedia.org/skins-1.5/common/mwsuggest.js?283p" type="text/javascript"></script>
+<script type="text/javascript" src="http://upload.wikimedia.org/centralnotice/wikibooks/en/centralnotice.js?283p"></script>
+
+<script src="/w/index.php?title=-&amp;action=raw&amp;gen=js&amp;useskin=monobook&amp;283p" type="text/javascript"></script>
+
+<style type="text/css">/*<![CDATA[*/
+.source-python {line-height: normal;}
+.source-python li, .source-python pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for python
+ * CSS class: source-python, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.python.source-python .de1, .python.source-python .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;}
+.python.source-python  {font-family:monospace;}
+.python.source-python .imp {font-weight: bold; color: red;}
+.python.source-python li, .python.source-python .li1 {font-weight: normal; vertical-align:top;}
+.python.source-python .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.python.source-python .li2 {font-weight: bold; vertical-align:top;}
+.python.source-python .kw1 {color: #ff7700;font-weight:bold;}
+.python.source-python .kw2 {color: #008000;}
+.python.source-python .kw3 {color: #dc143c;}
+.python.source-python .kw4 {color: #0000cd;}
+.python.source-python .co1 {color: #808080; font-style: italic;}
+.python.source-python .coMULTI {color: #808080; font-style: italic;}
+.python.source-python .es0 {color: #000099; font-weight: bold;}
+.python.source-python .br0 {color: black;}
+.python.source-python .sy0 {color: #66cc66;}
+.python.source-python .st0 {color: #483d8b;}
+.python.source-python .nu0 {color: #ff4500;}
+.python.source-python .me1 {color: black;}
+.python.source-python .ln-xtra, .python.source-python li.ln-xtra, .python.source-python div.ln-xtra {background-color: #ffc;}
+.python.source-python span.xtra { display:block; }
+
+/*]]>*/
+</style>
+<style type="text/css">/*<![CDATA[*/
+@import "/w/index.php?title=MediaWiki:Geshi.css&usemsgcache=yes&action=raw&ctype=text/css&smaxage=2678400";
+/*]]>*/
+</style><script type="text/javascript" src="/w/extensions/FlaggedRevs/client/flaggedrevs.js?76"></script>
+<script type="text/javascript">FlaggedRevs.messages = {"diffToggleShow": "show those changes", "diffToggleHide": "hide those changes", "logToggleShow": "show stability log", "logToggleHide": "hide stability log", "logDetailsShow": "show details", "logDetailsHide": "hide details", "toggleShow": "(+)", "toggleHide": "(-)"};</script>
+<script type="text/javascript" src="/w/extensions/ReaderFeedback/readerfeedback.js?1"></script>
+</head>
+<body class="mediawiki ltr ns-0 ns-subject page-Non-Programmer_s_Tutorial_for_Python_3_File_IO skin-monobook">
+<div id="globalWrapper">
+<div id="column-content"><div id="content">
+	<a id="top"></a>
+	<div id="siteNotice"><script type='text/javascript'>if (wgNotice != '') document.writeln(wgNotice);</script></div>
+	<h1 id="firstHeading" class="firstHeading">Non-Programmer's Tutorial for Python 3/File IO</h1>
+	<div id="bodyContent">
+		<div id="siteSub">From Wikibooks, the open-content textbooks collection</div>
+		<div id="contentSub"><span class="subpages">&lt; <a href="/wiki/Non-Programmer%27s_Tutorial_for_Python_3" title="Non-Programmer's Tutorial for Python 3">Non-Programmer's Tutorial for Python 3</a></span></div>
+		<div id="jump-to-nav">Jump to: <a href="#column-one">navigation</a>, <a href="#searchInput">search</a></div>
+		<!-- start content -->
+<p>Here is a simple example of file IO (input/output):</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;">
+<div class="python source-python" style="font-family:monospace;">
+<pre class="de1">
+<span class="co1"># Write a file</span>
+out_file = <span class="kw2">open</span><span class="br0">(</span><span class="st0">"test.txt"</span>, <span class="st0">"wt"</span><span class="br0">)</span>
+out_file.<span class="me1">write</span><span class="br0">(</span><span class="st0">"This Text is going to out file<span class="es0">\n</span>Look at it and see!"</span><span class="br0">)</span>
+out_file.<span class="me1">close</span><span class="br0">(</span><span class="br0">)</span>
+ 
+<span class="co1"># Read a file</span>
+in_file = <span class="kw2">open</span><span class="br0">(</span><span class="st0">"test.txt"</span>, <span class="st0">"rt"</span><span class="br0">)</span>
+text = in_file.<span class="me1">read</span><span class="br0">(</span><span class="br0">)</span>
+in_file.<span class="me1">close</span><span class="br0">(</span><span class="br0">)</span>
+ 
+<span class="kw1">print</span><span class="br0">(</span>text<span class="br0">)</span>
+</pre></div>
+</div>
+<p>The output and the contents of the file <code>test.txt</code> are:</p>
+<pre>
+This Text is going to out file
+Look at it and see!
+</pre>
+<p>Notice that it wrote a file called <code>test.txt</code> in the directory that you ran the program from. The <code>\n</code> in the string tells Python to put a <i>n</i>ewline where it is.</p>
+<p>A overview of file IO is:</p>
+<ul>
+<li>Get a file object with the <code>open</code> function.</li>
+<li>Read or write to the file object (depending on how it was opened)</li>
+<li>Close it</li>
+</ul>
+<p>The first step is to get a file object. The way to do this is to use the <code>open</code> function. The format is <code>file_object = open(filename, mode)</code> where <code>file_object</code> is the variable to put the file object, <code>filename</code> is a string with the filename, and <code>mode</code> is <code>"rt"</code> to <i>r</i>ead a file as <i>t</i>ext or <code>"wt"</code> to <i>w</i>rite a file as <i>t</i>ext (and a few others we will skip here). Next the file objects functions can be called. The two most common functions are <code>read</code> and <code>write</code>. The <code>write</code> function adds a string to the end of the file. The <code>read</code> function reads the next thing in the file and returns it as a string. If no argument is given it will return the whole file (as done in the example).</p>
+<p>Now here is a new version of the phone numbers program that we made earlier:</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;">
+<div class="python source-python" style="font-family:monospace;">
+<pre class="de1">
+<span class="kw1">def</span> print_numbers<span class="br0">(</span>numbers<span class="br0">)</span>:
+    <span class="kw1">print</span><span class="br0">(</span><span class="st0">"Telephone Numbers:"</span><span class="br0">)</span>
+    <span class="kw1">for</span> k, v <span class="kw1">in</span> numbers.<span class="me1">items</span><span class="br0">(</span><span class="br0">)</span>:
+        <span class="kw1">print</span><span class="br0">(</span><span class="st0">"Name:"</span>, k, <span class="st0">"<span class="es0">\t</span>Number:"</span>, v<span class="br0">)</span>
+    <span class="kw1">print</span><span class="br0">(</span><span class="br0">)</span>
+ 
+<span class="kw1">def</span> add_number<span class="br0">(</span>numbers, name, number<span class="br0">)</span>:
+    numbers<span class="br0">[</span>name<span class="br0">]</span> = number
+ 
+<span class="kw1">def</span> lookup_number<span class="br0">(</span>numbers, name<span class="br0">)</span>:
+    <span class="kw1">if</span> name <span class="kw1">in</span> numbers:
+        <span class="kw1">return</span> <span class="st0">"The number is "</span> + numbers<span class="br0">[</span>name<span class="br0">]</span>
+    <span class="kw1">else</span>:
+        <span class="kw1">return</span> name + <span class="st0">" was not found"</span>
+ 
+<span class="kw1">def</span> remove_number<span class="br0">(</span>numbers, name<span class="br0">)</span>:
+    <span class="kw1">if</span> name <span class="kw1">in</span> numbers:
+        <span class="kw1">del</span> numbers<span class="br0">[</span>name<span class="br0">]</span>
+    <span class="kw1">else</span>:
+        <span class="kw1">print</span><span class="br0">(</span>name,<span class="st0">" was not found"</span><span class="br0">)</span>
+ 
+<span class="kw1">def</span> load_numbers<span class="br0">(</span>numbers, filename<span class="br0">)</span>:
+    in_file = <span class="kw2">open</span><span class="br0">(</span>filename, <span class="st0">"rt"</span><span class="br0">)</span>
+    <span class="kw1">while</span> <span class="kw2">True</span>:
+        in_line = in_file.<span class="kw3">readline</span><span class="br0">(</span><span class="br0">)</span>
+        <span class="kw1">if</span> <span class="kw1">not</span> in_line:
+            <span class="kw1">break</span>
+        in_line = in_line<span class="br0">[</span>:-<span class="nu0">1</span><span class="br0">]</span>
+        name, number = in_line.<span class="me1">split</span><span class="br0">(</span><span class="st0">","</span><span class="br0">)</span>
+        numbers<span class="br0">[</span>name<span class="br0">]</span> = number
+    in_file.<span class="me1">close</span><span class="br0">(</span><span class="br0">)</span>
+ 
+<span class="kw1">def</span> save_numbers<span class="br0">(</span>numbers, filename<span class="br0">)</span>:
+    out_file = <span class="kw2">open</span><span class="br0">(</span>filename, <span class="st0">"wt"</span><span class="br0">)</span>
+    <span class="kw1">for</span> k, v <span class="kw1">in</span> numbers.<span class="me1">items</span><span class="br0">(</span><span class="br0">)</span>:
+        out_file.<span class="me1">write</span><span class="br0">(</span>k + <span class="st0">","</span> + v + <span class="st0">"<span class="es0">\n</span>"</span><span class="br0">)</span>
+    out_file.<span class="me1">close</span><span class="br0">(</span><span class="br0">)</span>
+ 
+<span class="kw1">def</span> print_menu<span class="br0">(</span><span class="br0">)</span>:
+    <span class="kw1">print</span><span class="br0">(</span><span class="st0">'1. Print Phone Numbers'</span><span class="br0">)</span>
+    <span class="kw1">print</span><span class="br0">(</span><span class="st0">'2. Add a Phone Number'</span><span class="br0">)</span>
+    <span class="kw1">print</span><span class="br0">(</span><span class="st0">'3. Remove a Phone Number'</span><span class="br0">)</span>
+    <span class="kw1">print</span><span class="br0">(</span><span class="st0">'4. Lookup a Phone Number'</span><span class="br0">)</span>
+    <span class="kw1">print</span><span class="br0">(</span><span class="st0">'5. Load numbers'</span><span class="br0">)</span>
+    <span class="kw1">print</span><span class="br0">(</span><span class="st0">'6. Save numbers'</span><span class="br0">)</span>
+    <span class="kw1">print</span><span class="br0">(</span><span class="st0">'7. Quit'</span><span class="br0">)</span>
+    <span class="kw1">print</span><span class="br0">(</span><span class="br0">)</span>
+ 
+phone_list = <span class="br0">{</span><span class="br0">}</span>
+menu_choice = 0
+print_menu<span class="br0">(</span><span class="br0">)</span>
+<span class="kw1">while</span> <span class="kw2">True</span>:
+    menu_choice = <span class="kw2">int</span><span class="br0">(</span><span class="kw2">input</span><span class="br0">(</span><span class="st0">"Type in a number (1-7): "</span><span class="br0">)</span><span class="br0">)</span>
+    <span class="kw1">if</span> menu_choice == 1:
+        print_numbers<span class="br0">(</span>phone_list<span class="br0">)</span>
+    <span class="kw1">elif</span> menu_choice == 2:
+        <span class="kw1">print</span><span class="br0">(</span><span class="st0">"Add Name and Number"</span><span class="br0">)</span>
+        name = <span class="kw2">input</span><span class="br0">(</span><span class="st0">"Name: "</span><span class="br0">)</span>
+        phone = <span class="kw2">input</span><span class="br0">(</span><span class="st0">"Number: "</span><span class="br0">)</span>
+        add_number<span class="br0">(</span>phone_list, name, phone<span class="br0">)</span>
+    <span class="kw1">elif</span> menu_choice == 3:
+        <span class="kw1">print</span><span class="br0">(</span><span class="st0">"Remove Name and Number"</span><span class="br0">)</span>
+        name = <span class="kw2">input</span><span class="br0">(</span><span class="st0">"Name: "</span><span class="br0">)</span>
+        remove_number<span class="br0">(</span>phone_list, name<span class="br0">)</span>
+    <span class="kw1">elif</span> menu_choice == 4:
+        <span class="kw1">print</span><span class="br0">(</span><span class="st0">"Lookup Number"</span><span class="br0">)</span>
+        name = <span class="kw2">input</span><span class="br0">(</span><span class="st0">"Name: "</span><span class="br0">)</span>
+        <span class="kw1">print</span><span class="br0">(</span>lookup_number<span class="br0">(</span>phone_list, name<span class="br0">)</span><span class="br0">)</span>
+    <span class="kw1">elif</span> menu_choice == 5:
+        filename = <span class="kw2">input</span><span class="br0">(</span><span class="st0">"Filename to load: "</span><span class="br0">)</span>
+        load_numbers<span class="br0">(</span>phone_list, filename<span class="br0">)</span>
+    <span class="kw1">elif</span> menu_choice == 6:
+        filename = <span class="kw2">input</span><span class="br0">(</span><span class="st0">"Filename to save: "</span><span class="br0">)</span>
+        save_numbers<span class="br0">(</span>phone_list, filename<span class="br0">)</span>
+    <span class="kw1">elif</span> menu_choice == 7:
+        <span class="kw1">break</span>
+    <span class="kw1">else</span>:
+        print_menu<span class="br0">(</span><span class="br0">)</span>
+ 
+<span class="kw1">print</span><span class="br0">(</span><span class="st0">"Goodbye"</span><span class="br0">)</span>
+</pre></div>
+</div>
+<p>Notice that it now includes saving and loading files. Here is some output of my running it twice:</p>
+<pre>
+1. Print Phone Numbers
+2. Add a Phone Number
+3. Remove a Phone Number
+4. Lookup a Phone Number
+5. Load numbers
+6. Save numbers
+7. Quit
+
+Type in a number (1-7): <b>2</b>
+Add Name and Number
+Name: <b>Jill</b>
+Number: <b>1234</b>
+Type in a number (1-7): <b>2</b>
+Add Name and Number
+Name: <b>Fred</b>
+Number: <b>4321</b>
+Type in a number (1-7): <b>1</b>
+Telephone Numbers:
+Name: Jill     Number: 1234
+Name: Fred     Number: 4321
+
+Type in a number (1-7): <b>6</b>
+Filename to save: <b>numbers.txt</b>
+Type in a number (1-7): <b>7</b>
+Goodbye
+</pre>
+<pre>
+1. Print Phone Numbers
+2. Add a Phone Number
+3. Remove a Phone Number
+4. Lookup a Phone Number
+5. Load numbers
+6. Save numbers
+7. Quit
+
+Type in a number (1-7): <b>5</b>
+Filename to load: <b>numbers.txt</b>
+Type in a number (1-7): <b>1</b>
+Telephone Numbers:
+Name: Jill     Number: 1234
+Name: Fred     Number: 4321
+
+Type in a number (1-7): <b>7</b>
+Goodbye
+</pre>
+<p>The new portions of this program are:</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;">
+<div class="python source-python" style="font-family:monospace;">
+<pre class="de1">
+<span class="kw1">def</span> load_numbers<span class="br0">(</span>numbers, filename<span class="br0">)</span>:
+    in_file = <span class="kw2">open</span><span class="br0">(</span>filename, <span class="st0">"rt"</span><span class="br0">)</span>
+    <span class="kw1">while</span> <span class="kw2">True</span>:
+        in_line = in_file.<span class="kw3">readline</span><span class="br0">(</span><span class="br0">)</span>
+        <span class="kw1">if</span> <span class="kw1">not</span> in_line:
+            <span class="kw1">break</span>
+        in_line = in_line<span class="br0">[</span>:-<span class="nu0">1</span><span class="br0">]</span>
+        name, number = in_line.<span class="me1">split</span><span class="br0">(</span><span class="st0">","</span><span class="br0">)</span>
+        numbers<span class="br0">[</span>name<span class="br0">]</span> = number
+    in_file.<span class="me1">close</span><span class="br0">(</span><span class="br0">)</span>
+ 
+<span class="kw1">def</span> save_numbers<span class="br0">(</span>numbers, filename<span class="br0">)</span>:
+    out_file = <span class="kw2">open</span><span class="br0">(</span>filename, <span class="st0">"wt"</span><span class="br0">)</span>
+    <span class="kw1">for</span> k, v <span class="kw1">in</span> numbers.<span class="me1">values</span><span class="br0">(</span><span class="br0">)</span>:
+        out_file.<span class="me1">write</span><span class="br0">(</span>k + <span class="st0">","</span> + v + <span class="st0">"<span class="es0">\n</span>"</span><span class="br0">)</span>
+    out_file.<span class="me1">close</span><span class="br0">(</span><span class="br0">)</span>
+</pre></div>
+</div>
+<p>First we will look at the save portion of the program. First it creates a file object with the command <code>open(filename, "wt")</code>. Next it goes through and creates a line for each of the phone numbers with the command <code>out_file.write(x + "," + numbers[x] + "\n")</code>. This writes out a line that contains the name, a comma, the number and follows it by a newline.</p>
+<p>The loading portion is a little more complicated. It starts by getting a file object. Then it uses a <code>while True:</code> loop to keep looping until a <code>break</code> statement is encountered. Next it gets a line with the line <code>in_line = in_file.readline()</code>. The <code>readline</code> function will return a empty string when the end of the file is reached. The <code>if</code> statement checks for this and <code>break</code>s out of the <code>while</code> loop when that happens. Of course if the <code>readline</code> function did not return the newline at the end of the line there would be no way to tell if an empty string was an empty line or the end of the file so the newline is left in what <code>readline</code> returns. Hence we have to get rid of the newline. The line <code>in_line = in_line[:-1]</code> does this for us by dropping the last character. Next the line <code>name, number = in_line.split(",")</code> splits the line at the comma into a name and a number. This is then added to the <code>numbers</code> dictionary.</p>
+<h3><span class="editsection">[<a href="/w/index.php?title=Non-Programmer%27s_Tutorial_for_Python_3/File_IO&amp;action=edit&amp;section=1" title="Edit section: Exercises">edit</a>]</span> <span class="mw-headline" id="Exercises">Exercises</span></h3>
+<p>Now modify the grades program from section <a href="/wiki/Non-Programmer%27s_Tutorial_for_Python_3/Dictionaries" title="Non-Programmer's Tutorial for Python 3/Dictionaries">Dictionaries</a> so that is uses file IO to keep a record of the students.</p>
+<div style="clear:both;width:100%;color:#000000;" class="NavFrame">
+<div class="NavHead" align="center">Solution</div>
+<div class="NavContent" align="left">
+<p>Now modify the grades program from section <a href="/wiki/Non-Programmer%27s_Tutorial_for_Python_3/Dictionaries" title="Non-Programmer's Tutorial for Python 3/Dictionaries">Dictionaries</a> so that is uses file IO to keep a record of the students.</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;">
+<div class="python source-python" style="font-family:monospace;">
+<pre class="de1">
+assignments = <span class="br0">[</span><span class="st0">'hw ch 1'</span>, <span class="st0">'hw ch 2'</span>, <span class="st0">'quiz   '</span>, <span class="st0">'hw ch 3'</span>, <span class="st0">'test'</span><span class="br0">]</span>
+students = <span class="br0">{</span> <span class="br0">}</span>
+ 
+<span class="kw1">def</span> load_grades<span class="br0">(</span>gradesfile<span class="br0">)</span>:
+    inputfile = <span class="kw2">open</span><span class="br0">(</span>gradesfile, <span class="st0">"r"</span><span class="br0">)</span>
+    grades = <span class="br0">[</span> <span class="br0">]</span>
+    <span class="kw1">while</span> <span class="kw2">True</span>:
+        student_and_grade = inputfile.<span class="kw3">readline</span><span class="br0">(</span><span class="br0">)</span>
+        student_and_grade = student_and_grade<span class="br0">[</span>:-1<span class="br0">]</span>
+        <span class="kw1">if</span> <span class="kw1">not</span> student_and_grade:
+            <span class="kw1">break</span>
+        <span class="kw1">else</span>:
+            studentname, studentgrades = student_and_grade.<span class="me1">split</span><span class="br0">(</span><span class="st0">","</span><span class="br0">)</span>
+            studentgrades = studentgrades.<span class="me1">split</span><span class="br0">(</span><span class="st0">" "</span><span class="br0">)</span>
+            students<span class="br0">[</span>studentname<span class="br0">]</span> = studentgrades
+    inputfile.<span class="me1">close</span><span class="br0">(</span><span class="br0">)</span>
+    <span class="kw1">print</span><span class="br0">(</span><span class="st0">"Grades loaded."</span><span class="br0">)</span>
+ 
+<span class="kw1">def</span> save_grades<span class="br0">(</span>gradesfile<span class="br0">)</span>:
+    outputfile = <span class="kw2">open</span><span class="br0">(</span>gradesfile, <span class="st0">"w"</span><span class="br0">)</span>
+    <span class="kw1">for</span> k, v <span class="kw1">in</span> students.<span class="me1">values</span><span class="br0">(</span><span class="br0">)</span>:
+        outputfile.<span class="me1">write</span><span class="br0">(</span>k + <span class="st0">","</span><span class="br0">)</span>
+        <span class="kw1">for</span> x <span class="kw1">in</span> v:
+            outputfile.<span class="me1">write</span><span class="br0">(</span>x + <span class="st0">" "</span><span class="br0">)</span>
+        outputfile.<span class="me1">write</span><span class="br0">(</span><span class="st0">"<span class="es0">\n</span>"</span><span class="br0">)</span>
+    outputfile.<span class="me1">close</span><span class="br0">(</span><span class="br0">)</span>
+    <span class="kw1">print</span><span class="br0">(</span><span class="st0">"Grades saved."</span><span class="br0">)</span>
+ 
+<span class="kw1">def</span> print_menu<span class="br0">(</span><span class="br0">)</span>:
+    <span class="kw1">print</span><span class="br0">(</span><span class="st0">"1. Add student"</span><span class="br0">)</span>
+    <span class="kw1">print</span><span class="br0">(</span><span class="st0">"2. Remove student"</span><span class="br0">)</span>
+    <span class="kw1">print</span><span class="br0">(</span><span class="st0">"3. Load grades"</span><span class="br0">)</span>
+    <span class="kw1">print</span><span class="br0">(</span><span class="st0">"4. Record grade"</span><span class="br0">)</span>
+    <span class="kw1">print</span><span class="br0">(</span><span class="st0">"5. Print grades"</span><span class="br0">)</span>
+    <span class="kw1">print</span><span class="br0">(</span><span class="st0">"6. Save grades"</span><span class="br0">)</span>
+    <span class="kw1">print</span><span class="br0">(</span><span class="st0">"7. Print Menu"</span><span class="br0">)</span>
+    <span class="kw1">print</span><span class="br0">(</span><span class="st0">"9. Quit"</span><span class="br0">)</span>
+ 
+<span class="kw1">def</span> print_all_grades<span class="br0">(</span><span class="br0">)</span>:
+    <span class="kw1">if</span> students:
+        keys = <span class="kw2">sorted</span><span class="br0">(</span>students.<span class="me1">keys</span><span class="br0">(</span><span class="br0">)</span><span class="br0">)</span>
+        <span class="kw1">print</span><span class="br0">(</span><span class="st0">'<span class="es0">\t</span>'</span>, end=<span class="st0">' '</span><span class="br0">)</span>
+        <span class="kw1">for</span> x <span class="kw1">in</span> assignments:
+            <span class="kw1">print</span><span class="br0">(</span>x, <span class="st0">'<span class="es0">\t</span>'</span>, end=<span class="st0">' '</span><span class="br0">)</span>
+        <span class="kw1">print</span><span class="br0">(</span><span class="br0">)</span>
+        <span class="kw1">for</span> x <span class="kw1">in</span> keys:
+            <span class="kw1">print</span><span class="br0">(</span>x, <span class="st0">'<span class="es0">\t</span>'</span>, end=<span class="st0">' '</span><span class="br0">)</span>
+            grades = students<span class="br0">[</span>x<span class="br0">]</span>
+            print_grades<span class="br0">(</span>grades<span class="br0">)</span>
+    <span class="kw1">else</span>:
+        <span class="kw1">print</span><span class="br0">(</span><span class="st0">"There are no grades to print."</span><span class="br0">)</span>
+ 
+<span class="kw1">def</span> print_grades<span class="br0">(</span>grades<span class="br0">)</span>:
+    <span class="kw1">for</span> x <span class="kw1">in</span> grades:
+        <span class="kw1">print</span><span class="br0">(</span>x, <span class="st0">'<span class="es0">\t</span>'</span>, end=<span class="st0">' '</span><span class="br0">)</span>
+    <span class="kw1">print</span><span class="br0">(</span><span class="br0">)</span>
+ 
+print_menu<span class="br0">(</span><span class="br0">)</span>
+menu_choice = 0
+<span class="kw1">while</span> menu_choice <span class="sy0">!</span>= 9:
+    <span class="kw1">print</span><span class="br0">(</span><span class="br0">)</span>
+    menu_choice = <span class="kw2">int</span><span class="br0">(</span><span class="kw2">input</span><span class="br0">(</span><span class="st0">"Menu Choice: "</span><span class="br0">)</span><span class="br0">)</span>
+    <span class="kw1">if</span> menu_choice == 1:
+        name = <span class="kw2">input</span><span class="br0">(</span><span class="st0">"Student to add: "</span><span class="br0">)</span>
+        students<span class="br0">[</span>name<span class="br0">]</span> = <span class="br0">[</span>0<span class="br0">]</span> <span class="sy0">*</span> <span class="kw2">len</span><span class="br0">(</span>assignments<span class="br0">)</span>
+    <span class="kw1">elif</span> menu_choice == 2:
+        name = <span class="kw2">input</span><span class="br0">(</span><span class="st0">"Student to remove: "</span><span class="br0">)</span>
+        <span class="kw1">if</span> name <span class="kw1">in</span> students:
+            <span class="kw1">del</span> students<span class="br0">[</span>name<span class="br0">]</span>
+        <span class="kw1">else</span>:
+            <span class="kw1">print</span><span class="br0">(</span><span class="st0">"Student:"</span>, name, <span class="st0">"not found"</span><span class="br0">)</span>
+    <span class="kw1">elif</span> menu_choice == 3:
+        gradesfile = <span class="kw2">input</span><span class="br0">(</span><span class="st0">"Load grades from which file? "</span><span class="br0">)</span>
+        load_grades<span class="br0">(</span>gradesfile<span class="br0">)</span>
+    <span class="kw1">elif</span> menu_choice == 4:
+        <span class="kw1">print</span><span class="br0">(</span><span class="st0">"Record Grade"</span><span class="br0">)</span>
+        name = <span class="kw2">input</span><span class="br0">(</span><span class="st0">"Student: "</span><span class="br0">)</span>
+        <span class="kw1">if</span> name <span class="kw1">in</span> students:
+            grades = students<span class="br0">[</span>name<span class="br0">]</span>
+            <span class="kw1">print</span><span class="br0">(</span><span class="st0">"Type in the number of the grade to record"</span><span class="br0">)</span>
+            <span class="kw1">print</span><span class="br0">(</span><span class="st0">"Type a 0 (zero) to exit"</span><span class="br0">)</span>
+            <span class="kw1">for</span> i,x <span class="kw1">in</span> <span class="kw2">enumerate</span><span class="br0">(</span>assignments<span class="br0">)</span>:
+                <span class="kw1">print</span><span class="br0">(</span>i + <span class="nu0">1</span>, x, <span class="st0">'<span class="es0">\t</span>'</span>, end=<span class="st0">' '</span><span class="br0">)</span>
+            <span class="kw1">print</span><span class="br0">(</span><span class="br0">)</span>
+            print_grades<span class="br0">(</span>grades<span class="br0">)</span>
+            which = 1234
+            <span class="kw1">while</span> which <span class="sy0">!</span>= -1:
+                which = <span class="kw2">int</span><span class="br0">(</span><span class="kw2">input</span><span class="br0">(</span><span class="st0">"Change which Grade: "</span><span class="br0">)</span><span class="br0">)</span>
+                which -= 1
+                <span class="kw1">if</span> 0 <span class="sy0">&lt;</span>= which <span class="sy0">&lt;</span> <span class="kw2">len</span><span class="br0">(</span>grades<span class="br0">)</span>:
+                    grade = <span class="kw2">input</span><span class="br0">(</span><span class="st0">"Grade: "</span><span class="br0">)</span> <span class="co1"># Change from float(input()) to input() to avoid an error when saving</span>
+                    grades<span class="br0">[</span>which<span class="br0">]</span> = grade
+                <span class="kw1">elif</span> which <span class="sy0">!</span>= -1:
+                    <span class="kw1">print</span><span class="br0">(</span><span class="st0">"Invalid Grade Number"</span><span class="br0">)</span>
+        <span class="kw1">else</span>:
+            <span class="kw1">print</span><span class="br0">(</span><span class="st0">"Student not found"</span><span class="br0">)</span>
+    <span class="kw1">elif</span> menu_choice == 5:
+        print_all_grades<span class="br0">(</span><span class="br0">)</span>
+    <span class="kw1">elif</span> menu_choice == 6:
+        gradesfile = <span class="kw2">input</span><span class="br0">(</span><span class="st0">"Save grades to which file? "</span><span class="br0">)</span>
+        save_grades<span class="br0">(</span>gradesfile<span class="br0">)</span>
+    <span class="kw1">elif</span> menu_choice <span class="sy0">!</span>= <span class="nu0">9</span>:
+        print_menu<span class="br0">(</span><span class="br0">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="noprint PrettyTextBox" style="background-color:#ffffe0;padding:0.5ex">
+<table width="100%" cellspacing="0" cellpadding="2">
+<tr>
+<td width="33%" bgcolor="#FFFFE0"><a href="/wiki/Non-Programmer%27s_Tutorial_for_Python_3/Revenge_of_the_Strings" title="Non-Programmer's Tutorial for Python 3/Revenge of the Strings"><b>Previous:</b> Revenge of the Strings</a></td>
+<td width="33%" bgcolor="#FFFFE0" align="center"><a href="/wiki/Non-Programmer%27s_Tutorial_for_Python_3" title="Non-Programmer's Tutorial for Python 3"><b>Front Page</b></a></td>
+<td width="33%" bgcolor="#FFFFE0" align="right"><a href="/wiki/Non-Programmer%27s_Tutorial_for_Python_3/Dealing_with_the_imperfect" title="Non-Programmer's Tutorial for Python 3/Dealing with the imperfect"><b>Next:</b> Dealing with the imperfect</a></td>
+</tr>
+</table>
+</div>
+
+
+<!-- 
+NewPP limit report
+Preprocessor node count: 87/1000000
+Post-expand include size: 1462/2048000 bytes
+Template argument size: 282/2048000 bytes
+Expensive parser function count: 0/500
+-->
+
+<!-- Saved in parser cache with key enwikibooks:pcache:idhash:190100-0!1!0!default!!en!2 and timestamp 20100825064655 -->
+<div class="printfooter">
+Retrieved from "<a href="http://en.wikibooks.org/wiki/Non-Programmer%27s_Tutorial_for_Python_3/File_IO">http://en.wikibooks.org/wiki/Non-Programmer%27s_Tutorial_for_Python_3/File_IO</a>"</div>
+		<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks"><a href="/wiki/Special:Categories" title="Special:Categories">Categories</a>: <span dir='ltr'><a href="/wiki/Category:Non-Programmer%27s_Tutorial_for_Python_3" title="Category:Non-Programmer's Tutorial for Python 3">Non-Programmer's Tutorial for Python 3</a></span> | <span dir='ltr'><a href="/wiki/Category:Non-Programmer%27s_Tutorial_for_Python_3.0" title="Category:Non-Programmer's Tutorial for Python 3.0">Non-Programmer's Tutorial for Python 3.0</a></span></div></div>		<!-- end content -->
+		<div id='mw-data-after-content'>
+	<form method="post" action="/w/index.php?title=Special:ReaderFeedback&amp;action=submit" id="mw-feedbackform"><fieldset class="feedback_reviewform noprint"><legend><strong>What do you think of this page?</strong></legend>
+<p><i>Please take a moment to rate this page below. Your feedback is valuable and helps us improve our website.</i>
+</p><span id="mw-feedbackselects"><b><label for="wpreliability">Reliability</label>:</b>&nbsp;<select name="wpreliability" id="wpreliability" onchange="updateFeedbackForm()"><option class="rfb-rating-option-4" value="4">Excellent</option>
+<option class="rfb-rating-option-3" value="3">High</option>
+<option class="rfb-rating-option-2" value="2">Fair</option>
+<option class="rfb-rating-option-1" value="1">Low</option>
+<option class="rfb-rating-option-0" value="0">Poor</option>
+<option value="-1" selected="selected">(unsure)</option>
+</select>
+<b><label for="wpcompleteness">Completeness</label>:</b>&nbsp;<select name="wpcompleteness" id="wpcompleteness" onchange="updateFeedbackForm()"><option class="rfb-rating-option-4" value="4">Excellent</option>
+<option class="rfb-rating-option-3" value="3">High</option>
+<option class="rfb-rating-option-2" value="2">Fair</option>
+<option class="rfb-rating-option-1" value="1">Low</option>
+<option class="rfb-rating-option-0" value="0">Poor</option>
+<option value="-1" selected="selected">(unsure)</option>
+</select>
+<b><label for="wpnpov">Neutrality</label>:</b>&nbsp;<select name="wpnpov" id="wpnpov" onchange="updateFeedbackForm()"><option class="rfb-rating-option-4" value="4">Excellent</option>
+<option class="rfb-rating-option-3" value="3">High</option>
+<option class="rfb-rating-option-2" value="2">Fair</option>
+<option class="rfb-rating-option-1" value="1">Low</option>
+<option class="rfb-rating-option-0" value="0">Poor</option>
+<option value="-1" selected="selected">(unsure)</option>
+</select>
+<b><label for="wppresentation">Presentation</label>:</b>&nbsp;<select name="wppresentation" id="wppresentation" onchange="updateFeedbackForm()"><option class="rfb-rating-option-4" value="4">Excellent</option>
+<option class="rfb-rating-option-3" value="3">High</option>
+<option class="rfb-rating-option-2" value="2">Fair</option>
+<option class="rfb-rating-option-1" value="1">Low</option>
+<option class="rfb-rating-option-0" value="0">Poor</option>
+<option value="-1" selected="selected">(unsure)</option>
+</select>
+</span><input type="submit" value="Submit" id="submitfeedback" accesskey="b" title="Submit review [b]" /><input type="hidden" value="Special:ReaderFeedback" name="title" />
+<input type="hidden" value="Non-Programmer's_Tutorial_for_Python_3/File_IO" name="target" />
+<input type="hidden" value="1904505" name="oldid" />
+<input type="hidden" value="a88182a61916f7ad841fc561462b9fc1" name="validatedParams" /><input type="hidden" value="submit" name="action" />
+<input type="hidden" value="+\" name="wpEditToken" />
+<input name="commentary" size="12" value="" style="display:none;" />
+</fieldset></form>
+</div>
+		<div class="visualClear"></div>
+	</div>
+</div></div>
+<div id="column-one">
+	<div id="p-cactions" class="portlet">
+		<h5>Views</h5>
+		<div class="pBody">
+			<ul>
+				 <li id="ca-nstab-main" class="selected"><a href="/wiki/Non-Programmer%27s_Tutorial_for_Python_3/File_IO" title="View the content page [c]" accesskey="c">Module</a></li>
+				 <li id="ca-talk" class="new"><a href="/w/index.php?title=Talk:Non-Programmer%27s_Tutorial_for_Python_3/File_IO&amp;action=edit&amp;redlink=1" title="Discussion about the content page [t]" accesskey="t">Discussion</a></li>
+				 <li id="ca-edit"><a href="/w/index.php?title=Non-Programmer%27s_Tutorial_for_Python_3/File_IO&amp;action=edit" title="You can edit this page. Please use the preview button before saving [e]" accesskey="e">Edit this page</a></li>
+				 <li id="ca-history"><a href="/w/index.php?title=Non-Programmer%27s_Tutorial_for_Python_3/File_IO&amp;action=history" title="Past revisions of this page [h]" accesskey="h">History</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-personal">
+		<h5>Personal tools</h5>
+		<div class="pBody">
+			<ul>
+				<li id="pt-optin-try"><a href="http://en.wikibooks.org/w/index.php?title=Special:UsabilityInitiativeOptIn&amp;from=Non-Programmer%27s_Tutorial_for_Python_3%2FFile_IO" title="Try out new features" class="no-text-transform">Try Beta</a></li>
+				<li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Non-Programmer%27s_Tutorial_for_Python_3/File_IO" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in / create account</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-logo">
+		<a style="background-image: url(http://upload.wikimedia.org/wikibooks/en/b/bc/Wiki.png);" href="/wiki/Main_Page" title="Visit the main page"></a>
+	</div>
+	<script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
+	<div class='generated-sidebar portlet' id='p-Navigation'>
+		<h5>Navigation</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-mainpage"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main Page</a></li>
+				<li id="n-help"><a href="/wiki/Help:Contents" title="Find help on how to use and edit Wikibooks">Help</a></li>
+				<li id="n-Browse"><a href="/wiki/Wikibooks:Card_Catalog_Office" title="Check out what Wikibooks has to offer">Browse</a></li>
+				<li id="n-Cookbook"><a href="/wiki/Cookbook:Table_of_Contents" title="Learn recipes from around the world">Cookbook</a></li>
+				<li id="n-Wikijunior"><a href="/wiki/Wikijunior" title="Books for children">Wikijunior</a></li>
+				<li id="n-Featured-books"><a href="/wiki/Wikibooks:Featured_books" title="The best of Wikibooks">Featured books</a></li>
+				<li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="The list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+				<li id="n-sitesupport"><a href="http://wikimediafoundation.org/wiki/Donate" title="Support Wikibooks">Donations</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="p-search" class="portlet">
+		<h5><label for="searchInput">Search</label></h5>
+		<div id="searchBody" class="pBody">
+			<form action="/w/index.php" id="searchform">
+				<input type='hidden' name="title" value="Special:Search"/>
+				<input id="searchInput" title="Search Wikibooks" accesskey="f" value="" name="search" />
+				<input type='submit' name="go" class="searchButton" id="searchGoButton"	value="Go" title="Go to a page with this exact name if exists" />&nbsp;
+				<input type='submit' name="fulltext" class="searchButton" id="mw-searchButton" value="Search" title="Search the pages for this text" />
+			</form>
+		</div>
+	</div>
+	<div class='generated-sidebar portlet' id='p-Community'>
+		<h5>Community</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-Reading-room"><a href="/wiki/Wikibooks:Reading_room" title="Discuss Wikibooks-related questions and concerns with others">Reading room</a></li>
+				<li id="n-portal"><a href="/wiki/Wikibooks:Community_Portal" title="Find your way around the Wikibooks community">Community portal</a></li>
+				<li id="n-currentevents"><a href="/wiki/Wikibooks:Reading_room/Bulletin_Board" title="Important community news">Bulletin Board</a></li>
+				<li id="n-maintenance"><a href="/wiki/Wikibooks:Maintenance" title="Frequent tasks that you can help with">Help out!</a></li>
+				<li id="n-Policies-and-guidelines"><a href="/wiki/Wikibooks:Policies_and_guidelines" title="Pages detailing important rules and procedures">Policies and guidelines</a></li>
+				<li id="n-contact"><a href="/wiki/Wikibooks:Contact_us" title="Alternative methods of communication">Contact us</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class='generated-sidebar portlet' id='p-coll-print_export'>
+		<h5>Print/export</h5>
+		<div class='pBody'>
+<ul id="collectionPortletList"><li id="coll-create_a_book"><a href="/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Non-Programmer%27s+Tutorial+for+Python+3%2FFile+IO" title="Create a book or page collection" rel="nofollow">Create a book</a></li><li id="coll-download-as-rl"><a href="/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Non-Programmer%27s+Tutorial+for+Python+3%2FFile+IO&amp;oldid=1904505&amp;writer=rl" title="Download a PDF version of this wiki page" rel="nofollow">Download as PDF</a></li><li id="t-print"><a href="/w/index.php?title=Non-Programmer%27s_Tutorial_for_Python_3/File_IO&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li></ul>		</div>
+	</div>
+	<div class="portlet" id="p-tb">
+		<h5>Toolbox</h5>
+		<div class="pBody">
+			<ul>
+				<li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Non-Programmer%27s_Tutorial_for_Python_3/File_IO" title="List of all wiki pages that link here [j]" accesskey="j">What links here</a></li>
+				<li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Non-Programmer%27s_Tutorial_for_Python_3/File_IO" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+<li id="t-upload"><a href="http://commons.wikimedia.org/wiki/Commons:Upload" title="Upload files [u]" accesskey="u">Upload file</a></li>
+<li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="List of all special pages [q]" accesskey="q">Special pages</a></li>
+				<li id="t-permalink"><a href="/w/index.php?title=Non-Programmer%27s_Tutorial_for_Python_3/File_IO&amp;oldid=1904505" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-rating"><a href="/w/index.php?title=Special:RatingHistory&amp;target=Non-Programmer%27s_Tutorial_for_Python_3/File_IO">Page rating</a></li>			</ul>
+		</div>
+	</div>
+</div><!-- end of the left (by default at least) column -->
+<div class="visualClear"></div>
+<div id="footer">
+	<div id="f-poweredbyico"><a href="http://www.mediawiki.org/"><img src="http://bits.wikimedia.org/skins-1.5/common/images/poweredby_mediawiki_88x31.png" height="31" width="88" alt="Powered by MediaWiki" /></a></div>
+	<div id="f-copyrightico"><a href="http://wikimediafoundation.org/"><img src="/images/wikimedia-button.png" width="88" height="31" alt="Wikimedia Foundation"/></a></div>
+	<ul id="f-list">
+		<li id="lastmod"> This page was last modified on 30 July 2010, at 15:36.</li>
+		<li id="copyright">Text is available under the <a rel="license" href="http://en.wikibooks.org/wiki/Wikibooks:Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply. See <a href="http://wikimediafoundation.org/wiki/Terms_of_Use">Terms of Use</a> for details.</li>
+		<li id="privacy"><a href="http://wikimediafoundation.org/wiki/Privacy_policy" title="wikimedia:Privacy policy">Privacy policy</a></li>
+		<li id="about"><a href="/wiki/Wikibooks:About" title="Wikibooks:About">About Wikibooks</a></li>
+		<li id="disclaimer"><a href="/wiki/Wikibooks:General_disclaimer" title="Wikibooks:General disclaimer">Disclaimers</a></li>
+	</ul>
+</div>
+</div>
+
+<script type="text/javascript">if (window.runOnloadHook) runOnloadHook();</script>
+<!-- Served by srv173 in 0.081 secs. --></body></html>

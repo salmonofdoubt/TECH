@@ -1,0 +1,4 @@
+mode: set
+unittesting-packages/testing3/math/math.go:5.36,8.23 3 1
+unittesting-packages/testing3/math/math.go:11.2,11.33 1 1
+unittesting-packages/testing3/math/math.go:8.23,10.3 1 1

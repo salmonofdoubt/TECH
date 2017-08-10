@@ -1,0 +1,1 @@
+set path=c:\jbuilderx\jdk1.4\bin;c:\jbuilder3\java\bin;%PATH%

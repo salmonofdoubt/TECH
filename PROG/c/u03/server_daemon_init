@@ -1,0 +1,61 @@
+#!/bin/sh
+# Starts and stops server_daemon
+
+###################################################################
+### Usage (UNIX):
+### place script into /etc/init.d/:
+### chmod 744 /etc/init.d/server_daemon_init
+
+### make a symbolic link to the desired runlevels
+### ln -s /etc/init.d/server_daemon_initscript /etc/rc3.d/S20server_daemon
+### ln -s /etc/init.d/server_daemon_initscript /etc/rc5.d/S20server_daemon
+
+### ln -s /etc/init.d/server_daemon_initscript /etc/rc0.d/K10server_daemon
+### ln -s /etc/init.d/server_daemon_initscript /etc/rc1.d/K10server_daemon
+### ln -s /etc/init.d/server_daemon_initscript /etc/rc2.d/K10server_daemon
+### ln -s /etc/init.d/server_daemon_initscript /etc/rc6.d/K10server_daemon
+
+### make a symbolic link to /etc/init/server_daemon_init in /sbin:
+### ln -s /etc/init.d/server_daemon_init /sbin/rcserver_daemon_init
+###################################################################
+
+# Check if service exists
+SERVER_DAEMON_BIN=/usr/bin/server_daemon
+test -x $SERVER_DAEMON_BIN || { echo "$SERVER_DAEMON_BIN not installed";
+	if [ "$1" = "stop" ]; then exit 0;
+	else exit 5; fi; }
+
+# Start daemon
+case "$1" in
+start)
+	start-stop-daemon --start --exec /usr/bin/server_daemon 10000 -u `id -u`
+	echo "starting server_daemon..."
+	echo "ready"
+;;
+# Stop daemon
+stop)   
+	start-stop-daemon --stop --exec /usr/bin/server_daemon
+	echo "stopping server_daemon..."
+	echo "stopped"
+;;
+# Restart daemon
+restart)
+	$0 stop
+	$0 start
+;;
+# Check for status
+status)
+	if pidof -o %PPID server_daemon > /dev/null; then
+		echo "server_daemon already running..."
+		exit 0
+	else
+		echo "server_daemon currently not running"
+		exit 1
+	fi
+;;
+# Correct usage
+*)
+	echo "Usage: $0 {start|stop|restart|status}"
+	exit 
+
+###EOF###

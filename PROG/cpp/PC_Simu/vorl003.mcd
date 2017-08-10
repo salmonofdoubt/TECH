@@ -1,0 +1,314 @@
+.MCAD 303020000 1 74 104 0
+.CMD PLOTFORMAT
+0 0 1 1 0 0 1 
+0 0 1 1 0 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 21 15 0 3 
+.CMD FORMAT  rd=d ct=10 im=i et=3 zt=15 pr=3 mass length time charge temperature tr=0 vm=0
+.CMD SET ORIGIN 0
+.CMD SET TOL 0.001000000000000
+.CMD SET PRNCOLWIDTH 8
+.CMD SET PRNPRECISION 4
+.CMD PRINT_SETUP 1.200000 0.979167 1.200000 1.200000 0
+.CMD HEADER_FOOTER 1 1 *empty* *empty* *empty* 0 1 *empty* *empty* *empty*
+.CMD HEADER_FOOTER_FONT fontID=14 family=Arial points=10 bold=0 italic=0 underline=0
+.CMD HEADER_FOOTER_FONT fontID=15 family=Arial points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE_NAME fontID=0 name=Variablen
+.CMD DEFINE_FONTSTYLE_NAME fontID=1 name=Konstanten
+.CMD DEFINE_FONTSTYLE_NAME fontID=2 name=Text
+.CMD DEFINE_FONTSTYLE_NAME fontID=4 name=Benutzer^1
+.CMD DEFINE_FONTSTYLE_NAME fontID=5 name=Benutzer^2
+.CMD DEFINE_FONTSTYLE_NAME fontID=6 name=Benutzer^3
+.CMD DEFINE_FONTSTYLE_NAME fontID=7 name=Benutzer^4
+.CMD DEFINE_FONTSTYLE_NAME fontID=8 name=Benutzer^5
+.CMD DEFINE_FONTSTYLE_NAME fontID=9 name=Benutzer^6
+.CMD DEFINE_FONTSTYLE_NAME fontID=10 name=Benutzer^7
+.CMD DEFINE_FONTSTYLE fontID=0 family=Times^New^Roman points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=1 family=Times^New^Roman points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=2 family=Arial points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=4 family=Arial points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=5 family=Courier^New points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=6 family=System points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=7 family=Script points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=8 family=Roman points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=9 family=Modern points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=10 family=Times^New^Roman points=10 bold=0 italic=0 underline=0
+.CMD UNITS U=1
+.CMD DIMENSIONS_ANALYSIS 0 0
+.EQN 3 8 11 0
+{0:D}NAME:0.01
+.EQN 0 11 12 0
+{0:liter}NAME:1
+.EQN 0 5 14 0
+{0:m}NAME:1
+.EQN 0 5 15 0
+{0:g}NAME:9.81
+.EQN 7 -21 5 0
+{0:newton}NAME:2000
+.EQN 0 9 6 0
+{0:i}NAME:0;{0:newton}NAME
+.EQN 1 10 7 0
+{0:tesla}NAME:10*2*{0:\p}NAME*\(({0:liter}NAME)/({0:g}NAME))
+.EQN 0 14 8 0
+({0:tonne}NAME)[({0:i}NAME):({0:i}NAME)/({0:newton}NAME)*{0:tesla}NAME
+.EQN 0 9 26 0
+{0:dt}NAME:({0:tonne}NAME)[(1)-({0:tonne}NAME)[(0)
+.EQN 5 -9 34 0
+({0:tonne}NAME)[({0:newton}NAME+1):({0:newton}NAME+1)/({0:newton}NAME)*{0:tesla}NAME
+.EQN 5 -32 16 0
+{0:f1}NAME({0:x}NAME,{0:v}NAME,{0:tonne}NAME):{0:v}NAME
+.EQN 5 0 17 0
+{0:f2}NAME({0:x}NAME,{0:v}NAME,{0:tonne}NAME):-(({0:D}NAME)/({0:m}NAME))*{0:v}NAME-({0:g}NAME)/({0:liter}NAME)*{0:sin}NAME({0:x}NAME)
+.EQN 7 1 21 0
+({2,1}ö({0:v}NAME)[(0)ö({0:x}NAME)[(0)):({2,1}ö0ö{0:\p}NAME-0.001)
+.EQN 9 -1 23 0
+({2,1}ö({0:v}NAME)[({0:i}NAME+1)ö({0:x}NAME)[({0:i}NAME+1)):({2,1}ö({0:v}NAME)[({0:i}NAME)+({0:dt}NAME)/(2)*({0:f2}NAME(({0:x}NAME)[({0:i}NAME),({0:v}NAME)[({0:i}NAME),({0:tonne}NAME)[({0:i}NAME))+{0:f2}NAME(({0:x}NAME)[({0:i}NAME)+{0:dt}NAME*{0:f1}NAME((
+{0:x}NAME)[({0:i}NAME),({0:v}NAME)[({0:i}NAME),({0:tonne}NAME)[({0:i}NAME)),({0:v}NAME)[({0:i}NAME)+{0:dt}NAME*{0:f2}NAME(({0:x}NAME)[({0:i}NAME),({0:v}NAME)[({0:i}NAME),({0:tonne}NAME)[({0:i}NAME)),({0:tonne}NAME)[({0:i}NAME+1)))ö({0:x}NAME)[({0:i}NAME)+
+({0:dt}NAME)/(2)*({0:f1}NAME(({0:x}NAME)[({0:i}NAME),({0:v}NAME)[({0:i}NAME),({0:tonne}NAME)[({0:i}NAME))+{0:f1}NAME(({0:x}NAME)[({0:i}NAME)+{0:dt}NAME*{0:f1}NAME(({0:x}NAME)[({0:i}NAME),({0:v}NAME)[({0:i}NAME),({0:tonne}NAME)[({0:i}NAME)),({0:v}NAME)[(
+{0:i}NAME)+{0:dt}NAME*{0:f2}NAME(({0:x}NAME)[({0:i}NAME),({0:v}NAME)[({0:i}NAME),({0:tonne}NAME)[({0:i}NAME)),({0:tonne}NAME)[({0:i}NAME+1))))
+.EQN 6 0 29 0
+&&(_n_u_l_l_&_n_u_l_l_)&({0:x}NAME)[({0:i}NAME)@{0:tesla}NAME&&(_n_u_l_l_&_n_u_l_l_)&({0:tonne}NAME)[({0:i}NAME)
+0 0 1 1 0 0 1 
+0 0 1 1 0 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 53 25 0 3 
+.EQN 32 1 30 0
+&&(_n_u_l_l_&_n_u_l_l_)&({0:v}NAME)[({0:i}NAME)@{0:tesla}NAME&&(_n_u_l_l_&_n_u_l_l_)&({0:tonne}NAME)[({0:i}NAME)
+0 0 1 1 0 0 1 
+0 0 1 1 0 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 53 25 0 3 
+.EQN 41 14 31 0
+2&&(_n_u_l_l_&_n_u_l_l_)&({0:x}NAME)[({0:i}NAME)@5&&(_n_u_l_l_&_n_u_l_l_)&({0:v}NAME)[({0:i}NAME)
+0 0 1 1 0 0 1 
+0 0 1 1 0 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 36 24 0 3 
+.EQN 37 -17 35 0
+{0:E}NAME({0:x}NAME,{0:v}NAME):{0:m}NAME*{0:g}NAME*{0:liter}NAME*(1-{0:cos}NAME({0:x}NAME))+({0:m}NAME)/(2)*({0:liter}NAME)^(2)*({0:v}NAME)^(2)
+.EQN 6 0 36 0
+20&16&(_n_u_l_l_&_n_u_l_l_)&{0:E}NAME(({0:x}NAME)[({0:i}NAME),({0:v}NAME)[({0:i}NAME))@{0:tesla}NAME&&(_n_u_l_l_&_n_u_l_l_)&({0:tonne}NAME)[({0:i}NAME)
+0 0 1 1 0 0 1 
+0 0 1 1 0 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 51 33 0 3 
+.EQN 56 -4 71 0
+{0:D}NAME:0.1
+.EQN 0 11 72 0
+{0:liter}NAME:9.81
+.EQN 6 5 73 0
+{0:m}NAME:1
+.EQN 0 5 74 0
+{0:g}NAME:9.81
+.EQN 0 10 103 0
+{0:amp}NAME:0.75
+.EQN 0 11 104 0
+{0:\w}NAME:\(({0:g}NAME)/({0:liter}NAME))*0.666
+.EQN 7 -42 75 0
+{0:newton}NAME:400
+.EQN 0 9 76 0
+{0:i}NAME:0;{0:newton}NAME
+.EQN 1 10 77 0
+{0:tesla}NAME:25*2*{0:\p}NAME*\(({0:liter}NAME)/({0:g}NAME))
+.EQN 0 14 78 0
+({0:tonne}NAME)[({0:i}NAME):({0:i}NAME)/({0:newton}NAME)*{0:tesla}NAME
+.EQN 0 9 79 0
+{0:dt}NAME:({0:tonne}NAME)[(1)-({0:tonne}NAME)[(0)
+.EQN 2 -33 81 0
+{0:j}NAME:0;({0:newton}NAME-1)
+.EQN 3 24 80 0
+({0:tonne}NAME)[({0:newton}NAME+1):({0:newton}NAME+1)/({0:newton}NAME)*{0:tesla}NAME
+.EQN 1 -33 101 0
+{0:f1}NAME({0:x}NAME,{0:v}NAME,{0:tonne}NAME):{0:v}NAME
+.EQN 4 0 102 0
+{0:f2}NAME({0:x}NAME,{0:v}NAME,{0:tonne}NAME):(-(({0:D}NAME)/({0:m}NAME))*{0:v}NAME-({0:g}NAME)/({0:liter}NAME)*{0:sin}NAME({0:x}NAME))+{0:amp}NAME*{0:sin}NAME({0:\w}NAME*{0:tonne}NAME)
+.EQN 4 0 42 0
+{0:k1x}NAME({0:x}NAME,{0:v}NAME,{0:tonne}NAME,{0:hr}NAME):{0:f1}NAME({0:x}NAME,{0:v}NAME,{0:tonne}NAME)
+.EQN 3 0 43 0
+{0:k1v}NAME({0:x}NAME,{0:v}NAME,{0:tonne}NAME,{0:hr}NAME):{0:f2}NAME({0:x}NAME,{0:v}NAME,{0:tonne}NAME)
+.EQN 5 0 44 0
+{0:k2x}NAME({0:x}NAME,{0:v}NAME,{0:tonne}NAME,{0:hr}NAME):{0:f1}NAME({0:x}NAME+({0:hr}NAME)/(2)*{0:k1x}NAME({0:x}NAME,{0:v}NAME,{0:tonne}NAME,{0:hr}NAME),{0:v}NAME+({0:hr}NAME)/(2)*{0:k1v}NAME({0:x}NAME,{0:v}NAME,{0:tonne}NAME,{0:hr}NAME),{0:tonne}NAME+(
+{0:hr}NAME)/(2))
+.EQN 6 0 45 0
+{0:k2v}NAME({0:x}NAME,{0:v}NAME,{0:tonne}NAME,{0:hr}NAME):{0:f2}NAME({0:x}NAME+({0:hr}NAME)/(2)*{0:k1x}NAME({0:x}NAME,{0:v}NAME,{0:tonne}NAME,{0:hr}NAME),{0:v}NAME+({0:hr}NAME)/(2)*{0:k1v}NAME({0:x}NAME,{0:v}NAME,{0:tonne}NAME,{0:hr}NAME),{0:tonne}NAME+(
+{0:hr}NAME)/(2))
+.EQN 6 0 46 0
+{0:k3x}NAME({0:x}NAME,{0:v}NAME,{0:tonne}NAME,{0:hr}NAME):{0:f1}NAME({0:x}NAME+({0:hr}NAME)/(2)*{0:k2x}NAME({0:x}NAME,{0:v}NAME,{0:tonne}NAME,{0:hr}NAME),{0:v}NAME+({0:hr}NAME)/(2)*{0:k2v}NAME({0:x}NAME,{0:v}NAME,{0:tonne}NAME,{0:hr}NAME),{0:tonne}NAME+(
+{0:hr}NAME)/(2))
+.EQN 7 0 47 0
+{0:k3v}NAME({0:x}NAME,{0:v}NAME,{0:tonne}NAME,{0:hr}NAME):{0:f2}NAME({0:x}NAME+({0:hr}NAME)/(2)*{0:k2x}NAME({0:x}NAME,{0:v}NAME,{0:tonne}NAME,{0:hr}NAME),{0:v}NAME+({0:hr}NAME)/(2)*{0:k2v}NAME({0:x}NAME,{0:v}NAME,{0:tonne}NAME,{0:hr}NAME),{0:tonne}NAME+(
+{0:hr}NAME)/(2))
+.EQN 6 0 48 0
+{0:k4x}NAME({0:x}NAME,{0:v}NAME,{0:tonne}NAME,{0:hr}NAME):{0:f1}NAME(({0:x}NAME+{0:hr}NAME*{0:k3x}NAME({0:x}NAME,{0:v}NAME,{0:tonne}NAME,{0:hr}NAME)),({0:v}NAME+{0:hr}NAME*{0:k3v}NAME({0:x}NAME,{0:v}NAME,{0:tonne}NAME,{0:hr}NAME)),{0:tonne}NAME+{0:hr}NAME
+)
+.EQN 6 0 49 0
+{0:k4v}NAME({0:x}NAME,{0:v}NAME,{0:tonne}NAME,{0:hr}NAME):{0:f2}NAME(({0:x}NAME+{0:hr}NAME*{0:k3x}NAME({0:x}NAME,{0:v}NAME,{0:tonne}NAME,{0:hr}NAME)),({0:v}NAME+{0:hr}NAME*{0:k3v}NAME({0:x}NAME,{0:v}NAME,{0:tonne}NAME,{0:hr}NAME)),{0:tonne}NAME+{0:hr}NAME
+)
+.EQN 15 1 65 0
+({2,1}ö({0:v}NAME)[(0)ö({0:x}NAME)[(0)):({2,1}ö0ö{0:\p}NAME*0.75)
+.EQN 9 -1 66 0
+({2,1}ö({0:v}NAME)[({0:j}NAME+1)ö({0:x}NAME)[({0:j}NAME+1)):({2,1}ö({0:v}NAME)[({0:j}NAME)+({0:dt}NAME)/(6)*({0:k1v}NAME(({0:x}NAME)[({0:j}NAME),({0:v}NAME)[({0:j}NAME),({0:tonne}NAME)[({0:j}NAME),{0:dt}NAME)+2*{0:k2v}NAME(({0:x}NAME)[({0:j}NAME),(
+{0:v}NAME)[({0:j}NAME),({0:tonne}NAME)[({0:j}NAME),{0:dt}NAME)+2*{0:k3v}NAME(({0:x}NAME)[({0:j}NAME),({0:v}NAME)[({0:j}NAME),({0:tonne}NAME)[({0:j}NAME),{0:dt}NAME)+{0:k4v}NAME(({0:x}NAME)[({0:j}NAME),({0:v}NAME)[({0:j}NAME),({0:tonne}NAME)[({0:j}NAME),
+{0:dt}NAME))ö({0:x}NAME)[({0:j}NAME)+({0:dt}NAME)/(6)*({0:k1x}NAME(({0:x}NAME)[({0:j}NAME),({0:v}NAME)[({0:j}NAME),({0:tonne}NAME)[({0:j}NAME),{0:dt}NAME)+2*{0:k2x}NAME(({0:x}NAME)[({0:j}NAME),({0:v}NAME)[({0:j}NAME),({0:tonne}NAME)[({0:j}NAME),{0:dt}NAME
+)+2*{0:k3x}NAME(({0:x}NAME)[({0:j}NAME),({0:v}NAME)[({0:j}NAME),({0:tonne}NAME)[({0:j}NAME),{0:dt}NAME)+{0:k4x}NAME(({0:x}NAME)[({0:j}NAME),({0:v}NAME)[({0:j}NAME),({0:tonne}NAME)[({0:j}NAME),{0:dt}NAME)))
+.EQN 10 1 96 0
+&&(_n_u_l_l_&_n_u_l_l_)&({0:x}NAME)[({0:i}NAME)@{0:tesla}NAME&&(_n_u_l_l_&_n_u_l_l_)&({0:tonne}NAME)[({0:i}NAME)
+0 0 1 1 0 0 1 
+0 0 1 1 0 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 53 25 0 3 
+.EQN 32 1 97 0
+&&(_n_u_l_l_&_n_u_l_l_)&({0:v}NAME)[({0:i}NAME)@{0:tesla}NAME&&(_n_u_l_l_&_n_u_l_l_)&({0:tonne}NAME)[({0:i}NAME)
+0 0 1 1 0 0 1 
+0 0 1 1 0 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 53 25 0 3 
+.EQN 41 14 98 0
+6&&(_n_u_l_l_&_n_u_l_l_)&({0:x}NAME)[({0:i}NAME)@5&&(_n_u_l_l_&_n_u_l_l_)&({0:v}NAME)[({0:i}NAME)
+0 0 1 1 0 0 1 
+0 0 1 1 0 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 36 24 0 3 
+.EQN 37 -17 99 0
+{0:E}NAME({0:x}NAME,{0:v}NAME):{0:m}NAME*{0:g}NAME*{0:liter}NAME*(1-{0:cos}NAME({0:x}NAME))+({0:m}NAME)/(2)*({0:liter}NAME)^(2)*({0:v}NAME)^(2)
+.EQN 6 0 100 0
+20&9.5&(_n_u_l_l_&_n_u_l_l_)&{0:E}NAME(({0:x}NAME)[({0:i}NAME),({0:v}NAME)[({0:i}NAME))@{0:tesla}NAME&_n_u_l_l_&(_n_u_l_l_&_n_u_l_l_)&({0:tonne}NAME)[({0:i}NAME)
+0 0 1 1 0 0 1 
+0 0 1 1 0 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 51 33 0 3 

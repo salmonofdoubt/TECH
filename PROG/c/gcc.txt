@@ -1,0 +1,76 @@
+by gcoady
+
+valgrind --leak-check ./hello.c
+http://valgrind.org/
+
+
+clang
+http://clang.llvm.org/
+
+gprof
+
+
+
+
+/home/leczb/projects/beginners-C/
+/home/leczb/projects/intro-to-c/exam/abaumann
+			there will be a reviews/ folder
+			
+
+easy version
+/home/leczb/projects/intro-to-c/advanced-find/
+
+/home/wachira/SREU/HW-1/C
+
+-- malloc (mem)
+-- ls (struct, union
+-- stdin here (read file)
+--------------------
+1. allocate buffer
+2. fread into buffer
+3. check if you reached EOF
+4. write to stdout
+5. back to 2
+strip 			#strips symbols, cant debug any longer
+
+strace -- sys call traces
+ltrace -- lib call traces 
+
+man 1 ...	#var commands
+man 2 ...	#system calls
+man 3 ...	#standard lib functions
+
+gcc file.c					-> a.out (full binary)
+gcc -o elfname file.c		-> file (full binary)
+gcc -E file.c				-> prints cpp'ed .c on screen
+gcc -S file.c				-> assembly file
+gcc -c file.c				-> object file .o
+
+Debugging
+-------------
+gcc -g file.c				-> a.out (full binary for debugging)
+gcc -pq -g file.c			-> a.out
+
+gdb a.out
+(gdb) break linenumber
+(gdb) run 					-> runs the program (up to breakpoint)
+(gdb) p i					-> prints variable i, do they have expected value?
+
+gdb -c core program			-> debug
+bt							-> backtrace
+
+
+
+
+
+
+
+
+
+
+
+/home/leczb/projects/beginners-C/
+/home/wachira/SREU/HW-1/C
+
+
+

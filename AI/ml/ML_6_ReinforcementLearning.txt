@@ -1,0 +1,102 @@
+##################################
+   Misc Notes Online Course
+##################################
+
+############ PYTHON ###############
+### check code      : cmd + i   ###
+### run code        : cmd enter ###
+### set working dir : Fn F5     ###
+###################################
+
+############### R ####################
+### check code      : Fn F1        ###
+### run code        : cmd enter    ###
+### set working dir : files 'more' ###
+######################################
+
+
+########################################
+### PART 6 - REINFORCEMENT LEARNING  ###
+########################################
+
+
+############################
+###    INTRO & SUMMARY   ###
+############################
+
+		    learning
+            /      \
+           /        \
+    supervised       \
+   Learning from the k\nown label data to create a model, then predicting target class for the given input data.
+   (basket of known fruit)
+                        \
+                         \
+                    unsupervised
+            Learning from the unlabeled data to just differentiating the given input data
+            (basket of fruit with no idea what they are)
+
+- Reinforcement Learning is a branch of Machine Learning, also called Online Learning. 
+- Used to solve interacting problems where the data observed up to time t is considered to decide which action to take at time t + 1. It is also used for Artificial Intelligence when training machines to perform tasks such as walking. Desired outcomes provide the AI with reward, undesired with punishment. Machines learn through trial and error.
+
+In this part, you will understand and learn how to implement the following Reinforcement Learning models:
+
+Upper Confidence Bound (UCB)
+Thompson Sampling
+
+
+############################
+###    UPPER CONFIDENCE  ###
+###         BOUND        ###
+############################
+
+- Multiarmed Bandit Problem
+- Optimise click-through rate of marginally different ads 
+  10 versions of same ad
+
+- UCB Algorithm
+  - At each round we consider two numbers of each ad i
+    - N i (n) the number of times the ad was shown up to round n
+    - R i (n) the sum of rewards of ad i up to round n
+
+  - From these two numbers we calculate
+    - r i (n) average reward of ad i up to round n
+    - d i (n) the conf interval at round n
+
+  - We select the ad with maximum r+i
+
+    Ad0 Ad1 Ad2 Ad3 Ad4 Ad5 Ad6 Ad7 Ad8 Ad9
+  n1 1   0   0   1   0   0   1   1   0   0  
+  n2 0   1   0   0   1   0   0   0   1   0 
+   .
+   .
+   .
+
+- One would start with no data
+- What we have is 10 great ads, but which one do we use?
+- Obviously, the one with best conversion rate 
+
+- So, any user visits page, gets shown one ad, what did they do? 
+- Clicked on it reward = 1, didnt reward = 0
+
+- But there is a strategy to show next ad to them: it depends on every users previous results 
+- "interactive learning"
+
+
+############################
+###   THOMPSON SAMPLING  ###
+############################
+
+- Yields even better reward
+
+- THOMPSON Algorithm
+  - At each round we consider two numbers of each ad i
+    - N1 i (n) the number of times the ad i got reward 1, up to round n
+    - N0 i (n) the number of times the ad i got reward 0, up to round n
+
+  - For each ad i we take a random draw from distro
+    - theta i (n) = beta(N 1 i (n) + 1, N 0 i (n) + 1)
+
+  - We select the ad with highest theta i (n)
+
+  

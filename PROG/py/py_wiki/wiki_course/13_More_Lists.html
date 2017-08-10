@@ -1,0 +1,464 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr">
+<head>
+<title>Non-Programmer's Tutorial for Python 3/More on Lists - Wikibooks, collection of open-content textbooks</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta name="generator" content="MediaWiki 1.16wmf4" />
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="/w/index.php?title=Non-Programmer%27s_Tutorial_for_Python_3/More_on_Lists&amp;action=edit" />
+<link rel="edit" title="Edit this page" href="/w/index.php?title=Non-Programmer%27s_Tutorial_for_Python_3/More_on_Lists&amp;action=edit" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikibooks (en)" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/" />
+<link rel="alternate" type="application/atom+xml" title="Wikibooks Atom feed" href="/w/index.php?title=Special:RecentChanges&amp;feed=atom" />
+<link rel="stylesheet" href="http://bits.wikimedia.org/skins-1.5/common/shared.css?283p" type="text/css" media="screen" />
+<link rel="stylesheet" href="http://bits.wikimedia.org/skins-1.5/common/commonPrint.css?283p" type="text/css" media="print" />
+<link rel="stylesheet" href="http://bits.wikimedia.org/skins-1.5/monobook/main.css?283p" type="text/css" media="screen" />
+<link rel="stylesheet" href="http://bits.wikimedia.org/skins-1.5/chick/main.css?283p" type="text/css" media="handheld" />
+<!--[if lt IE 5.5000]><link rel="stylesheet" href="http://bits.wikimedia.org/skins-1.5/monobook/IE50Fixes.css?283p" type="text/css" media="screen" /><![endif]-->
+<!--[if IE 5.5000]><link rel="stylesheet" href="http://bits.wikimedia.org/skins-1.5/monobook/IE55Fixes.css?283p" type="text/css" media="screen" /><![endif]-->
+<!--[if IE 6]><link rel="stylesheet" href="http://bits.wikimedia.org/skins-1.5/monobook/IE60Fixes.css?283p" type="text/css" media="screen" /><![endif]-->
+<!--[if IE 7]><link rel="stylesheet" href="http://bits.wikimedia.org/skins-1.5/monobook/IE70Fixes.css?283p" type="text/css" media="screen" /><![endif]-->
+<link rel="stylesheet" href="/w/extensions/FlaggedRevs/client/flaggedrevs.css?76" type="text/css" media="all" />
+<link rel="stylesheet" href="/w/extensions/ReaderFeedback/readerfeedback.css?1" type="text/css" media="all" />
+<link rel="stylesheet" href="/w/index.php?title=MediaWiki:Common.css&amp;usemsgcache=yes&amp;ctype=text%2Fcss&amp;smaxage=2678400&amp;action=raw&amp;maxage=2678400" type="text/css" media="all" />
+<link rel="stylesheet" href="/w/index.php?title=MediaWiki:Print.css&amp;usemsgcache=yes&amp;ctype=text%2Fcss&amp;smaxage=2678400&amp;action=raw&amp;maxage=2678400" type="text/css" media="print" />
+<link rel="stylesheet" href="/w/index.php?title=MediaWiki:Handheld.css&amp;usemsgcache=yes&amp;ctype=text%2Fcss&amp;smaxage=2678400&amp;action=raw&amp;maxage=2678400" type="text/css" media="handheld" />
+<link rel="stylesheet" href="/w/index.php?title=MediaWiki:Monobook.css&amp;usemsgcache=yes&amp;ctype=text%2Fcss&amp;smaxage=2678400&amp;action=raw&amp;maxage=2678400" type="text/css" media="all" />
+<link rel="stylesheet" href="/w/index.php?title=-&amp;action=raw&amp;maxage=2678400&amp;gen=css" type="text/css" media="all" />
+<script type="text/javascript">
+var skin="monobook",
+stylepath="http://bits.wikimedia.org/skins-1.5",
+wgUrlProtocols="http\\:\\/\\/|https\\:\\/\\/|ftp\\:\\/\\/|irc\\:\\/\\/|gopher\\:\\/\\/|telnet\\:\\/\\/|nntp\\:\\/\\/|worldwind\\:\\/\\/|mailto\\:|news\\:|svn\\:\\/\\/",
+wgArticlePath="/wiki/$1",
+wgScriptPath="/w",
+wgScriptExtension=".php",
+wgScript="/w/index.php",
+wgVariantArticlePath=false,
+wgActionPaths={},
+wgServer="http://en.wikibooks.org",
+wgCanonicalNamespace="",
+wgCanonicalSpecialPageName=false,
+wgNamespaceNumber=0,
+wgPageName="Non-Programmer\'s_Tutorial_for_Python_3/More_on_Lists",
+wgTitle="Non-Programmer\'s Tutorial for Python 3/More on Lists",
+wgAction="view",
+wgArticleId=189840,
+wgIsArticle=true,
+wgUserName=null,
+wgUserGroups=null,
+wgUserLanguage="en",
+wgContentLanguage="en",
+wgBreakFrames=false,
+wgCurRevisionId=1636815,
+wgVersion="1.16wmf4",
+wgEnableAPI=true,
+wgEnableWriteAPI=true,
+wgSeparatorTransformTable=["", ""],
+wgDigitTransformTable=["", ""],
+wgMainPageTitle="Main Page",
+wgFormattedNamespaces={"-2": "Media", "-1": "Special", "0": "", "1": "Talk", "2": "User", "3": "User talk", "4": "Wikibooks", "5": "Wikibooks talk", "6": "File", "7": "File talk", "8": "MediaWiki", "9": "MediaWiki talk", "10": "Template", "11": "Template talk", "12": "Help", "13": "Help talk", "14": "Category", "15": "Category talk", "102": "Cookbook", "103": "Cookbook talk", "108": "Transwiki", "109": "Transwiki talk", "110": "Wikijunior", "111": "Wikijunior talk", "112": "Subject", "113": "Subject talk"},
+wgNamespaceIds={"media": -2, "special": -1, "": 0, "talk": 1, "user": 2, "user_talk": 3, "wikibooks": 4, "wikibooks_talk": 5, "file": 6, "file_talk": 7, "mediawiki": 8, "mediawiki_talk": 9, "template": 10, "template_talk": 11, "help": 12, "help_talk": 13, "category": 14, "category_talk": 15, "cookbook": 102, "cookbook_talk": 103, "transwiki": 108, "transwiki_talk": 109, "wikijunior": 110, "wikijunior_talk": 111, "subject": 112, "subject_talk": 113, "wb": 4, "wj": 110, "cat": 14, "cook": 102, "sub": 112, "image": 6, "image_talk": 7},
+wgSiteName="Wikibooks",
+wgCategories=["Non-Programmer\'s Tutorial for Python 3", "Non-Programmer\'s Tutorial for Python 3.0"],
+wgMWSuggestTemplate="http://en.wikibooks.org/w/api.php?action=opensearch\x26search={searchTerms}\x26namespace={namespaces}\x26suggest",
+wgDBname="enwikibooks",
+wgSearchNamespaces=[0, 4, 112],
+wgMWSuggestMessages=["with suggestions", "no suggestions"],
+wgRestrictionEdit=[],
+wgRestrictionMove=[],
+wgFlaggedRevsParams={"tags": {"value": {"levels": 3, "quality": 2, "pristine": 3}}},
+wgStableRevisionId=1636815,
+wgFeedbackParams={"tags": {"reliability": 3, "completeness": 2, "npov": 2, "presentation": 1}},
+wgAjaxFeedback={"sendingMsg": "Submitting …", "sentMsg": "Thank you!"},
+wgNotice="",
+wgNoticeLocal="";
+</script><script src="http://bits.wikimedia.org/skins-1.5/common/wikibits.js?283p" type="text/javascript"></script>
+<script src="http://bits.wikimedia.org/skins-1.5/common/ajax.js?283p" type="text/javascript"></script>
+<script src="http://bits.wikimedia.org/skins-1.5/common/mwsuggest.js?283p" type="text/javascript"></script>
+<script type="text/javascript" src="http://upload.wikimedia.org/centralnotice/wikibooks/en/centralnotice.js?283p"></script>
+
+<script src="/w/index.php?title=-&amp;action=raw&amp;gen=js&amp;useskin=monobook&amp;283p" type="text/javascript"></script>
+
+<style type="text/css">/*<![CDATA[*/
+.source-python {line-height: normal;}
+.source-python li, .source-python pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for python
+ * CSS class: source-python, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.python.source-python .de1, .python.source-python .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;}
+.python.source-python  {font-family:monospace;}
+.python.source-python .imp {font-weight: bold; color: red;}
+.python.source-python li, .python.source-python .li1 {font-weight: normal; vertical-align:top;}
+.python.source-python .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.python.source-python .li2 {font-weight: bold; vertical-align:top;}
+.python.source-python .kw1 {color: #ff7700;font-weight:bold;}
+.python.source-python .kw2 {color: #008000;}
+.python.source-python .kw3 {color: #dc143c;}
+.python.source-python .kw4 {color: #0000cd;}
+.python.source-python .co1 {color: #808080; font-style: italic;}
+.python.source-python .coMULTI {color: #808080; font-style: italic;}
+.python.source-python .es0 {color: #000099; font-weight: bold;}
+.python.source-python .br0 {color: black;}
+.python.source-python .sy0 {color: #66cc66;}
+.python.source-python .st0 {color: #483d8b;}
+.python.source-python .nu0 {color: #ff4500;}
+.python.source-python .me1 {color: black;}
+.python.source-python .ln-xtra, .python.source-python li.ln-xtra, .python.source-python div.ln-xtra {background-color: #ffc;}
+.python.source-python span.xtra { display:block; }
+
+/*]]>*/
+</style>
+<style type="text/css">/*<![CDATA[*/
+@import "/w/index.php?title=MediaWiki:Geshi.css&usemsgcache=yes&action=raw&ctype=text/css&smaxage=2678400";
+/*]]>*/
+</style><script type="text/javascript" src="/w/extensions/FlaggedRevs/client/flaggedrevs.js?76"></script>
+<script type="text/javascript">FlaggedRevs.messages = {"diffToggleShow": "show those changes", "diffToggleHide": "hide those changes", "logToggleShow": "show stability log", "logToggleHide": "hide stability log", "logDetailsShow": "show details", "logDetailsHide": "hide details", "toggleShow": "(+)", "toggleHide": "(-)"};</script>
+<script type="text/javascript" src="/w/extensions/ReaderFeedback/readerfeedback.js?1"></script>
+</head>
+<body class="mediawiki ltr ns-0 ns-subject page-Non-Programmer_s_Tutorial_for_Python_3_More_on_Lists skin-monobook">
+<div id="globalWrapper">
+<div id="column-content"><div id="content">
+	<a id="top"></a>
+	<div id="siteNotice"><script type='text/javascript'>if (wgNotice != '') document.writeln(wgNotice);</script></div>
+	<h1 id="firstHeading" class="firstHeading">Non-Programmer's Tutorial for Python 3/More on Lists</h1>
+	<div id="bodyContent">
+		<div id="siteSub">From Wikibooks, the open-content textbooks collection</div>
+		<div id="contentSub"><span class="subpages">&lt; <a href="/wiki/Non-Programmer%27s_Tutorial_for_Python_3" title="Non-Programmer's Tutorial for Python 3">Non-Programmer's Tutorial for Python 3</a></span></div>
+		<div id="jump-to-nav">Jump to: <a href="#column-one">navigation</a>, <a href="#searchInput">search</a></div>
+		<!-- start content -->
+<p>We have already seen lists and how they can be used. Now that you have some more background I will go into more detail about lists. First we will look at more ways to get at the elements in a list and then we will talk about copying them.</p>
+<p>Here are some examples of using indexing to access a single element of a list:</p>
+<pre>
+&gt;&gt;&gt; <b>some_numbers = ['zero', 'one', 'two', 'three', 'four', 'five']</b>
+&gt;&gt;&gt; <b>some_numbers[0]</b>
+'zero'
+&gt;&gt;&gt; <b>some_numbers[4]</b>
+'four'
+&gt;&gt;&gt; <b>some_numbers[5]</b>
+'five'
+</pre>
+<p>All those examples should look familiar to you. If you want the first item in the list just look at index 0. The second item is index 1 and so on through the list. However what if you want the last item in the list? One way could be to use the <code>len()</code> function like <code>some_numbers[len(some_numbers) - 1]</code>. This way works since the <code>len()</code> function always returns the last index plus one. The second from the last would then be <code>some_numbers[len(some_numbers) - 2]</code>. There is an easier way to do this. In Python the last item is always index -1. The second to the last is index -2 and so on. Here are some more examples:</p>
+<pre>
+&gt;&gt;&gt; <b>some_numbers[len(some_numbers) - 1]</b>
+'five'
+&gt;&gt;&gt; <b>some_numbers[len(some_numbers) - 2]</b>
+'four'
+&gt;&gt;&gt; <b>some_numbers[-1]</b>
+'five'
+&gt;&gt;&gt; <b>some_numbers[-2]</b>
+'four'
+&gt;&gt;&gt; <b>some_numbers[-6]</b>
+'zero'
+</pre>
+<p>Thus any item in the list can be indexed in two ways: from the front and from the back.</p>
+<p>Another useful way to get into parts of lists is using slicing. Here is another example to give you an idea what they can be used for:</p>
+<pre>
+&gt;&gt;&gt; <b>things = [0, 'Fred', 2, 'S.P.A.M.', 'Stocking', 42, "Jack", "Jill"]</b>
+&gt;&gt;&gt; <b>things[0]</b>
+0
+&gt;&gt;&gt; <b>things[7]</b>
+'Jill'
+&gt;&gt;&gt; <b>things[0:8]</b>
+[0, 'Fred', 2, 'S.P.A.M.', 'Stocking', 42, 'Jack', 'Jill']
+&gt;&gt;&gt; <b>things[2:4]</b>
+[2, 'S.P.A.M.']
+&gt;&gt;&gt; <b>things[4:7]</b>
+['Stocking', 42, 'Jack']
+&gt;&gt;&gt; <b>things[1:5]</b>
+['Fred', 2, 'S.P.A.M.', 'Stocking']
+</pre>
+<p>Slicing is used to return part of a list. The slicing operator is in the form <code>things[first_index:last_index]</code>. Slicing cuts the list before the <code>first_index</code> and before the <code>last_index</code> and returns the parts in between. You can use both types of indexing:</p>
+<pre>
+&gt;&gt;&gt; <b>things[-4:-2]</b>
+['Stocking', 42]
+&gt;&gt;&gt; <b>things[-4]</b>
+'Stocking'
+&gt;&gt;&gt; <b>things[-4:6]</b>
+['Stocking', 42]
+</pre>
+<p>Another trick with slicing is the unspecified index. If the first index is not specified the beginning of the list is assumed. If the last index is not specified the whole rest of the list is assumed. Here are some examples:</p>
+<pre>
+&gt;&gt;&gt; <b>things[:2]</b>
+[0, 'Fred']
+&gt;&gt;&gt; <b>things[-2:]</b>
+['Jack', 'Jill']
+&gt;&gt;&gt; <b>things[:3]</b>
+[0, 'Fred', 2]
+&gt;&gt;&gt; <b>things[:-5]</b>
+[0, 'Fred', 2]
+</pre>
+<p>Here is a (HTML inspired) program example (copy and paste in the poem definition if you want):</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;">
+<div class="python source-python" style="font-family:monospace;">
+<pre class="de1">
+poem = <span class="br0">[</span><span class="st0">"&lt;B&gt;"</span>, <span class="st0">"Jack"</span>, <span class="st0">"and"</span>, <span class="st0">"Jill"</span>, <span class="st0">"&lt;/B&gt;"</span>, <span class="st0">"went"</span>, <span class="st0">"up"</span>, <span class="st0">"the"</span>,
+        <span class="st0">"hill"</span>, <span class="st0">"to"</span>, <span class="st0">"&lt;B&gt;"</span>, <span class="st0">"fetch"</span>, <span class="st0">"a"</span>, <span class="st0">"pail"</span>, <span class="st0">"of"</span>, <span class="st0">"&lt;/B&gt;"</span>,
+        <span class="st0">"water."</span>, <span class="st0">"Jack"</span>, <span class="st0">"fell"</span>, <span class="st0">"&lt;B&gt;"</span>, <span class="st0">"down"</span>, <span class="st0">"and"</span>, <span class="st0">"broke"</span>,
+        <span class="st0">"&lt;/B&gt;"</span>, <span class="st0">"his"</span>, <span class="st0">"crown"</span>, <span class="st0">"and"</span>, <span class="st0">"&lt;B&gt;"</span>, <span class="st0">"Jill"</span>, <span class="st0">"came"</span>,
+        <span class="st0">"&lt;/B&gt;"</span>, <span class="st0">"tumbling"</span>, <span class="st0">"after"</span><span class="br0">]</span>
+ 
+<span class="kw1">def</span> get_bolds<span class="br0">(</span>text<span class="br0">)</span>:
+    true = <span class="nu0">1</span>
+    false = <span class="nu0">0</span>
+    <span class="co1">## is_bold tells whether or not the we are currently looking at </span>
+    <span class="co1">## a bold section of text.</span>
+    is_bold = false
+    <span class="co1">## start_block is the index of the start of either an unbolded </span>
+    <span class="co1">## segment of text or a bolded segment.</span>
+    start_block = 0
+    <span class="kw1">for</span> index <span class="kw1">in</span> <span class="kw2">range</span><span class="br0">(</span><span class="kw2">len</span><span class="br0">(</span>text<span class="br0">)</span><span class="br0">)</span>:
+        <span class="co1">## Handle a starting of bold text</span>
+        <span class="kw1">if</span> text<span class="br0">[</span>index<span class="br0">]</span> == <span class="st0">"&lt;B&gt;"</span>:
+            <span class="kw1">if</span> is_bold:
+                <span class="kw1">print</span><span class="br0">(</span><span class="st0">"Error: Extra Bold"</span><span class="br0">)</span>
+            <span class="co1">## print "Not Bold:", text[start_block:index]</span>
+            is_bold = true
+            start_block = index + <span class="nu0">1</span>
+        <span class="co1">## Handle end of bold text</span>
+        <span class="co1">## Remember that the last number in a slice is the index </span>
+        <span class="co1">## after the last index used.</span>
+        <span class="kw1">if</span> text<span class="br0">[</span>index<span class="br0">]</span> == <span class="st0">"&lt;/B&gt;"</span>:
+            <span class="kw1">if</span> <span class="kw1">not</span> is_bold:
+                <span class="kw1">print</span><span class="br0">(</span><span class="st0">"Error: Extra Close Bold"</span><span class="br0">)</span>
+            <span class="kw1">print</span><span class="br0">(</span><span class="st0">"Bold ["</span>, start_block, <span class="st0">":"</span>, index, <span class="st0">"]"</span>, text<span class="br0">[</span>start_block:index<span class="br0">]</span><span class="br0">)</span>
+            is_bold = false
+            start_block = index + <span class="nu0">1</span>
+ 
+get_bolds<span class="br0">(</span>poem<span class="br0">)</span>
+</pre></div>
+</div>
+<p>with the output being:</p>
+<pre>
+Bold [ 1 : 4 ] ['Jack', 'and', 'Jill']
+Bold [ 11 : 15 ] ['fetch', 'a', 'pail', 'of']
+Bold [ 20 : 23 ] ['down', 'and', 'broke']
+Bold [ 28 : 30 ] ['Jill', 'came']
+</pre>
+<p>The <code>get_bold()</code> function takes in a list that is broken into words and tokens. The tokens that it looks for are <code>&lt;B&gt;</code> which starts the bold text and <code>&lt;/B&gt;</code> which ends bold text. The function <code>get_bold()</code> goes through and searches for the start and end tokens.</p>
+<p>The next feature of lists is copying them. If you try something simple like:</p>
+<pre>
+&gt;&gt;&gt; <b>a = [1, 2, 3]</b>
+&gt;&gt;&gt; <b>b = a</b>
+&gt;&gt;&gt; <b>print(b)</b>
+[1, 2, 3]
+&gt;&gt;&gt; <b>b[1] = 10</b>
+&gt;&gt;&gt; <b>print(b)</b>
+[1, 10, 3]
+&gt;&gt;&gt; <b>print(a)</b>
+[1, 10, 3]
+</pre>
+<p>This probably looks surprising since a modification to <code>b</code> resulted in <code>a</code> being changed as well. What happened is that the statement <code>b = a</code> makes <code>b</code> a <i>reference</i> to <code>a</code>. This means that <code>b</code> can be thought of as another name for <code>a</code>. Hence any modification to <code>b</code> changes <code>a</code> as well. However some assignments don't create two names for one list:</p>
+<pre>
+&gt;&gt;&gt; <b>a = [1, 2, 3]</b>
+&gt;&gt;&gt; <b>b = a * 2</b>
+&gt;&gt;&gt; <b>print(a)</b>
+[1, 2, 3]
+&gt;&gt;&gt; <b>print(b)</b>
+[1, 2, 3, 1, 2, 3]
+&gt;&gt;&gt; <b>a[1] = 10</b>
+&gt;&gt;&gt; <b>print(a)</b>
+[1, 10, 3]
+&gt;&gt;&gt; <b>print(b)</b>
+[1, 2, 3, 1, 2, 3]
+</pre>
+<p>In this case <code>b</code> is not a reference to <code>a</code> since the expression <code>a * 2</code> creates a new list. Then the statement <code>b = a * 2</code> gives <code>b</code> a reference to <code>a * 2</code> rather than a reference to <code>a</code>. All assignment operations create a reference. When you pass a list as an argument to a function you create a reference as well. Most of the time you don't have to worry about creating references rather than copies. However when you need to make modifications to one list without changing another name of the list you have to make sure that you have actually created a copy.</p>
+<p>There are several ways to make a copy of a list. The simplest that works most of the time is the slice operator since it always makes a new list even if it is a slice of a whole list:</p>
+<pre>
+&gt;&gt;&gt; <b>a = [1, 2, 3]</b>
+&gt;&gt;&gt; <b>b = a[:]</b>
+&gt;&gt;&gt; <b>b[1] = 10</b>
+&gt;&gt;&gt; <b>print(a)</b>
+[1, 2, 3]
+&gt;&gt;&gt; <b>print(b)</b>
+[1, 10, 3]
+</pre>
+<p>Taking the slice <code>[:]</code> creates a new copy of the list. However it only copies the outer list. Any sublist inside is still a references to the sublist in the original list. Therefore, when the list contains lists, the inner lists have to be copied as well. You could do that manually but Python already contains a module to do it. You use the <code>deepcopy</code> function of the <code>copy</code> module:</p>
+<pre>
+&gt;&gt;&gt; <b>import copy</b>
+&gt;&gt;&gt; <b>a = [[1, 2, 3], [4, 5, 6]]</b>
+&gt;&gt;&gt; <b>b = a[:]</b>
+&gt;&gt;&gt; <b>c = copy.deepcopy(a)</b>
+&gt;&gt;&gt; <b>b[0][1] = 10</b>
+&gt;&gt;&gt; <b>c[1][1] = 12</b>
+&gt;&gt;&gt; <b>print(a)</b>
+[[1, 10, 3], [4, 5, 6]]
+&gt;&gt;&gt; <b>print(b)</b>
+[[1, 10, 3], [4, 5, 6]]
+&gt;&gt;&gt; <b>print(c)</b>
+[[1, 2, 3], [4, 12, 6]]
+</pre>
+<p>First of all notice that <code>a</code> is a list of lists. Then notice that when <code>b[0][1] = 10</code> is run both <code>a</code> and <code>b</code> are changed, but <code>c</code> is not. This happens because the inner arrays are still references when the slice operator is used. However with <code>deepcopy</code> <code>c</code> was fully copied.</p>
+<p>So, should I worry about references every time I use a function or <code>=</code>? The good news is that you only have to worry about references when using dictionaries and lists. Numbers and strings create references when assigned but every operation on numbers and strings that modifies them creates a new copy so you can never modify them unexpectedly. You do have to think about references when you are modifying a list or a dictionary.</p>
+<p>By now you are probably wondering why are references used at all? The basic reason is speed. It is much faster to make a reference to a thousand element list than to copy all the elements. The other reason is that it allows you to have a function to modify the inputed list or dictionary. Just remember about references if you ever have some weird problem with data being changed when it shouldn't be.</p>
+<div class="noprint PrettyTextBox" style="background-color:#ffffe0;padding:0.5ex">
+<table width="100%" cellspacing="0" cellpadding="2">
+<tr>
+<td width="33%" bgcolor="#FFFFE0"><a href="/wiki/Non-Programmer%27s_Tutorial_for_Python_3/Using_Modules" title="Non-Programmer's Tutorial for Python 3/Using Modules"><b>Previous:</b> Using Modules</a></td>
+<td width="33%" bgcolor="#FFFFE0" align="center"><a href="/wiki/Non-Programmer%27s_Tutorial_for_Python_3" title="Non-Programmer's Tutorial for Python 3"><b>Front Page</b></a></td>
+<td width="33%" bgcolor="#FFFFE0" align="right"><a href="/wiki/Non-Programmer%27s_Tutorial_for_Python_3/Revenge_of_the_Strings" title="Non-Programmer's Tutorial for Python 3/Revenge of the Strings"><b>Next:</b> Revenge of the Strings</a></td>
+</tr>
+</table>
+</div>
+
+
+<!-- 
+NewPP limit report
+Preprocessor node count: 44/1000000
+Post-expand include size: 1146/2048000 bytes
+Template argument size: 70/2048000 bytes
+Expensive parser function count: 0/500
+-->
+
+<!-- Saved in parser cache with key enwikibooks:pcache:idhash:189840-0!1!0!default!!en!2 and timestamp 20100825064651 -->
+<div class="printfooter">
+Retrieved from "<a href="http://en.wikibooks.org/wiki/Non-Programmer%27s_Tutorial_for_Python_3/More_on_Lists">http://en.wikibooks.org/wiki/Non-Programmer%27s_Tutorial_for_Python_3/More_on_Lists</a>"</div>
+		<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks"><a href="/wiki/Special:Categories" title="Special:Categories">Categories</a>: <span dir='ltr'><a href="/wiki/Category:Non-Programmer%27s_Tutorial_for_Python_3" title="Category:Non-Programmer's Tutorial for Python 3">Non-Programmer's Tutorial for Python 3</a></span> | <span dir='ltr'><a href="/wiki/Category:Non-Programmer%27s_Tutorial_for_Python_3.0" title="Category:Non-Programmer's Tutorial for Python 3.0">Non-Programmer's Tutorial for Python 3.0</a></span></div></div>		<!-- end content -->
+		<div id='mw-data-after-content'>
+	<form method="post" action="/w/index.php?title=Special:ReaderFeedback&amp;action=submit" id="mw-feedbackform"><fieldset class="feedback_reviewform noprint"><legend><strong>What do you think of this page?</strong></legend>
+<p><i>Please take a moment to rate this page below. Your feedback is valuable and helps us improve our website.</i>
+</p><span id="mw-feedbackselects"><b><label for="wpreliability">Reliability</label>:</b>&nbsp;<select name="wpreliability" id="wpreliability" onchange="updateFeedbackForm()"><option class="rfb-rating-option-4" value="4">Excellent</option>
+<option class="rfb-rating-option-3" value="3">High</option>
+<option class="rfb-rating-option-2" value="2">Fair</option>
+<option class="rfb-rating-option-1" value="1">Low</option>
+<option class="rfb-rating-option-0" value="0">Poor</option>
+<option value="-1" selected="selected">(unsure)</option>
+</select>
+<b><label for="wpcompleteness">Completeness</label>:</b>&nbsp;<select name="wpcompleteness" id="wpcompleteness" onchange="updateFeedbackForm()"><option class="rfb-rating-option-4" value="4">Excellent</option>
+<option class="rfb-rating-option-3" value="3">High</option>
+<option class="rfb-rating-option-2" value="2">Fair</option>
+<option class="rfb-rating-option-1" value="1">Low</option>
+<option class="rfb-rating-option-0" value="0">Poor</option>
+<option value="-1" selected="selected">(unsure)</option>
+</select>
+<b><label for="wpnpov">Neutrality</label>:</b>&nbsp;<select name="wpnpov" id="wpnpov" onchange="updateFeedbackForm()"><option class="rfb-rating-option-4" value="4">Excellent</option>
+<option class="rfb-rating-option-3" value="3">High</option>
+<option class="rfb-rating-option-2" value="2">Fair</option>
+<option class="rfb-rating-option-1" value="1">Low</option>
+<option class="rfb-rating-option-0" value="0">Poor</option>
+<option value="-1" selected="selected">(unsure)</option>
+</select>
+<b><label for="wppresentation">Presentation</label>:</b>&nbsp;<select name="wppresentation" id="wppresentation" onchange="updateFeedbackForm()"><option class="rfb-rating-option-4" value="4">Excellent</option>
+<option class="rfb-rating-option-3" value="3">High</option>
+<option class="rfb-rating-option-2" value="2">Fair</option>
+<option class="rfb-rating-option-1" value="1">Low</option>
+<option class="rfb-rating-option-0" value="0">Poor</option>
+<option value="-1" selected="selected">(unsure)</option>
+</select>
+</span><input type="submit" value="Submit" id="submitfeedback" accesskey="b" title="Submit review [b]" /><input type="hidden" value="Special:ReaderFeedback" name="title" />
+<input type="hidden" value="Non-Programmer's_Tutorial_for_Python_3/More_on_Lists" name="target" />
+<input type="hidden" value="1636815" name="oldid" />
+<input type="hidden" value="4002fc5f48e76ff2e22ea7e140976b91" name="validatedParams" /><input type="hidden" value="submit" name="action" />
+<input type="hidden" value="+\" name="wpEditToken" />
+<input name="commentary" size="12" value="" style="display:none;" />
+</fieldset></form>
+</div>
+		<div class="visualClear"></div>
+	</div>
+</div></div>
+<div id="column-one">
+	<div id="p-cactions" class="portlet">
+		<h5>Views</h5>
+		<div class="pBody">
+			<ul>
+				 <li id="ca-nstab-main" class="selected"><a href="/wiki/Non-Programmer%27s_Tutorial_for_Python_3/More_on_Lists" title="View the content page [c]" accesskey="c">Module</a></li>
+				 <li id="ca-talk" class="new"><a href="/w/index.php?title=Talk:Non-Programmer%27s_Tutorial_for_Python_3/More_on_Lists&amp;action=edit&amp;redlink=1" title="Discussion about the content page [t]" accesskey="t">Discussion</a></li>
+				 <li id="ca-edit"><a href="/w/index.php?title=Non-Programmer%27s_Tutorial_for_Python_3/More_on_Lists&amp;action=edit" title="You can edit this page. Please use the preview button before saving [e]" accesskey="e">Edit this page</a></li>
+				 <li id="ca-history"><a href="/w/index.php?title=Non-Programmer%27s_Tutorial_for_Python_3/More_on_Lists&amp;action=history" title="Past revisions of this page [h]" accesskey="h">History</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-personal">
+		<h5>Personal tools</h5>
+		<div class="pBody">
+			<ul>
+				<li id="pt-optin-try"><a href="http://en.wikibooks.org/w/index.php?title=Special:UsabilityInitiativeOptIn&amp;from=Non-Programmer%27s_Tutorial_for_Python_3%2FMore_on_Lists" title="Try out new features" class="no-text-transform">Try Beta</a></li>
+				<li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Non-Programmer%27s_Tutorial_for_Python_3/More_on_Lists" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in / create account</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-logo">
+		<a style="background-image: url(http://upload.wikimedia.org/wikibooks/en/b/bc/Wiki.png);" href="/wiki/Main_Page" title="Visit the main page"></a>
+	</div>
+	<script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
+	<div class='generated-sidebar portlet' id='p-Navigation'>
+		<h5>Navigation</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-mainpage"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main Page</a></li>
+				<li id="n-help"><a href="/wiki/Help:Contents" title="Find help on how to use and edit Wikibooks">Help</a></li>
+				<li id="n-Browse"><a href="/wiki/Wikibooks:Card_Catalog_Office" title="Check out what Wikibooks has to offer">Browse</a></li>
+				<li id="n-Cookbook"><a href="/wiki/Cookbook:Table_of_Contents" title="Learn recipes from around the world">Cookbook</a></li>
+				<li id="n-Wikijunior"><a href="/wiki/Wikijunior" title="Books for children">Wikijunior</a></li>
+				<li id="n-Featured-books"><a href="/wiki/Wikibooks:Featured_books" title="The best of Wikibooks">Featured books</a></li>
+				<li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="The list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+				<li id="n-sitesupport"><a href="http://wikimediafoundation.org/wiki/Donate" title="Support Wikibooks">Donations</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="p-search" class="portlet">
+		<h5><label for="searchInput">Search</label></h5>
+		<div id="searchBody" class="pBody">
+			<form action="/w/index.php" id="searchform">
+				<input type='hidden' name="title" value="Special:Search"/>
+				<input id="searchInput" title="Search Wikibooks" accesskey="f" value="" name="search" />
+				<input type='submit' name="go" class="searchButton" id="searchGoButton"	value="Go" title="Go to a page with this exact name if exists" />&nbsp;
+				<input type='submit' name="fulltext" class="searchButton" id="mw-searchButton" value="Search" title="Search the pages for this text" />
+			</form>
+		</div>
+	</div>
+	<div class='generated-sidebar portlet' id='p-Community'>
+		<h5>Community</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-Reading-room"><a href="/wiki/Wikibooks:Reading_room" title="Discuss Wikibooks-related questions and concerns with others">Reading room</a></li>
+				<li id="n-portal"><a href="/wiki/Wikibooks:Community_Portal" title="Find your way around the Wikibooks community">Community portal</a></li>
+				<li id="n-currentevents"><a href="/wiki/Wikibooks:Reading_room/Bulletin_Board" title="Important community news">Bulletin Board</a></li>
+				<li id="n-maintenance"><a href="/wiki/Wikibooks:Maintenance" title="Frequent tasks that you can help with">Help out!</a></li>
+				<li id="n-Policies-and-guidelines"><a href="/wiki/Wikibooks:Policies_and_guidelines" title="Pages detailing important rules and procedures">Policies and guidelines</a></li>
+				<li id="n-contact"><a href="/wiki/Wikibooks:Contact_us" title="Alternative methods of communication">Contact us</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class='generated-sidebar portlet' id='p-coll-print_export'>
+		<h5>Print/export</h5>
+		<div class='pBody'>
+<ul id="collectionPortletList"><li id="coll-create_a_book"><a href="/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Non-Programmer%27s+Tutorial+for+Python+3%2FMore+on+Lists" title="Create a book or page collection" rel="nofollow">Create a book</a></li><li id="coll-download-as-rl"><a href="/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Non-Programmer%27s+Tutorial+for+Python+3%2FMore+on+Lists&amp;oldid=1636815&amp;writer=rl" title="Download a PDF version of this wiki page" rel="nofollow">Download as PDF</a></li><li id="t-print"><a href="/w/index.php?title=Non-Programmer%27s_Tutorial_for_Python_3/More_on_Lists&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li></ul>		</div>
+	</div>
+	<div class="portlet" id="p-tb">
+		<h5>Toolbox</h5>
+		<div class="pBody">
+			<ul>
+				<li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Non-Programmer%27s_Tutorial_for_Python_3/More_on_Lists" title="List of all wiki pages that link here [j]" accesskey="j">What links here</a></li>
+				<li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Non-Programmer%27s_Tutorial_for_Python_3/More_on_Lists" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+<li id="t-upload"><a href="http://commons.wikimedia.org/wiki/Commons:Upload" title="Upload files [u]" accesskey="u">Upload file</a></li>
+<li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="List of all special pages [q]" accesskey="q">Special pages</a></li>
+				<li id="t-permalink"><a href="/w/index.php?title=Non-Programmer%27s_Tutorial_for_Python_3/More_on_Lists&amp;oldid=1636815" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-rating"><a href="/w/index.php?title=Special:RatingHistory&amp;target=Non-Programmer%27s_Tutorial_for_Python_3/More_on_Lists">Page rating</a></li>			</ul>
+		</div>
+	</div>
+</div><!-- end of the left (by default at least) column -->
+<div class="visualClear"></div>
+<div id="footer">
+	<div id="f-poweredbyico"><a href="http://www.mediawiki.org/"><img src="http://bits.wikimedia.org/skins-1.5/common/images/poweredby_mediawiki_88x31.png" height="31" width="88" alt="Powered by MediaWiki" /></a></div>
+	<div id="f-copyrightico"><a href="http://wikimediafoundation.org/"><img src="/images/wikimedia-button.png" width="88" height="31" alt="Wikimedia Foundation"/></a></div>
+	<ul id="f-list">
+		<li id="lastmod"> This page was last modified on 30 September 2009, at 12:29.</li>
+		<li id="copyright">Text is available under the <a rel="license" href="http://en.wikibooks.org/wiki/Wikibooks:Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply. See <a href="http://wikimediafoundation.org/wiki/Terms_of_Use">Terms of Use</a> for details.</li>
+		<li id="privacy"><a href="http://wikimediafoundation.org/wiki/Privacy_policy" title="wikimedia:Privacy policy">Privacy policy</a></li>
+		<li id="about"><a href="/wiki/Wikibooks:About" title="Wikibooks:About">About Wikibooks</a></li>
+		<li id="disclaimer"><a href="/wiki/Wikibooks:General_disclaimer" title="Wikibooks:General disclaimer">Disclaimers</a></li>
+	</ul>
+</div>
+</div>
+
+<script type="text/javascript">if (window.runOnloadHook) runOnloadHook();</script>
+<!-- Served by srv183 in 0.091 secs. --></body></html>
