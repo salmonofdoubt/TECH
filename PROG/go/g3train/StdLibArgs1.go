@@ -21,6 +21,7 @@ import "fmt"
 
 func main() {
 
+	//These are defaults
 	wordPtr := flag.String("word", "foo", "a string")
 	numbPtr := flag.Int("num", 42, "an int")
 	boolPtr := flag.Bool("fork", false, "a bool")
@@ -34,10 +35,9 @@ func main() {
 	// parse all cmd-line flags into main
 	flag.Parse()
 
-	// Here we'll just dump out the parsed options and
-	// any trailing positional arguments. Note that we
-	// need to dereference the pointers with e.g. `*wordPtr`
-	// to get the actual option values.
+	// Dump out the parsed options and any trailing positional arguments.
+	// We need to dereference the pointers using '*' to get actual option values.
+	fmt.Println("The declared defaults:")
 	fmt.Println("word:", *wordPtr)
 	fmt.Println("numb:", *numbPtr)
 	fmt.Println("fork:", *boolPtr)
