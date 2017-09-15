@@ -21,7 +21,7 @@ import "fmt"
 
 func main() {
 
-	//These are defaults / new commit
+	//These are defaults / new commit / grail here
 	wordPtr := flag.String("word", "foo", "a string")
 	numbPtr := flag.Int("num", 42, "an int")
 	boolPtr := flag.Bool("fork", false, "a bool")
