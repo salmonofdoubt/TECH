@@ -21,14 +21,13 @@ import "fmt"
 
 func main() {
 
-	//These are defaults / mac03
+	//Setting defaults
 	wordPtr := flag.String("word", "foo", "a string")
-	numbPtr := flag.Int("num", 42, "an int")
+	numPtr := flag.Int("num", 42, "an int")
 	boolPtr := flag.Bool("fork", false, "a bool")
 
-	// It's also possible to declare an option that uses an
-	// existing var declared elsewhere in the program.
-	// Pass a pointer to the flag declaration function.
+	//An option to use existing var declared elsewhere in the program.
+	//Pass a pointer to the flag declaration function.
 	var strvar string
 	flag.StringVar(&strvar, "strvar", "bar", "a string var")
 
@@ -37,10 +36,10 @@ func main() {
 
 	// Dump out the parsed options and any trailing positional arguments.
 	// We need to dereference the pointers using '*' to get actual option values.
-	fmt.Println("The declared defaults:")
-	fmt.Println("word:", *wordPtr)
-	fmt.Println("numb:", *numbPtr)
-	fmt.Println("fork:", *boolPtr)
+	fmt.Println("declared defaul flags:")
+	fmt.Println("word:  ", *wordPtr)
+	fmt.Println("num:   ", *numPtr)
+	fmt.Println("fork:  ", *boolPtr)
 	fmt.Println("strvar:", strvar)
-	fmt.Println("tail:", flag.Args())
+	fmt.Println("tail:  ", flag.Args(), "...if there was cli input")
 }
