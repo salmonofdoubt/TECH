@@ -21,7 +21,7 @@ import "fmt"
 
 func main() {
 
-	//These are defaults / mac02
+	//These are defaults / mac03
 	wordPtr := flag.String("word", "foo", "a string")
 	numbPtr := flag.Int("num", 42, "an int")
 	boolPtr := flag.Bool("fork", false, "a bool")
