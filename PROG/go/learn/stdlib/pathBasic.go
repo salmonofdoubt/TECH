@@ -3,15 +3,14 @@
 
 /*
 Standard library:
-	path			 : manipulates only linux like OS path seperator
-	path/filepath: manipulates any ops path
-	flags
+	path			: manipulates only linux like OS path seperator
+	path/filepath	: manipulates any ops path
 
 2) Given the path “/google/data/ro/projects/netops/gdrain.sh”
-Check whether it is an absolute path
-Display the name of file
-Display the extension of the file
-Display the directory
+- Check whether it is an absolute path
+- Display the name of file
+- Display the extension of the file
+- Display the directory
 */
 
 package main
