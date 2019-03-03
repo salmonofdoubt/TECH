@@ -1,0 +1,57 @@
+1. Download JDK
+    https://www.oracle.com/technetwork/java/javase/downloads/jdk11-downloads-5066655.html
+
+2. terminal version
+    /usr/libexec//java_home -V
+    
+    Matching Java Virtual Machines (1):
+    11.0.2, x86_64:	"Java SE 11.0.2"	/Library/Java/JavaVirtualMachines/jdk-11.0.2.jdk/Contents/Home
+    /Library/Java/JavaVirtualMachines/jdk-11.0.2.jdk/Contents/Home
+
+3. java -version
+    
+    java version "11.0.2" 2019-01-15 LTS
+    Java(TM) SE Runtime Environment 18.9 (build 11.0.2+9-LTS)
+    Java HotSpot(TM) 64-Bit Server VM 18.9 (build 11.0.2+9-LTS, mixed mode)
+
+4. Java IDE IntelliJ Community
+    https://www.jetbrains.com/idea/download/#section=mac
+
+5. JShell (execute snippets, no classes, since JDK9)
+    $ jshell
+        Welcome to JShell -- Version 11.0.2
+        For an introduction type: /help intro
+    $ jshell -help intro
+   
+6. IntelliJ
+    New Project
+    In scr dir, create new Class 'Main'
+
+    public class Main {
+    //Main class
+    //  has func 'main' that takes a String array
+    //  and this String array (the func input) is called 'args'
+    public static void main(String[] args) {
+        //System is a class, 'out' is a static prop, println a func
+        System.out.println("Hello World");
+    }
+}
+
+7. Can also run on cmd line 
+    $ ~/Java/HelloWorld/src java Main.java
+        Hello World
+
+8. Exercise files 
+    (abaumann::MACOSX)-(jobs:0)-(~/Java)
+    total 24
+    8 -rw-r--r--   1 abaumann  primarygroup   158  2 Mar 12:17 preps.txt
+    0 drwxrwxrwx@  8 abaumann  primarygroup   256  2 Mar 12:16 .
+    0 drwxr-xr-x+ 28 abaumann  primarygroup   896  2 Mar 12:04 ..
+    16 -rw-r--r--@  1 abaumann  primarygroup  6148  2 Mar 12:03 .DS_Store
+    0 drwxrwxrwx@  4 abaumann  primarygroup   128  2 Mar 12:03 Chapter 01
+    0 drwxrwxrwx@  6 abaumann  primarygroup   192 17 Jan  2018 Chapter 04
+    0 drwxrwxrwx@  8 abaumann  primarygroup   256 17 Jan  2018 Chapter 03
+    0 drwxrwxrwx@ 10 abaumann  primarygroup   320 16 Jan  2018 Chapter 02
+
+9. Play and have fun!!!
+    cmd + click on expression
