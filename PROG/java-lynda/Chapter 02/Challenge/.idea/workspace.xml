@@ -2,28 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="74df163f-bf63-4016-9f34-fc1b6cc4a7b4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Strings2/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ValueReference/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Chapter 01/01_05/begin/Desktop.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Chapter 01/01_05/end/Desktop.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Chapter 01/01_05/end/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02_07/begin/Desktop.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02_07/begin/src/Car.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02_07/begin/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02_07/end/Desktop.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02_07/end/src/Car.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02_07/end/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02_08/begin/Desktop.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02_08/begin/src/Car.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02_08/begin/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02_08/end/Desktop.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02_08/end/src/Car.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02_08/end/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Arrays/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Arrays/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Arrays/out/production/Arrays/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Arrays/out/production/Arrays/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Arrays/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Arrays/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -34,16 +13,16 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="24" column="47" selection-start-line="24" selection-start-column="47" selection-end-line="24" selection-end-column="47" />
+            <state relative-caret-position="375">
+              <caret line="25" column="39" selection-start-line="25" selection-start-column="39" selection-end-line="25" selection-end-column="39" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Cats.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="360">
@@ -105,7 +84,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551638078760" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551638330137" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -186,13 +165,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="47" selection-start-line="24" selection-start-column="47" selection-end-line="24" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Cats.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
@@ -203,6 +175,13 @@
             <element signature="e#479#480#0" expanded="true" />
             <element signature="e#507#508#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="39" selection-start-line="25" selection-start-column="39" selection-end-line="25" selection-end-column="39" />
         </state>
       </provider>
     </entry>

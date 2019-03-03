@@ -23,7 +23,7 @@ public class Main {
                 myCat.domestic);
 
         String kitty = myCat.meaow("Meeeeaow");
-        System.out.println("My cat greats you: " + kitty);
+        System.out.println("My cat greets you: " + kitty);
 
     }
 }
