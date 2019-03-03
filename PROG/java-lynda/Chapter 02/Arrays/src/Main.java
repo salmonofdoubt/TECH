@@ -15,6 +15,7 @@ public class Main {
 
         int[] moreNumbers = {31, 45, 22, 98, 10};
 
+        //Understand Arrays, Array
         Arrays.sort(numbers);
         System.out.println(Arrays.toString(numbers));
         //mem address
@@ -30,6 +31,8 @@ public class Main {
         System.out.println(myFavs[2]);
 
         System.out.println(myFavs.length);
+
+        //Array will work with mem reference rather than values
         System.out.println(Array.get(myFavs, 2));
     }
 
