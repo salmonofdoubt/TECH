@@ -1,59 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2ae231a7-9cbc-4fb0-b2d8-cfb1ed992c24" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../Conditions/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Conditions/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Conditions/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Conditions/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Conditions/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Conditions/out/production/Conditions/Main.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Conditions/src/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ControlFlow/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ControlFlow/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ControlFlow/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ControlFlow/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ControlFlow/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ControlFlow/out/production/ControlFlow/Main.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DebugIDE/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Libs/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../untitled/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../untitled/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../untitled/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../untitled/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../untitled/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../untitled/untitled.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Chapter 02/Challenge/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Chapter 02/Challenge/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03_02/begin/Desktop.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../Conditions/Conditions.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03_02/begin/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03_02/end/Desktop.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../Conditions/Desktop.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03_02/end/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ControlFlow/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03_03/begin/Desktop.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../ControlFlow/ControlFlow.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03_03/begin/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03_03/end/Desktop.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../ControlFlow/Desktop.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03_03/end/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03_04/begin/Desktop.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03_04/begin/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03_04/end/Desktop.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03_04/end/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03_05/begin/Desktop.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03_05/begin/src/Coin.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03_05/begin/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03_05/end/Desktop.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03_05/end/src/Coin.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03_05/end/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03_06/begin/Desktop.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03_06/begin/src/Coin.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03_06/begin/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03_06/end/Desktop.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03_06/end/src/Coin.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03_06/end/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03_08/begin/Desktop.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03_08/begin/src/Dice.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03_08/begin/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03_08/end/Desktop.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03_08/end/src/Dice.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03_08/end/src/Main.java" beforeDir="false" />
+    <list default="true" id="b3c5351a-14d8-4172-80c1-b78b9dbb9af9" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Dice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -67,18 +19,20 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" selection-start-line="1" selection-end-line="1" />
+            <state relative-caret-position="200">
+              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/begin/src/Main.java">
+        <entry file="file://$PROJECT_DIR$/src/Dice.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
+            <state relative-caret-position="126">
+              <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#67#68#0" expanded="true" />
+                <element signature="e#101#102#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -86,21 +40,34 @@
       </file>
     </leaf>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <replaceStrings>
+      <replace />
+    </replaceStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/src/Dice.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="666" />
-    <option name="y" value="48" />
-    <option name="width" value="774" />
-    <option name="height" value="852" />
+    <option name="x" value="958" />
+    <option name="y" value="25" />
+    <option name="width" value="1521" />
+    <option name="height" value="2134" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -118,26 +85,19 @@
             <path>
               <item name="ChallengeDice" type="b2602c69:ProjectViewProjectNode" />
               <item name="ChallengeDice" type="462c0819:PsiDirectoryNode" />
-              <item name="begin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ChallengeDice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ChallengeDice" type="462c0819:PsiDirectoryNode" />
-              <item name="begin" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ChallengeDice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ChallengeDice" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551726566605" />
+    <property name="settings.editor.selected.configurable" value="preferences.editor" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -151,21 +111,35 @@
       </list>
     </option>
   </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="ChallengeDice" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="2ae231a7-9cbc-4fb0-b2d8-cfb1ed992c24" name="Default Changelist" comment="" />
-      <created>1551709254449</created>
+      <changelist id="b3c5351a-14d8-4172-80c1-b78b9dbb9af9" name="Default Changelist" comment="" />
+      <created>1551717289797</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1551709254449</updated>
+      <updated>1551717289797</updated>
     </task>
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="666" y="48" width="774" height="852" extended-state="0" />
+    <frame x="958" y="25" width="1521" height="2134" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Image Layers" />
@@ -173,60 +147,54 @@
       <window_info id="UI Designer" />
       <window_info id="Capture Tool" />
       <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22909585" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Terminal" weight="0.32982457" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32982457" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="right" id="Palette" />
       <window_info anchor="right" id="Theme Preview" />
+      <window_info anchor="right" id="Maven" />
       <window_info anchor="right" id="Capture Analysis" />
       <window_info anchor="right" id="Palette&#9;" />
-      <window_info anchor="right" id="Maven" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/begin/src/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/Dicies.java">
       <provider selected="true" editor-type-id="text-editor">
         <state>
+          <caret column="19" selection-start-column="19" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Dice.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#67#68#0" expanded="true" />
+            <element signature="e#101#102#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        <state relative-caret-position="200">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
         </state>
       </provider>
     </entry>
-  </component>
-  <component name="masterDetails">
-    <states>
-      <state key="ProjectJDKs.UI">
-        <settings>
-          <last-edited>11</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-    </states>
   </component>
 </project>
