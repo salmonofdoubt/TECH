@@ -2,26 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b3c5351a-14d8-4172-80c1-b78b9dbb9af9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/begin/Desktop.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/begin/src/Dice.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/begin/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/end/Desktop.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/end/src/Dice.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/end/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ChallengeDice/Dice.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ChallengeDice/Dice.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ChallengeDice/META-INF/ChallengeDice.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ChallengeDice/Main.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Dice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dice.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Debug/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../untitled/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../untitled/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../untitled/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../untitled/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../untitled/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../untitled/untitled.iml" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -32,20 +15,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="135">
-              <caret line="9" selection-start-line="9" selection-end-line="9" />
+              <caret line="9" column="10" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Dice.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" selection-start-line="5" selection-end-line="5" />
+            <state relative-caret-position="255">
+              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
               <folding>
                 <element signature="e#109#110#0" expanded="true" />
                 <element signature="e#149#150#0" expanded="true" />
@@ -74,8 +57,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Dice.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
+        <option value="$PROJECT_DIR$/src/Dice.java" />
       </list>
     </option>
   </component>
@@ -167,7 +150,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32894737" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32894737" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -175,7 +158,7 @@
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32982457" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info active="true" anchor="bottom" id="Messages" order="10" visible="true" weight="0.32894737" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32894737" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -197,21 +180,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="10" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Dice.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        <state relative-caret-position="255">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
           <folding>
             <element signature="e#109#110#0" expanded="true" />
             <element signature="e#149#150#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
         </state>
       </provider>
     </entry>
