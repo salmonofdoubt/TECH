@@ -1,8 +1,18 @@
+import java.util.Random;
+
 public class Dice {
+    Random rand;
+    int previousRoll = -1;
 
-    int face;
+    public Dice() {
+        this.rand = new Random();
+    }
 
-    public Dice(int inputFace) {
-      this.face = inputFace;
+    public int roll() {
+        int currentRoll = this.rand.nextInt(6) + 1;
+        this.previousRoll = currentRoll;
+        return currentRoll;
     }
 }
+
+
