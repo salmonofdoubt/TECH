@@ -1,0 +1,459 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="39bb6587-0116-4557-8ec7-d9e6ee6e84f3" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/.vscode/launch.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 02/01Start/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 02/Arrays/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 02/Arrays/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 02/Arrays/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 02/Arrays/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 02/Arrays/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 02/Arrays/Arrays.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 02/Arrays/out/production/Arrays/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 02/Arrays/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 02/Cars/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 02/Cars/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 02/Cars/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 02/Cars/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 02/Cars/Cars.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 02/Cars/out/production/Cars/Car.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 02/Cars/out/production/Cars/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 02/Cars/src/Car.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 02/Cars/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 02/Challenge/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 02/Challenge/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 02/Challenge/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 02/Challenge/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 02/Challenge/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 02/Challenge/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 02/Challenge/Challenge.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 02/Challenge/out/production/Challenge/Cats.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 02/Challenge/out/production/Challenge/META-INF/Challenge.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 02/Challenge/out/production/Challenge/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 02/Challenge/src/Cats.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 02/Challenge/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 02/Inputs/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 02/Inputs/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 02/Inputs/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 02/Inputs/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 02/Inputs/Inputs.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 02/Inputs/out/production/Inputs/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 02/Inputs/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 02/Strings/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 02/Strings/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 02/Strings/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 02/Strings/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 02/Strings/Strings.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 02/Strings/out/production/Strings/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 02/Strings/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 02/Strings2/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 02/Strings2/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 02/Strings2/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 02/Strings2/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 02/Strings2/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 02/Strings2/Strings2.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 02/Strings2/out/production/Strings2/META-INF/Strings2.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 02/Strings2/out/production/Strings2/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 02/Strings2/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 02/ValueReference/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 02/ValueReference/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 02/ValueReference/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 02/ValueReference/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 02/ValueReference/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 02/ValueReference/ValueReference.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 02/ValueReference/out/production/ValueReference/Car.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 02/ValueReference/out/production/ValueReference/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 02/ValueReference/src/Car.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 02/ValueReference/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 03/ChallengeDice/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 03/ChallengeDice/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 03/ChallengeDice/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 03/ChallengeDice/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 03/ChallengeDice/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 03/ChallengeDice/ChallengeDice.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 03/ChallengeDice/out/production/ChallengeDice/Dice.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 03/ChallengeDice/out/production/ChallengeDice/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 03/ChallengeDice/src/Dice.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 03/ChallengeDice/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 03/Conditions/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 03/Conditions/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 03/Conditions/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 03/Conditions/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 03/Conditions/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 03/Conditions/Conditions.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 03/Conditions/Desktop.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 03/Conditions/out/production/Conditions/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 03/Conditions/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 03/ControlFlow/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 03/ControlFlow/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 03/ControlFlow/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 03/ControlFlow/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 03/ControlFlow/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 03/ControlFlow/ControlFlow.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 03/ControlFlow/Desktop.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 03/ControlFlow/out/production/ControlFlow/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 03/ControlFlow/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 03/DebugIDE/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 03/DebugIDE/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 03/DebugIDE/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 03/DebugIDE/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 03/DebugIDE/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 03/DebugIDE/DebugIDE.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 03/DebugIDE/Desktop.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 03/DebugIDE/out/production/DebugIDE/Coin.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 03/DebugIDE/out/production/DebugIDE/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 03/DebugIDE/src/Coin.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 03/DebugIDE/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 03/DebugPrint/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 03/DebugPrint/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 03/DebugPrint/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 03/DebugPrint/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 03/DebugPrint/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 03/DebugPrint/Debug.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 03/DebugPrint/Desktop.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 03/DebugPrint/out/production/Debug/Coin.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 03/DebugPrint/out/production/Debug/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 03/DebugPrint/src/Coin.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 03/DebugPrint/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 03/Libs/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 03/Libs/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 03/Libs/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 03/Libs/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 03/Libs/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 03/Libs/Desktop.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 03/Libs/Libs.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 03/Libs/out/production/Libs/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 03/Libs/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 04/FUNCPROG/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 04/FUNCPROG/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 04/FUNCPROG/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 04/FUNCPROG/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 04/FUNCPROG/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 04/FUNCPROG/FUNCPROG.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 04/FUNCPROG/out/production/FUNCPROG/Answerable.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 04/FUNCPROG/out/production/FUNCPROG/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 04/FUNCPROG/out/production/FUNCPROG/Oddity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 04/FUNCPROG/src/Answerable.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 04/FUNCPROG/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 04/FUNCPROG/src/Oddity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 04/INTERFACES/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 04/INTERFACES/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 04/INTERFACES/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 04/INTERFACES/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 04/INTERFACES/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 04/INTERFACES/INTERFACES.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 04/INTERFACES/out/production/INTERFACES/Cat.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 04/INTERFACES/out/production/INTERFACES/Dog.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 04/INTERFACES/out/production/INTERFACES/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 04/INTERFACES/out/production/INTERFACES/Pet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 04/INTERFACES/src/Cat.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 04/INTERFACES/src/Dog.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 04/INTERFACES/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 04/INTERFACES/src/Pet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 04/OOP-ENCAP/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 04/OOP-ENCAP/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 04/OOP-ENCAP/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 04/OOP-ENCAP/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 04/OOP-ENCAP/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 04/OOP-ENCAP/OOP.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 04/OOP-ENCAP/out/production/OOP/BankAccount.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 04/OOP-ENCAP/out/production/OOP/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 04/OOP-ENCAP/src/BankAccount.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 04/OOP-ENCAP/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 04/OOP-INHERIT/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 04/OOP-INHERIT/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 04/OOP-INHERIT/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 04/OOP-INHERIT/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 04/OOP-INHERIT/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 04/OOP-INHERIT/OOP-INHERIT.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 04/OOP-INHERIT/out/production/OOP-INHERIT/Cricket.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 04/OOP-INHERIT/out/production/OOP-INHERIT/Insect.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 04/OOP-INHERIT/out/production/OOP-INHERIT/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 04/OOP-INHERIT/out/production/OOP-INHERIT/Spider.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 04/OOP-INHERIT/src/Cricket.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 04/OOP-INHERIT/src/Insect.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 04/OOP-INHERIT/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/Chapter 04/OOP-INHERIT/src/Spider.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/HelloWorld/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/HelloWorld/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/HelloWorld/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/HelloWorld/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/HelloWorld/HelloWorld.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/HelloWorld/out/production/HelloWorld/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/HelloWorld/src/Car.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/HelloWorld/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/preps.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-lynda/readme.md" beforeDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/out/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/Ch01$Main.ic" NAME="Main Coverage Results" MODIFIED="1551878192910" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/01_05/NameAndAge.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="297">
+              <caret line="9" column="29" lean-forward="true" selection-start-line="3" selection-start-column="4" selection-end-line="13" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="363">
+              <caret line="11" column="17" lean-forward="true" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/Main.java" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="958" />
+    <option name="y" value="25" />
+    <option name="width" value="2109" />
+    <option name="height" value="2134" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Ch01" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Ch01" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Ch01" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Ch01" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551878374316" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/01_05" />
+      <recent name="$PROJECT_DIR$/src" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="Ch01" />
+      <option name="PROGRAM_PARAMETERS" value="Andre, 52" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NameAndAge" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="NameAndAge" />
+      <module name="Ch01" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Main" />
+      <item itemvalue="Application.NameAndAge" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.NameAndAge" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="39bb6587-0116-4557-8ec7-d9e6ee6e84f3" name="Default Changelist" comment="" />
+      <created>1551876685298</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1551876685298</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="958" y="25" width="2109" height="2134" extended-state="0" />
+    <layout>
+      <window_info id="Image Layers" />
+      <window_info id="Designer" />
+      <window_info id="UI Designer" />
+      <window_info id="Capture Tool" />
+      <window_info id="Favorites" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17338514" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" weight="0.32982457" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32982457" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Palette" />
+      <window_info anchor="right" id="Theme Preview" />
+      <window_info anchor="right" id="Maven" />
+      <window_info anchor="right" id="Capture Analysis" />
+      <window_info anchor="right" id="Palette&#9;" />
+      <window_info anchor="right" id="Coverage" side_tool="true" visible="true" weight="0.32977173" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/01_05/NameAndAge.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="9" column="29" lean-forward="true" selection-start-line="3" selection-start-column="4" selection-end-line="13" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="363">
+          <caret line="11" column="17" lean-forward="true" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>Ch01</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
