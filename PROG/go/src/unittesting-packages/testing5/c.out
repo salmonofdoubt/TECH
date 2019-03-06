@@ -1,6 +1,0 @@
-mode: set
-unittesting-packages/qrcode/qrcoded.go:13.13,17.16 3 0
-unittesting-packages/qrcode/qrcoded.go:20.2,23.16 3 0
-unittesting-packages/qrcode/qrcoded.go:17.16,19.3 1 0
-unittesting-packages/qrcode/qrcoded.go:23.16,25.3 1 0
-unittesting-packages/qrcode/qrcoded.go:28.77,32.2 3 1
