@@ -1,0 +1,4 @@
+Book: Pride and Prejudice
+Checkouts: start: 9/2, end: 10/23|start: 10/24, end: 12/2|
+Status: In-Stock
+

@@ -1,0 +1,17 @@
+Hydra rooms.go:66: Starting chat room HydraChat
+Hydra hydrachat.go:51: Received request from client 127.0.0.1:55489
+Hydra rooms.go:32: Adding client 127.0.0.1:55489
+Hydra clients.go:25: Anonymous320:RandomMessage 315
+Hydra clients.go:25: Anonymous320:RandomMessage 271
+Hydra clients.go:25: Anonymous320:RandomMessage 194
+Hydra clients.go:25: Anonymous320:RandomMessage 40
+Hydra clients.go:25: Anonymous320:RandomMessage 5
+Hydra clients.go:25: Anonymous320:RandomMessage 153
+Hydra clients.go:25: Anonymous320:RandomMessage 34
+Hydra clients.go:25: Anonymous320:RandomMessage 206
+Hydra clients.go:25: Anonymous320:RandomMessage 349
+Hydra clients.go:25: Anonymous320:RandomMessage 190
+Hydra clients.go:25: Anonymous320:RandomMessage 143
+Hydra rooms.go:51: Removing client 
+Hydra hydrachat.go:51: Received request from client 127.0.0.1:55490
+Hydra rooms.go:32: Adding client 127.0.0.1:55490

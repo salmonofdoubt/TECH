@@ -1,0 +1,443 @@
+    <dl> 
+  <dt> 
+    <strong> 
+      <strong>JACK:</strong> 
+    </strong> 
+  </dt> 
+  <dd> 
+    <span id="imp-1-155">Gwendolen, I must get christened at once—I mean we must get married at once. There is no time to be lost.</span> 
+    <br/> 
+  </dd> 
+</dl><dl> 
+  <dt> 
+    <strong> 
+      <strong>GWENDOLEN:</strong> 
+    </strong> 
+  </dt> 
+  <dd> 
+    <span id="imp-1-156">Married, Mr. Worthing?</span> 
+    <br/> 
+  </dd> 
+</dl><dl> 
+  <dt> 
+    <strong> 
+      <strong>JACK:</strong> 
+    </strong> 
+  </dt> 
+  <dd> 
+    <span id="imp-1-157"><span class="stage"><em>[Astounded.]</em></span> Well…surely. You know that I love you, and you led me to believe, Miss Fairfax, that you were not absolutely indifferent to me.</span> 
+    <br/> 
+  </dd> 
+</dl><dl> 
+  <dt> 
+    <strong> 
+      <strong>GWENDOLEN:</strong> 
+    </strong> 
+  </dt> 
+  <dd> 
+    <span id="imp-1-158">I adore you. But you haven't proposed to me yet. Nothing has been said at all about marriage. The subject has not even been touched on.</span> 
+    <br/> 
+  </dd> 
+</dl><dl> 
+  <dt> 
+    <strong> 
+      <strong>JACK:</strong> 
+    </strong> 
+  </dt> 
+  <dd> 
+    <span id="imp-1-159">Well…may I propose to you now?</span> 
+    <br/> 
+  </dd> 
+</dl><dl> 
+  <dt> 
+    <strong> 
+      <strong>GWENDOLEN:</strong> 
+    </strong> 
+  </dt> 
+  <dd> 
+    <span id="imp-1-160">I think it would be an admirable opportunity. And to spare you any possible disappointment, Mr. Worthing, I think it only fair to tell you quite frankly beforehand that I am fully determined to accept you.</span> 
+    <br/> 
+  </dd> 
+</dl><dl> 
+  <dt> 
+    <strong> 
+      <strong>JACK:</strong> 
+    </strong> 
+  </dt> 
+  <dd> 
+    <span id="imp-1-161">Gwendolen!</span> 
+    <br/> 
+  </dd> 
+</dl><dl> 
+  <dt> 
+    <strong> 
+      <strong>GWENDOLEN:</strong> 
+    </strong> 
+  </dt> 
+  <dd> 
+    <span id="imp-1-162">Yes, Mr. Worthing, what have you got to say to me?</span> 
+    <br/> 
+  </dd> 
+</dl><dl> 
+  <dt> 
+    <strong> 
+      <strong>JACK:</strong> 
+    </strong> 
+  </dt> 
+  <dd> 
+    <span id="imp-1-163">You know what I have got to say to you.</span> 
+    <br/> 
+  </dd> 
+</dl><dl> 
+  <dt> 
+    <strong> 
+      <strong>GWENDOLEN:</strong> 
+    </strong> 
+  </dt> 
+  <dd> 
+    <span id="imp-1-164">Yes, but you don't say it.</span> 
+    <br/> 
+  </dd> 
+</dl><dl> 
+  <dt> 
+    <strong> 
+      <strong>JACK:</strong> 
+    </strong> 
+  </dt> 
+  <dd> 
+    <span id="imp-1-165">Gwendolen, will you marry me? <span class="stage"><em>[Goes on his knees.]</em></span></span> 
+    <br/> 
+  </dd> 
+</dl><dl> 
+  <dt> 
+    <strong> 
+      <strong>GWENDOLEN:</strong> 
+    </strong> 
+  </dt> 
+  <dd> 
+    <span id="imp-1-166">Of course I will, darling. How long you have been about it! I am afraid you have had very little experience in how to propose.</span> 
+    <br/> 
+  </dd> 
+</dl><dl> 
+  <dt> 
+    <strong> 
+      <strong>JACK:</strong> 
+    </strong> 
+  </dt> 
+  <dd> 
+    <span id="imp-1-167">My own one, I have never loved anyone in the world but you.</span> 
+    <br/> 
+  </dd> 
+</dl><dl> 
+  <dt> 
+    <strong> 
+      <strong>GWENDOLEN:</strong> 
+    </strong> 
+  </dt> 
+  <dd> 
+    <span id="imp-1-168">Yes, but men often propose for practice. I know my brother Gerald does. All my girl-friends tell me so. What wonderfully blue eyes you have, Ernest! They are quite, quite, blue. I hope you will always look at me just like that, especially when there are other people present.</span> 
+    <br/> 
+  </dd> 
+</dl><p class="stage"> 
+  <em>[Enter L<span style="font-size: 75%">ADY</span> B<span style="font-size: 75%">RACKNELL</span>.]</em> 
+</p><dl> 
+  <dt> 
+    <strong> 
+      <strong>LADY BRACKNELL:</strong> 
+    </strong> 
+  </dt> 
+  <dd> 
+    <span id="imp-1-169">Mr. Worthing! Rise, sir, from this <a href="#prestwick-vocab-imp-1-21" class="tooltip" onclick="return false;">semi-recumbent</a> posture. It is most indecorous.</span> 
+    <br/> 
+  </dd> 
+</dl><dl> 
+  <dt> 
+    <strong> 
+      <strong>GWENDOLEN:</strong> 
+    </strong> 
+  </dt> 
+  <dd> 
+    <span id="imp-1-170">Mamma! <span class="stage"><em>[He tries to rise; she restrains him.]</em></span> I must beg you to retire. This is no place for you. Besides, Mr. Worthing has not quite finished yet.</span> 
+    <br/> 
+  </dd> 
+</dl><dl> 
+  <dt> 
+    <strong> 
+      <strong>LADY BRACKNELL:</strong> 
+    </strong> 
+  </dt> 
+  <dd> 
+    <span id="imp-1-171">Finished what, may I ask?</span> 
+    <br/> 
+  </dd> 
+</dl><dl> 
+  <dt> 
+    <strong> 
+      <strong>GWENDOLEN:</strong> 
+    </strong> 
+  </dt> 
+  <dd> 
+    <span id="imp-1-172">I am engaged to Mr. Worthing, mamma. <span class="stage"><em>[They rise together.]</em></span></span> 
+    <br/> 
+  </dd> 
+</dl><dl> 
+  <dt> 
+    <strong> 
+      <strong>LADY BRACKNELL:</strong> 
+    </strong> 
+  </dt> 
+  <dd> 
+    <span id="imp-1-173">Pardon me, you are not engaged to anyone. When you do become engaged to some one, I, or your father, should his health permit him, will inform you of the fact. An engagement should come on a young girl as a surprise, pleasant or unpleasant, as the case may be. It is hardly a matter that she could be allowed to arrange for herself.…And now I have a few questions to put to you, Mr. Worthing. While I am making these inquiries, you, Gwendolen, will wait for me below in the carriage.</span> 
+    <br/> 
+  </dd> 
+</dl><dl> 
+  <dt> 
+    <strong> 
+      <strong>GWENDOLEN:</strong> 
+    </strong> 
+  </dt> 
+  <dd> 
+    <span id="imp-1-174"><span class="stage"><em>[Reproachfully.]</em></span> Mamma!</span> 
+    <br/> 
+  </dd> 
+</dl><dl> 
+  <dt> 
+    <strong> 
+      <strong>LADY BRACKNELL:</strong> 
+    </strong> 
+  </dt> 
+  <dd> 
+    <span id="imp-1-175">In the carriage, Gwendolen! <span class="stage"><em>[G<span style="font-size: 75%">WENDOLEN</span> goes to the door. She and JACK blow kisses to each other behind L<span style="font-size: 75%">ADY</span> B<span style="font-size: 75%">RACKNELL'S</span> back. L<span style="font-size: 75%">ADY</span> B<span style="font-size: 75%">RACKNELL</span> looks vaguely about as if she could not understand what the noise was. Finally turns round.]</em></span> Gwendolen, the carriage!</span> 
+    <br/> 
+  </dd> 
+</dl><dl> 
+  <dt> 
+    <strong> 
+      <strong>GWENDOLEN:</strong> 
+    </strong> 
+  </dt> 
+  <dd> 
+    <span id="imp-1-176">Yes, mamma. <span class="stage"><em>[Goes out, looking back at J<span style="font-size: 75%">ACK</span>.]</em></span></span> 
+    <br/> 
+  </dd> 
+</dl><dl> 
+  <dt> 
+    <strong> 
+      <strong>LADY BRACKNELL:</strong> 
+    </strong> 
+  </dt> 
+  <dd> 
+    <span id="imp-1-177"><span class="stage"><em>[Sitting down.]</em></span> You can take a seat, Mr. Worthing. <span class="stage"><em>[Looks in her pocket for note-book and pencil.]</em></span></span> 
+    <br/> 
+  </dd> 
+</dl><dl> 
+  <dt> 
+    <strong> 
+      <strong>JACK:</strong> 
+    </strong> 
+  </dt> 
+  <dd> 
+    <span id="imp-1-178">Thank you, Lady Bracknell, I prefer standing.</span> 
+    <br/> 
+  </dd> 
+</dl><dl> 
+  <dt> 
+    <strong> 
+      <strong>LADY BRACKNELL:</strong> 
+    </strong> 
+  </dt> 
+  <dd> 
+    <span id="imp-1-179"><span class="stage"><em>[Pencil and note-book in hand.]</em></span> I feel bound to tell you that you are not down on my list of eligible young men, although I have the same list as the dear Duchess of Bolton has. We work together, in fact. However, I am quite ready to enter your name, should your answers be what a really affectionate mother requires. Do you smoke?</span> 
+    <br/> 
+  </dd> 
+</dl><dl> 
+  <dt> 
+    <strong> 
+      <strong>JACK:</strong> 
+    </strong> 
+  </dt> 
+  <dd> 
+    <span id="imp-1-180">Well, yes, I must admit I smoke.</span> 
+    <br/> 
+  </dd> 
+</dl><dl> 
+  <dt> 
+    <strong> 
+      <strong>LADY BRACKNELL:</strong> 
+    </strong> 
+  </dt> 
+  <dd> 
+    <span id="imp-1-181">I am glad to hear it. A man should always have an occupation of some kind. There are far too many idle men in London as it is. How old are you?</span> 
+    <br/> 
+  </dd> 
+</dl><dl> 
+  <dt> 
+    <strong> 
+      <strong>JACK:</strong> 
+    </strong> 
+  </dt> 
+  <dd> 
+    <span id="imp-1-182">Twenty-nine.</span> 
+    <br/> 
+  </dd> 
+</dl><dl> 
+  <dt> 
+    <strong> 
+      <strong>LADY BRACKNELL:</strong> 
+    </strong> 
+  </dt> 
+  <dd> 
+    <span id="imp-1-183">A very good age to be married at. I have always been of opinion that a man who desires to get married should know either everything or nothing. Which do you know?</span> 
+    <br/> 
+  </dd> 
+</dl><dl> 
+  <dt> 
+    <strong> 
+      <strong>JACK:</strong> 
+    </strong> 
+  </dt> 
+  <dd> 
+    <span id="imp-1-184"><span class="stage"><em>[After some hesitation.]</em></span> I know nothing, Lady Bracknell.</span> 
+    <br/> 
+  </dd> 
+</dl><dl> 
+  <dt> 
+    <strong> 
+      <strong>LADY BRACKNELL:</strong> 
+    </strong> 
+  </dt> 
+  <dd> 
+    <span id="imp-1-185">I am pleased to hear it. I do not approve of anything that tampers with natural ignorance. Ignorance is like a delicate exotic fruit; touch it and the bloom is gone. The whole theory of modern education is <a href="#prestwick-vocab-imp-1-18" class="tooltip" onclick="return false;">radically</a> unsound. Fortunately in England, at any rate, education produces no effect whatsoever. If it did, it would prove a serious danger to the upper classes, and probably lead to acts of violence in Grosvenor Square. What is your income?</span> 
+    <br/> 
+  </dd> 
+</dl><dl> 
+  <dt> 
+    <strong> 
+      <strong>JACK:</strong> 
+    </strong> 
+  </dt> 
+  <dd> 
+    <span id="imp-1-186">Between seven and eight thousand a year.</span> 
+    <br/> 
+  </dd> 
+</dl><dl> 
+  <dt> 
+    <strong> 
+      <strong>LADY BRACKNELL:</strong> 
+    </strong> 
+  </dt> 
+  <dd> 
+    <span id="imp-1-187"><span class="stage"><em>[Makes a note in her book.]</em></span> In land, or in investments?</span> 
+    <br/> 
+  </dd> 
+</dl><dl> 
+  <dt> 
+    <strong> 
+      <strong>JACK:</strong> 
+    </strong> 
+  </dt> 
+  <dd> 
+    <span id="imp-1-188">In investments, chiefly.</span> 
+    <br/> 
+  </dd> 
+</dl><dl> 
+  <dt> 
+    <strong> 
+      <strong>LADY BRACKNELL:</strong> 
+    </strong> 
+  </dt> 
+  <dd> 
+    <span id="imp-1-189">That is satisfactory. What between the duties expected of one during one's life-time, and the duties exacted from one after one's death, land has ceased to be either a profit or a pleasure. It gives one position, and prevents one from keeping it up. That's all that can be said about land.</span> 
+    <br/> 
+  </dd> 
+</dl><dl> 
+  <dt> 
+    <strong> 
+      <strong>JACK:</strong> 
+    </strong> 
+  </dt> 
+  <dd> 
+    <span id="imp-1-190">I have a country house with some land, of course, attached to it, about fifteen hundred acres, I believe; but I don't depend on that for my real income. In fact, as far as I can make out, the poachers are the only people who make anything out of it.</span> 
+    <br/> 
+  </dd> 
+</dl><dl> 
+  <dt> 
+    <strong> 
+      <strong>LADY BRACKNELL:</strong> 
+    </strong> 
+  </dt> 
+  <dd> 
+    <span id="imp-1-191">A country house! How many bedrooms? Well, that point can be cleared up afterwards. You have a town house, I hope? A girl with a simple, unspoiled nature, like Gwendolen, could hardly be expected to reside in the country.</span> 
+    <br/> 
+  </dd> 
+</dl><dl> 
+  <dt> 
+    <strong> 
+      <strong>JACK:</strong> 
+    </strong> 
+  </dt> 
+  <dd> 
+    <span id="imp-1-192">Well, I own a house in Belgrave Square, but it is let by the year to Lady Bloxham. Of course, I can get it back whenever I like, at six months' notice.</span> 
+    <br/> 
+  </dd> 
+</dl><dl> 
+  <dt> 
+    <strong> 
+      <strong>LADY BRACKNELL:</strong> 
+    </strong> 
+  </dt> 
+  <dd> 
+    <span id="imp-1-193">Lady Bloxham? I don't know her.</span> 
+    <br/> 
+  </dd> 
+</dl><dl> 
+  <dt> 
+    <strong> 
+      <strong>JACK:</strong> 
+    </strong> 
+  </dt> 
+  <dd> 
+    <span id="imp-1-194">Oh, she goes about very little. She is a lady considerably advanced in years.</span> 
+    <br/> 
+  </dd> 
+</dl><dl> 
+  <dt> 
+    <strong> 
+      <strong>LADY BRACKNELL:</strong> 
+    </strong> 
+  </dt> 
+  <dd> 
+    <span id="imp-1-195">Ah, now-a-days that is no guarantee of respectability of character. What number in Belgrave Square?</span> 
+    <br/> 
+  </dd> 
+</dl><dl> 
+  <dt> 
+    <strong> 
+      <strong>JACK:</strong> 
+    </strong> 
+  </dt> 
+  <dd> 
+    <span id="imp-1-196">149.</span> 
+    <br/> 
+  </dd> 
+</dl><dl> 
+  <dt> 
+    <strong> 
+      <strong>LADY BRACKNELL:</strong> 
+    </strong> 
+  </dt> 
+  <dd> 
+    <span id="imp-1-197"><span class="stage"><em>[Shaking her head.]</em></span> The unfashionable side. I thought there was something. However, that could easily be altered.</span> 
+    <br/> 
+  </dd> 
+</dl><dl> 
+  <dt> 
+    <strong> 
+      <strong>JACK:</strong> 
+    </strong> 
+  </dt> 
+  <dd> 
+    <span id="imp-1-198">Do you mean the fashion, or the side?</span> 
+    <br/> 
+  </dd> 
+</dl> 

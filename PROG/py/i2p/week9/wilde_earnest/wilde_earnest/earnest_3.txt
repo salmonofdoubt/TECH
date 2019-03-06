@@ -1,0 +1,397 @@
+   <dl> 
+  <dt> 
+    <strong> 
+      <strong>ALGERNON:</strong> 
+    </strong> 
+  </dt> 
+  <dd> 
+    <span id="imp-1-85">The truth is rarely pure and never simple. Modern life would be very <a href="#prestwick-vocab-imp-1-23" class="tooltip" onclick="return false;">tedious</a> if it were either, and modern literature a complete impossibility!</span> 
+    <br/> 
+  </dd> 
+</dl><dl> 
+  <dt> 
+    <strong> 
+      <strong>JACK:</strong> 
+    </strong> 
+  </dt> 
+  <dd> 
+    <span id="imp-1-86">That wouldn't be at all a bad thing.</span> 
+    <br/> 
+  </dd> 
+</dl><dl> 
+  <dt> 
+    <strong> 
+      <strong>ALGERNON:</strong> 
+    </strong> 
+  </dt> 
+  <dd> 
+    <span id="imp-1-87">Literary criticism is not your forte, my dear fellow. Don't try it. You should leave that to people who haven't been at a University. They do it so well in the daily papers. What you really are is a Bunburyist. I was quite right in saying you were a Bunburyist. You are one of the most advanced Bunburyists I know.</span> 
+    <br/> 
+  </dd> 
+</dl><dl> 
+  <dt> 
+    <strong> 
+      <strong>JACK:</strong> 
+    </strong> 
+  </dt> 
+  <dd> 
+    <span id="imp-1-88">What on earth do you mean?</span> 
+    <br/> 
+  </dd> 
+</dl><dl> 
+  <dt> 
+    <strong> 
+      <strong>ALGERNON:</strong> 
+    </strong> 
+  </dt> 
+  <dd> 
+    <span id="imp-1-89">You have invented a very useful younger brother called Ernest, in order that you may be able to come up to town as often as you like. I have invented an invaluable permanent invalid called Bunbury, in order that I may be able to go down into the country whenever I choose. Bunbury is perfectly invaluable. If it wasn't for Bunbury's extraordinary bad health, for instance, I wouldn't be able to dine with you at Willis's to-night, for I have been really engaged to Aunt Augusta for more than a week.</span> 
+    <br/> 
+  </dd> 
+</dl><dl> 
+  <dt> 
+    <strong> 
+      <strong>JACK:</strong> 
+    </strong> 
+  </dt> 
+  <dd> 
+    <span id="imp-1-90">I haven't asked you to dine with me anywhere to-night.</span> 
+    <br/> 
+  </dd> 
+</dl><dl> 
+  <dt> 
+    <strong> 
+      <strong>ALGERNON:</strong> 
+    </strong> 
+  </dt> 
+  <dd> 
+    <span id="imp-1-91">I know. You are absoltely careless about sending out invitations. It is very foolish of you. Nothing annoys people so much as not receiving invitations.</span> 
+    <br/> 
+  </dd> 
+</dl><dl> 
+  <dt> 
+    <strong> 
+      <strong>JACK:</strong> 
+    </strong> 
+  </dt> 
+  <dd> 
+    <span id="imp-1-92">You had much better dine with your Aunt Augusta.</span> 
+    <br/> 
+  </dd> 
+</dl><dl> 
+  <dt> 
+    <strong> 
+      <strong>ALGERNON:</strong> 
+    </strong> 
+  </dt> 
+  <dd> 
+    <span id="imp-1-93">I haven't the smallest intention of doing anything of the kind. To begin with, I dined there on Monday, and once a week is quite enough to dine with one's own relations. In the second place, whenever I do dine there I am always treated as a member of the family, and sent down with either no woman at all, or two. In the third place, I know perfectly well whom she will place me next to, to-night. She will place me next Mary Farquhar, who always flirts with her own husband across the dinner-table. That is not very pleasant. Indeed, it is not even decent…and that sort of thing is enormously on the increase. The amount of women in London who flirt with their own husbands is perfectly scandalous. It looks so bad. It is simply washing one's clean linen in public. Besides, now that I know you to be a confirmed Bunburyist I naturally want to talk to you about Bunburying. I want to tell you the rules.</span> 
+    <br/> 
+  </dd> 
+</dl><dl> 
+  <dt> 
+    <strong> 
+      <strong>JACK:</strong> 
+    </strong> 
+  </dt> 
+  <dd> 
+    <span id="imp-1-94">I'm not a Bunburyist at all. If Gwendolen accepts me, I am going to kill my brother, indeed I think I'll kill him in any case. Cecily is a little too much interested in him. It is rather a bore. So I am going to get rid of Ernest. And I strongly advise you to do the same with Mr.…with your invalid friend who has the absurd name.</span> 
+    <br/> 
+  </dd> 
+</dl><dl> 
+  <dt> 
+    <strong> 
+      <strong>ALGERNON:</strong> 
+    </strong> 
+  </dt> 
+  <dd> 
+    <span id="imp-1-95">Nothing will <a href="#prestwick-vocab-imp-1-11" class="tooltip" onclick="return false;">induce</a> me to part with Bunbury, and if you ever get married, which seems to me extremely problematic, you will be very glad to know Bunbury. A man who marries without knowing Bunbury has a very tedious time of it.</span> 
+    <br/> 
+  </dd> 
+</dl><dl> 
+  <dt> 
+    <strong> 
+      <strong>JACK:</strong> 
+    </strong> 
+  </dt> 
+  <dd> 
+    <span id="imp-1-96">That is nonsense. If I marry a charming girl like Gwendolen, and she is the only girl I ever saw in my life that I would marry, I certainly won't want to know Bunbury.</span> 
+    <br/> 
+  </dd> 
+</dl><dl> 
+  <dt> 
+    <strong> 
+      <strong>ALGERNON:</strong> 
+    </strong> 
+  </dt> 
+  <dd> 
+    <span id="imp-1-97">Then your wife will. You don't seem to realize, that in married life three is company and two is none.</span> 
+    <br/> 
+  </dd> 
+</dl><dl> 
+  <dt> 
+    <strong> 
+      <strong>JACK:</strong> 
+    </strong> 
+  </dt> 
+  <dd> 
+    <span id="imp-1-98"><span class="stage"><em>[Sententiously.]</em></span> That, my dear young friend, is the theory that the corrupt French Drama has been <a href="#prestwick-vocab-imp-1-17" class="tooltip" onclick="return false;">propounding</a> for the last fifty years.</span> 
+    <br/> 
+  </dd> 
+</dl><dl> 
+  <dt> 
+    <strong> 
+      <strong>ALGERNON:</strong> 
+    </strong> 
+  </dt> 
+  <dd> 
+    <span id="imp-1-99">Yes; and that the happy English home has proved in half the time.</span> 
+    <br/> 
+  </dd> 
+</dl><dl> 
+  <dt> 
+    <strong> 
+      <strong>JACK:</strong> 
+    </strong> 
+  </dt> 
+  <dd> 
+    <span id="imp-1-100">For heaven's sake, don't try to be <a href="#prestwick-vocab-imp-1-4" class="tooltip" onclick="return false;">cynical</a>. It's perfectly easy to be cynical.</span> 
+    <br/> 
+  </dd> 
+</dl><dl> 
+  <dt> 
+    <strong> 
+      <strong>ALGERNON:</strong> 
+    </strong> 
+  </dt> 
+  <dd> 
+    <span id="imp-1-101">My dear fellow, it isn't easy to be anything now-a-days. There's such a lot of beastly competition about. <span class="stage"><em>[The sound of an electric bell is heard.]</em></span> Ah! that must be Aunt Augusta. Only relatives, or creditors, ever ring in that <a href="#prestwick-gloss-imp-1-1" class="tooltip" onclick="return false;">Wagnerian</a> manner. Now, if I get her out of the way for ten minutes, so that you can have an opportunity for proposing to Gwendolen, may I dine with you to-night at Willis's?</span> 
+    <br/> 
+  </dd> 
+</dl><dl> 
+  <dt> 
+    <strong> 
+      <strong>JACK:</strong> 
+    </strong> 
+  </dt> 
+  <dd> 
+    <span id="imp-1-102">I suppose so, if you want to.</span> 
+    <br/> 
+  </dd> 
+</dl><dl> 
+  <dt> 
+    <strong> 
+      <strong>ALGERNON:</strong> 
+    </strong> 
+  </dt> 
+  <dd> 
+    <span id="imp-1-103">Yes, but you must be serious about it. I hate people who are not serious about meals. It is so shallow of them.</span> 
+    <br/> 
+  </dd> 
+</dl><p class="stage"> 
+  <em>[Enter L<span style="font-size: 75%">ANE</span>.]</em> 
+</p><dl> 
+  <dt> 
+    <strong> 
+      <strong>LANE:</strong> 
+    </strong> 
+  </dt> 
+  <dd> 
+    <span id="imp-1-104">Lady Bracknell and Miss Fairfax.</span> 
+    <br/> 
+  </dd> 
+</dl><p class="stage"> 
+  <em>[A<span style="font-size: 75%">LGERNON</span> goes forward to meet them. Enter L<span style="font-size: 75%">ADY</span> B<span style="font-size: 75%">RACKNELL</span> and G<span style="font-size: 75%">WENDOLEN</span>.]</em> 
+</p><dl> 
+  <dt> 
+    <strong> 
+      <strong>LADY BRACKNELL:</strong> 
+    </strong> 
+  </dt> 
+  <dd> 
+    <span id="imp-1-105">Good afternoon, dear Algernon, I hope you are behaving very well.</span> 
+    <br/> 
+  </dd> 
+</dl><dl> 
+  <dt> 
+    <strong> 
+      <strong>ALGERNON:</strong> 
+    </strong> 
+  </dt> 
+  <dd> 
+    <span id="imp-1-106">I'm feeling very well, Aunt Augusta.</span> 
+    <br/> 
+  </dd> 
+</dl><dl> 
+  <dt> 
+    <strong> 
+      <strong>LADY BRACKNELL:</strong> 
+    </strong> 
+  </dt> 
+  <dd> 
+    <span id="imp-1-107">That's not quite the same thing. In fact the two things rarely go together. <span class="stage"><em>[Sees J<span style="font-size: 75%">ACK</span> and bows to him with icy coldness.]</em></span></span> 
+    <br/> 
+  </dd> 
+</dl><dl> 
+  <dt> 
+    <strong> 
+      <strong>ALGERNON:</strong> 
+    </strong> 
+  </dt> 
+  <dd> 
+    <span id="imp-1-108"><span class="stage"><em>[To G<span style="font-size: 75%">WENDOLEN</span>.]</em></span> Dear me, you are smart!</span> 
+    <br/> 
+  </dd> 
+</dl><dl> 
+  <dt> 
+    <strong> 
+      <strong>GWENDOLEN:</strong> 
+    </strong> 
+  </dt> 
+  <dd> 
+    <span id="imp-1-109">I am always smart! Aren't I, Mr. Worthing?</span> 
+    <br/> 
+  </dd> 
+</dl><dl> 
+  <dt> 
+    <strong> 
+      <strong>JACK:</strong> 
+    </strong> 
+  </dt> 
+  <dd> 
+    <span id="imp-1-110">You're quite perfect, Miss Fairfax.</span> 
+    <br/> 
+  </dd> 
+</dl><dl> 
+  <dt> 
+    <strong> 
+      <strong>GWENDOLEN:</strong> 
+    </strong> 
+  </dt> 
+  <dd> 
+    <span id="imp-1-111">Oh! I hope I am not that. It would leave no room for developments, and I intend to develop in many directions.</span> 
+    <br/> 
+  </dd> 
+</dl><p class="stage"> 
+  <em>[G<span style="font-size: 75%">WENDOLEN</span> and J<span style="font-size: 75%">ACK</span> sit down together in the corner.]</em> 
+</p><dl> 
+  <dt> 
+    <strong> 
+      <strong>LADY BRACKNELL:</strong> 
+    </strong> 
+  </dt> 
+  <dd> 
+    <span id="imp-1-112">I'm sorry if we are a little late, Algernon, but I was obliged to call on dear Lady Harbury. I hadn't been there since her poor husband's death. I never saw a woman so altered; she looks quite twenty years younger. And now I'll have a cup of tea, and one of those nice cucumber sandwiches you promised me.</span> 
+    <br/> 
+  </dd> 
+</dl><dl> 
+  <dt> 
+    <strong> 
+      <strong>ALGERNON:</strong> 
+    </strong> 
+  </dt> 
+  <dd> 
+    <span id="imp-1-113">Certainly, Aunt Augusta. <span class="stage"><em>[Goes over to tea-table.]</em></span></span> 
+    <br/> 
+  </dd> 
+</dl><dl> 
+  <dt> 
+    <strong> 
+      <strong>LADY BRACKNELL:</strong> 
+    </strong> 
+  </dt> 
+  <dd> 
+    <span id="imp-1-114">Won't you come and sit here, Gwendolen?</span> 
+    <br/> 
+  </dd> 
+</dl><dl> 
+  <dt> 
+    <strong> 
+      <strong>GWENDOLEN:</strong> 
+    </strong> 
+  </dt> 
+  <dd> 
+    <span id="imp-1-115">Thanks, mamma, I'm quite comfortable where I am.</span> 
+    <br/> 
+  </dd> 
+</dl><dl> 
+  <dt> 
+    <strong> 
+      <strong>ALGERNON:</strong> 
+    </strong> 
+  </dt> 
+  <dd> 
+    <span id="imp-1-116"><span class="stage"><em>[Picking up empty plate in horror.]</em></span> Good heavens! Lane! Why are there no cucumber sandwiches? I ordered them specially.</span> 
+    <br/> 
+  </dd> 
+</dl><dl> 
+  <dt> 
+    <strong> 
+      <strong>LANE:</strong> 
+    </strong> 
+  </dt> 
+  <dd> 
+    <span id="imp-1-117"><span class="stage"><em>[Gravely.]</em></span> There were no cucumbers in the market this morning, sir. I went down twice.</span> 
+    <br/> 
+  </dd> 
+</dl><dl> 
+  <dt> 
+    <strong> 
+      <strong>ALGERNON:</strong> 
+    </strong> 
+  </dt> 
+  <dd> 
+    <span id="imp-1-118">No cucumbers!</span> 
+    <br/> 
+  </dd> 
+</dl><dl> 
+  <dt> 
+    <strong> 
+      <strong>LANE:</strong> 
+    </strong> 
+  </dt> 
+  <dd> 
+    <span id="imp-1-119">No, sir. Not even for ready money.</span> 
+    <br/> 
+  </dd> 
+</dl><dl> 
+  <dt> 
+    <strong> 
+      <strong>ALGERNON:</strong> 
+    </strong> 
+  </dt> 
+  <dd> 
+    <span id="imp-1-120">That will do, Lane:, thank you.</span> 
+    <br/> 
+  </dd> 
+</dl><dl> 
+  <dt> 
+    <strong> 
+      <strong>LANE:</strong> 
+    </strong> 
+  </dt> 
+  <dd> 
+    <span id="imp-1-121">Thank you, sir. <span class="stage"><em>[Goes out.]</em></span></span> 
+    <br/> 
+  </dd> 
+</dl><dl> 
+  <dt> 
+    <strong> 
+      <strong>ALGERNON:</strong> 
+    </strong> 
+  </dt> 
+  <dd> 
+    <span id="imp-1-122">I am greatly distressed, Aunt Augusta, about there being no cucumbers, not even for ready money.</span> 
+    <br/> 
+  </dd> 
+</dl><dl> 
+  <dt> 
+    <strong> 
+      <strong>LADY BRACKNELL:</strong> 
+    </strong> 
+  </dt> 
+  <dd> 
+    <span id="imp-1-123">It really makes no matter, Algernon. I had some crumpets with Lady Harbury, who seems to me to be living entirely for pleasure now.</span> 
+    <br/> 
+  </dd> 
+</dl> 

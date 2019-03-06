@@ -1,0 +1,92 @@
+#! /usr/bin/python
+
+# I was unable to iterate trhough multiple files at the same time so I had to open every single file singularly
+
+
+import re
+
+def main():
+ 
+  d1 = {}
+  text1 = open('earnest_1.txt','r').read()
+  character  = re.findall(r'<strong>(.+):</strong>',text1)
+  words = re.findall(r'<strong>(\w+):</strong>',text1,)
+  for x in character:
+    d1[x] = d1.get(x,0) + 1
+
+  
+  print words
+
+  d2 ={}  
+  text2 = open('earnest_2.txt','r').read()
+  character  = re.findall(r'<strong>(.+):</strong>',text2)
+  for x in character:
+    d2[x] = d2.get(x,0) + 1
+
+  
+  d3 ={}
+  text3 = open('earnest_3.txt','r').read()
+  character  = re.findall(r'<strong>(.+):</strong>',text3)
+  for x in character:
+    d3[x] = d3.get(x,0) + 1
+
+  d4 ={}
+  text4 = open('earnest_4.txt','r').read()
+  character  = re.findall(r'<strong>(.+):</strong>',text4)
+  count = character.count
+  for x in character:
+    d4[x] = d4.get(x,0) + 1  
+  
+
+  d5 ={}
+  text5 = open('earnest_5.txt','r').read()
+  character  = re.findall(r'<strong>(.+):</strong>',text5)
+  count = character.count
+  for x in character:
+    d5[x] = d5.get(x,0) + 1
+
+  d6 ={}
+  text6 = open('earnest_6.txt','r').read()
+  character  = re.findall(r'<strong>(.+):</strong>',text6)
+  count = character.count
+  for x in character:
+    d6[x] = d6.get(x,0) + 1
+
+  d7 ={}
+  text7 = open('earnest_7.txt','r').read()
+  character  = re.findall(r'<strong>(.+):</strong>',text7)
+  count = character.count
+  for x in character:
+    d7[x] = d7.get(x,0) + 1
+ 
+  list1 =[]
+  list1.append(d1)
+  list1.append(d2)
+  list1.append(d3)
+  list1.append(d4)
+  list1.append(d5)
+  list1.append(d6)
+  list1.append(d7)
+
+  result = {}
+  for newdict in list1:
+    for k in newdict:
+      result[k] = result.setdefault(k,0) + newdict[k]
+  
+  
+  print 'the character with most lines is: ' + max(result, key=result.get)
+     
+
+
+
+
+
+
+
+
+
+
+
+if __name__  =='__main__':
+  main()
+

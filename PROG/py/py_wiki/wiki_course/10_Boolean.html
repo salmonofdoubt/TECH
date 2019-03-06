@@ -1,0 +1,595 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr">
+<head>
+<title>Non-Programmer's Tutorial for Python 3/Boolean Expressions - Wikibooks, collection of open-content textbooks</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta name="generator" content="MediaWiki 1.16wmf4" />
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="/w/index.php?title=Non-Programmer%27s_Tutorial_for_Python_3/Boolean_Expressions&amp;action=edit" />
+<link rel="edit" title="Edit this page" href="/w/index.php?title=Non-Programmer%27s_Tutorial_for_Python_3/Boolean_Expressions&amp;action=edit" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikibooks (en)" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/" />
+<link rel="alternate" type="application/atom+xml" title="Wikibooks Atom feed" href="/w/index.php?title=Special:RecentChanges&amp;feed=atom" />
+<link rel="stylesheet" href="http://bits.wikimedia.org/skins-1.5/common/shared.css?283p" type="text/css" media="screen" />
+<link rel="stylesheet" href="http://bits.wikimedia.org/skins-1.5/common/commonPrint.css?283p" type="text/css" media="print" />
+<link rel="stylesheet" href="http://bits.wikimedia.org/skins-1.5/monobook/main.css?283p" type="text/css" media="screen" />
+<link rel="stylesheet" href="http://bits.wikimedia.org/skins-1.5/chick/main.css?283p" type="text/css" media="handheld" />
+<!--[if lt IE 5.5000]><link rel="stylesheet" href="http://bits.wikimedia.org/skins-1.5/monobook/IE50Fixes.css?283p" type="text/css" media="screen" /><![endif]-->
+<!--[if IE 5.5000]><link rel="stylesheet" href="http://bits.wikimedia.org/skins-1.5/monobook/IE55Fixes.css?283p" type="text/css" media="screen" /><![endif]-->
+<!--[if IE 6]><link rel="stylesheet" href="http://bits.wikimedia.org/skins-1.5/monobook/IE60Fixes.css?283p" type="text/css" media="screen" /><![endif]-->
+<!--[if IE 7]><link rel="stylesheet" href="http://bits.wikimedia.org/skins-1.5/monobook/IE70Fixes.css?283p" type="text/css" media="screen" /><![endif]-->
+<link rel="stylesheet" href="/w/extensions/FlaggedRevs/client/flaggedrevs.css?76" type="text/css" media="all" />
+<link rel="stylesheet" href="/w/extensions/ReaderFeedback/readerfeedback.css?1" type="text/css" media="all" />
+<link rel="stylesheet" href="/w/index.php?title=MediaWiki:Common.css&amp;usemsgcache=yes&amp;ctype=text%2Fcss&amp;smaxage=2678400&amp;action=raw&amp;maxage=2678400" type="text/css" media="all" />
+<link rel="stylesheet" href="/w/index.php?title=MediaWiki:Print.css&amp;usemsgcache=yes&amp;ctype=text%2Fcss&amp;smaxage=2678400&amp;action=raw&amp;maxage=2678400" type="text/css" media="print" />
+<link rel="stylesheet" href="/w/index.php?title=MediaWiki:Handheld.css&amp;usemsgcache=yes&amp;ctype=text%2Fcss&amp;smaxage=2678400&amp;action=raw&amp;maxage=2678400" type="text/css" media="handheld" />
+<link rel="stylesheet" href="/w/index.php?title=MediaWiki:Monobook.css&amp;usemsgcache=yes&amp;ctype=text%2Fcss&amp;smaxage=2678400&amp;action=raw&amp;maxage=2678400" type="text/css" media="all" />
+<link rel="stylesheet" href="/w/index.php?title=-&amp;action=raw&amp;maxage=2678400&amp;gen=css" type="text/css" media="all" />
+<script type="text/javascript">
+var skin="monobook",
+stylepath="http://bits.wikimedia.org/skins-1.5",
+wgUrlProtocols="http\\:\\/\\/|https\\:\\/\\/|ftp\\:\\/\\/|irc\\:\\/\\/|gopher\\:\\/\\/|telnet\\:\\/\\/|nntp\\:\\/\\/|worldwind\\:\\/\\/|mailto\\:|news\\:|svn\\:\\/\\/",
+wgArticlePath="/wiki/$1",
+wgScriptPath="/w",
+wgScriptExtension=".php",
+wgScript="/w/index.php",
+wgVariantArticlePath=false,
+wgActionPaths={},
+wgServer="http://en.wikibooks.org",
+wgCanonicalNamespace="",
+wgCanonicalSpecialPageName=false,
+wgNamespaceNumber=0,
+wgPageName="Non-Programmer\'s_Tutorial_for_Python_3/Boolean_Expressions",
+wgTitle="Non-Programmer\'s Tutorial for Python 3/Boolean Expressions",
+wgAction="view",
+wgArticleId=182367,
+wgIsArticle=true,
+wgUserName=null,
+wgUserGroups=null,
+wgUserLanguage="en",
+wgContentLanguage="en",
+wgBreakFrames=false,
+wgCurRevisionId=1797279,
+wgVersion="1.16wmf4",
+wgEnableAPI=true,
+wgEnableWriteAPI=true,
+wgSeparatorTransformTable=["", ""],
+wgDigitTransformTable=["", ""],
+wgMainPageTitle="Main Page",
+wgFormattedNamespaces={"-2": "Media", "-1": "Special", "0": "", "1": "Talk", "2": "User", "3": "User talk", "4": "Wikibooks", "5": "Wikibooks talk", "6": "File", "7": "File talk", "8": "MediaWiki", "9": "MediaWiki talk", "10": "Template", "11": "Template talk", "12": "Help", "13": "Help talk", "14": "Category", "15": "Category talk", "102": "Cookbook", "103": "Cookbook talk", "108": "Transwiki", "109": "Transwiki talk", "110": "Wikijunior", "111": "Wikijunior talk", "112": "Subject", "113": "Subject talk"},
+wgNamespaceIds={"media": -2, "special": -1, "": 0, "talk": 1, "user": 2, "user_talk": 3, "wikibooks": 4, "wikibooks_talk": 5, "file": 6, "file_talk": 7, "mediawiki": 8, "mediawiki_talk": 9, "template": 10, "template_talk": 11, "help": 12, "help_talk": 13, "category": 14, "category_talk": 15, "cookbook": 102, "cookbook_talk": 103, "transwiki": 108, "transwiki_talk": 109, "wikijunior": 110, "wikijunior_talk": 111, "subject": 112, "subject_talk": 113, "wb": 4, "wj": 110, "cat": 14, "cook": 102, "sub": 112, "image": 6, "image_talk": 7},
+wgSiteName="Wikibooks",
+wgCategories=["Non-Programmer\'s Tutorial for Python 3", "Non-Programmer\'s Tutorial for Python 3.0"],
+wgMWSuggestTemplate="http://en.wikibooks.org/w/api.php?action=opensearch\x26search={searchTerms}\x26namespace={namespaces}\x26suggest",
+wgDBname="enwikibooks",
+wgSearchNamespaces=[0, 4, 112],
+wgMWSuggestMessages=["with suggestions", "no suggestions"],
+wgRestrictionEdit=[],
+wgRestrictionMove=[],
+wgFlaggedRevsParams={"tags": {"value": {"levels": 3, "quality": 2, "pristine": 3}}},
+wgStableRevisionId=1797279,
+wgFeedbackParams={"tags": {"reliability": 3, "completeness": 2, "npov": 2, "presentation": 1}},
+wgAjaxFeedback={"sendingMsg": "Submitting …", "sentMsg": "Thank you!"},
+wgNotice="",
+wgNoticeLocal="";
+</script><script src="http://bits.wikimedia.org/skins-1.5/common/wikibits.js?283p" type="text/javascript"></script>
+<script src="http://bits.wikimedia.org/skins-1.5/common/ajax.js?283p" type="text/javascript"></script>
+<script src="http://bits.wikimedia.org/skins-1.5/common/mwsuggest.js?283p" type="text/javascript"></script>
+<script type="text/javascript" src="http://upload.wikimedia.org/centralnotice/wikibooks/en/centralnotice.js?283p"></script>
+
+<script src="/w/index.php?title=-&amp;action=raw&amp;gen=js&amp;useskin=monobook&amp;283p" type="text/javascript"></script>
+
+<style type="text/css">/*<![CDATA[*/
+.source-python {line-height: normal;}
+.source-python li, .source-python pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for python
+ * CSS class: source-python, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.python.source-python .de1, .python.source-python .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;}
+.python.source-python  {font-family:monospace;}
+.python.source-python .imp {font-weight: bold; color: red;}
+.python.source-python li, .python.source-python .li1 {font-weight: normal; vertical-align:top;}
+.python.source-python .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.python.source-python .li2 {font-weight: bold; vertical-align:top;}
+.python.source-python .kw1 {color: #ff7700;font-weight:bold;}
+.python.source-python .kw2 {color: #008000;}
+.python.source-python .kw3 {color: #dc143c;}
+.python.source-python .kw4 {color: #0000cd;}
+.python.source-python .co1 {color: #808080; font-style: italic;}
+.python.source-python .coMULTI {color: #808080; font-style: italic;}
+.python.source-python .es0 {color: #000099; font-weight: bold;}
+.python.source-python .br0 {color: black;}
+.python.source-python .sy0 {color: #66cc66;}
+.python.source-python .st0 {color: #483d8b;}
+.python.source-python .nu0 {color: #ff4500;}
+.python.source-python .me1 {color: black;}
+.python.source-python .ln-xtra, .python.source-python li.ln-xtra, .python.source-python div.ln-xtra {background-color: #ffc;}
+.python.source-python span.xtra { display:block; }
+
+/*]]>*/
+</style>
+<style type="text/css">/*<![CDATA[*/
+@import "/w/index.php?title=MediaWiki:Geshi.css&usemsgcache=yes&action=raw&ctype=text/css&smaxage=2678400";
+/*]]>*/
+</style><script type="text/javascript" src="/w/extensions/FlaggedRevs/client/flaggedrevs.js?76"></script>
+<script type="text/javascript">FlaggedRevs.messages = {"diffToggleShow": "show those changes", "diffToggleHide": "hide those changes", "logToggleShow": "show stability log", "logToggleHide": "hide stability log", "logDetailsShow": "show details", "logDetailsHide": "hide details", "toggleShow": "(+)", "toggleHide": "(-)"};</script>
+<script type="text/javascript" src="/w/extensions/ReaderFeedback/readerfeedback.js?1"></script>
+</head>
+<body class="mediawiki ltr ns-0 ns-subject page-Non-Programmer_s_Tutorial_for_Python_3_Boolean_Expressions skin-monobook">
+<div id="globalWrapper">
+<div id="column-content"><div id="content">
+	<a id="top"></a>
+	<div id="siteNotice"><script type='text/javascript'>if (wgNotice != '') document.writeln(wgNotice);</script></div>
+	<h1 id="firstHeading" class="firstHeading">Non-Programmer's Tutorial for Python 3/Boolean Expressions</h1>
+	<div id="bodyContent">
+		<div id="siteSub">From Wikibooks, the open-content textbooks collection</div>
+		<div id="contentSub"><span class="subpages">&lt; <a href="/wiki/Non-Programmer%27s_Tutorial_for_Python_3" title="Non-Programmer's Tutorial for Python 3">Non-Programmer's Tutorial for Python 3</a></span></div>
+		<div id="jump-to-nav">Jump to: <a href="#column-one">navigation</a>, <a href="#searchInput">search</a></div>
+		<!-- start content -->
+<p>Here is a little example of boolean expressions (you don't have to type it in):</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;">
+<div class="python source-python" style="font-family:monospace;">
+<pre class="de1">
+a = 6
+b = 7
+c = 42
+<span class="kw1">print</span><span class="br0">(</span>1, a == 6<span class="br0">)</span>
+<span class="kw1">print</span><span class="br0">(</span>2, a == 7<span class="br0">)</span>
+<span class="kw1">print</span><span class="br0">(</span>3, a == 6 <span class="kw1">and</span> b == 7<span class="br0">)</span>
+<span class="kw1">print</span><span class="br0">(</span>4, a == 7 <span class="kw1">and</span> b == 7<span class="br0">)</span>
+<span class="kw1">print</span><span class="br0">(</span>5, <span class="kw1">not</span> a == 7 <span class="kw1">and</span> b == 7<span class="br0">)</span>
+<span class="kw1">print</span><span class="br0">(</span>6, a == 7 <span class="kw1">or</span> b == 7<span class="br0">)</span>
+<span class="kw1">print</span><span class="br0">(</span>7, a == 7 <span class="kw1">or</span> b == 6<span class="br0">)</span>
+<span class="kw1">print</span><span class="br0">(</span>8, <span class="kw1">not</span> <span class="br0">(</span>a == 7 <span class="kw1">and</span> b == 6<span class="br0">)</span><span class="br0">)</span>
+<span class="kw1">print</span><span class="br0">(</span>9, <span class="kw1">not</span> a == 7 <span class="kw1">and</span> b == <span class="nu0">6</span><span class="br0">)</span>
+</pre></div>
+</div>
+<p>With the output being:</p>
+<pre>
+1 True
+2 False
+3 True
+4 False
+5 True
+6 True
+7 False
+8 True
+9 False
+</pre>
+<p>What is going on? The program consists of a bunch of funny looking <code>print</code> statements. Each <code>print</code> statement prints a number and an expression. The number is to help keep track of which statement I am dealing with. Notice how each expression ends up being either <code>False</code> or <code>True</code>. In Python false can also be written as 0 and true as 1.</p>
+<p>The lines:</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;">
+<div class="python source-python" style="font-family:monospace;">
+<pre class="de1">
+<span class="kw1">print</span><span class="br0">(</span>1, a == 6<span class="br0">)</span>
+<span class="kw1">print</span><span class="br0">(</span><span class="nu0">2</span>, a == <span class="nu0">7</span><span class="br0">)</span>
+</pre></div>
+</div>
+<p>print out a <code>True</code> and a <code>False</code> respectively just as expected since the first is true and the second is false. The third print, <code>print(3, a == 6 and b == 7)</code>, is a little different. The operator <code>and</code> means if both the statement before and the statement after are true then the whole expression is true otherwise the whole expression is false. The next line, <code>print(4, a == 7 and b == 7)</code>, shows how if part of an <code>and</code> expression is false, the whole thing is false. The behavior of <code>and</code> can be summarized as follows:</p>
+<table class="prettytable">
+<tr>
+<th>expression</th>
+<th>result</th>
+</tr>
+<tr>
+<td>true <code>and</code> true</td>
+<td>true</td>
+</tr>
+<tr>
+<td>true <code>and</code> false</td>
+<td>false</td>
+</tr>
+<tr>
+<td>false <code>and</code> true</td>
+<td>false</td>
+</tr>
+<tr>
+<td>false <code>and</code> false</td>
+<td>false</td>
+</tr>
+</table>
+<p>Notice that if the first expression is false Python does not check the second expression since it knows the whole expression is false. Try running <code>False and print("Hi")</code> and compare this to running <code>True and print("Hi")</code> The technical term for this is <a href="http://en.wikipedia.org/wiki/Short-circuit_evaluation" class="extiw" title="w:Short-circuit evaluation">short-circuit evaluation</a></p>
+<p>The next line, <code>print(5, not a == 7 and b == 7)</code>, uses the <code>not</code> operator. <code>not</code> just gives the opposite of the expression. (The expression could be rewritten as <code>print(5, a&#160;!= 7 and b == 7)</code>). Here is the table:</p>
+<table class="prettytable">
+<tr>
+<th>expression</th>
+<th>result</th>
+</tr>
+<tr>
+<td><code>not</code> true</td>
+<td>false</td>
+</tr>
+<tr>
+<td><code>not</code> false</td>
+<td>true</td>
+</tr>
+</table>
+<p>The two following lines, <code>print(6, a == 7 or b == 7)</code> and <code>print(7, a == 7 or b == 6)</code>, use the <code>or</code> operator. The <code>or</code> operator returns true if the first expression is true, or if the second expression is true or both are true. If neither are true it returns false. Here's the table:</p>
+<table class="prettytable">
+<tr>
+<th>expression</th>
+<th>result</th>
+</tr>
+<tr>
+<td>true <code>or</code> true</td>
+<td>true</td>
+</tr>
+<tr>
+<td>true <code>or</code> false</td>
+<td>true</td>
+</tr>
+<tr>
+<td>false <code>or</code> true</td>
+<td>true</td>
+</tr>
+<tr>
+<td>false <code>or</code> false</td>
+<td>false</td>
+</tr>
+</table>
+<p>Notice that if the first expression is true Python doesn't check the second expression since it knows the whole expression is true. This works since <code>or</code> is true if at least one half of the expression is true. The first part is true so the second part could be either false or true, but the whole expression is still true.</p>
+<p>The next two lines, <code>print(8, not (a == 7 and b == 6))</code> and <code>print(9, not a == 7 and b == 6)</code>, show that parentheses can be used to group expressions and force one part to be evaluated first. Notice that the parentheses changed the expression from false to true. This occurred since the parentheses forced the <code>not</code> to apply to the whole expression instead of just the <code>a == 7</code> portion.</p>
+<p>Here is an example of using a boolean expression:</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;">
+<div class="python source-python" style="font-family:monospace;">
+<pre class="de1">
+<span class="kw2">list</span> = <span class="br0">[</span><span class="st0">"Life"</span>, <span class="st0">"The Universe"</span>, <span class="st0">"Everything"</span>, <span class="st0">"Jack"</span>, <span class="st0">"Jill"</span>, <span class="st0">"Life"</span>, <span class="st0">"Jill"</span><span class="br0">]</span>
+ 
+<span class="co1"># make a copy of the list. See the More on Lists chapter to explain what [:] means.</span>
+<span class="kw3">copy</span> = <span class="kw2">list</span><span class="br0">[</span>:<span class="br0">]</span>
+<span class="co1"># sort the copy</span>
+<span class="kw3">copy</span>.<span class="me1">sort</span><span class="br0">(</span><span class="br0">)</span>
+prev = <span class="kw3">copy</span><span class="br0">[</span>0<span class="br0">]</span>
+<span class="kw1">del</span> <span class="kw3">copy</span><span class="br0">[</span><span class="nu0">0</span><span class="br0">]</span>
+ 
+count = <span class="nu0">0</span>
+ 
+<span class="co1"># go through the list searching for a match</span>
+<span class="kw1">while</span> count <span class="sy0">&lt;</span> <span class="kw2">len</span><span class="br0">(</span><span class="kw3">copy</span><span class="br0">)</span> <span class="kw1">and</span> <span class="kw3">copy</span><span class="br0">[</span>count<span class="br0">]</span> <span class="sy0">!</span>= prev:
+    prev = <span class="kw3">copy</span><span class="br0">[</span>count<span class="br0">]</span>
+    count = count + <span class="nu0">1</span>
+ 
+<span class="co1"># If a match was not found then count can't be &lt; len</span>
+<span class="co1"># since the while loop continues while count is &lt; len</span>
+<span class="co1"># and no match is found</span>
+ 
+<span class="kw1">if</span> count <span class="sy0">&lt;</span> <span class="kw2">len</span><span class="br0">(</span><span class="kw3">copy</span><span class="br0">)</span>:
+    <span class="kw1">print</span><span class="br0">(</span><span class="st0">"First Match:"</span>, prev<span class="br0">)</span>
+</pre></div>
+</div>
+<p>And here is the output:</p>
+<pre>
+First Match: Jill
+</pre>
+<p>This program works by continuing to check for match <code>while count &lt; len(copy) and copy[count] is not equal to prev</code>. When either <code>count</code> is greater than the last index of <code>copy</code> or a match has been found the <code>and</code> is no longer true so the loop exits. The <code>if</code> simply checks to make sure that the <code>while</code> exited because a match was found.</p>
+<p>The other "trick" of <code>and</code> is used in this example. If you look at the table for <code>and</code> notice that the third entry is "false and false". If <code>count &gt;= len(copy)</code> (in other words <code>count &lt; len(copy)</code> is false) then <code>copy[count]</code> is never looked at. This is because Python knows that if the first is false then they can't both be true. This is known as a short circuit and is useful if the second half of the <code>and</code> will cause an error if something is wrong. I used the first expression (<code>count &lt; len(copy)</code>) to check and see if <code>count</code> was a valid index for <code>copy</code>. (If you don't believe me remove the matches "Jill" and "Life", check that it still works and then reverse the order of <code>count &lt; len(copy) and copy[count]&#160;!= prev</code> to <code>copy[count]&#160;!= prev and count &lt; len(copy)</code>.)</p>
+<p>Boolean expressions can be used when you need to check two or more different things at once.</p>
+<h3><span class="editsection">[<a href="/w/index.php?title=Non-Programmer%27s_Tutorial_for_Python_3/Boolean_Expressions&amp;action=edit&amp;section=1" title="Edit section: A note on Boolean Operators">edit</a>]</span> <span class="mw-headline" id="A_note_on_Boolean_Operators">A note on Boolean Operators</span></h3>
+<p>A common mistake for people new to programming is a misunderstanding of the way that boolean operators works, which stems from the way the python interpreter reads these expressions. For example, after initially learning about "and " and "or" statements, one might assume that the expression <code>x == ('a' or 'b')</code> would check to see if the variable <code>x</code> was equivalent to one of the strings <code>'a'</code> or <code>'b'</code>. This is not so. To see what I'm talking about, start an interactive session with the interpreter and enter the following expressions:</p>
+<pre>
+&gt;&gt;&gt; 'a' == ('a' or 'b')
+&gt;&gt;&gt; 'b' == ('a' or 'b')
+&gt;&gt;&gt; 'a' == ('a' and 'b')
+&gt;&gt;&gt; 'b' == ('a' and 'b')
+</pre>
+<p>And this will be the unintuitive result:</p>
+<pre>
+&gt;&gt;&gt;<b> 'a' == ('a' or 'b')</b>
+True
+&gt;&gt;&gt;<b> 'b' == ('a' or 'b')</b>
+False
+&gt;&gt;&gt;<b> 'a' == ('a' and 'b')</b>
+False 
+&gt;&gt;&gt;<b> 'b' == ('a' and 'b')</b>
+True
+</pre>
+<p>At this point, the <code>and</code> and <code>or</code> operators seem to be broken. It doesn't make sense that, for the first two expressions, <code>'a'</code> is equivalent to <code>'a'</code> or <code>'b'</code> while <code>'b'</code> is not. Furthermore, it doesn't make any sense that 'b' is equivalent to <code>'a'</code> and <code>'b'</code>. After examining what the interpreter does with boolean operators, these results do in fact exactly what you are asking of them, it's just not the same as what you think you are asking.</p>
+<p>When the Python interpreter looks at an <code>or</code> expression, it takes the first statement and checks to see if it is true. If the first statement is true, then Python returns that object's value without checking the second statement. This is because for an <code>or</code> expression, the whole thing is true if one of the values is true; the program does not need to bother with the second statement. On the other hand, if the first value is evaluated as false Python checks the second half and returns that value. That second half determines the truth value of the whole expression since the first half was false. This "laziness" on the part of the interpreter is called "short circuiting" and is a common way of evaluating boolean expressions in many programming languages.</p>
+<p>Similarly, for an <code>and</code> expression, Python uses a short circuit technique to speed truth value evaluation. If the first statement is false then the whole thing must be false, so it returns that value. Otherwise if the first value is true it checks the second and returns that value.</p>
+<p>One thing to note at this point is that the boolean expression returns a value indicating <code>True</code> or <code>False</code>, but that Python considers a number of different things to have a truth value assigned to them. To check the truth value of any given object <code>x</code>, you can use the fuction <code>bool(x)</code> to see its truth value. Below is a table with examples of the truth values of various objects:</p>
+<table class="prettytable">
+<tr>
+<th>True</th>
+<th>False</th>
+</tr>
+<tr>
+<td>True</td>
+<td>False</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Numbers other than zero</td>
+<td>The string 'None'</td>
+</tr>
+<tr>
+<td>Nonempty strings</td>
+<td>Empty strings</td>
+</tr>
+<tr>
+<td>Nonempty lists</td>
+<td>Empty lists</td>
+</tr>
+<tr>
+<td>Nonempty dictionaries</td>
+<td>Empty dictionaries</td>
+</tr>
+</table>
+<p>Now it is possible to understand the perplexing results we were getting when we tested those boolean expressions before. Let's take a look at what the interpreter "sees" as it goes through that code:</p>
+<p><b>First case:</b></p>
+<pre>
+&gt;&gt;&gt;<b> 'a' == ('a' or 'b')</b>  # Look at parentheses first, so evaluate expression "('a' or 'b')"
+                           # 'a' is a nonempty string, so the first value is True
+                           # Return that first value: 'a'
+&gt;&gt;&gt;<b> 'a' == 'a' </b>          # the string 'a' is equivalent to the string 'a', so expression is True
+True
+</pre>
+<p><b>Second case:</b></p>
+<pre>
+&gt;&gt;&gt;<b> 'b' == ('a' or 'b')</b>  # Look at parentheses first, so evaluate expression "('a' or 'b')"
+                           # 'a' is a nonempty string, so the first value is True
+                           # Return that first value: 'a'
+&gt;&gt;&gt;<b> 'b' == 'a' </b>          # the string 'b' is not equivalent to the string 'a', so expression is False
+False 
+</pre>
+<p><b>Third case:</b></p>
+<pre>
+&gt;&gt;&gt;<b> 'a' == ('a' and 'b')</b> # Look at parentheses first, so evaluate expression "('a' and 'b')"
+                           # 'a' is a nonempty string, so the first value is True, examine second value
+                           # 'b' is a nonempty string, so second value is True
+                           # Return that second value as result of whole expression: 'b'
+&gt;&gt;&gt;<b> 'a' == 'b' </b>          # the string 'a' is not equivalent to the string 'b', so expression is False
+False
+</pre>
+<p><b>Fourth case:</b></p>
+<pre>
+&gt;&gt;&gt;<b> 'b' == ('a' and 'b')</b> # Look at parentheses first, so evaluate expression "('a' and 'b')"
+                           # 'a' is a nonempty string, so the first value is True, examine second value
+                           # 'b' is a nonempty string, so second value is True
+                           # Return that second value as result of whole expression: 'b'
+&gt;&gt;&gt;<b> 'b' == 'b' </b>          # the string 'b' is equivalent to the string 'b', so expression is True
+True 
+</pre>
+<p>So Python was really doing its job when it gave those apparently bogus results. As mentioned previously, the important thing is to recognize what value your boolean expression will return when it is evaluated, because it isn't always obvious.</p>
+<p>Going back to those initial expressions, this is how you would write them out so they behaved in a way that you want:</p>
+<pre>
+&gt;&gt;&gt;<b> 'a' == 'a' or 'a' == 'b' </b>
+True
+&gt;&gt;&gt;<b> 'b' == 'a' or 'b' == 'b' </b>
+True
+&gt;&gt;&gt;<b> 'a' == 'a' and 'a' == 'b' </b>
+False
+&gt;&gt;&gt;<b> 'b' == 'a' and 'b' == 'b' </b>
+False
+</pre>
+<p>When these comparisons are evaluated they return truth values in terms of True or False, not strings, so we get the proper results.</p>
+<h3><span class="editsection">[<a href="/w/index.php?title=Non-Programmer%27s_Tutorial_for_Python_3/Boolean_Expressions&amp;action=edit&amp;section=2" title="Edit section: Examples">edit</a>]</span> <span class="mw-headline" id="Examples">Examples</span></h3>
+<p><b>password1.py</b></p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;">
+<div class="python source-python" style="font-family:monospace;">
+<pre class="de1">
+<span class="co1">## This programs asks a user for a name and a password.</span>
+<span class="co1"># It then checks them to make sure that the user is allowed in.</span>
+ 
+name = <span class="kw2">input</span><span class="br0">(</span><span class="st0">"What is your name? "</span><span class="br0">)</span>
+password = <span class="kw2">input</span><span class="br0">(</span><span class="st0">"What is the password? "</span><span class="br0">)</span>
+<span class="kw1">if</span> name == <span class="st0">"Josh"</span> <span class="kw1">and</span> password == <span class="st0">"Friday"</span>:
+    <span class="kw1">print</span><span class="br0">(</span><span class="st0">"Welcome Josh"</span><span class="br0">)</span>
+<span class="kw1">elif</span> name == <span class="st0">"Fred"</span> <span class="kw1">and</span> password == <span class="st0">"Rock"</span>:
+    <span class="kw1">print</span><span class="br0">(</span><span class="st0">"Welcome Fred"</span><span class="br0">)</span>
+<span class="kw1">else</span>:
+    <span class="kw1">print</span><span class="br0">(</span><span class="st0">"I don't know you."</span><span class="br0">)</span>
+</pre></div>
+</div>
+<p>Sample runs</p>
+<pre>
+What is your name? <b>Josh</b>
+What is the password? <b>Friday</b>
+Welcome Josh
+</pre>
+<pre>
+What is your name? <b>Bill</b>
+What is the password? <b>Money</b>
+I don't know you.
+</pre>
+<h3><span class="editsection">[<a href="/w/index.php?title=Non-Programmer%27s_Tutorial_for_Python_3/Boolean_Expressions&amp;action=edit&amp;section=3" title="Edit section: Exercises">edit</a>]</span> <span class="mw-headline" id="Exercises">Exercises</span></h3>
+<p>Write a program that has a user guess your name, but they only get 3 chances to do so until the program quits.</p>
+<div style="clear:both;width:100%;color:#000000;" class="NavFrame">
+<div class="NavHead" align="center">Solution</div>
+<div class="NavContent" align="left">
+<p>Write a program that has a user guess your name, but they only get 3 chances to do so until the program quits.</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;">
+<div class="python source-python" style="font-family:monospace;">
+<pre class="de1">
+<span class="kw1">print</span><span class="br0">(</span><span class="st0">"Try to guess my name!"</span><span class="br0">)</span>
+count = <span class="nu0">1</span>
+name = <span class="st0">"guilherme"</span>
+guess = <span class="kw2">input</span><span class="br0">(</span><span class="st0">"What is my name? "</span><span class="br0">)</span>
+<span class="kw1">while</span> count <span class="sy0">&lt;</span> 3 <span class="kw1">and</span> guess.<span class="me1">lower</span><span class="br0">(</span><span class="br0">)</span> <span class="sy0">!</span>= name:    <span class="co1"># .lower allows things like Guilherme to still match</span>
+    <span class="kw1">print</span><span class="br0">(</span><span class="st0">"You are wrong!"</span><span class="br0">)</span>
+    guess = <span class="kw2">input</span><span class="br0">(</span><span class="st0">"What is my name? "</span><span class="br0">)</span>
+    count = count + 1
+ 
+<span class="kw1">if</span> guess.<span class="me1">lower</span><span class="br0">(</span><span class="br0">)</span> <span class="sy0">!</span>= name:
+    <span class="kw1">print</span><span class="br0">(</span><span class="st0">"You are wrong!"</span><span class="br0">)</span> <span class="co1"># this message isn't printed in the third chance, so we print it now</span>
+    <span class="kw1">print</span><span class="br0">(</span><span class="st0">"You ran out of chances."</span><span class="br0">)</span>
+<span class="kw1">else</span>:
+    <span class="kw1">print</span><span class="br0">(</span><span class="st0">"Yes! My name is"</span>, name + <span class="st0">"!"</span><span class="br0">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="noprint PrettyTextBox" style="background-color:#ffffe0;padding:0.5ex">
+<table width="100%" cellspacing="0" cellpadding="2">
+<tr>
+<td width="33%" bgcolor="#FFFFE0"><a href="/wiki/Non-Programmer%27s_Tutorial_for_Python_3/For_Loops" title="Non-Programmer's Tutorial for Python 3/For Loops"><b>Previous:</b> For Loops</a></td>
+<td width="33%" bgcolor="#FFFFE0" align="center"><a href="/wiki/Non-Programmer%27s_Tutorial_for_Python_3" title="Non-Programmer's Tutorial for Python 3"><b>Front Page</b></a></td>
+<td width="33%" bgcolor="#FFFFE0" align="right"><a href="/wiki/Non-Programmer%27s_Tutorial_for_Python_3/Dictionaries" title="Non-Programmer's Tutorial for Python 3/Dictionaries"><b>Next:</b> Dictionaries</a></td>
+</tr>
+</table>
+</div>
+
+
+<!-- 
+NewPP limit report
+Preprocessor node count: 120/1000000
+Post-expand include size: 1506/2048000 bytes
+Template argument size: 206/2048000 bytes
+Expensive parser function count: 0/500
+-->
+
+<!-- Saved in parser cache with key enwikibooks:pcache:idhash:182367-0!1!0!default!!en!2 and timestamp 20100825064647 -->
+<div class="printfooter">
+Retrieved from "<a href="http://en.wikibooks.org/wiki/Non-Programmer%27s_Tutorial_for_Python_3/Boolean_Expressions">http://en.wikibooks.org/wiki/Non-Programmer%27s_Tutorial_for_Python_3/Boolean_Expressions</a>"</div>
+		<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks"><a href="/wiki/Special:Categories" title="Special:Categories">Categories</a>: <span dir='ltr'><a href="/wiki/Category:Non-Programmer%27s_Tutorial_for_Python_3" title="Category:Non-Programmer's Tutorial for Python 3">Non-Programmer's Tutorial for Python 3</a></span> | <span dir='ltr'><a href="/wiki/Category:Non-Programmer%27s_Tutorial_for_Python_3.0" title="Category:Non-Programmer's Tutorial for Python 3.0">Non-Programmer's Tutorial for Python 3.0</a></span></div></div>		<!-- end content -->
+		<div id='mw-data-after-content'>
+	<form method="post" action="/w/index.php?title=Special:ReaderFeedback&amp;action=submit" id="mw-feedbackform"><fieldset class="feedback_reviewform noprint"><legend><strong>What do you think of this page?</strong></legend>
+<p><i>Please take a moment to rate this page below. Your feedback is valuable and helps us improve our website.</i>
+</p><span id="mw-feedbackselects"><b><label for="wpreliability">Reliability</label>:</b>&nbsp;<select name="wpreliability" id="wpreliability" onchange="updateFeedbackForm()"><option class="rfb-rating-option-4" value="4">Excellent</option>
+<option class="rfb-rating-option-3" value="3">High</option>
+<option class="rfb-rating-option-2" value="2">Fair</option>
+<option class="rfb-rating-option-1" value="1">Low</option>
+<option class="rfb-rating-option-0" value="0">Poor</option>
+<option value="-1" selected="selected">(unsure)</option>
+</select>
+<b><label for="wpcompleteness">Completeness</label>:</b>&nbsp;<select name="wpcompleteness" id="wpcompleteness" onchange="updateFeedbackForm()"><option class="rfb-rating-option-4" value="4">Excellent</option>
+<option class="rfb-rating-option-3" value="3">High</option>
+<option class="rfb-rating-option-2" value="2">Fair</option>
+<option class="rfb-rating-option-1" value="1">Low</option>
+<option class="rfb-rating-option-0" value="0">Poor</option>
+<option value="-1" selected="selected">(unsure)</option>
+</select>
+<b><label for="wpnpov">Neutrality</label>:</b>&nbsp;<select name="wpnpov" id="wpnpov" onchange="updateFeedbackForm()"><option class="rfb-rating-option-4" value="4">Excellent</option>
+<option class="rfb-rating-option-3" value="3">High</option>
+<option class="rfb-rating-option-2" value="2">Fair</option>
+<option class="rfb-rating-option-1" value="1">Low</option>
+<option class="rfb-rating-option-0" value="0">Poor</option>
+<option value="-1" selected="selected">(unsure)</option>
+</select>
+<b><label for="wppresentation">Presentation</label>:</b>&nbsp;<select name="wppresentation" id="wppresentation" onchange="updateFeedbackForm()"><option class="rfb-rating-option-4" value="4">Excellent</option>
+<option class="rfb-rating-option-3" value="3">High</option>
+<option class="rfb-rating-option-2" value="2">Fair</option>
+<option class="rfb-rating-option-1" value="1">Low</option>
+<option class="rfb-rating-option-0" value="0">Poor</option>
+<option value="-1" selected="selected">(unsure)</option>
+</select>
+</span><input type="submit" value="Submit" id="submitfeedback" accesskey="b" title="Submit review [b]" /><input type="hidden" value="Special:ReaderFeedback" name="title" />
+<input type="hidden" value="Non-Programmer's_Tutorial_for_Python_3/Boolean_Expressions" name="target" />
+<input type="hidden" value="1797279" name="oldid" />
+<input type="hidden" value="1c3ece36f32e0170e3fcefeec1ed0b8c" name="validatedParams" /><input type="hidden" value="submit" name="action" />
+<input type="hidden" value="+\" name="wpEditToken" />
+<input name="commentary" size="12" value="" style="display:none;" />
+</fieldset></form>
+</div>
+		<div class="visualClear"></div>
+	</div>
+</div></div>
+<div id="column-one">
+	<div id="p-cactions" class="portlet">
+		<h5>Views</h5>
+		<div class="pBody">
+			<ul>
+				 <li id="ca-nstab-main" class="selected"><a href="/wiki/Non-Programmer%27s_Tutorial_for_Python_3/Boolean_Expressions" title="View the content page [c]" accesskey="c">Module</a></li>
+				 <li id="ca-talk" class="new"><a href="/w/index.php?title=Talk:Non-Programmer%27s_Tutorial_for_Python_3/Boolean_Expressions&amp;action=edit&amp;redlink=1" title="Discussion about the content page [t]" accesskey="t">Discussion</a></li>
+				 <li id="ca-edit"><a href="/w/index.php?title=Non-Programmer%27s_Tutorial_for_Python_3/Boolean_Expressions&amp;action=edit" title="You can edit this page. Please use the preview button before saving [e]" accesskey="e">Edit this page</a></li>
+				 <li id="ca-history"><a href="/w/index.php?title=Non-Programmer%27s_Tutorial_for_Python_3/Boolean_Expressions&amp;action=history" title="Past revisions of this page [h]" accesskey="h">History</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-personal">
+		<h5>Personal tools</h5>
+		<div class="pBody">
+			<ul>
+				<li id="pt-optin-try"><a href="http://en.wikibooks.org/w/index.php?title=Special:UsabilityInitiativeOptIn&amp;from=Non-Programmer%27s_Tutorial_for_Python_3%2FBoolean_Expressions" title="Try out new features" class="no-text-transform">Try Beta</a></li>
+				<li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Non-Programmer%27s_Tutorial_for_Python_3/Boolean_Expressions" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in / create account</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-logo">
+		<a style="background-image: url(http://upload.wikimedia.org/wikibooks/en/b/bc/Wiki.png);" href="/wiki/Main_Page" title="Visit the main page"></a>
+	</div>
+	<script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
+	<div class='generated-sidebar portlet' id='p-Navigation'>
+		<h5>Navigation</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-mainpage"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main Page</a></li>
+				<li id="n-help"><a href="/wiki/Help:Contents" title="Find help on how to use and edit Wikibooks">Help</a></li>
+				<li id="n-Browse"><a href="/wiki/Wikibooks:Card_Catalog_Office" title="Check out what Wikibooks has to offer">Browse</a></li>
+				<li id="n-Cookbook"><a href="/wiki/Cookbook:Table_of_Contents" title="Learn recipes from around the world">Cookbook</a></li>
+				<li id="n-Wikijunior"><a href="/wiki/Wikijunior" title="Books for children">Wikijunior</a></li>
+				<li id="n-Featured-books"><a href="/wiki/Wikibooks:Featured_books" title="The best of Wikibooks">Featured books</a></li>
+				<li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="The list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+				<li id="n-sitesupport"><a href="http://wikimediafoundation.org/wiki/Donate" title="Support Wikibooks">Donations</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="p-search" class="portlet">
+		<h5><label for="searchInput">Search</label></h5>
+		<div id="searchBody" class="pBody">
+			<form action="/w/index.php" id="searchform">
+				<input type='hidden' name="title" value="Special:Search"/>
+				<input id="searchInput" title="Search Wikibooks" accesskey="f" value="" name="search" />
+				<input type='submit' name="go" class="searchButton" id="searchGoButton"	value="Go" title="Go to a page with this exact name if exists" />&nbsp;
+				<input type='submit' name="fulltext" class="searchButton" id="mw-searchButton" value="Search" title="Search the pages for this text" />
+			</form>
+		</div>
+	</div>
+	<div class='generated-sidebar portlet' id='p-Community'>
+		<h5>Community</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-Reading-room"><a href="/wiki/Wikibooks:Reading_room" title="Discuss Wikibooks-related questions and concerns with others">Reading room</a></li>
+				<li id="n-portal"><a href="/wiki/Wikibooks:Community_Portal" title="Find your way around the Wikibooks community">Community portal</a></li>
+				<li id="n-currentevents"><a href="/wiki/Wikibooks:Reading_room/Bulletin_Board" title="Important community news">Bulletin Board</a></li>
+				<li id="n-maintenance"><a href="/wiki/Wikibooks:Maintenance" title="Frequent tasks that you can help with">Help out!</a></li>
+				<li id="n-Policies-and-guidelines"><a href="/wiki/Wikibooks:Policies_and_guidelines" title="Pages detailing important rules and procedures">Policies and guidelines</a></li>
+				<li id="n-contact"><a href="/wiki/Wikibooks:Contact_us" title="Alternative methods of communication">Contact us</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class='generated-sidebar portlet' id='p-coll-print_export'>
+		<h5>Print/export</h5>
+		<div class='pBody'>
+<ul id="collectionPortletList"><li id="coll-create_a_book"><a href="/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Non-Programmer%27s+Tutorial+for+Python+3%2FBoolean+Expressions" title="Create a book or page collection" rel="nofollow">Create a book</a></li><li id="coll-download-as-rl"><a href="/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Non-Programmer%27s+Tutorial+for+Python+3%2FBoolean+Expressions&amp;oldid=1797279&amp;writer=rl" title="Download a PDF version of this wiki page" rel="nofollow">Download as PDF</a></li><li id="t-print"><a href="/w/index.php?title=Non-Programmer%27s_Tutorial_for_Python_3/Boolean_Expressions&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li></ul>		</div>
+	</div>
+	<div class="portlet" id="p-tb">
+		<h5>Toolbox</h5>
+		<div class="pBody">
+			<ul>
+				<li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Non-Programmer%27s_Tutorial_for_Python_3/Boolean_Expressions" title="List of all wiki pages that link here [j]" accesskey="j">What links here</a></li>
+				<li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Non-Programmer%27s_Tutorial_for_Python_3/Boolean_Expressions" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+<li id="t-upload"><a href="http://commons.wikimedia.org/wiki/Commons:Upload" title="Upload files [u]" accesskey="u">Upload file</a></li>
+<li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="List of all special pages [q]" accesskey="q">Special pages</a></li>
+				<li id="t-permalink"><a href="/w/index.php?title=Non-Programmer%27s_Tutorial_for_Python_3/Boolean_Expressions&amp;oldid=1797279" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-rating"><a href="/w/index.php?title=Special:RatingHistory&amp;target=Non-Programmer%27s_Tutorial_for_Python_3/Boolean_Expressions">Page rating</a></li>			</ul>
+		</div>
+	</div>
+</div><!-- end of the left (by default at least) column -->
+<div class="visualClear"></div>
+<div id="footer">
+	<div id="f-poweredbyico"><a href="http://www.mediawiki.org/"><img src="http://bits.wikimedia.org/skins-1.5/common/images/poweredby_mediawiki_88x31.png" height="31" width="88" alt="Powered by MediaWiki" /></a></div>
+	<div id="f-copyrightico"><a href="http://wikimediafoundation.org/"><img src="/images/wikimedia-button.png" width="88" height="31" alt="Wikimedia Foundation"/></a></div>
+	<ul id="f-list">
+		<li id="lastmod"> This page was last modified on 17 May 2010, at 03:08.</li>
+		<li id="copyright">Text is available under the <a rel="license" href="http://en.wikibooks.org/wiki/Wikibooks:Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply. See <a href="http://wikimediafoundation.org/wiki/Terms_of_Use">Terms of Use</a> for details.</li>
+		<li id="privacy"><a href="http://wikimediafoundation.org/wiki/Privacy_policy" title="wikimedia:Privacy policy">Privacy policy</a></li>
+		<li id="about"><a href="/wiki/Wikibooks:About" title="Wikibooks:About">About Wikibooks</a></li>
+		<li id="disclaimer"><a href="/wiki/Wikibooks:General_disclaimer" title="Wikibooks:General disclaimer">Disclaimers</a></li>
+	</ul>
+</div>
+</div>
+
+<script type="text/javascript">if (window.runOnloadHook) runOnloadHook();</script>
+<!-- Served by srv172 in 0.080 secs. --></body></html>

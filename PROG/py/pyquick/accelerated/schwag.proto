@@ -1,0 +1,30 @@
+// Copyright 2008 Google Inc.
+// All Rights Reserved.
+//
+// Author: Nick Parlante
+
+// This is just an simple example .proto which contains
+// protocol buffers for google schwag items: shirt, cup, and towel.
+
+syntax = "proto2";
+
+package codelab.pyquick.accelerated;
+
+option cc_api_version = 1;
+option py_api_version = 1;
+option java_api_version = 1;
+
+message Shirt  {
+  required string text = 1;
+  optional string project = 2;
+}
+
+message Cup {
+  required string text = 1;
+  optional string project = 2;
+}
+
+message Towel {
+  required float opaque = 1;
+}
+

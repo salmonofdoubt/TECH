@@ -1,0 +1,313 @@
+<dl> 
+  <dt> 
+    <strong> 
+      <strong>ALGERNON:</strong> 
+    </strong> 
+  </dt> 
+  <dd> 
+    <span id="imp-1-54">Bring me that cigarette case Mr. Worthing left in the smoking-room the last time he dined here.</span> 
+    <br/> 
+  </dd> 
+</dl><dl> 
+  <dt> 
+    <strong> 
+      <strong>LANE:</strong> 
+    </strong> 
+  </dt> 
+  <dd> 
+    <span id="imp-1-55">Yes, sir. <span class="stage"><em>[LANE goes out.]</em></span></span> 
+    <br/> 
+  </dd> 
+</dl><dl> 
+  <dt> 
+    <strong> 
+      <strong>JACK:</strong> 
+    </strong> 
+  </dt> 
+  <dd> 
+    <span id="imp-1-56">Do you mean to say you have had my cigarette case all this time? I wish to goodness you had let me know. I have been writing frantic letters to Scotland Yard about it. I was very nearly offering a large reward.</span> 
+    <br/> 
+  </dd> 
+</dl><dl> 
+  <dt> 
+    <strong> 
+      <strong>ALGERNON:</strong> 
+    </strong> 
+  </dt> 
+  <dd> 
+    <span id="imp-1-57">Well, I wish you would offer one. I happen to be more than usually hard up.</span> 
+    <br/> 
+  </dd> 
+</dl><dl> 
+  <dt> 
+    <strong> 
+      <strong>JACK:</strong> 
+    </strong> 
+  </dt> 
+  <dd> 
+    <span id="imp-1-58">There is no good offering a large reward now that the thing is found.</span> 
+    <br/> 
+  </dd> 
+</dl><p class="stage"> 
+  <em>[Enter L<span style="font-size: 75%">ANE</span> with the cigarette case on a salver. A<span style="font-size: 75%">LGERNON</span> takes it at once. L<span style="font-size: 75%">ANE</span> goes out.]</em> 
+</p><dl> 
+  <dt> 
+    <strong> 
+      <strong>ALGERNON:</strong> 
+    </strong> 
+  </dt> 
+  <dd> 
+    <span id="imp-1-59">I think that is rather mean of you, Ernest, I must say. <span class="stage"><em>[Opens case and examines it.]</em></span> However, it makes no matter, for, now that I look at the inscription, I find that the thing isn't yours after all.</span> 
+    <br/> 
+  </dd> 
+</dl><dl> 
+  <dt> 
+    <strong> 
+      <strong>JACK:</strong> 
+    </strong> 
+  </dt> 
+  <dd> 
+    <span id="imp-1-60">Of course it's mine. <span class="stage"><em>[Moving to him.]</em></span> You have seen me with it a hundred times, and you have no right whatsoever to read what is written inside. It is a very ungentlemanly thing to read a private cigarette case.</span> 
+    <br/> 
+  </dd> 
+</dl><dl> 
+  <dt> 
+    <strong> 
+      <strong>ALGERNON:</strong> 
+    </strong> 
+  </dt> 
+  <dd> 
+    <span id="imp-1-61">Oh! it is absurd to have a hard-and-fast rule about what one should read and what one shouldn't. More than half of modern culture depends on what one shouldn't read.</span> 
+    <br/> 
+  </dd> 
+</dl><dl> 
+  <dt> 
+    <strong> 
+      <strong>JACK:</strong> 
+    </strong> 
+  </dt> 
+  <dd> 
+    <span id="imp-1-62">I am quite aware of the fact, and I don't propose to discuss modern culture. It isn't the sort of thing one should talk of in private. I simply want my cigarette case back.</span> 
+    <br/> 
+  </dd> 
+</dl><dl> 
+  <dt> 
+    <strong> 
+      <strong>ALGERNON:</strong> 
+    </strong> 
+  </dt> 
+  <dd> 
+    <span id="imp-1-63">Yes; but this isn't your cigarette case. This cigarette case is a present from someone of the name of Cecily, and you said you didn't know anyone of that name.</span> 
+    <br/> 
+  </dd> 
+</dl><dl> 
+  <dt> 
+    <strong> 
+      <strong>JACK:</strong> 
+    </strong> 
+  </dt> 
+  <dd> 
+    <span id="imp-1-64">Well, if you want to know, Cecily happens to be my aunt.</span> 
+    <br/> 
+  </dd> 
+</dl><dl> 
+  <dt> 
+    <strong> 
+      <strong>ALGERNON:</strong> 
+    </strong> 
+  </dt> 
+  <dd> 
+    <span id="imp-1-65">Your aunt!</span> 
+    <br/> 
+  </dd> 
+</dl><dl> 
+  <dt> 
+    <strong> 
+      <strong>JACK:</strong> 
+    </strong> 
+  </dt> 
+  <dd> 
+    <span id="imp-1-66">Yes. Charming old lady she is, too. Lives at Tunbridge Wells. Just give it back to me, Algy.</span> 
+    <br/> 
+  </dd> 
+</dl><dl> 
+  <dt> 
+    <strong> 
+      <strong>ALGERNON:</strong> 
+    </strong> 
+  </dt> 
+  <dd> 
+    <span id="imp-1-67"><span class="stage"><em>[Retreating to back of sofa.]</em></span> But why does she call herself little Cecily if she is your aunt and lives at Tunbridge Wells? <span class="stage"><em>[Reading.]</em></span> “From little Cecily with her fondest love.”</span> 
+    <br/> 
+  </dd> 
+</dl><dl> 
+  <dt> 
+    <strong> 
+      <strong>JACK:</strong> 
+    </strong> 
+  </dt> 
+  <dd> 
+    <span id="imp-1-68"><span class="stage"><em>[Moving to sofa and kneeling upon it.]</em></span> My dear fellow, what on earth is there in that? Some aunts are tall, some aunts are not tall. That is a matter that surely an aunt may be allowed to decide for herself. You seem to think that every aunt should be exactly like your aunt! That is absurd! For Heaven's sake give me back my cigarette case. <span class="stage"><em>[Follows A<span style="font-size: 75%">LGERNON</span> round the room.]</em></span></span> 
+    <br/> 
+  </dd> 
+</dl><dl> 
+  <dt> 
+    <strong> 
+      <strong>ALGERNON:</strong> 
+    </strong> 
+  </dt> 
+  <dd> 
+    <span id="imp-1-69">Yes. But why does your aunt call you her uncle? “From little Cecily, with her fondest love to her dear Uncle Jack. ” There is no objection, I admit, to an aunt being a small aunt, but why an aunt, no matter what her size may be, should call her own nephew her uncle, I can't quite make out. Besides, your name isn't Jack at all; it is Ernest.</span> 
+    <br/> 
+  </dd> 
+</dl><dl> 
+  <dt> 
+    <strong> 
+      <strong>JACK:</strong> 
+    </strong> 
+  </dt> 
+  <dd> 
+    <span id="imp-1-70">It isn't Ernest; it's Jack.</span> 
+    <br/> 
+  </dd> 
+</dl><dl> 
+  <dt> 
+    <strong> 
+      <strong>ALGERNON:</strong> 
+    </strong> 
+  </dt> 
+  <dd> 
+    <span id="imp-1-71">You have always told me it was Ernest. I have introduced you to everyone as Ernest. You answer to the name of Ernest. You look as if your name was Ernest. You are the most earnest-looking person I ever saw in my life. It is perfectly absurd your saying that your name isn't Ernest. It's on your cards. Here is one of them. <span class="stage"><em>[Taking it from case.]</em></span> “Mr. Ernest Worthing, B 4, The Albany.” I'll keep this as a proof that your name is Ernest if ever you attempt to deny it to me, or to Gwendolen, or to anyone else. <span class="stage"><em>[Puts the card in his pocket.]</em></span></span> 
+    <br/> 
+  </dd> 
+</dl><dl> 
+  <dt> 
+    <strong> 
+      <strong>JACK:</strong> 
+    </strong> 
+  </dt> 
+  <dd> 
+    <span id="imp-1-72">Well, my name is Ernest in town and Jack in the country, and the cigarette case was given to me in the country.</span> 
+    <br/> 
+  </dd> 
+</dl><dl> 
+  <dt> 
+    <strong> 
+      <strong>ALGERNON:</strong> 
+    </strong> 
+  </dt> 
+  <dd> 
+    <span id="imp-1-73">Yes, but that does not account for the fact that your small Aunt Cecily, who lives at Tunbridge Wells, calls you her dear uncle. Come, old boy, you had much better have the thing out at once.</span> 
+    <br/> 
+  </dd> 
+</dl><dl> 
+  <dt> 
+    <strong> 
+      <strong>JACK:</strong> 
+    </strong> 
+  </dt> 
+  <dd> 
+    <span id="imp-1-74">My dear Algy, you talk exactly as if you were a dentist. It is very vulgar to talk like a dentist when one isn't a dentist. It produces a false impression.</span> 
+    <br/> 
+  </dd> 
+</dl><dl> 
+  <dt> 
+    <strong> 
+      <strong>ALGERNON:</strong> 
+    </strong> 
+  </dt> 
+  <dd> 
+    <span id="imp-1-75">Well, that is exactly what dentists always do. Now, go on! Tell me the whole thing. I may mention that I have always suspected you of being a confirmed and secret Bunburyist; and I am quite sure of it now.</span> 
+    <br/> 
+  </dd> 
+</dl><dl> 
+  <dt> 
+    <strong> 
+      <strong>JACK:</strong> 
+    </strong> 
+  </dt> 
+  <dd> 
+    <span id="imp-1-76">Bunburyist? What on earth do you mean by a Bunburyist?</span> 
+    <br/> 
+  </dd> 
+</dl><dl> 
+  <dt> 
+    <strong> 
+      <strong>ALGERNON:</strong> 
+    </strong> 
+  </dt> 
+  <dd> 
+    <span id="imp-1-77">I'll reveal to you the meaning of that incomparable expression as soon as you are kind enough to inform me why you are Ernest in town and Jack in the country.</span> 
+    <br/> 
+  </dd> 
+</dl><dl> 
+  <dt> 
+    <strong> 
+      <strong>JACK:</strong> 
+    </strong> 
+  </dt> 
+  <dd> 
+    <span id="imp-1-78">Well, produce my cigarette case first.</span> 
+    <br/> 
+  </dd> 
+</dl><dl> 
+  <dt> 
+    <strong> 
+      <strong>ALGERNON:</strong> 
+    </strong> 
+  </dt> 
+  <dd> 
+    <span id="imp-1-79">Here it is. <span class="stage"><em>[Hands cigarette case.]</em></span> Now produce your explanation, and pray make it improbable. <span class="stage"><em>[Sits on sofa.]</em></span></span> 
+    <br/> 
+  </dd> 
+</dl><dl> 
+  <dt> 
+    <strong> 
+      <strong>JACK:</strong> 
+    </strong> 
+  </dt> 
+  <dd> 
+    <span id="imp-1-80">My dear fellow, there is nothing improbable about my explanation at all. In fact it's perfectly ordinary. Old Mr. Thomas Cardew, who adopted me when I was a little boy, made me in his will guardian to his granddaughter, Miss Cecily Cardew. Cecily, who addresses me as her uncle from motives of respect that you could not possibly appreciate, lives at my place in the country under the charge of her admirable governess, Miss Prism.</span> 
+    <br/> 
+  </dd> 
+</dl><dl> 
+  <dt> 
+    <strong> 
+      <strong>ALGERNON:</strong> 
+    </strong> 
+  </dt> 
+  <dd> 
+    <span id="imp-1-81">Where is that place in the country, by the way?</span> 
+    <br/> 
+  </dd> 
+</dl><dl> 
+  <dt> 
+    <strong> 
+      <strong>JACK:</strong> 
+    </strong> 
+  </dt> 
+  <dd> 
+    <span id="imp-1-82">That is nothing to you, dear boy. You are not going to be invited…I may tell you candidly that the place is not in Shropshire.</span> 
+    <br/> 
+  </dd> 
+</dl><dl> 
+  <dt> 
+    <strong> 
+      <strong>ALGERNON:</strong> 
+    </strong> 
+  </dt> 
+  <dd> 
+    <span id="imp-1-83">I suspected that, my dear fellow! I have Bunburyed all over Shropshire on two separate occasions. Now, go on. Why are you Ernest in town and Jack in the country?</span> 
+    <br/> 
+  </dd> 
+</dl><dl> 
+  <dt> 
+    <strong> 
+      <strong>JACK:</strong> 
+    </strong> 
+  </dt> 
+  <dd> 
+    <span id="imp-1-84">My dear Algy, I don't know whether you will be able to understand my real motives. You are hardly serious enough. When one is placed in the position of guardian, one has to adopt a very high moral tone on all subjects. It's one's duty to do so. And as a high moral tone can hardly be said to <a href="#prestwick-vocab-imp-1-3" class="tooltip" onclick="return false;">conduce</a> very much to either one's health or one's happiness, in order to get up to town I have always pretended to have a younger brother of the name of Ernest, who lives in the Albany, and gets into the most dreadful <a href="#prestwick-vocab-imp-1-20" class="tooltip" onclick="return false;">scrapes</a>. That, my dear Algy, is the whole truth pure and simple.</span> 
+    <br/> 
+  </dd> 
+</dl> 

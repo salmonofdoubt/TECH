@@ -1,0 +1,362 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0047)http://learnpythonthehardway.org/book/ex50.html -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    
+    <title>Exercise 50: Your First Website — Learn Python The Hard Way, 2nd Edition</title>
+    <link rel="stylesheet" href="./Exercise 50  Your First Website — Learn Python The Hard Way, 2nd Edition_files/sphinxdoc.css" type="text/css">
+    <link rel="stylesheet" href="./Exercise 50  Your First Website — Learn Python The Hard Way, 2nd Edition_files/pygments.css" type="text/css">
+    <script type="text/javascript" async="" src="./Exercise 50  Your First Website — Learn Python The Hard Way, 2nd Edition_files/ga.js"></script><script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '2.0',
+        COLLAPSE_MODINDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="./Exercise 50  Your First Website — Learn Python The Hard Way, 2nd Edition_files/jquery.js"></script>
+    <script type="text/javascript" src="./Exercise 50  Your First Website — Learn Python The Hard Way, 2nd Edition_files/underscore.js"></script>
+    <script type="text/javascript" src="./Exercise 50  Your First Website — Learn Python The Hard Way, 2nd Edition_files/doctools.js"></script>
+    <link rel="top" title="Learn Python The Hard Way, 2nd Edition" href="http://learnpythonthehardway.org/book/index.html">
+    <link rel="next" title="Exercise 51: Getting Input From A Browser" href="http://learnpythonthehardway.org/book/ex51.html">
+    <link rel="prev" title="Exercise 49: Making Sentences" href="http://learnpythonthehardway.org/book/ex49.html"> 
+  </head>
+  <body>
+    <div class="related">
+        <ul>
+        <li class="right"><a style="color: #C40B46;" href="http://learncodethehardway.org/contact.html" title="Need Help?">Need Help?</a></li>
+        <li class="right"><a style="color: #C40B46;" href="http://regex.learncodethehardway.org/" title="Learn Regex">Learn Regex</a> | </li>
+        <li class="right"><a style="color: #C40B46;" href="http://sql.learncodethehardway.org/" title="Learn SQL">Learn SQL</a> | </li>
+        <li class="right"><a style="color: #C40B46;" href="http://c.learncodethehardway.org/" title="Learn C">Learn C</a> | </li>
+        <li class="right"><a style="color: #C40B46;" href="http://ruby.learncodethehardway.org/" title="Learn Ruby">Learn Ruby</a> | </li>
+        <li><a style="color: #C40B46;" href="https://getdpd.com/v2/cart/add/8273/19967/19291?referer=http%3A//learnpythonthehardway.org/book/"><b>Buy PDF - $2.99</b></a> |
+        </li><li><a style="color: #C40B46;" href="https://getdpd.com/v2/cart/add/8273/19968/19292?referer=http%3A//learnpythonthehardway.org/book/"><b>ePub - $2.99</b></a> |
+        </li><li><a style="color: #C40B46;" href="https://getdpd.com/v2/cart/add/8273/19969/19293?referer=http%3A//learnpythonthehardway.org/book/"><b>Both - $5</b></a></li>
+        </ul>
+    </div>
+
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="http://learnpythonthehardway.org/book/ex51.html" title="Exercise 51: Getting Input From A Browser" accesskey="N">next</a></li>
+        <li class="right">
+          <a href="http://learnpythonthehardway.org/book/ex49.html" title="Exercise 49: Making Sentences" accesskey="P">previous</a> |</li>
+        <li><a href="http://learnpythonthehardway.org/">Learn Python The Hard Way, 2nd Edition</a> »</li> 
+        <li class="right"><a href="http://learnpythonthehardway.org/book/search.html" title="search">search</a> | </li>
+      </ul>
+    </div>
+
+
+
+    <div class="document">
+      <div class="documentwrapper">
+          <div class="body">
+            
+  <div class="section" id="exercise-50-your-first-website">
+<h1>Exercise 50: Your First Website<a class="headerlink" href="http://learnpythonthehardway.org/book/ex50.html#exercise-50-your-first-website" title="Permalink to this headline">¶</a></h1>
+<p>These final three exercises will be very hard and you should take your time with them.
+In this first one you'll build a simple web version of one of your games.  Before you attempt this exercise you <em>must</em> have completed Exercise 46 successfully
+and have a working <tt class="docutils literal"><span class="pre">pip</span></tt> installed such that you can install packages and
+know how to make a skeleton project directory.  If you don't remember how
+to do this, go back to Exercise 46 and do it all over again.</p>
+<div class="section" id="installing-lpthw-web">
+<h2>Installing lpthw.web<a class="headerlink" href="http://learnpythonthehardway.org/book/ex50.html#installing-lpthw-web" title="Permalink to this headline">¶</a></h2>
+<p>Before creating your first web application, you'll first need to install the "web framework" called <tt class="docutils literal"><span class="pre">lpthw.web</span></tt>.  The term "framework" generally
+means "some package that makes it easier for me to do something".  In the world
+of web applications, people create "web frameworks" to compensate for the difficult
+problems they've encountered when making their own sites.  They share these
+common solutions in the form of a package you can
+download to bootstrap your own projects.</p>
+<p>In our case, we'll be using the <tt class="docutils literal"><span class="pre">lpthw.web</span></tt> framework, but there are many, many,
+<em>many</em> others you can choose from.  For now, learn <tt class="docutils literal"><span class="pre">lpthw.web</span></tt> then branch out to another
+one when you're ready (or just keep using <tt class="docutils literal"><span class="pre">lpthw.web</span></tt> since it's good enough).</p>
+<p>Using <tt class="docutils literal"><span class="pre">pip</span></tt> install <tt class="docutils literal"><span class="pre">lpthw.web</span></tt>:</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> sudo pip install lpthw.web
+<span class="go">[sudo] password for zedshaw:</span>
+<span class="go">Downloading/unpacking lpthw.web</span>
+<span class="go">  Running setup.py egg_info for package lpthw.web</span>
+
+<span class="go">Installing collected packages: lpthw.web</span>
+<span class="go">  Running setup.py install for lpthw.web</span>
+
+<span class="go">Successfully installed lpthw.web</span>
+<span class="go">Cleaning up...</span>
+</pre></div>
+</div>
+<p>This will work on Linux and Mac OSX computers, but on Windows just drop the <tt class="docutils literal"><span class="pre">sudo</span></tt> part of
+the pip install command and it should work.  If not, go back to Exercise 46
+and make sure you can do it reliably.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Other Python programmers will warn you that <tt class="docutils literal"><span class="pre">lpthw.web</span></tt> is just a fork of
+another web framework called <tt class="docutils literal"><span class="pre">web.py</span></tt>, and that <tt class="docutils literal"><span class="pre">web.py</span></tt> has too much
+"magic".  If they say this, point out to them that Google App Engine
+originally used <tt class="docutils literal"><span class="pre">web.py</span></tt> and not a single Python programmer complained
+that it had too much magic, because they all worked at Google.
+If it's good enough for Google, then it's good enough for you to get
+started.  Then, just get back to learning to code and ignore their goal of indoctrination over education.</p>
+</div>
+</div>
+<div class="section" id="make-a-simple-hello-world-project">
+<h2>Make A Simple "Hello World" Project<a class="headerlink" href="http://learnpythonthehardway.org/book/ex50.html#make-a-simple-hello-world-project" title="Permalink to this headline">¶</a></h2>
+<p>Now you're going to make an initial very simple "Hello World" web application and
+project directory using <tt class="docutils literal"><span class="pre">lpthw.web</span></tt>.  First, make your project directory:</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> <span class="nb">cd </span>projects
+<span class="gp">$</span> mkdir gothonweb
+<span class="gp">$</span> <span class="nb">cd </span>gothonweb
+<span class="gp">$</span> mkdir bin gothonweb tests docs templates
+<span class="gp">$</span> touch gothonweb/__init__.py
+<span class="gp">$</span> touch tests/__init__.py
+</pre></div>
+</div>
+<p>You'll be taking the game from Exercise 42 and making it into a web application, so that's
+why you're calling it <tt class="docutils literal"><span class="pre">gothonweb</span></tt>.  Before you do that, we need to create the most basic
+<tt class="docutils literal"><span class="pre">lpthw.web</span></tt> application possible.  Put the following code into <tt class="docutils literal"><span class="pre">bin/app.py</span></tt>:</p>
+<div class="highlight-python"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15</pre></div></td><td class="code"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">web</span>
+
+<span class="n">urls</span> <span class="o">=</span> <span class="p">(</span>
+  <span class="s">'/'</span><span class="p">,</span> <span class="s">'index'</span>
+<span class="p">)</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">web</span><span class="o">.</span><span class="n">application</span><span class="p">(</span><span class="n">urls</span><span class="p">,</span> <span class="nb">globals</span><span class="p">())</span>
+
+<span class="k">class</span> <span class="nc">index</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">GET</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">greeting</span> <span class="o">=</span> <span class="s">"Hello World"</span>
+        <span class="k">return</span> <span class="n">greeting</span>
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">"__main__"</span><span class="p">:</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p>Then run the application like this:</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> python bin/app.py
+<span class="go">http://0.0.0.0:8080/</span>
+</pre></div>
+</div>
+<p>Finally, use your web browser and go to the URL <tt class="docutils literal"><span class="pre">http://localhost:8080/</span></tt> and you should see two
+things.  First, in your browser you'll see <tt class="docutils literal"><span class="pre">Hello,</span> <span class="pre">world!</span></tt>.  Second, you'll see your terminal
+with new output like this:</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> python bin/app.py
+<span class="go">http://0.0.0.0:8080/</span>
+<span class="go">127.0.0.1:59542 - - [13/Jun/2011 11:44:43] "HTTP/1.1 GET /" - 200 OK</span>
+<span class="go">127.0.0.1:59542 - - [13/Jun/2011 11:44:43] "HTTP/1.1 GET /favicon.ico" - 404 Not Found</span>
+</pre></div>
+</div>
+<p>Those are log messages that <tt class="docutils literal"><span class="pre">lpthw.web</span></tt> prints out so you can see that the server is working, and
+what the browser is doing behind the scenes.  The log messages help you debug and figure
+out when you have problems.  For example, it's saying that your browser tried to get
+<tt class="docutils literal"><span class="pre">/favicon.ico</span></tt> but that file didn't exist so it returned <tt class="docutils literal"><span class="pre">404</span> <span class="pre">Not</span> <span class="pre">Found</span></tt> status
+code.</p>
+<p>I haven't explained the way <em>any</em> of this web stuff works yet, because I want to get you setup
+and ready to roll so that I can explain it better in the next two exercises.  To accomplish this, I'll have you break your lpthw.web application in various ways and then restructure it
+so that you know how it's setup.</p>
+</div>
+<div class="section" id="what-s-going-on">
+<h2>What's Going On?<a class="headerlink" href="http://learnpythonthehardway.org/book/ex50.html#what-s-going-on" title="Permalink to this headline">¶</a></h2>
+<p>Here's what's happening when your browser hits your application:</p>
+<ol class="arabic simple">
+<li>Your browser makes a network connection to your own computer, which is called <tt class="docutils literal"><span class="pre">localhost</span></tt>
+and is a standard way of saying "whatever my own computer is called on the network".  It
+also uses port <tt class="docutils literal"><span class="pre">8080</span></tt>.</li>
+<li>Once it connects, it makes an HTTP request to the <tt class="docutils literal"><span class="pre">bin/app.py</span></tt> application and asks for
+the <tt class="docutils literal"><span class="pre">/</span></tt> URL, which is commonly the first URL on any website.</li>
+<li>Inside <tt class="docutils literal"><span class="pre">bin/app.py</span></tt> you've got a list of URLs and what classes they match.  The only one
+we have is the <tt class="docutils literal"><span class="pre">'/',</span> <span class="pre">'index'</span></tt> mapping.  This means that whenever someone goes to <tt class="docutils literal"><span class="pre">/</span></tt>
+with a browser, <tt class="docutils literal"><span class="pre">lpthw.web</span></tt> will find the <tt class="docutils literal"><span class="pre">class</span> <span class="pre">index</span></tt> and load it to handle the
+request.</li>
+<li>Now that <tt class="docutils literal"><span class="pre">lpthw.web</span></tt> has found <tt class="docutils literal"><span class="pre">class</span> <span class="pre">index</span></tt> it calls the <tt class="docutils literal"><span class="pre">index.GET</span></tt> method on an
+instance of that class to actually handle the request.  This function runs, and simply
+returns a string for what <tt class="docutils literal"><span class="pre">lpthw.web</span></tt> should send to the browser.</li>
+<li>Finally, <tt class="docutils literal"><span class="pre">lpthw.web</span></tt> has handled the request and sends this response to the browser which
+is what you are seeing.</li>
+</ol>
+<p>Make sure you really understand this.  Draw up a diagram of how this information
+flows from your browser, to <tt class="docutils literal"><span class="pre">lpthw.web</span></tt>, then to <tt class="docutils literal"><span class="pre">index.GET</span></tt> and back to your browser.</p>
+</div>
+<div class="section" id="fixing-errors">
+<h2>Fixing Errors<a class="headerlink" href="http://learnpythonthehardway.org/book/ex50.html#fixing-errors" title="Permalink to this headline">¶</a></h2>
+<p>First, delete line 11 where you assign the <tt class="docutils literal"><span class="pre">greeting</span></tt> variable, then hit refresh in your
+browser.  You should see an error page now that gives you lots of information on how your
+application just exploded.  You know that the variable <tt class="docutils literal"><span class="pre">greeting</span></tt> is now missing, but
+<tt class="docutils literal"><span class="pre">lpthw.web</span></tt> gives you this nice error page to track down exactly where.  Do each
+of the following with this page:</p>
+<ol class="arabic simple">
+<li>Look at each of the <tt class="docutils literal"><span class="pre">Local</span> <span class="pre">vars</span></tt> outputs (click on them) and see if you can follow what
+variables it's talking about and where they are.</li>
+<li>Look at the <tt class="docutils literal"><span class="pre">Request</span> <span class="pre">Information</span></tt> section and see if it matches anything you're already familiar with.
+This is information that your web browser is sending to your <tt class="docutils literal"><span class="pre">gothonweb</span></tt> application.  You
+normally don't even know that it's sending this stuff, so now you get to see what it does.</li>
+<li>Try breaking this simple application in other ways and explore what happens.  Don't forget to also
+look at the logs being printed into your terminal as <tt class="docutils literal"><span class="pre">lpthw.web</span></tt> will put other stack traces
+and information there too.</li>
+</ol>
+</div>
+<div class="section" id="create-basic-templates">
+<h2>Create Basic Templates<a class="headerlink" href="http://learnpythonthehardway.org/book/ex50.html#create-basic-templates" title="Permalink to this headline">¶</a></h2>
+<p>You can break your lpthw.web application, but did you notice that "Hello World" isn't a very
+good HTML page?  This is a web application, and as such it needs a proper HTML
+response.  To do that you will create a simple template that says "Hello World"
+in a big green font.</p>
+<p>The first step is to create a <tt class="docutils literal"><span class="pre">templates/index.html</span></tt> file that looks like this:</p>
+<div class="highlight-python"><pre>$def with (greeting)
+
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;Gothons Of Planet Percal #25&lt;/title&gt;
+    &lt;/head&gt;
+&lt;body&gt;
+
+$if greeting:
+    I just wanted to say &lt;em style="color: green; font-size: 2em;"&gt;$greeting&lt;/em&gt;.
+$else:
+    &lt;em&gt;Hello&lt;/em&gt;, world!
+
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+</div>
+<p>If you know what HTML is then this should look fairly familiar. If not, research
+HTML and try writing a few web pages by hand so you know how it works.  This HTML file
+however is a <em>template</em>, which means that <tt class="docutils literal"><span class="pre">lpthw.web</span></tt> will fill in "holes" in the text
+depending on variables you pass in to the template.  Every place you see <tt class="docutils literal"><span class="pre">$greeting</span></tt> will be
+a variable you'll pass to the template that alters its contents.</p>
+<p>To make your <tt class="docutils literal"><span class="pre">bin/app.py</span></tt> do this, you need to add some code to tell <tt class="docutils literal"><span class="pre">lpthw.web</span></tt> where to
+load the template and to render it.  Take that file and change it like this:</p>
+<div class="highlight-python"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17</pre></div></td><td class="code"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">web</span>
+
+<span class="n">urls</span> <span class="o">=</span> <span class="p">(</span>
+  <span class="s">'/'</span><span class="p">,</span> <span class="s">'Index'</span>
+<span class="p">)</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">web</span><span class="o">.</span><span class="n">application</span><span class="p">(</span><span class="n">urls</span><span class="p">,</span> <span class="nb">globals</span><span class="p">())</span>
+
+<span class="n">render</span> <span class="o">=</span> <span class="n">web</span><span class="o">.</span><span class="n">template</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="s">'templates/'</span><span class="p">)</span>
+
+<span class="k">class</span> <span class="nc">Index</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">GET</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">greeting</span> <span class="o">=</span> <span class="s">"Hello World"</span>
+        <span class="k">return</span> <span class="n">render</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">greeting</span> <span class="o">=</span> <span class="n">greeting</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">"__main__"</span><span class="p">:</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p>Pay close attention to the new <tt class="docutils literal"><span class="pre">render</span></tt> variable, and how I changed the last line of <tt class="docutils literal"><span class="pre">index.GET</span></tt>
+so it returns <tt class="docutils literal"><span class="pre">render.index()</span></tt> passing in your <tt class="docutils literal"><span class="pre">greeting</span></tt> variable.</p>
+<p>Once you have that in place, reload the web page in your browser and you should see a different message
+in green.  You should also be able to do a <tt class="docutils literal"><span class="pre">View</span> <span class="pre">Source</span></tt> on the page in your browser to see that it is
+valid HTML.</p>
+<p>This may have flown by you very fast, so let me explain how a template works:</p>
+<ol class="arabic simple">
+<li>In your <tt class="docutils literal"><span class="pre">bin/app.py</span></tt> you've added a new variable <tt class="docutils literal"><span class="pre">render</span></tt> which is a <tt class="docutils literal"><span class="pre">web.template.render</span></tt> object.</li>
+<li>This <tt class="docutils literal"><span class="pre">render</span></tt> object knows how to load <tt class="docutils literal"><span class="pre">.html</span></tt> files out of the <tt class="docutils literal"><span class="pre">templates/</span></tt> directory because
+you passed that to it as a parameter.</li>
+<li>Later in your code, when the browser hits the <tt class="docutils literal"><span class="pre">index.GET</span></tt> like before, instead of just returning
+the string <tt class="docutils literal"><span class="pre">greeting</span></tt>, you call <tt class="docutils literal"><span class="pre">render.index</span></tt> and pass the greeting to it as a variable.</li>
+<li>This <tt class="docutils literal"><span class="pre">render.index</span></tt> method is kind of a <em>magic</em> function where the <tt class="docutils literal"><span class="pre">render</span></tt> object sees that
+you're asking for <tt class="docutils literal"><span class="pre">index</span></tt>, goes into the <tt class="docutils literal"><span class="pre">templates/</span></tt> directory, looks for a page named <tt class="docutils literal"><span class="pre">index.html</span></tt>,
+and then "renders" it, or converts it.</li>
+<li>In the <tt class="docutils literal"><span class="pre">templates/index.html</span></tt> file you see the beginning definition that says this template takes
+a <tt class="docutils literal"><span class="pre">greeting</span></tt> parameter, just like a function.  Also, just like Python this template is indentation
+sensitive, so make sure you get them right.</li>
+<li>Finally, you have the HTML in <tt class="docutils literal"><span class="pre">templates/index.html</span></tt> that looks at the <tt class="docutils literal"><span class="pre">greeting</span></tt> variable, and
+if it's there, prints one message using the <tt class="docutils literal"><span class="pre">$greeting</span></tt>, or a default message.</li>
+</ol>
+<p>To get deeper into this, change the greeting variable and the HTML to see what effect it has.
+Also create another template named <tt class="docutils literal"><span class="pre">templates/foo.html</span></tt> and render that using <tt class="docutils literal"><span class="pre">render.foo()</span></tt>
+instead of <tt class="docutils literal"><span class="pre">render.index()</span></tt> like before. This will show you how the name of the function you
+call on <tt class="docutils literal"><span class="pre">render</span></tt> is just matched to a <tt class="docutils literal"><span class="pre">.html</span></tt> file in <tt class="docutils literal"><span class="pre">templates/</span></tt>.</p>
+</div>
+<div class="section" id="extra-credit">
+<h2>Extra Credit<a class="headerlink" href="http://learnpythonthehardway.org/book/ex50.html#extra-credit" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li>Read the documentation at <a class="reference external" href="http://webpy.org/">http://webpy.org/</a> which is the same as the <tt class="docutils literal"><span class="pre">lpthw.web</span></tt> project.</li>
+<li>Experiment with everything you can find there, including their example code.</li>
+<li>Read about HTML5 and CSS3 and make some other .html and .css files for practice.</li>
+<li>If you have a friend who knows Django and is willing to help you, then consider doing
+Ex 50, 51, and 52 in Django instead to see what that's like.</li>
+</ol>
+</div>
+</div>
+
+
+          </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+        <ul>
+        <li class="right"><a style="color: #C40B46;" href="http://learncodethehardway.org/contact.html" title="Need Help?">Need Help?</a></li>
+        <li class="right"><a style="color: #C40B46;" href="http://regex.learncodethehardway.org/" title="Learn Regex">Learn Regex</a> | </li>
+        <li class="right"><a style="color: #C40B46;" href="http://sql.learncodethehardway.org/" title="Learn SQL">Learn SQL</a> | </li>
+        <li class="right"><a style="color: #C40B46;" href="http://c.learncodethehardway.org/" title="Learn C">Learn C</a> | </li>
+        <li class="right"><a style="color: #C40B46;" href="http://ruby.learncodethehardway.org/" title="Learn Ruby">Learn Ruby</a> | </li>
+        <li><a style="color: #C40B46;" href="https://getdpd.com/v2/cart/add/8273/19967/19291?referer=http%3A//learnpythonthehardway.org/book/"><b>Buy PDF - $2.99</b></a> |
+        </li><li><a style="color: #C40B46;" href="https://getdpd.com/v2/cart/add/8273/19968/19292?referer=http%3A//learnpythonthehardway.org/book/"><b>ePub - $2.99</b></a> |
+        </li><li><a style="color: #C40B46;" href="https://getdpd.com/v2/cart/add/8273/19969/19293?referer=http%3A//learnpythonthehardway.org/book/"><b>Both - $5</b></a></li>
+        </ul>
+    </div>
+
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="http://learnpythonthehardway.org/book/ex51.html" title="Exercise 51: Getting Input From A Browser">next</a></li>
+        <li class="right">
+          <a href="http://learnpythonthehardway.org/book/ex49.html" title="Exercise 49: Making Sentences">previous</a> |</li>
+        <li><a href="http://learnpythonthehardway.org/">Learn Python The Hard Way, 2nd Edition</a> »</li> 
+        <li class="right"><a href="http://learnpythonthehardway.org/book/search.html" title="search">search</a> | </li>
+      </ul>
+    </div>
+    <div class="footer">
+      © Copyright 2010, Zed A. Shaw.
+      Last updated on Nov 12, 2011.
+</div>
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-24168052-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+  
+</body></html>
