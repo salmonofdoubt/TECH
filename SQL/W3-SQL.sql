@@ -35,9 +35,21 @@ SELECT * FROM Customers ORDER BY Country, City;
 
 SELECT * FROM Customers ORDER BY Country ASC, CustomerName DESC;
 
+SELECT * FROM Customers WHERE PostalCode is null;
+
 ----------------------------------------------
 INSERT INTO Customers (CustomerName, ContactName, Address, City, PostalCode, Country)
 VALUES ('Cardinal', 'Tom B. Erichsen', 'Skagen 21', 'Stavanger', '4006', 'Norway');
 
 ----------------------------------------------
-SELECT * FROM Customers WHERE PostalCode is null;
+UPDATE Customers SET ContactName = 'Alfred Schmidt', City= 'Frankfurt'
+WHERE CustomerID = 1;
+
+UPDATE Customers SET ContactName='Juan' WHERE Country='Mexico';
+
+UPDATE Customers SET City = 'Oslo', Country = 'Norway'
+WHERE CustomerID = 32;
+
+----------------------------------------------
+DELETE FROM Customers WHERE CustomerName='Alfreds Futterkiste';
+
