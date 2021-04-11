@@ -76,4 +76,124 @@ SELECT * FROM Customers WHERE City LIKE '[!bsp]%';
 'a__%'	Finds any values that start with "a" and are at least 3 characters in length
 'a%o'	Finds any values that start with "a" and ends with "o"
 
+----------------------------------------------
+SELECT * FROM Customers
+WHERE Country IN ('Germany', 'France', 'UK');
+
+SELECT * FROM Customers
+WHERE Country IN (SELECT Country FROM Suppliers);
+
+----------------------------------------------
+SELECT * FROM Products WHERE Price BETWEEN 10 AND 20;
+
+----------------------------------------------
+SELECT CustomerName AS Customer, ContactName AS 'Contact Person'
+FROM Customers;
+
+SELECT CustomerName, Address + ', ' + PostalCode + ' ' + City + ', ' + Country AS Address
+FROM Customers;
+
+SELECT CustomerName, CONCAT(Address,', ',PostalCode,', ',City,', ',Country) AS Address
+FROM Customers;
+
+----------------------------------------------
+SELECT Orders.OrderID, Orders.OrderDate, Customers.CustomerName
+FROM Customers, Orders
+WHERE Customers.CustomerName='Around the Horn' AND Customers.CustomerID=Orders.CustomerID;
+
+SELECT o.OrderID, o.OrderDate, c.CustomerName
+FROM Customers AS c, Orders AS o
+WHERE c.CustomerName='Around the Horn' AND c.CustomerID=o.CustomerID;
+
+----------------------------------------------
+-- A JOIN clause is used to combine rows from two or more tables, based on a related column between them.
+
+The different types of the JOINs in SQL:
+(INNER) JOIN: Returns records that have matching values in both tables
+LEFT (OUTER) JOIN: Returns all records from the left table, and the matched records from the right table
+RIGHT (OUTER) JOIN: Returns all records from the right table, and the matched records from the left table
+FULL (OUTER) JOIN: Returns all records when there is a match in either left or right table
+
+SELECT column_name(s)
+FROM table1
+RIGHT JOIN table2
+ON table1.column_name = table2.column_name;
+
+SELECT Orders.OrderID, Customers.CustomerName, Orders.OrderDate
+FROM Orders
+INNER JOIN Customers ON Orders.CustomerID=Customers.CustomerID;
+
+SELECT Orders.OrderID, Customers.CustomerName, Shippers.ShipperName
+FROM ((Orders INNER JOIN Customers ON Orders.CustomerID = Customers.CustomerID)
+INNER JOIN Shippers ON Orders.ShipperID = Shippers.ShipperID);
+
+----------------------------------------------
+SELECT column_name(s) FROM table1
+UNION
+SELECT column_name(s) FROM table2;
+
+----------------------------------------------
+SELECT COUNT(CustomerID), Country
+FROM Customers
+GROUP BY Country
+HAVING COUNT(CustomerID) > 5;
+
+----------------------------------------------
+SELECT column_name(s)
+FROM table_name
+WHERE EXISTS
+(SELECT column_name FROM table_name WHERE condition);
+
+----------------------------------------------
+SELECT ProductName 
+FROM Products
+WHERE ProductID = ANY (SELECT ProductID FROM OrderDetails WHERE Quantity = 10);
+
+----------------------------------------------
+SELECT * INTO newtable [IN externaldb] FROM oldtable WHERE condition;
+
+INSERT INTO Customers (CustomerName, City, Country)
+SELECT SupplierName, City, Country FROM Suppliers
+WHERE Country='Germany';
+
+----------------------------------------------
+-- The CASE statement goes through conditions and returns a value when the first condition is met (like an if-then-else statement). So, once a condition is true, it will stop reading and return the result. If no conditions are true, it returns the value in the ELSE clause.
+
+CASE
+    WHEN condition1 THEN result1
+    WHEN condition2 THEN result2
+    WHEN conditionN THEN resultN
+    ELSE result
+END;
+
+SELECT OrderID, Quantity,
+    CASE
+        WHEN Quantity > 30 THEN 'The quantity is greater than 30'
+        WHEN Quantity = 30 THEN 'The quantity is 30'
+        ELSE 'The quantity is under 30'
+    END AS QuantityText
+FROM OrderDetails;
+
+----------------------------------------------
+SELECT ProductName, UnitPrice * (UnitsInStock + IFNULL(UnitsOnOrder, 0))
+FROM Products;
+----------------------------------------------
+CREATE PROCEDURE procedure_name 
+AS sql_statement
+GO;
+
+EXEC sql_statement;
+
+
+CREATE PROCEDURE SelectAllCustomers @City nvarchar(30)
+AS SELECT * FROM Customers WHERE City = @City
+GO;
+
+EXEC SelectAllCustomers @City = 'London';
+
+----------------------------------------------
+----------------------------------------------
+----------------------------------------------
+----------------------------------------------
+----------------------------------------------
 
