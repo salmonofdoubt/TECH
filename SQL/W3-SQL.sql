@@ -193,24 +193,45 @@ EXEC SelectAllCustomers @City = 'London';
 
 ----------------------------------------------
 CREATE DATABASE databasename;
+
 DROP DATABASE databasename;
 
-----------------------------------------------
-CREATE TABLE Persons
- (
-  PersonID int,
-  LastName varchar(255),
-  FirstName varchar(255),
-  Address varchar(255),
-  City varchar(255) 
-);
-----------------------------------------------
 BACKUP DATABASE databasename
 TO DISK = 'filepath'
 WITH DIFFERENTIAL;
-----------------------------------------------
 
 ----------------------------------------------
+CREATE TABLE Persons (
+    PersonID int NOT NULL,
+    LastName varchar(255) NOT NULL,
+    FirstName varchar(255),
+    Age int,
+    CHECK (Age>=18)
+);
+
+INSERT INTO Persons (column1, column2, column3, ...)
+VALUES (value1, value2, value3, ...);
+
+TRUNCATE TABLE Persons;
+
+DROP TABLE Persons;
+
+----------------------------------------------
+CREATE TABLE TestTable AS
+SELECT customername, contactname
+FROM customers;
+
+ALTER TABLE Persons
+ADD Birthday DATE;
+
+ALTER TABLE table_name
+ADD column_name datatype;
+
+----------------------------------------------
+CREATE VIEW [Brazil Customers] AS
+SELECT CustomerName, ContactName
+FROM Customers
+WHERE Country = 'Brazil';
 
 ----------------------------------------------
 
