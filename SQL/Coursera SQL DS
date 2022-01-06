@@ -1,0 +1,23 @@
+WEEK 1 WARM-UP
+=============================
+SELECT *
+FROM Artists;
+-----------------------------
+SELECT Playlistid,
+Name
+FROM Playlists;
+-----------------------------
+SELECT CustomerId,
+   InvoiceDate, 
+   BillingCity 
+FROM Invoices;
+-----------------------------
+Select FirstName, 
+LastName, 
+Email, 
+Phone
+From Customers;
+
+WEEK 1 CODING QUIZ
+=============================
+
