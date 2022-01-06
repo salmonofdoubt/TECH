@@ -6,18 +6,18 @@ SELECT *
 FROM Artists;
 -----------------------------
 SELECT Playlistid,
-Name
+    Name
 FROM Playlists;
 -----------------------------
 SELECT CustomerId,
-   InvoiceDate, 
-   BillingCity 
+    InvoiceDate, 
+    BillingCity 
 FROM Invoices;
 -----------------------------
-Select FirstName, 
-LastName, 
-Email, 
-Phone
+Select FirstName,
+    LastName, 
+    Email, 
+    Phone
 From Customers;
 
 /*
