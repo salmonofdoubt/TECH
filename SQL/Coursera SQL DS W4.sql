@@ -8,14 +8,18 @@ SELECT lastname
 SUBSTR(lastname,5,7)
 FROM employees;
 
-SELECT Company, Name, Company || ' ('|| Name||')'
-FROM tablex
+SELECT UPPER(column_name)
+FROM tablex;
+
+SELECT CustomerId,
+       FirstName || " " || LastName AS FullName,
+       UPPER(City || " " || Country) AS CityCountry
+FROM Customers;
 
 --(TRIM, RTRIM, LTRIM))
 SELECT TRIM("  SQL Tutorial   ") AS Trimmed;
 
-SELECT UPPER(column_name)
-FROM tablex;
+
 
 --DATE, TIME 
 
@@ -39,6 +43,15 @@ SELECT DATE('now');
 SELECT STRTIME('%Y %m %d', 'now');
 
 SELECT STRTIME('%H %M %S %s', 'now'); --now, down to millisec
+
+SELECT 
+    EmployeeID,
+    Firstname, 
+    Lastname,  
+    DATE('now') - hiredate AS term
+FROM employees
+ORDER BY lastname ASC
+
 
 
 --CASE
@@ -74,27 +87,5 @@ FROM my_view --above
 DROP VIEW my_view; --remove from mem
 
 -- DATA GOVERNANCE and SANDBOXING
-
-
-
-
-/* WEEK 4 WARM-UP
-=============================
-*/
-
-
-
-
-
-
-
-
-
-/*
-WEEK 4 CODING QUIZ
-=============================
-1. 
-*/ 
-
 
 
