@@ -4,7 +4,7 @@
 
 SELECT lastname
 SUBSTR(lastname,5,7)
-FROM employees
+FROM employees;
 
 
 
