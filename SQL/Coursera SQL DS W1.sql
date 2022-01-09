@@ -39,8 +39,7 @@ FROM employees
 WHERE LastName = 'King'
 
 /* 
-Retrieve the FirstName, LastName, Birthdate, Address, City, and State from the Employees table.
-Which of the employees listed below has a birthdate of 3-3-1965?
+Retrieve the FirstName, LastName, Birthdate, Address, City, and State from the Employees table. Which of the employees listed below has a birthdate of 3-3-1965?
 */
 SELECT FirstName, LastName, Birthdate, Address, City, State 
 FROM employees
