@@ -1,0 +1,1 @@
+ clang -o args args.c -lcs50
