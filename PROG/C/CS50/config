@@ -1,1 +1,69 @@
- clang -o args args.c -lcs50
+$ clang -o args args.c -lcs50
+
+$ cowsay mama mia
+ __________ 
+< mama mia >
+ ---------- 
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+$ echo ho | cowsay
+ ____ 
+< ho >
+ ---- 
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+$ fortune | cowsay 
+
+$ cowsay -l
+Cow files in /usr/local/Cellar/cowsay/3.04_1/share/cows:
+beavis.zen blowfish bong bud-frogs bunny cheese cower daemon default dragon
+dragon-and-cow elephant elephant-in-snake eyes flaming-sheep ghostbusters
+head-in hellokitty kiss kitty koala kosh luke-koala meow milk moofasa moose
+mutilated ren satanic sheep skeleton small stegosaurus stimpy supermilker
+surgery three-eyes turkey turtle tux udder vader vader-koala www
+
+$ fortune | cowsay -f tux
+
+$ fortune | cowsay -f turtle
+ ________________________________________ 
+< Colorless green ideas sleep furiously. >
+ ---------------------------------------- 
+    \                                  ___-------___
+     \                             _-~~             ~~-_
+      \                         _-~                    /~-_
+             /^\__/^\         /~  \                   /    \
+           /|  O|| O|        /      \_______________/        \
+          | |___||__|      /       /                \          \
+          |          \    /      /                    \          \
+          |   (_______) /______/                        \_________ \
+          |         / /         \                      /            \
+           \         \^\\         \                  /               \     /
+             \         ||           \______________/      _-_       //\__//
+               \       ||------_-~~-_ ------------- \ --/~   ~\    || __/
+                 ~-----||====/~     |==================|       |/~~~~~
+                  (_(__/  ./     /                    \_\      \.
+                         (_(___/                         \_____)_)
+
+ fortune | cowsay -f sheep
+ _________________________________________ 
+/ Hardware, n.:                           \
+|                                         |
+| The parts of a computer system that can |
+\ be kicked.                              /
+ ----------------------------------------- 
+  \
+   \
+       __     
+      UooU\.'@@@@@@`.
+      \__/(@@@@@@@@@@)
+           (@@@@@@@@)
+           `YY~~~~YY'
+            ||    ||
